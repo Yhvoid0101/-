@@ -640,3 +640,9 @@
 - Exact error: FullFileIndex MCP transport closed during search
 - Root-cause hypothesis: Use already-read local source and tests for this phase; do not repeat the closed transport call
 - Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T18:49:00+08:00
+- Command: pytest tests/test_autonomy.py
+- Exact error: policy version test expected version 2 but durable replay correctly returned version 1 for the same evolution cycle key
+- Root-cause hypothesis: Expose an explicit cycle_key argument so tests can distinguish same-cycle replay from a new-cycle evaluation
+- Next experiment: define a changed hypothesis before retrying.

@@ -72,7 +72,7 @@ def test_policy_versions_and_rollback_restore_previous_delay(tmp_path):
     for index in range(2, 4):
         store.enqueue("sync", {}, idempotency_key=f"version-{index}", max_attempts=1)
         store.run_once(lambda job: (_ for _ in ()).throw(RuntimeError("versioned")))
-    second = store.evolution_cycle()
+    second = store.evolution_cycle(cycle_key="cycle-version-2")
     second_policy = second["candidates"][0]["policy_id"]
     assert second["candidates"][0]["policy_version"] == 2
     assert store.rollback_policy(second_policy, "evaluation regression")["restored_parent"] == first_policy
@@ -101,6 +101,21 @@ def test_policy_regression_automatically_rolls_back_active_version(tmp_path):
     with store.connect() as db:
         status = db.execute("SELECT status FROM evolution_policies WHERE id=?", (policy_id,)).fetchone()[0]
     assert status == "rolled_back"
+
+
+def test_durable_step_replays_completed_output_without_reexecuting(tmp_path):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    calls = []
+
+    def action():
+        calls.append("executed")
+        return {"value": 42}
+
+    first = store.run_durable_step("cycle-1", "step-a", {"input": "x"}, action)
+    second = store.run_durable_step("cycle-1", "step-a", {"input": "x"}, action)
+    assert first["replayed"] is False
+    assert second == {"output": {"value": 42}, "replayed": True}
+    assert calls == ["executed"]
 
 
 def test_restart_recovery_requeues_stale_running(tmp_path):

@@ -53,3 +53,6 @@ identified and resumed safely.
 Active policies also receive runtime outcomes. After a minimum three-sample
 window, a failure rate above 50% automatically rolls the policy back to its
 parent version.
+
+Evolution steps persist input hashes and outputs. Re-running a completed step
+replays its stored output instead of repeating the side effect.

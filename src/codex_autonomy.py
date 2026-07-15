@@ -129,6 +129,17 @@ CREATE TABLE IF NOT EXISTS policy_outcomes (
   created_at REAL NOT NULL
 );
 CREATE INDEX IF NOT EXISTS policy_outcomes_idx ON policy_outcomes(policy_id, created_at);
+CREATE TABLE IF NOT EXISTS evolution_step_events (
+  cycle_key TEXT NOT NULL,
+  step_name TEXT NOT NULL,
+  input_hash TEXT NOT NULL,
+  status TEXT NOT NULL CHECK(status IN ('running','completed','failed')),
+  output_json TEXT NOT NULL DEFAULT '{}',
+  error TEXT NOT NULL DEFAULT '',
+  started_at REAL NOT NULL,
+  completed_at REAL,
+  PRIMARY KEY(cycle_key, step_name)
+);
 """
 
 
@@ -288,6 +299,37 @@ class AutonomyStore:
             row = db.execute("SELECT * FROM evolution_checkpoints WHERE cycle_key=?", (cycle_key,)).fetchone()
         return dict(row) if row else None
 
+    def run_durable_step(self, cycle_key: str, step_name: str, inputs: dict[str, Any],
+                         action: Callable[[], dict[str, Any]]) -> dict[str, Any]:
+        """Run a deterministic step once and replay its persisted output thereafter."""
+        input_hash = hashlib.sha256(json.dumps(inputs, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        with self.connect() as db:
+            existing = db.execute("SELECT * FROM evolution_step_events WHERE cycle_key=? AND step_name=?",
+                                  (cycle_key, step_name)).fetchone()
+        if existing and existing["input_hash"] != input_hash:
+            raise RuntimeError(f"durable step input changed: {step_name}")
+        if existing and existing["status"] == "completed":
+            return {"output": json.loads(existing["output_json"]), "replayed": True}
+        now = time.time()
+        with self.connect() as db:
+            db.execute("""INSERT INTO evolution_step_events
+                (cycle_key,step_name,input_hash,status,output_json,error,started_at)
+                VALUES (?,?,?,?,?,?,?)
+                ON CONFLICT(cycle_key,step_name) DO UPDATE SET status='running',error='',started_at=?""",
+                       (cycle_key, step_name, input_hash, "running", "{}", "", now, now))
+        try:
+            output = action()
+            encoded = json.dumps(output, ensure_ascii=False, sort_keys=True)[:8000]
+        except Exception as exc:
+            with self.connect() as db:
+                db.execute("UPDATE evolution_step_events SET status='failed',error=? WHERE cycle_key=? AND step_name=?",
+                           (str(exc)[:2000], cycle_key, step_name))
+            raise
+        with self.connect() as db:
+            db.execute("UPDATE evolution_step_events SET status='completed',output_json=?,completed_at=? WHERE cycle_key=? AND step_name=?",
+                       (encoded, time.time(), cycle_key, step_name))
+        return {"output": output, "replayed": False}
+
     def fail(self, job_id: str, error: str, *, base_delay: float = 5) -> dict[str, Any]:
         now = time.time()
         with self.connect() as db:
@@ -429,29 +471,33 @@ class AutonomyStore:
 
         return self.run_once(execute)
 
-    def evolution_cycle(self, *, min_occurrences: int = 2) -> dict[str, Any]:
+    def evolution_cycle(self, *, min_occurrences: int = 2, cycle_key: str | None = None) -> dict[str, Any]:
         """Turn repeated failures into evaluated, versioned, rollback-capable policies."""
-        cycle_key = f"evolution:{int(time.time() // 600)}"
+        cycle_key = cycle_key or f"evolution:{int(time.time() // 600)}"
         previous = self._get_checkpoint(cycle_key)
         resumed_from = previous["phase"] if previous and previous["status"] != "completed" else ""
         self._checkpoint(cycle_key, "scan", "running", {"min_occurrences": min_occurrences})
         try:
-            with self.connect() as db:
-                events = db.execute(
-                    "SELECT id,payload_json FROM control_events WHERE event_type='job_failed' ORDER BY created_at"
-                ).fetchall()
-            groups: dict[tuple[str, str], list[str]] = {}
-            for event in events:
-                try:
-                    payload = json.loads(event["payload_json"])
-                except json.JSONDecodeError:
-                    continue
-                kind = str(payload.get("kind", "unknown"))
-                error = str(payload.get("error", "unknown"))
-                signature = re.sub(r"[0-9a-f]{8,}", "<id>", error, flags=re.IGNORECASE)
-                groups.setdefault((kind, signature), []).append(event["id"])
+            def scan_groups() -> dict[str, Any]:
+                with self.connect() as db:
+                    events = db.execute("SELECT id,payload_json FROM control_events WHERE event_type='job_failed' ORDER BY created_at").fetchall()
+                groups: dict[tuple[str, str], list[str]] = {}
+                for event in events:
+                    try:
+                        payload = json.loads(event["payload_json"])
+                    except json.JSONDecodeError:
+                        continue
+                    kind = str(payload.get("kind", "unknown"))
+                    error = str(payload.get("error", "unknown"))
+                    signature = re.sub(r"[0-9a-f]{8,}", "<id>", error, flags=re.IGNORECASE)
+                    groups.setdefault((kind, signature), []).append(event["id"])
+                return {"groups": [{"kind": kind, "signature": signature, "event_ids": ids[-20:]}
+                                   for (kind, signature), ids in groups.items()]}
+            scan = self.run_durable_step(cycle_key, "scan-groups", {"min_occurrences": min_occurrences}, scan_groups)
+            groups = {(item["kind"], item["signature"]): item["event_ids"] for item in scan["output"]["groups"]}
             candidates = []
             self._checkpoint(cycle_key, "evaluate", "running", {"patterns": len(groups)})
+            replayed_steps = ["scan-groups"] if scan["replayed"] else []
             for (kind, signature), event_ids in groups.items():
                 if len(event_ids) < min_occurrences:
                     continue
@@ -464,24 +510,27 @@ class AutonomyStore:
                     event_ids[-20:], risk="low", confidence=min(0.99, 0.85 + 0.03 * (len(event_ids) - 2)),
                 )
                 candidate_id = candidate["id"]
-                verification = self.verify_candidate(
-                    candidate_id,
-                    lambda proposal, ids=event_ids: proposal.get("job_kind") == kind
-                    and proposal.get("failure_signature") == signature
-                    and len(ids) >= min_occurrences,
-                )
-                evaluation = self.evaluate_candidate(candidate_id)
-                if evaluation["status"] != "passed":
-                    self._checkpoint(cycle_key, "evaluate", "failed", {"candidate_id": candidate_id,
-                                                                          "evaluation": evaluation})
-                    continue
-                promoted = self.promote_candidate(candidate_id)
-                policy = self.activate_policy(candidate_id, evaluation)
-                candidates.append({"id": candidate_id, "status": promoted["status"], "verified": verification["status"],
-                                   "job_kind": kind, "occurrences": len(event_ids), "automatic": True,
-                                   "policy_id": policy["id"], "policy_version": policy["version"]})
+                def activate() -> dict[str, Any]:
+                    verification = self.verify_candidate(
+                        candidate_id,
+                        lambda proposal, ids=event_ids: proposal.get("job_kind") == kind
+                        and proposal.get("failure_signature") == signature
+                        and len(ids) >= min_occurrences,
+                    )
+                    evaluation = self.evaluate_candidate(candidate_id)
+                    if evaluation["status"] != "passed":
+                        raise RuntimeError(f"candidate evaluation failed: {candidate_id}")
+                    promoted = self.promote_candidate(candidate_id)
+                    policy = self.activate_policy(candidate_id, evaluation)
+                    return {"id": candidate_id, "status": promoted["status"], "verified": verification["status"],
+                            "job_kind": kind, "occurrences": len(event_ids), "automatic": True,
+                            "policy_id": policy["id"], "policy_version": policy["version"]}
+                step = self.run_durable_step(cycle_key, f"activate:{candidate_id}", {"event_ids": event_ids}, activate)
+                if step["replayed"]:
+                    replayed_steps.append(f"activate:{candidate_id}")
+                candidates.append(step["output"])
             result = {"status": "PASS", "patterns": len(candidates), "candidates": candidates,
-                      "resumed_from": resumed_from,
+                      "resumed_from": resumed_from, "replayed_steps": replayed_steps,
                       "checkpoint": self._checkpoint(cycle_key, "complete", "completed", {"patterns": len(candidates)})}
             return result
         except Exception as exc:
