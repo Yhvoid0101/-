@@ -195,7 +195,7 @@ SQLite/Windows runtime.
 
 - [x] Every learned policy has an immutable version and parent version.
 - [x] Candidate activation requires an executable evaluation result, not only occurrence count.
-- [x] Previous active policy can be restored automatically when evaluation regresses.
+- [x] Previous active policy can be restored through the bounded rollback operation when evaluation regresses.
 - [x] Evolution cycle persists a resumable checkpoint before and after each phase.
 - [x] Existing low-risk retry behavior and all current tests remain compatible.
 
