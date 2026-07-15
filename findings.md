@@ -556,3 +556,21 @@
 - Exact error: Author identity unknown; Git cannot auto-detect email address.
 - Root-cause hypothesis: Configure repository-local Git author identity for the authenticated GitHub account; do not alter global config.
 - Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T16:39:07+08:00
+- Command: gh repo create Yhvoid0101/codex-autonomy --private --source . --remote origin --push
+- Exact error: GraphQL: Resource not accessible by personal access token (createRepository)
+- Root-cause hypothesis: Fine-grained token lacks account-level repository creation; use existing administrator-owned empty repository Yhvoid0101/- without broadening scopes.
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T16:43:12+08:00
+- Command: gh run list --repo Yhvoid0101/- --json databaseId,name,status,conclusion,headSha,event
+- Exact error: unknown command name for gh run list; current gh schema requires workflowName instead of name
+- Root-cause hypothesis: Use gh run list supported JSON fields from the installed CLI help.
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T16:47:09+08:00
+- Command: pytest tests -q
+- Exact error: SyntaxError: unmatched parenthesis in tools/vault_quality_gate.py line 24
+- Root-cause hypothesis: Remove the extra closing parenthesis in the wiki-link guard, then rerun the complete suite.
+- Next experiment: define a changed hypothesis before retrying.

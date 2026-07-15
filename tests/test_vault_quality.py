@@ -2,7 +2,7 @@ import importlib.util
 from pathlib import Path
 
 
-MODULE = Path(r"D:\hermes\scripts\vault_quality_gate.py")
+MODULE = Path(__file__).parents[1] / "tools" / "vault_quality_gate.py"
 spec = importlib.util.spec_from_file_location("vault_quality_gate", MODULE)
 quality = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(quality)

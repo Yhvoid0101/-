@@ -14,7 +14,7 @@ from typing import Any
 import frontmatter
 
 
-QUALITY = Path(r"D:\hermes\scripts\vault_quality_gate.py")
+QUALITY = Path(__file__).with_name("vault_quality_gate.py")
 spec = importlib.util.spec_from_file_location("vault_quality_gate", QUALITY)
 quality = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(quality)

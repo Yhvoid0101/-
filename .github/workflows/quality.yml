@@ -22,7 +22,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - name: Install test dependencies
-        run: python -m pip install --upgrade pip pytest PyYAML coverage hypothesis numpy
+        run: python -m pip install --upgrade pip pytest PyYAML python-frontmatter coverage hypothesis numpy
       - name: Run tests
         env:
           CODEX_MEMORY_SEMANTIC: disabled
