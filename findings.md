@@ -634,3 +634,9 @@
 - Exact error: test_repeated_failures_create_bounded_evolution_candidate expected 2 control events but policy evaluation adds a third event
 - Root-cause hypothesis: Assert event type counts: two job_failed events and one policy_evaluated event
 - Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T18:36:49+08:00
+- Command: mcp__fullfile_index__fullfile_search evolution_candidates control_events retry_delay_multiplier
+- Exact error: FullFileIndex MCP transport closed during search
+- Root-cause hypothesis: Use already-read local source and tests for this phase; do not repeat the closed transport call
+- Next experiment: define a changed hypothesis before retrying.

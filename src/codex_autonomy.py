@@ -121,6 +121,14 @@ CREATE TABLE IF NOT EXISTS evolution_checkpoints (
   state_json TEXT NOT NULL,
   updated_at REAL NOT NULL
 );
+CREATE TABLE IF NOT EXISTS policy_outcomes (
+  id TEXT PRIMARY KEY,
+  policy_id TEXT NOT NULL,
+  passed INTEGER NOT NULL CHECK(passed IN (0,1)),
+  metrics_json TEXT NOT NULL,
+  created_at REAL NOT NULL
+);
+CREATE INDEX IF NOT EXISTS policy_outcomes_idx ON policy_outcomes(policy_id, created_at);
 """
 
 
@@ -220,12 +228,39 @@ class AutonomyStore:
         with self.connect() as db:
             db.execute("UPDATE jobs SET status='succeeded', finished_at=?, updated_at=? WHERE id=?", (now, now, job_id))
 
-    def _adaptive_delay_multiplier(self, kind: str, error: str) -> float:
+    def _active_policy(self, kind: str, error: str) -> dict[str, Any] | None:
         signature = re.sub(r"[0-9a-f]{8,}", "<id>", error, flags=re.IGNORECASE)
         with self.connect() as db:
-            rows = db.execute(
-                "SELECT proposal_json FROM evolution_candidates WHERE status='promoted' AND kind='workflow'"
-            ).fetchall()
+            row = db.execute("""SELECT * FROM evolution_policies
+                               WHERE job_kind=? AND failure_signature=? AND status='active'
+                               ORDER BY version DESC LIMIT 1""", (kind, signature)).fetchone()
+        return dict(row) if row else None
+
+    def _adaptive_delay_multiplier(self, kind: str, error: str) -> float:
+        policy = self._active_policy(kind, error)
+        if policy:
+            try:
+                proposal = json.loads(policy["proposal_json"])
+                return min(4.0, max(1.0, float(proposal.get("retry_delay_multiplier", 1.0))))
+            except (ValueError, TypeError, json.JSONDecodeError):
+                return 1.0
+        return 1.0
+
+    def record_policy_outcome(self, policy_id: str, passed: bool, metrics: dict[str, Any] | None = None) -> dict[str, Any]:
+        metrics = metrics or {}
+        with self.connect() as db:
+            policy = db.execute("SELECT status FROM evolution_policies WHERE id=?", (policy_id,)).fetchone()
+            if policy is None:
+                raise KeyError(policy_id)
+            db.execute("INSERT INTO policy_outcomes(id,policy_id,passed,metrics_json,created_at) VALUES (?,?,?,?,?)",
+                       (str(uuid.uuid4()), policy_id, int(bool(passed)), json.dumps(metrics, ensure_ascii=False)[:2000], time.time()))
+            recent = db.execute("SELECT passed FROM policy_outcomes WHERE policy_id=? ORDER BY created_at DESC LIMIT 5",
+                                (policy_id,)).fetchall()
+        failures = sum(1 for row in recent if not row[0])
+        regression = len(recent) >= 3 and failures / len(recent) > 0.5
+        rollback = self.rollback_policy(policy_id, f"automatic regression: {failures}/{len(recent)} failures") if regression and policy["status"] == "active" else None
+        return {"policy_id": policy_id, "samples": len(recent), "failures": failures,
+                "regression": regression, "rollback": rollback}
         for row in rows:
             try:
                 proposal = json.loads(row[0])
@@ -256,6 +291,11 @@ class AutonomyStore:
     def fail(self, job_id: str, error: str, *, base_delay: float = 5) -> dict[str, Any]:
         now = time.time()
         with self.connect() as db:
+            job = db.execute("SELECT kind FROM jobs WHERE id=?", (job_id,)).fetchone()
+        if job is None:
+            raise KeyError(job_id)
+        policy = self._active_policy(job["kind"], error)
+        with self.connect() as db:
             row = db.execute("SELECT attempts,max_attempts,kind FROM jobs WHERE id=?", (job_id,)).fetchone()
             if row is None:
                 raise KeyError(job_id)
@@ -264,6 +304,8 @@ class AutonomyStore:
             delay = base_delay * self._adaptive_delay_multiplier(row["kind"], error) * (2 ** max(0, row["attempts"] - 1))
             db.execute("""UPDATE jobs SET status=?, last_error=?, next_run_at=?, finished_at=?, updated_at=?
                          WHERE id=?""", (status, str(error)[:2000], now + delay, now if terminal else None, now, job_id))
+        if policy:
+            self.record_policy_outcome(policy["id"], False, {"job_id": job_id, "error": error[:500]})
         return {"status": status, "retry_in": 0 if terminal else delay}
 
     def run_once(self, executor: Callable[[Job], None]) -> dict[str, Any]:
@@ -542,10 +584,11 @@ class AutonomyStore:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Codex durable autonomy control plane")
-    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "evolution-check", "policy-rollback", "capabilities"])
+    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "evolution-check", "policy-rollback", "policy-outcome", "capabilities"])
     parser.add_argument("--db", type=Path, default=Path(r"D:\hermes\codex_memory_store\codex_autonomy.db"))
     parser.add_argument("--policy-id", default="")
     parser.add_argument("--reason", default="operator-requested rollback")
+    parser.add_argument("--passed", action="store_true")
     args = parser.parse_args()
     store = AutonomyStore(args.db)
     if args.command == "status":
@@ -562,6 +605,10 @@ def main() -> int:
         if not args.policy_id:
             parser.error("--policy-id is required for policy-rollback")
         result = store.rollback_policy(args.policy_id, args.reason)
+    elif args.command == "policy-outcome":
+        if not args.policy_id:
+            parser.error("--policy-id is required for policy-outcome")
+        result = store.record_policy_outcome(args.policy_id, args.passed, {"source": "cli"})
     else:
         result = store.capability_report()
     print(json.dumps(result, ensure_ascii=False, indent=2))

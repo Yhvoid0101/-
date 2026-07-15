@@ -89,6 +89,20 @@ def test_evolution_checkpoint_is_completed_and_reports_resume_field(tmp_path):
     assert tuple(checkpoint) == ("complete", "completed")
 
 
+def test_policy_regression_automatically_rolls_back_active_version(tmp_path):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    for index in range(2):
+        store.enqueue("sync", {}, idempotency_key=f"auto-rollback-{index}", max_attempts=1)
+        store.run_once(lambda job: (_ for _ in ()).throw(RuntimeError("unstable")))
+    policy_id = store.evolution_cycle()["candidates"][0]["policy_id"]
+    results = [store.record_policy_outcome(policy_id, False, {"sample": index}) for index in range(3)]
+    assert results[-1]["regression"] is True
+    assert results[-1]["rollback"]["status"] == "rolled_back"
+    with store.connect() as db:
+        status = db.execute("SELECT status FROM evolution_policies WHERE id=?", (policy_id,)).fetchone()[0]
+    assert status == "rolled_back"
+
+
 def test_restart_recovery_requeues_stale_running(tmp_path):
     store = autonomy.AutonomyStore(tmp_path / "state.db")
     row = store.enqueue("sync", {}, idempotency_key="recover")

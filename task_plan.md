@@ -181,6 +181,7 @@ Build a Codex-owned, MCP-accessible Obsidian memory platform with scoped retriev
 - [x] Keep code, credentials, deployment, and external writes outside automatic self-modification
 - [x] Add regression coverage for failure observation and candidate generation
 - [x] Version active policies, persist evaluations, expose rollback, and persist cycle checkpoints
+- [x] Record policy runtime outcomes and automatically rollback regressions after a guarded sample window
 - [ ] Run a multi-day soak test proving the loop changes a later routing decision without manual intervention
 
 ## Frontier Evolution Reliability Phase
@@ -201,10 +202,11 @@ SQLite/Windows runtime.
 
 ### Verification Evidence
 
-- Autonomous tests: `11 passed`; full project suite: `37 passed`.
+- Autonomous tests: `12 passed`; full project suite: `38 passed`.
 - Real `evolution-check`: `PASS`, checkpoint status `completed`.
 - Native Memory: `498/498`, semantic health `ready`, SQLite integrity `ok`.
 - Capability Gate and Evolution Audit: `PASS`.
+- Automatic regression test: 3/3 failed policy samples triggered parent-version rollback.
 
 ### Research Decision
 

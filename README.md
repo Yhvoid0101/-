@@ -31,6 +31,7 @@ vault content, credentials, logs, and temporary work are excluded from Git.
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py github-check
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py evolution-check
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py policy-rollback --policy-id <id> --reason "evaluation regression"
+& D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py policy-outcome --policy-id <id> --passed
 ```
 
 `worker` only executes the fixed memory check, GitHub snapshot, and evolution
@@ -48,3 +49,7 @@ Evolution policies are immutable and versioned. Each activation stores an
 evaluation result and parent policy; a rollback restores the previous active
 version. Evolution cycles persist checkpoints so an interrupted cycle can be
 identified and resumed safely.
+
+Active policies also receive runtime outcomes. After a minimum three-sample
+window, a failure rate above 50% automatically rolls the policy back to its
+parent version.
