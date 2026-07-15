@@ -1,0 +1,12 @@
+﻿{
+    "id":  "codex-memory-platform",
+    "name":  "codex-memory-platform",
+    "slug":  "codex-memory-platform",
+    "path":  "D:\\hermes\\codex_projects\\codex-memory-platform",
+    "description":  "Codex project",
+    "status":  "active",
+    "created":  "2026-07-14T21:39:37.1762505+08:00",
+    "updated":  "2026-07-15T14:04:00+08:00",
+    "memoryVault":  "D:\\hermes\\hermes_obsidian_vault",
+    "dailyMemory":  "D:\\hermes\\hermes_obsidian_vault\\daily\\Codex\\2026-07-15.md"
+}

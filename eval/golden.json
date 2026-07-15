@@ -1,0 +1,10 @@
+[
+  {"query": "Codex error prevention", "expected_titles": ["Error Prevention"]},
+  {"query": "native memory boundary", "expected_titles": ["Native Memory Boundary"]},
+  {"query": "memory reliability hardening", "expected_titles": ["Memory Reliability Hardening"]},
+  {"query": "canonical project organization", "expected_titles": ["Project Organization"]},
+  {"query": "automatic task memory capture", "expected_titles": ["Automatic Task Memory Capture"]},
+  {"query": "provenance journal backup", "expected_titles": ["Workflow evt-2008"]},
+  {"query": "CPU semantic BGE M3 retrieval", "expected_titles": ["Decision 6544a07a"]},
+  {"query": "native memory boundary", "expected_titles": ["Native Memory Boundary"]}
+]

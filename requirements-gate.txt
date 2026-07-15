@@ -1,0 +1,7 @@
+coverage==7.15.1
+hypothesis==6.156.6
+sortedcontainers==2.4.0
+pytest==9.1.1
+PyYAML==6.0.3
+numpy==2.5.1
+pyflakes==3.4.0

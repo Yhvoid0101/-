@@ -1,0 +1,316 @@
+{
+  "name": "codex-memory-frontier",
+  "status": "PASS",
+  "pass_at_3": true,
+  "retrieval": {
+    "cases": 8,
+    "hits_at_5": 8,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "scope_isolation": true,
+    "details": [
+      {
+        "query": "pagination error envelope",
+        "expected": "Alpha API Contract",
+        "rank": 1,
+        "titles": [
+          "Alpha API Contract"
+        ]
+      },
+      {
+        "query": "OAuth session expiry",
+        "expected": "Alpha Authentication",
+        "rank": 1,
+        "titles": [
+          "Alpha Authentication"
+        ]
+      },
+      {
+        "query": "pytest coverage integration",
+        "expected": "Alpha Testing Workflow",
+        "rank": 1,
+        "titles": [
+          "Alpha Testing Workflow"
+        ]
+      },
+      {
+        "query": "rollback health check",
+        "expected": "Alpha Deployment",
+        "rank": 1,
+        "titles": [
+          "Alpha Deployment"
+        ]
+      },
+      {
+        "query": "GraphQL resolver schema",
+        "expected": "Beta API Contract",
+        "rank": 1,
+        "titles": [
+          "Beta API Contract"
+        ]
+      },
+      {
+        "query": "service account audit",
+        "expected": "Beta Authentication",
+        "rank": 1,
+        "titles": [
+          "Beta Authentication"
+        ]
+      },
+      {
+        "query": "fuzz property snapshot",
+        "expected": "Beta Testing Workflow",
+        "rank": 1,
+        "titles": [
+          "Beta Testing Workflow"
+        ]
+      },
+      {
+        "query": "container readiness rollout",
+        "expected": "Beta Deployment",
+        "rank": 1,
+        "titles": [
+          "Beta Deployment"
+        ]
+      }
+    ]
+  },
+  "stability_runs": [
+    {
+      "cases": 8,
+      "hits_at_5": 8,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "scope_isolation": true,
+      "details": [
+        {
+          "query": "pagination error envelope",
+          "expected": "Alpha API Contract",
+          "rank": 1,
+          "titles": [
+            "Alpha API Contract"
+          ]
+        },
+        {
+          "query": "OAuth session expiry",
+          "expected": "Alpha Authentication",
+          "rank": 1,
+          "titles": [
+            "Alpha Authentication"
+          ]
+        },
+        {
+          "query": "pytest coverage integration",
+          "expected": "Alpha Testing Workflow",
+          "rank": 1,
+          "titles": [
+            "Alpha Testing Workflow"
+          ]
+        },
+        {
+          "query": "rollback health check",
+          "expected": "Alpha Deployment",
+          "rank": 1,
+          "titles": [
+            "Alpha Deployment"
+          ]
+        },
+        {
+          "query": "GraphQL resolver schema",
+          "expected": "Beta API Contract",
+          "rank": 1,
+          "titles": [
+            "Beta API Contract"
+          ]
+        },
+        {
+          "query": "service account audit",
+          "expected": "Beta Authentication",
+          "rank": 1,
+          "titles": [
+            "Beta Authentication"
+          ]
+        },
+        {
+          "query": "fuzz property snapshot",
+          "expected": "Beta Testing Workflow",
+          "rank": 1,
+          "titles": [
+            "Beta Testing Workflow"
+          ]
+        },
+        {
+          "query": "container readiness rollout",
+          "expected": "Beta Deployment",
+          "rank": 1,
+          "titles": [
+            "Beta Deployment"
+          ]
+        }
+      ]
+    },
+    {
+      "cases": 8,
+      "hits_at_5": 8,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "scope_isolation": true,
+      "details": [
+        {
+          "query": "pagination error envelope",
+          "expected": "Alpha API Contract",
+          "rank": 1,
+          "titles": [
+            "Alpha API Contract"
+          ]
+        },
+        {
+          "query": "OAuth session expiry",
+          "expected": "Alpha Authentication",
+          "rank": 1,
+          "titles": [
+            "Alpha Authentication"
+          ]
+        },
+        {
+          "query": "pytest coverage integration",
+          "expected": "Alpha Testing Workflow",
+          "rank": 1,
+          "titles": [
+            "Alpha Testing Workflow"
+          ]
+        },
+        {
+          "query": "rollback health check",
+          "expected": "Alpha Deployment",
+          "rank": 1,
+          "titles": [
+            "Alpha Deployment"
+          ]
+        },
+        {
+          "query": "GraphQL resolver schema",
+          "expected": "Beta API Contract",
+          "rank": 1,
+          "titles": [
+            "Beta API Contract"
+          ]
+        },
+        {
+          "query": "service account audit",
+          "expected": "Beta Authentication",
+          "rank": 1,
+          "titles": [
+            "Beta Authentication"
+          ]
+        },
+        {
+          "query": "fuzz property snapshot",
+          "expected": "Beta Testing Workflow",
+          "rank": 1,
+          "titles": [
+            "Beta Testing Workflow"
+          ]
+        },
+        {
+          "query": "container readiness rollout",
+          "expected": "Beta Deployment",
+          "rank": 1,
+          "titles": [
+            "Beta Deployment"
+          ]
+        }
+      ]
+    },
+    {
+      "cases": 8,
+      "hits_at_5": 8,
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "scope_isolation": true,
+      "details": [
+        {
+          "query": "pagination error envelope",
+          "expected": "Alpha API Contract",
+          "rank": 1,
+          "titles": [
+            "Alpha API Contract"
+          ]
+        },
+        {
+          "query": "OAuth session expiry",
+          "expected": "Alpha Authentication",
+          "rank": 1,
+          "titles": [
+            "Alpha Authentication"
+          ]
+        },
+        {
+          "query": "pytest coverage integration",
+          "expected": "Alpha Testing Workflow",
+          "rank": 1,
+          "titles": [
+            "Alpha Testing Workflow"
+          ]
+        },
+        {
+          "query": "rollback health check",
+          "expected": "Alpha Deployment",
+          "rank": 1,
+          "titles": [
+            "Alpha Deployment"
+          ]
+        },
+        {
+          "query": "GraphQL resolver schema",
+          "expected": "Beta API Contract",
+          "rank": 1,
+          "titles": [
+            "Beta API Contract"
+          ]
+        },
+        {
+          "query": "service account audit",
+          "expected": "Beta Authentication",
+          "rank": 1,
+          "titles": [
+            "Beta Authentication"
+          ]
+        },
+        {
+          "query": "fuzz property snapshot",
+          "expected": "Beta Testing Workflow",
+          "rank": 1,
+          "titles": [
+            "Beta Testing Workflow"
+          ]
+        },
+        {
+          "query": "container readiness rollout",
+          "expected": "Beta Deployment",
+          "rank": 1,
+          "titles": [
+            "Beta Deployment"
+          ]
+        }
+      ]
+    }
+  ],
+  "lifecycle": {
+    "idempotent_replay": true,
+    "conflict_resolved": true,
+    "audit_ok": true,
+    "expiration": true,
+    "first_id": "eval-idempotent-1"
+  },
+  "backup": {
+    "path": "D:\\hermes\\codex_memory_store\\backups\\20260715_130905\\codex_memory.db",
+    "notes": 10,
+    "fts_docs": 10,
+    "integrity_check": "ok",
+    "manifest": "D:\\hermes\\codex_memory_store\\backups\\20260715_130905\\manifest.json",
+    "manifest_verified": true,
+    "verified": true,
+    "restore_drill": true
+  }
+}
