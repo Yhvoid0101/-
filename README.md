@@ -2,6 +2,9 @@
 
 Canonical Codex-owned memory runtime for the Obsidian vault.
 
+The versioned source mirror is hosted at `Yhvoid0101/-`; local databases,
+vault content, credentials, logs, and temporary work are excluded from Git.
+
 ## Capabilities
 
 - SQLite WAL + FTS5 durable index
