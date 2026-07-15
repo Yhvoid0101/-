@@ -32,6 +32,8 @@ vault content, credentials, logs, and temporary work are excluded from Git.
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py evolution-check
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py policy-rollback --policy-id <id> --reason "evaluation regression"
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py policy-outcome --policy-id <id> --passed
+& D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py audit
+& D:\hermes\.venv\Scripts\python.exe tools\evolution_soak.py --cycles 100
 ```
 
 `worker` only executes the fixed memory check, GitHub snapshot, and evolution
@@ -56,3 +58,7 @@ parent version.
 
 Evolution steps persist input hashes and outputs. Re-running a completed step
 replays its stored output instead of repeating the side effect.
+
+`audit` checks policy, checkpoint, and step-event invariants. The isolated soak
+harness exercises repeated failure injection and replay without touching the
+production database.

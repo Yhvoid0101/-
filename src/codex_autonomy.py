@@ -589,6 +589,37 @@ class AutonomyStore:
                        (str(uuid.uuid4()), "policy_rollback", json.dumps({"policy_id": policy_id, "reason": reason[:500]}), time.time()))
         return {"id": policy_id, "status": "rolled_back", "restored_parent": policy["parent_id"]}
 
+    def audit_invariants(self) -> dict[str, Any]:
+        """Audit durable evolution state and fail closed on structural corruption."""
+        issues: list[str] = []
+        with self.connect() as db:
+            duplicate_active = db.execute("""SELECT job_kind,failure_signature,COUNT(*) FROM evolution_policies
+                                              WHERE status='active' GROUP BY job_kind,failure_signature HAVING COUNT(*) > 1""").fetchall()
+            issues.extend(f"multiple active policies: {row[0]}:{row[1]}" for row in duplicate_active)
+            for row in db.execute("SELECT id,version,parent_id,status FROM evolution_policies").fetchall():
+                if row[1] > 1 and not row[2]:
+                    issues.append(f"missing parent: {row[0]}")
+                if row[3] == "active":
+                    evaluation = db.execute("SELECT evaluation_json FROM evolution_policies WHERE id=?", (row[0],)).fetchone()[0]
+                    try:
+                        if json.loads(evaluation).get("status") != "passed":
+                            issues.append(f"active policy without passed evaluation: {row[0]}")
+                    except json.JSONDecodeError:
+                        issues.append(f"invalid evaluation: {row[0]}")
+            empty_steps = db.execute("""SELECT cycle_key,step_name FROM evolution_step_events
+                                       WHERE status='completed' AND (output_json='' OR output_json='{}')""").fetchall()
+            issues.extend(f"completed step without output: {row[0]}:{row[1]}" for row in empty_steps)
+            invalid_checkpoints = db.execute("""SELECT cycle_key FROM evolution_checkpoints
+                                               WHERE status NOT IN ('running','completed','failed')""").fetchall()
+            issues.extend(f"invalid checkpoint: {row[0]}" for row in invalid_checkpoints)
+            counts = {
+                "policies": db.execute("SELECT COUNT(*) FROM evolution_policies").fetchone()[0],
+                "active_policies": db.execute("SELECT COUNT(*) FROM evolution_policies WHERE status='active'").fetchone()[0],
+                "step_events": db.execute("SELECT COUNT(*) FROM evolution_step_events").fetchone()[0],
+                "checkpoints": db.execute("SELECT COUNT(*) FROM evolution_checkpoints").fetchone()[0],
+            }
+        return {"status": "PASS" if not issues else "BLOCKED", "issues": issues, "counts": counts}
+
     def propose(self, kind: str, title: str, proposal: dict[str, Any], evidence: list[str],
                 *, risk: str = "medium", confidence: float = 0.8) -> dict[str, Any]:
         if kind not in {"memory", "skill", "workflow"} or risk not in {"low", "medium", "high"}:
@@ -633,7 +664,7 @@ class AutonomyStore:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Codex durable autonomy control plane")
-    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "evolution-check", "policy-rollback", "policy-outcome", "capabilities"])
+    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "evolution-check", "policy-rollback", "policy-outcome", "audit", "capabilities"])
     parser.add_argument("--db", type=Path, default=Path(r"D:\hermes\codex_memory_store\codex_autonomy.db"))
     parser.add_argument("--policy-id", default="")
     parser.add_argument("--reason", default="operator-requested rollback")
@@ -658,6 +689,8 @@ def main() -> int:
         if not args.policy_id:
             parser.error("--policy-id is required for policy-outcome")
         result = store.record_policy_outcome(args.policy_id, args.passed, {"source": "cli"})
+    elif args.command == "audit":
+        result = store.audit_invariants()
     else:
         result = store.capability_report()
     print(json.dumps(result, ensure_ascii=False, indent=2))

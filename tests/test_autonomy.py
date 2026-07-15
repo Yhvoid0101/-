@@ -118,6 +118,14 @@ def test_durable_step_replays_completed_output_without_reexecuting(tmp_path):
     assert calls == ["executed"]
 
 
+def test_audit_invariants_pass_for_versioned_replay_state(tmp_path):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    store.evolution_cycle(cycle_key="audit-cycle")
+    report = store.audit_invariants()
+    assert report["status"] == "PASS"
+    assert report["counts"]["checkpoints"] == 1
+
+
 def test_restart_recovery_requeues_stale_running(tmp_path):
     store = autonomy.AutonomyStore(tmp_path / "state.db")
     row = store.enqueue("sync", {}, idempotency_key="recover")

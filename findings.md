@@ -646,3 +646,15 @@
 - Exact error: policy version test expected version 2 but durable replay correctly returned version 1 for the same evolution cycle key
 - Root-cause hypothesis: Expose an explicit cycle_key argument so tests can distinguish same-cycle replay from a new-cycle evaluation
 - Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T18:57:47+08:00
+- Command: python tools/evolution_soak.py --cycles 100
+- Exact error: Python 3.14 dataclass import failed because dynamically loaded codex_autonomy module was not registered in sys.modules
+- Root-cause hypothesis: Register the dynamically loaded module in sys.modules before exec_module
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T18:59:33+08:00
+- Command: python tools/evolution_soak.py --cycles 100
+- Exact error: Windows cleanup hit WinError 32 because the temporary SQLite file handle remained open after the soak loop
+- Root-cause hypothesis: Explicitly delete the store reference and force garbage collection before TemporaryDirectory cleanup
+- Next experiment: define a changed hypothesis before retrying.
