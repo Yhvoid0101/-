@@ -30,6 +30,7 @@ vault content, credentials, logs, and temporary work are excluded from Git.
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py worker
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py github-check
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py evolution-check
+& D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py policy-rollback --policy-id <id> --reason "evaluation regression"
 ```
 
 `worker` only executes the fixed memory check, GitHub snapshot, and evolution
@@ -42,3 +43,8 @@ Every worker outcome is stored as a redacted control event. Repeated low-risk
 failures are automatically verified and promoted when their evidence matches;
 the resulting bounded retry policy changes later scheduling. Code, credentials,
 deployment, and external write behavior never self-modify.
+
+Evolution policies are immutable and versioned. Each activation stores an
+evaluation result and parent policy; a rollback restores the previous active
+version. Evolution cycles persist checkpoints so an interrupted cycle can be
+identified and resumed safely.

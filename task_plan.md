@@ -180,4 +180,37 @@ Build a Codex-owned, MCP-accessible Obsidian memory platform with scoped retriev
 - [x] Apply promoted bounded retry policy to later matching failures without manual confirmation
 - [x] Keep code, credentials, deployment, and external writes outside automatic self-modification
 - [x] Add regression coverage for failure observation and candidate generation
+- [x] Version active policies, persist evaluations, expose rollback, and persist cycle checkpoints
 - [ ] Run a multi-day soak test proving the loop changes a later routing decision without manual intervention
+
+## Frontier Evolution Reliability Phase
+
+### Objective
+
+Upgrade automatic self-evolution from direct promotion to versioned, evaluated,
+rollback-capable policy deployment with interruption recovery on the current
+SQLite/Windows runtime.
+
+### Acceptance Criteria
+
+- [x] Every learned policy has an immutable version and parent version.
+- [x] Candidate activation requires an executable evaluation result, not only occurrence count.
+- [x] Previous active policy can be restored automatically when evaluation regresses.
+- [x] Evolution cycle persists a resumable checkpoint before and after each phase.
+- [x] Existing low-risk retry behavior and all current tests remain compatible.
+
+### Verification Evidence
+
+- Autonomous tests: `11 passed`; full project suite: `37 passed`.
+- Real `evolution-check`: `PASS`, checkpoint status `completed`.
+- Native Memory: `498/498`, semantic health `ready`, SQLite integrity `ok`.
+- Capability Gate and Evolution Audit: `PASS`.
+
+### Research Decision
+
+- Adopt the principles of LangGraph checkpoints, Temporal durable workflow history,
+  Letta layered memory, and OpenAI Agents guardrails.
+- Extend the existing SQLite control plane rather than adding a heavyweight
+  distributed runtime that does not fit the E3-1230v3/32GB local environment.
+- Build only the missing policy lifecycle, evaluation, rollback, and checkpoint
+  primitives in this phase.

@@ -616,3 +616,21 @@
 - Exact error: test_repeated_failures_create_bounded_evolution_candidate expected pending but first independent fixture job reached dead because max_attempts=2 and queue ordering retried the same job
 - Root-cause hypothesis: Use max_attempts=1 for each independent fixture job so two distinct failure events are produced without depending on queue ordering
 - Next experiment: define a changed hypothesis before retrying.
+
+## Search-First Decision 2026-07-15
+
+- Existing implementation: SQLite jobs, control events, and evidence-gated candidates; no policy version table, evaluation history, rollback record, or evolution checkpoint.
+- External evidence: LangGraph checkpointers, Temporal durable execution, Letta core/archival memory, and OpenAI Agents guardrails/tracing were reviewed as mature reference patterns.
+- Decision: Extend the current SQLite control plane with immutable policy versions, executable evaluation, rollback, and resumable checkpoints; do not add a heavyweight distributed dependency on this hardware.
+
+### Failure 2026-07-15T18:16:45+08:00
+- Command: mcp__codegraph__codegraph_status projectPath=D:/hermes/codex_projects/codex-memory-platform
+- Exact error: CodeGraph not initialized in D:/hermes/codex_projects/codex-memory-platform
+- Root-cause hypothesis: This independent repository has no CodeGraph index; use existing FullFileIndex and direct tests for this phase and do not repeat the same query
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T18:19:15+08:00
+- Command: pytest tests/test_autonomy.py
+- Exact error: test_repeated_failures_create_bounded_evolution_candidate expected 2 control events but policy evaluation adds a third event
+- Root-cause hypothesis: Assert event type counts: two job_failed events and one policy_evaluated event
+- Next experiment: define a changed hypothesis before retrying.

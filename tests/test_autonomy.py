@@ -42,7 +42,10 @@ def test_repeated_failures_create_bounded_evolution_candidate(tmp_path):
     assert report["patterns"] == 1
     assert report["candidates"][0]["status"] == "promoted"
     assert report["candidates"][0]["automatic"] is True
-    assert store.status()["control_events"] == 2
+    with store.connect() as db:
+        event_types = [row[0] for row in db.execute("SELECT event_type FROM control_events ORDER BY created_at")]
+    assert event_types.count("job_failed") == 2
+    assert event_types.count("policy_evaluated") == 1
 
 
 def test_promoted_learning_policy_changes_future_retry_delay(tmp_path):
@@ -57,6 +60,33 @@ def test_promoted_learning_policy_changes_future_retry_delay(tmp_path):
     with store.connect() as db:
         saved = db.execute("SELECT next_run_at,updated_at FROM jobs WHERE id=?", (row["id"],)).fetchone()
     assert saved[0] - saved[1] >= 9.0
+
+
+def test_policy_versions_and_rollback_restore_previous_delay(tmp_path):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    for index in range(2):
+        store.enqueue("sync", {}, idempotency_key=f"version-{index}", max_attempts=1)
+        store.run_once(lambda job: (_ for _ in ()).throw(RuntimeError("versioned")))
+    first = store.evolution_cycle()
+    first_policy = first["candidates"][0]["policy_id"]
+    for index in range(2, 4):
+        store.enqueue("sync", {}, idempotency_key=f"version-{index}", max_attempts=1)
+        store.run_once(lambda job: (_ for _ in ()).throw(RuntimeError("versioned")))
+    second = store.evolution_cycle()
+    second_policy = second["candidates"][0]["policy_id"]
+    assert second["candidates"][0]["policy_version"] == 2
+    assert store.rollback_policy(second_policy, "evaluation regression")["restored_parent"] == first_policy
+    assert store._adaptive_delay_multiplier("sync", "RuntimeError: versioned") == 2.0
+
+
+def test_evolution_checkpoint_is_completed_and_reports_resume_field(tmp_path):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    report = store.evolution_cycle()
+    assert report["checkpoint"]["status"] == "completed"
+    assert report["resumed_from"] == ""
+    with store.connect() as db:
+        checkpoint = db.execute("SELECT phase,status FROM evolution_checkpoints").fetchone()
+    assert tuple(checkpoint) == ("complete", "completed")
 
 
 def test_restart_recovery_requeues_stale_running(tmp_path):

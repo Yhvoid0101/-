@@ -98,6 +98,29 @@ CREATE TABLE IF NOT EXISTS control_events (
   payload_json TEXT NOT NULL,
   created_at REAL NOT NULL
 );
+CREATE TABLE IF NOT EXISTS evolution_policies (
+  id TEXT PRIMARY KEY,
+  candidate_id TEXT NOT NULL,
+  job_kind TEXT NOT NULL,
+  failure_signature TEXT NOT NULL,
+  version INTEGER NOT NULL,
+  parent_id TEXT NOT NULL DEFAULT '',
+  status TEXT NOT NULL CHECK(status IN ('active','retired','rolled_back')),
+  proposal_json TEXT NOT NULL,
+  evaluation_json TEXT NOT NULL,
+  created_at REAL NOT NULL,
+  activated_at REAL,
+  retired_at REAL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS evolution_policy_version_idx
+  ON evolution_policies(job_kind, failure_signature, version);
+CREATE TABLE IF NOT EXISTS evolution_checkpoints (
+  cycle_key TEXT PRIMARY KEY,
+  phase TEXT NOT NULL,
+  status TEXT NOT NULL CHECK(status IN ('running','completed','failed')),
+  state_json TEXT NOT NULL,
+  updated_at REAL NOT NULL
+);
 """
 
 
@@ -211,6 +234,24 @@ class AutonomyStore:
             if proposal.get("job_kind") == kind and proposal.get("failure_signature") == signature:
                 return min(4.0, max(1.0, float(proposal.get("retry_delay_multiplier", 1.0))))
         return 1.0
+
+    def _checkpoint(self, cycle_key: str, phase: str, status: str, state: dict[str, Any]) -> dict[str, Any]:
+        payload = json.dumps(state, ensure_ascii=False, sort_keys=True)[:4000]
+        with self.connect() as db:
+            db.execute(
+                """INSERT INTO evolution_checkpoints(cycle_key,phase,status,state_json,updated_at)
+                   VALUES (?,?,?,?,?)
+                   ON CONFLICT(cycle_key) DO UPDATE SET phase=excluded.phase,status=excluded.status,
+                   state_json=excluded.state_json,updated_at=excluded.updated_at""",
+                (cycle_key, phase, status, payload, time.time()),
+            )
+            row = db.execute("SELECT * FROM evolution_checkpoints WHERE cycle_key=?", (cycle_key,)).fetchone()
+        return dict(row)
+
+    def _get_checkpoint(self, cycle_key: str) -> dict[str, Any] | None:
+        with self.connect() as db:
+            row = db.execute("SELECT * FROM evolution_checkpoints WHERE cycle_key=?", (cycle_key,)).fetchone()
+        return dict(row) if row else None
 
     def fail(self, job_id: str, error: str, *, base_delay: float = 5) -> dict[str, Any]:
         now = time.time()
@@ -347,44 +388,115 @@ class AutonomyStore:
         return self.run_once(execute)
 
     def evolution_cycle(self, *, min_occurrences: int = 2) -> dict[str, Any]:
-        """Turn repeated verified runtime failures into bounded improvement candidates."""
+        """Turn repeated failures into evaluated, versioned, rollback-capable policies."""
+        cycle_key = f"evolution:{int(time.time() // 600)}"
+        previous = self._get_checkpoint(cycle_key)
+        resumed_from = previous["phase"] if previous and previous["status"] != "completed" else ""
+        self._checkpoint(cycle_key, "scan", "running", {"min_occurrences": min_occurrences})
+        try:
+            with self.connect() as db:
+                events = db.execute(
+                    "SELECT id,payload_json FROM control_events WHERE event_type='job_failed' ORDER BY created_at"
+                ).fetchall()
+            groups: dict[tuple[str, str], list[str]] = {}
+            for event in events:
+                try:
+                    payload = json.loads(event["payload_json"])
+                except json.JSONDecodeError:
+                    continue
+                kind = str(payload.get("kind", "unknown"))
+                error = str(payload.get("error", "unknown"))
+                signature = re.sub(r"[0-9a-f]{8,}", "<id>", error, flags=re.IGNORECASE)
+                groups.setdefault((kind, signature), []).append(event["id"])
+            candidates = []
+            self._checkpoint(cycle_key, "evaluate", "running", {"patterns": len(groups)})
+            for (kind, signature), event_ids in groups.items():
+                if len(event_ids) < min_occurrences:
+                    continue
+                candidate = self.propose(
+                    "workflow",
+                    f"repeated failure: {kind}",
+                    {"job_kind": kind, "failure_signature": signature,
+                     "recommended_action": "increase bounded retry delay for this repeated failure",
+                     "retry_delay_multiplier": 2.0},
+                    event_ids[-20:], risk="low", confidence=min(0.99, 0.85 + 0.03 * (len(event_ids) - 2)),
+                )
+                candidate_id = candidate["id"]
+                verification = self.verify_candidate(
+                    candidate_id,
+                    lambda proposal, ids=event_ids: proposal.get("job_kind") == kind
+                    and proposal.get("failure_signature") == signature
+                    and len(ids) >= min_occurrences,
+                )
+                evaluation = self.evaluate_candidate(candidate_id)
+                if evaluation["status"] != "passed":
+                    self._checkpoint(cycle_key, "evaluate", "failed", {"candidate_id": candidate_id,
+                                                                          "evaluation": evaluation})
+                    continue
+                promoted = self.promote_candidate(candidate_id)
+                policy = self.activate_policy(candidate_id, evaluation)
+                candidates.append({"id": candidate_id, "status": promoted["status"], "verified": verification["status"],
+                                   "job_kind": kind, "occurrences": len(event_ids), "automatic": True,
+                                   "policy_id": policy["id"], "policy_version": policy["version"]})
+            result = {"status": "PASS", "patterns": len(candidates), "candidates": candidates,
+                      "resumed_from": resumed_from,
+                      "checkpoint": self._checkpoint(cycle_key, "complete", "completed", {"patterns": len(candidates)})}
+            return result
+        except Exception as exc:
+            self._checkpoint(cycle_key, "failed", "failed", {"error": str(exc)[:1500]})
+            raise
+
+    def evaluate_candidate(self, candidate_id: str) -> dict[str, Any]:
         with self.connect() as db:
-            events = db.execute(
-                "SELECT id,payload_json FROM control_events WHERE event_type='job_failed' ORDER BY created_at"
-            ).fetchall()
-        groups: dict[tuple[str, str], list[str]] = {}
-        for event in events:
-            try:
-                payload = json.loads(event["payload_json"])
-            except json.JSONDecodeError:
-                continue
-            kind = str(payload.get("kind", "unknown"))
-            error = str(payload.get("error", "unknown"))
-            signature = re.sub(r"[0-9a-f]{8,}", "<id>", error, flags=re.IGNORECASE)
-            groups.setdefault((kind, signature), []).append(event["id"])
-        candidates = []
-        for (kind, signature), event_ids in groups.items():
-            if len(event_ids) < min_occurrences:
-                continue
-            candidate = self.propose(
-                "workflow",
-                f"repeated failure: {kind}",
-                {"job_kind": kind, "failure_signature": signature,
-                 "recommended_action": "increase bounded retry delay for this repeated failure",
-                 "retry_delay_multiplier": 2.0},
-                event_ids[-20:], risk="low", confidence=min(0.99, 0.85 + 0.03 * (len(event_ids) - 2)),
-            )
-            candidate_id = candidate["id"]
-            verification = self.verify_candidate(
-                candidate_id,
-                lambda proposal, ids=event_ids: proposal.get("job_kind") == kind
-                and proposal.get("failure_signature") == signature
-                and len(ids) >= min_occurrences,
-            )
-            promoted = self.promote_candidate(candidate_id)
-            candidates.append({"id": candidate_id, "status": promoted["status"], "verified": verification["status"],
-                               "job_kind": kind, "occurrences": len(event_ids), "automatic": True})
-        return {"status": "PASS", "patterns": len(candidates), "candidates": candidates}
+            row = db.execute("SELECT proposal_json,status FROM evolution_candidates WHERE id=?", (candidate_id,)).fetchone()
+        if row is None:
+            raise KeyError(candidate_id)
+        proposal = json.loads(row["proposal_json"])
+        multiplier = proposal.get("retry_delay_multiplier")
+        passed = (row["status"] == "verified" and proposal.get("job_kind") and proposal.get("failure_signature")
+                  and isinstance(multiplier, (int, float)) and 1.0 <= float(multiplier) <= 4.0)
+        result = {"status": "passed" if passed else "failed", "baseline_delay": 5.0,
+                  "candidate_delay": 5.0 * float(multiplier or 0), "regression": not passed}
+        with self.connect() as db:
+            db.execute("INSERT INTO control_events(id,event_type,payload_json,created_at) VALUES (?,?,?,?)",
+                       (str(uuid.uuid4()), "policy_evaluated", json.dumps({"candidate_id": candidate_id, **result}), time.time()))
+        return result
+
+    def activate_policy(self, candidate_id: str, evaluation: dict[str, Any]) -> dict[str, Any]:
+        with self.connect() as db:
+            candidate = db.execute("SELECT proposal_json FROM evolution_candidates WHERE id=?", (candidate_id,)).fetchone()
+            if candidate is None:
+                raise KeyError(candidate_id)
+            proposal = json.loads(candidate["proposal_json"])
+            job_kind, signature = proposal["job_kind"], proposal["failure_signature"]
+            parent = db.execute("""SELECT * FROM evolution_policies WHERE job_kind=? AND failure_signature=?
+                                  AND status='active' ORDER BY version DESC LIMIT 1""", (job_kind, signature)).fetchone()
+            version = int(db.execute("SELECT COALESCE(MAX(version),0)+1 FROM evolution_policies WHERE job_kind=? AND failure_signature=?",
+                                     (job_kind, signature)).fetchone()[0])
+            policy_id = str(uuid.uuid4())
+            now = time.time()
+            if parent:
+                db.execute("UPDATE evolution_policies SET status='retired',retired_at=? WHERE id=?", (now, parent["id"]))
+            db.execute("""INSERT INTO evolution_policies
+                (id,candidate_id,job_kind,failure_signature,version,parent_id,status,proposal_json,evaluation_json,created_at,activated_at)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?)""",
+                       (policy_id, candidate_id, job_kind, signature, version, parent["id"] if parent else "", "active",
+                        json.dumps(proposal, ensure_ascii=False), json.dumps(evaluation, ensure_ascii=False), now, now))
+        return {"id": policy_id, "version": version, "parent_id": parent["id"] if parent else "", "status": "active"}
+
+    def rollback_policy(self, policy_id: str, reason: str) -> dict[str, Any]:
+        with self.connect() as db:
+            policy = db.execute("SELECT parent_id,status FROM evolution_policies WHERE id=?", (policy_id,)).fetchone()
+            if policy is None:
+                raise KeyError(policy_id)
+            if policy["status"] != "active":
+                return {"id": policy_id, "status": policy["status"]}
+            db.execute("UPDATE evolution_policies SET status='rolled_back',retired_at=? WHERE id=?", (time.time(), policy_id))
+            if policy["parent_id"]:
+                db.execute("UPDATE evolution_policies SET status='active',activated_at=? WHERE id=?", (time.time(), policy["parent_id"]))
+            db.execute("INSERT INTO control_events(id,event_type,payload_json,created_at) VALUES (?,?,?,?)",
+                       (str(uuid.uuid4()), "policy_rollback", json.dumps({"policy_id": policy_id, "reason": reason[:500]}), time.time()))
+        return {"id": policy_id, "status": "rolled_back", "restored_parent": policy["parent_id"]}
 
     def propose(self, kind: str, title: str, proposal: dict[str, Any], evidence: list[str],
                 *, risk: str = "medium", confidence: float = 0.8) -> dict[str, Any]:
@@ -430,8 +542,10 @@ class AutonomyStore:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Codex durable autonomy control plane")
-    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "evolution-check", "capabilities"])
+    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "evolution-check", "policy-rollback", "capabilities"])
     parser.add_argument("--db", type=Path, default=Path(r"D:\hermes\codex_memory_store\codex_autonomy.db"))
+    parser.add_argument("--policy-id", default="")
+    parser.add_argument("--reason", default="operator-requested rollback")
     args = parser.parse_args()
     store = AutonomyStore(args.db)
     if args.command == "status":
@@ -444,6 +558,10 @@ def main() -> int:
         result = store.github_snapshot()
     elif args.command == "evolution-check":
         result = store.evolution_cycle()
+    elif args.command == "policy-rollback":
+        if not args.policy_id:
+            parser.error("--policy-id is required for policy-rollback")
+        result = store.rollback_policy(args.policy_id, args.reason)
     else:
         result = store.capability_report()
     print(json.dumps(result, ensure_ascii=False, indent=2))
