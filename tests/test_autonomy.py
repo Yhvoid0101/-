@@ -96,8 +96,10 @@ def test_worker_enqueues_github_check_idempotently(tmp_path, monkeypatch):
     script.write_text("", encoding="utf-8")
     monkeypatch.setenv("CODEX_MEMORY_AUTOMATION", str(script))
     monkeypatch.setattr(store, "github_snapshot", lambda: {"status": "PASS"})
-    first = store.builtin_worker_once()
-    assert first["status"] == "succeeded"
+    results = [store.builtin_worker_once(), store.builtin_worker_once()]
+    assert any(result["status"] == "succeeded" for result in results)
     with store.connect() as db:
-        kinds = {row["kind"] for row in db.execute("SELECT kind FROM jobs")}
+        rows = list(db.execute("SELECT kind,status FROM jobs"))
+    kinds = {row["kind"] for row in rows}
     assert kinds == {"memory-check", "github-check"}
+    assert dict(rows)["github-check"] == "succeeded"

@@ -579,9 +579,34 @@
 - Command: pytest tests -q
 - Exact error: NameError: name re is not defined in AutonomyStore.github_snapshot
 - Root-cause hypothesis: Add the missing standard-library re import, then rerun the full suite.
-- Next experiment: define a changed hypothesis before retrying.`n
+- Next experiment: define a changed hypothesis before retrying.
+
 ### Failure 2026-07-15T17:08:11+08:00
 - Command: Native Memory status after routed preflight
 - Exact error: ONNXRuntime bad allocation
 - Root-cause hypothesis: Semantic worker initialization was retried during preflight and exceeded current E3 memory pressure despite serialized policy
-- Next experiment: define a changed hypothesis before retrying.`n
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T17:15:47+08:00
+- Command: gh run list with conclusion field
+- Exact error: unknown command conclusion for gh run list
+- Root-cause hypothesis: installed gh CLI exposes status but not conclusion in run list JSON fields; query only supported fields
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T17:16:21+08:00
+- Command: gh run list with status field
+- Exact error: unknown command status for gh run list
+- Root-cause hypothesis: this gh version has a reduced JSON field set; stop guessing fields and use plain run list or gh api
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T17:18:54+08:00
+- Command: GitHub Actions run 29403788641 pytest tests -q
+- Exact error: test_worker_enqueues_github_check_idempotently expected succeeded but got pending on Python 3.12 and 3.13
+- Root-cause hypothesis: worker claims one of two newly enqueued fixed jobs nondeterministically; test must not assume which job is claimed first
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T17:25:10+08:00
+- Command: PowerShell targeted findings newline normalization
+- Exact error: String.Replace oldChar received a multi-character string literal
+- Root-cause hypothesis: Use regex replacement for the literal backtick-n marker and normalize only the three newly appended failure blocks
+- Next experiment: define a changed hypothesis before retrying.
