@@ -610,3 +610,9 @@
 - Exact error: String.Replace oldChar received a multi-character string literal
 - Root-cause hypothesis: Use regex replacement for the literal backtick-n marker and normalize only the three newly appended failure blocks
 - Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T17:48:04+08:00
+- Command: pytest tests/test_autonomy.py
+- Exact error: test_repeated_failures_create_bounded_evolution_candidate expected pending but first independent fixture job reached dead because max_attempts=2 and queue ordering retried the same job
+- Root-cause hypothesis: Use max_attempts=1 for each independent fixture job so two distinct failure events are produced without depending on queue ordering
+- Next experiment: define a changed hypothesis before retrying.

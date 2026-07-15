@@ -129,6 +129,18 @@ class AutonomyStore:
         with self.connect() as db:
             db.executescript(SCHEMA)
 
+    def record_control_event(self, event_type: str, payload: dict[str, Any]) -> str:
+        """Persist a bounded, redacted learning signal for later evolution analysis."""
+        safe = json.dumps(payload, ensure_ascii=False)
+        safe = re.sub(r"(?i)(token|password|secret|api[_-]?key)\s*[:=]\s*[^,}\s]+", r"\1=[REDACTED]", safe)
+        event_id = str(uuid.uuid4())
+        with self.connect() as db:
+            db.execute(
+                "INSERT INTO control_events(id,event_type,payload_json,created_at) VALUES (?,?,?,?)",
+                (event_id, event_type, safe[:4000], time.time()),
+            )
+        return event_id
+
     def enqueue(self, kind: str, payload: dict[str, Any], *, idempotency_key: str,
                 max_attempts: int = 3, delay_seconds: float = 0) -> dict[str, Any]:
         if not idempotency_key.strip():
@@ -185,15 +197,30 @@ class AutonomyStore:
         with self.connect() as db:
             db.execute("UPDATE jobs SET status='succeeded', finished_at=?, updated_at=? WHERE id=?", (now, now, job_id))
 
+    def _adaptive_delay_multiplier(self, kind: str, error: str) -> float:
+        signature = re.sub(r"[0-9a-f]{8,}", "<id>", error, flags=re.IGNORECASE)
+        with self.connect() as db:
+            rows = db.execute(
+                "SELECT proposal_json FROM evolution_candidates WHERE status='promoted' AND kind='workflow'"
+            ).fetchall()
+        for row in rows:
+            try:
+                proposal = json.loads(row[0])
+            except json.JSONDecodeError:
+                continue
+            if proposal.get("job_kind") == kind and proposal.get("failure_signature") == signature:
+                return min(4.0, max(1.0, float(proposal.get("retry_delay_multiplier", 1.0))))
+        return 1.0
+
     def fail(self, job_id: str, error: str, *, base_delay: float = 5) -> dict[str, Any]:
         now = time.time()
         with self.connect() as db:
-            row = db.execute("SELECT attempts,max_attempts FROM jobs WHERE id=?", (job_id,)).fetchone()
+            row = db.execute("SELECT attempts,max_attempts,kind FROM jobs WHERE id=?", (job_id,)).fetchone()
             if row is None:
                 raise KeyError(job_id)
             terminal = row["attempts"] >= row["max_attempts"]
             status = "dead" if terminal else "pending"
-            delay = base_delay * (2 ** max(0, row["attempts"] - 1))
+            delay = base_delay * self._adaptive_delay_multiplier(row["kind"], error) * (2 ** max(0, row["attempts"] - 1))
             db.execute("""UPDATE jobs SET status=?, last_error=?, next_run_at=?, finished_at=?, updated_at=?
                          WHERE id=?""", (status, str(error)[:2000], now + delay, now if terminal else None, now, job_id))
         return {"status": status, "retry_in": 0 if terminal else delay}
@@ -207,8 +234,13 @@ class AutonomyStore:
             executor(job)
         except Exception as exc:  # persist exact bounded failure before returning
             result = self.fail(job.id, f"{type(exc).__name__}: {exc}")
+            self.record_control_event("job_failed", {
+                "job_id": job.id, "kind": job.kind, "attempt": job.attempts,
+                "error": f"{type(exc).__name__}: {exc}"[:1500], "status": result["status"],
+            })
             return {"status": result["status"], "job_id": job.id, "error": str(exc), "retry_in": result["retry_in"]}
         self.succeed(job.id)
+        self.record_control_event("job_succeeded", {"job_id": job.id, "kind": job.kind, "attempt": job.attempts})
         return {"status": "succeeded", "job_id": job.id}
 
     def status(self) -> dict[str, Any]:
@@ -216,9 +248,12 @@ class AutonomyStore:
             rows = db.execute("SELECT status,COUNT(*) AS n FROM jobs GROUP BY status").fetchall()
             candidates = db.execute("SELECT status,COUNT(*) AS n FROM evolution_candidates GROUP BY status").fetchall()
             integrity = db.execute("PRAGMA integrity_check").fetchone()[0]
+        with self.connect() as db:
+            event_count = db.execute("SELECT COUNT(*) FROM control_events").fetchone()[0]
         return {"db": str(self.db_path), "integrity_check": integrity,
                 "jobs": {r["status"]: r["n"] for r in rows},
-                "evolution": {r["status"]: r["n"] for r in candidates}}
+                "evolution": {r["status"]: r["n"] for r in candidates},
+                "control_events": event_count}
 
     def capability_report(self) -> dict[str, Any]:
         """Report real local capability prerequisites without exposing values."""
@@ -289,6 +324,7 @@ class AutonomyStore:
         bucket = int(time.time() // 600)
         self.enqueue("memory-check", {"bucket": bucket}, idempotency_key=f"memory-check:{bucket}", max_attempts=2)
         self.enqueue("github-check", {"bucket": bucket}, idempotency_key=f"github-check:{bucket}", max_attempts=2)
+        self.enqueue("evolution-check", {"bucket": bucket}, idempotency_key=f"evolution-check:{bucket}", max_attempts=2)
 
         def execute(job: Job) -> None:
             if job.kind == "memory-check":
@@ -303,10 +339,52 @@ class AutonomyStore:
                     raise RuntimeError((completed.stderr or completed.stdout or "memory check failed")[-2000:])
             elif job.kind == "github-check":
                 self.github_snapshot()
+            elif job.kind == "evolution-check":
+                self.evolution_cycle()
             else:
                 raise RuntimeError(f"unsupported builtin job kind: {job.kind}")
 
         return self.run_once(execute)
+
+    def evolution_cycle(self, *, min_occurrences: int = 2) -> dict[str, Any]:
+        """Turn repeated verified runtime failures into bounded improvement candidates."""
+        with self.connect() as db:
+            events = db.execute(
+                "SELECT id,payload_json FROM control_events WHERE event_type='job_failed' ORDER BY created_at"
+            ).fetchall()
+        groups: dict[tuple[str, str], list[str]] = {}
+        for event in events:
+            try:
+                payload = json.loads(event["payload_json"])
+            except json.JSONDecodeError:
+                continue
+            kind = str(payload.get("kind", "unknown"))
+            error = str(payload.get("error", "unknown"))
+            signature = re.sub(r"[0-9a-f]{8,}", "<id>", error, flags=re.IGNORECASE)
+            groups.setdefault((kind, signature), []).append(event["id"])
+        candidates = []
+        for (kind, signature), event_ids in groups.items():
+            if len(event_ids) < min_occurrences:
+                continue
+            candidate = self.propose(
+                "workflow",
+                f"repeated failure: {kind}",
+                {"job_kind": kind, "failure_signature": signature,
+                 "recommended_action": "increase bounded retry delay for this repeated failure",
+                 "retry_delay_multiplier": 2.0},
+                event_ids[-20:], risk="low", confidence=min(0.99, 0.85 + 0.03 * (len(event_ids) - 2)),
+            )
+            candidate_id = candidate["id"]
+            verification = self.verify_candidate(
+                candidate_id,
+                lambda proposal, ids=event_ids: proposal.get("job_kind") == kind
+                and proposal.get("failure_signature") == signature
+                and len(ids) >= min_occurrences,
+            )
+            promoted = self.promote_candidate(candidate_id)
+            candidates.append({"id": candidate_id, "status": promoted["status"], "verified": verification["status"],
+                               "job_kind": kind, "occurrences": len(event_ids), "automatic": True})
+        return {"status": "PASS", "patterns": len(candidates), "candidates": candidates}
 
     def propose(self, kind: str, title: str, proposal: dict[str, Any], evidence: list[str],
                 *, risk: str = "medium", confidence: float = 0.8) -> dict[str, Any]:
@@ -352,7 +430,7 @@ class AutonomyStore:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Codex durable autonomy control plane")
-    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "capabilities"])
+    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "evolution-check", "capabilities"])
     parser.add_argument("--db", type=Path, default=Path(r"D:\hermes\codex_memory_store\codex_autonomy.db"))
     args = parser.parse_args()
     store = AutonomyStore(args.db)
@@ -364,6 +442,8 @@ def main() -> int:
         result = store.builtin_worker_once()
     elif args.command == "github-check":
         result = store.github_snapshot()
+    elif args.command == "evolution-check":
+        result = store.evolution_cycle()
     else:
         result = store.capability_report()
     print(json.dumps(result, ensure_ascii=False, indent=2))

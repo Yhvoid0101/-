@@ -32,6 +32,33 @@ def test_failure_backoff_and_dead_letter(tmp_path):
     assert store.status()["jobs"] == {"dead": 1}
 
 
+def test_repeated_failures_create_bounded_evolution_candidate(tmp_path):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    for index in range(2):
+        store.enqueue("sync", {}, idempotency_key=f"failure-{index}", max_attempts=1)
+        result = store.run_once(lambda job: (_ for _ in ()).throw(RuntimeError("allocation failed")))
+        assert result["status"] == "dead"
+    report = store.evolution_cycle()
+    assert report["patterns"] == 1
+    assert report["candidates"][0]["status"] == "promoted"
+    assert report["candidates"][0]["automatic"] is True
+    assert store.status()["control_events"] == 2
+
+
+def test_promoted_learning_policy_changes_future_retry_delay(tmp_path):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    for index in range(2):
+        store.enqueue("sync", {}, idempotency_key=f"learning-{index}", max_attempts=1)
+        store.run_once(lambda job: (_ for _ in ()).throw(RuntimeError("repeated")))
+    store.evolution_cycle()
+    row = store.enqueue("sync", {}, idempotency_key="future", max_attempts=2)
+    result = store.run_once(lambda job: (_ for _ in ()).throw(RuntimeError("repeated")))
+    assert result["status"] == "pending"
+    with store.connect() as db:
+        saved = db.execute("SELECT next_run_at,updated_at FROM jobs WHERE id=?", (row["id"],)).fetchone()
+    assert saved[0] - saved[1] >= 9.0
+
+
 def test_restart_recovery_requeues_stale_running(tmp_path):
     store = autonomy.AutonomyStore(tmp_path / "state.db")
     row = store.enqueue("sync", {}, idempotency_key="recover")
@@ -101,5 +128,5 @@ def test_worker_enqueues_github_check_idempotently(tmp_path, monkeypatch):
     with store.connect() as db:
         rows = list(db.execute("SELECT kind,status FROM jobs"))
     kinds = {row["kind"] for row in rows}
-    assert kinds == {"memory-check", "github-check"}
+    assert kinds == {"memory-check", "github-check", "evolution-check"}
     assert dict(rows)["github-check"] == "succeeded"

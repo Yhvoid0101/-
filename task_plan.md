@@ -170,3 +170,14 @@ Build a Codex-owned, MCP-accessible Obsidian memory platform with scoped retriev
 - Worker: first invocation succeeded; immediate second invocation was `idle`, confirming time-bucket idempotency.
 - Local tests: `33 passed in 3.75s`.
 - Scope: read-only `gh api`, `gh issue list`, and `gh pr list`; no comments, merges, pushes, workflow edits, or arbitrary shell payloads.
+
+## Codex Self-Evolution Loop
+
+- [x] Record every autonomous job outcome as a bounded redacted control event
+- [x] Aggregate repeated failures into deterministic, evidence-linked candidates
+- [x] Run evolution analysis as a fixed low-risk worker job and CLI command
+- [x] Automatically verify and promote only low-risk candidates with matching evidence
+- [x] Apply promoted bounded retry policy to later matching failures without manual confirmation
+- [x] Keep code, credentials, deployment, and external writes outside automatic self-modification
+- [x] Add regression coverage for failure observation and candidate generation
+- [ ] Run a multi-day soak test proving the loop changes a later routing decision without manual intervention
