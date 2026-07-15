@@ -64,3 +64,40 @@ def test_high_risk_candidate_stays_blocked(tmp_path):
         assert False, "high-risk candidate was promoted"
     except RuntimeError as exc:
         assert "high-risk" in str(exc)
+
+
+def test_github_snapshot_is_read_only_and_audited(tmp_path, monkeypatch):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    responses = {
+        "repos/Yhvoid0101/-": {"full_name": "Yhvoid0101/-", "private": False, "default_branch": "main"},
+        "issue": [{"number": 1}],
+        "pr": [{"number": 2}],
+    }
+
+    def fake_run(command, timeout=30):
+        text = " ".join(command)
+        if "repos/Yhvoid0101/-" in text:
+            return __import__("json").dumps(responses["repos/Yhvoid0101/-"])
+        if "gh issue list" in text:
+            return __import__("json").dumps(responses["issue"])
+        return __import__("json").dumps(responses["pr"])
+
+    monkeypatch.setattr(autonomy, "_run_checked", fake_run)
+    result = store.github_snapshot()
+    assert result["status"] == "PASS"
+    assert result["issues"] == 1
+    assert result["pull_requests"] == 1
+    assert (tmp_path / "github" / "last_snapshot.json").exists()
+
+
+def test_worker_enqueues_github_check_idempotently(tmp_path, monkeypatch):
+    store = autonomy.AutonomyStore(tmp_path / "state.db")
+    script = tmp_path / "memory.ps1"
+    script.write_text("", encoding="utf-8")
+    monkeypatch.setenv("CODEX_MEMORY_AUTOMATION", str(script))
+    monkeypatch.setattr(store, "github_snapshot", lambda: {"status": "PASS"})
+    first = store.builtin_worker_once()
+    assert first["status"] == "succeeded"
+    with store.connect() as db:
+        kinds = {row["kind"] for row in db.execute("SELECT kind FROM jobs")}
+    assert kinds == {"memory-check", "github-check"}

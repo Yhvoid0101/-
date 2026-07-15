@@ -154,3 +154,19 @@ Build a Codex-owned, MCP-accessible Obsidian memory platform with scoped retriev
 - [x] Attach a fixed low-risk worker to Windows Task Scheduler and verify a real successful run.
 - [x] Publish comparison evidence and the Codex adaptation boundary to Obsidian.
 - [ ] Add channel-specific adapters only when credentials, sandbox, and delivery contracts are independently verified.
+
+## GitHub Read-Only Control Plane
+
+- [x] Add an authenticated, fixed-scope repository snapshot through `gh`
+- [x] Persist repository metadata, open issues, and open pull requests locally
+- [x] Enqueue the GitHub check idempotently in the low-risk worker
+- [x] Add CLI and unit coverage for the snapshot and worker routing
+- [x] Verify live snapshot against `Yhvoid0101/-` without any write operation
+- [x] Verify local tests and remote GitHub Actions quality matrix
+
+### GitHub Verification Evidence
+
+- Live snapshot: `github-check` returned `PASS`; repository `Yhvoid0101/-`; 0 open issues; 0 open pull requests.
+- Worker: first invocation succeeded; immediate second invocation was `idle`, confirming time-bucket idempotency.
+- Local tests: `33 passed in 3.75s`.
+- Scope: read-only `gh api`, `gh issue list`, and `gh pr list`; no comments, merges, pushes, workflow edits, or arbitrary shell payloads.

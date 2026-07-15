@@ -1,4 +1,4 @@
-﻿
+
 ### Failure 2026-07-14T21:40:01+08:00
 - Command: new_codex_project.ps1 -Name codex-memory-platform
 - Exact error: PowerShell Method invocation failed: PSObject does not contain op_Addition.
@@ -574,3 +574,14 @@
 - Exact error: SyntaxError: unmatched parenthesis in tools/vault_quality_gate.py line 24
 - Root-cause hypothesis: Remove the extra closing parenthesis in the wiki-link guard, then rerun the complete suite.
 - Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T16:58:28+08:00
+- Command: pytest tests -q
+- Exact error: NameError: name re is not defined in AutonomyStore.github_snapshot
+- Root-cause hypothesis: Add the missing standard-library re import, then rerun the full suite.
+- Next experiment: define a changed hypothesis before retrying.`n
+### Failure 2026-07-15T17:08:11+08:00
+- Command: Native Memory status after routed preflight
+- Exact error: ONNXRuntime bad allocation
+- Root-cause hypothesis: Semantic worker initialization was retried during preflight and exceeded current E3 memory pressure despite serialized policy
+- Next experiment: define a changed hypothesis before retrying.`n

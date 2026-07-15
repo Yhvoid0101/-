@@ -11,12 +11,14 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import sqlite3
 import subprocess
 import time
 import uuid
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
@@ -34,6 +36,22 @@ def _command_ok(command: list[str], *, timeout: int = 10) -> bool:
         ).returncode == 0
     except (OSError, subprocess.SubprocessError):
         return False
+
+
+def _run_checked(command: list[str], *, timeout: int = 30) -> str:
+    completed = subprocess.run(
+        command,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        timeout=timeout,
+        check=False,
+    )
+    if completed.returncode != 0:
+        detail = (completed.stderr or completed.stdout or "command failed").strip()
+        raise RuntimeError(detail[-2000:])
+    return completed.stdout
 
 
 SCHEMA = """
@@ -237,6 +255,31 @@ class AutonomyStore:
                 "optional_backends": optional,
                 "external": external, "policy": "missing credentials are blocked, never simulated"}
 
+    def github_snapshot(self) -> dict[str, Any]:
+        """Capture a read-only GitHub repository snapshot through authenticated gh."""
+        owner = os.environ.get("CODEX_GITHUB_OWNER", "Yhvoid0101").strip()
+        repo = os.environ.get("CODEX_GITHUB_REPO", "-").strip()
+        if not re.fullmatch(r"[A-Za-z0-9_.-]+", owner) or not re.fullmatch(r"[A-Za-z0-9_.-]+", repo):
+            raise ValueError("invalid GitHub owner/repository name")
+        repository = json.loads(_run_checked(["gh", "api", f"repos/{owner}/{repo}"], timeout=30))
+        issues = json.loads(_run_checked(["gh", "issue", "list", "--repo", f"{owner}/{repo}",
+                                          "--state", "open", "--limit", "50", "--json",
+                                          "number,title,url,updatedAt"], timeout=30) or "[]")
+        pull_requests = json.loads(_run_checked(["gh", "pr", "list", "--repo", f"{owner}/{repo}",
+                                                 "--state", "open", "--limit", "50", "--json",
+                                                 "number,title,url,updatedAt"], timeout=30) or "[]")
+        report = {
+            "checked_at": datetime.now(timezone.utc).isoformat(),
+            "repository": {"full_name": repository.get("full_name"), "private": repository.get("private"),
+                            "default_branch": (repository.get("default_branch") or "")},
+            "issues": issues,
+            "pull_requests": pull_requests,
+        }
+        target = self.db_path.parent / "github" / "last_snapshot.json"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+        return {"status": "PASS", "path": str(target), "issues": len(issues), "pull_requests": len(pull_requests)}
+
     def builtin_worker_once(self) -> dict[str, Any]:
         """Run one fixed, low-risk maintenance cycle.
 
@@ -245,19 +288,23 @@ class AutonomyStore:
         """
         bucket = int(time.time() // 600)
         self.enqueue("memory-check", {"bucket": bucket}, idempotency_key=f"memory-check:{bucket}", max_attempts=2)
+        self.enqueue("github-check", {"bucket": bucket}, idempotency_key=f"github-check:{bucket}", max_attempts=2)
 
         def execute(job: Job) -> None:
-            if job.kind != "memory-check":
+            if job.kind == "memory-check":
+                script = Path(os.environ.get("CODEX_MEMORY_AUTOMATION", r"D:\hermes\codex_memory_automation.ps1"))
+                if not script.exists():
+                    raise FileNotFoundError(script)
+                completed = subprocess.run(
+                    ["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(script), "-Mode", "Check"],
+                    capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180, check=False,
+                )
+                if completed.returncode != 0:
+                    raise RuntimeError((completed.stderr or completed.stdout or "memory check failed")[-2000:])
+            elif job.kind == "github-check":
+                self.github_snapshot()
+            else:
                 raise RuntimeError(f"unsupported builtin job kind: {job.kind}")
-            script = Path(os.environ.get("CODEX_MEMORY_AUTOMATION", r"D:\hermes\codex_memory_automation.ps1"))
-            if not script.exists():
-                raise FileNotFoundError(script)
-            completed = subprocess.run(
-                ["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(script), "-Mode", "Check"],
-                capture_output=True, text=True, timeout=180, check=False,
-            )
-            if completed.returncode != 0:
-                raise RuntimeError((completed.stderr or completed.stdout or "memory check failed")[-2000:])
 
         return self.run_once(execute)
 
@@ -305,7 +352,7 @@ class AutonomyStore:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Codex durable autonomy control plane")
-    parser.add_argument("command", choices=["status", "recover", "worker", "capabilities"])
+    parser.add_argument("command", choices=["status", "recover", "worker", "github-check", "capabilities"])
     parser.add_argument("--db", type=Path, default=Path(r"D:\hermes\codex_memory_store\codex_autonomy.db"))
     args = parser.parse_args()
     store = AutonomyStore(args.db)
@@ -315,6 +362,8 @@ def main() -> int:
         result = store.recover_orphans()
     elif args.command == "worker":
         result = store.builtin_worker_once()
+    elif args.command == "github-check":
+        result = store.github_snapshot()
     else:
         result = store.capability_report()
     print(json.dumps(result, ensure_ascii=False, indent=2))

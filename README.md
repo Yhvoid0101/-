@@ -14,6 +14,7 @@ vault content, credentials, logs, and temporary work are excluded from Git.
 - backup, golden retrieval evaluation, and MCP stdio server
 - isolated CPU semantic worker with JSONL supervision and FTS-only last-resort fallback
 - durable autonomy control plane with idempotent jobs, restart recovery, bounded retries, and evidence-gated evolution
+- authenticated GitHub read-only snapshot of repository metadata, open issues, and pull requests
 - independent from Hermes Chroma, BM25, HTTP services, and memory service
 
 ## Commands
@@ -26,4 +27,10 @@ vault content, credentials, logs, and temporary work are excluded from Git.
 & D:\hermes\.venv\Scripts\python.exe src\codex_memory_platform.py serve
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py status
 & D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py worker
+& D:\hermes\.venv\Scripts\python.exe src\codex_autonomy.py github-check
 ```
+
+`worker` only executes the fixed memory check and GitHub snapshot jobs. The
+GitHub integration uses the existing `gh` credential store and writes the
+redacted local snapshot to `D:\hermes\codex_memory_store\github\last_snapshot.json`.
+It cannot comment, merge, push, edit workflows, or execute arbitrary commands.
