@@ -658,3 +658,15 @@
 - Exact error: Windows cleanup hit WinError 32 because the temporary SQLite file handle remained open after the soak loop
 - Root-cause hypothesis: Explicitly delete the store reference and force garbage collection before TemporaryDirectory cleanup
 - Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T19:04:09+08:00
+- Command: git push origin main for commit 70960c9
+- Exact error: Recv failure: Connection was reset
+- Root-cause hypothesis: Retry the same authorized push with bounded HTTP low-speed settings after the transient connection reset
+- Next experiment: define a changed hypothesis before retrying.
+
+### Failure 2026-07-15T19:05:48+08:00
+- Command: git push after gh auth setup-git
+- Exact error: remote denied permission to Yhvoid0101/-; HTTP 403
+- Root-cause hypothesis: gh credential helper uses a token without repository write permission; inspect helpers and auth status before changing transport again
+- Next experiment: define a changed hypothesis before retrying.
