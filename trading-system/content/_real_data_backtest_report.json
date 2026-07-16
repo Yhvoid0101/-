@@ -1,0 +1,223 @@
+{
+  "timestamp": "2026-06-28T12:42:41.362967Z",
+  "backtest_days": 180,
+  "symbols": [
+    "BTC_USDT",
+    "ETH_USDT",
+    "SOL_USDT"
+  ],
+  "data_sources": {
+    "BTC_USDT": "cache",
+    "ETH_USDT": "cache",
+    "SOL_USDT": "cache"
+  },
+  "strategies": [
+    {
+      "rank": 1,
+      "agent_id": "agent-b157fbe4",
+      "worldview": "stat_arb_pairs",
+      "gt_score": 1.7944692260983581,
+      "kpi": {
+        "annualized_return": -0.017542126058852192,
+        "max_drawdown": 0.017544110914757584,
+        "win_rate": 0.0,
+        "sharpe_ratio": -13.99544184465452,
+        "profit_loss_ratio": 0.0,
+        "max_single_loss": 0.00022289479152056509,
+        "max_consecutive_losses": 153,
+        "monthly_loss_prob": 1.0,
+        "total_return": -0.017544110914757584,
+        "total_trades": 153,
+        "win_trades": 0,
+        "loss_trades": 153,
+        "loss_months": 13,
+        "total_months": 13
+      },
+      "kpi_pass": {
+        "annualized_return": false,
+        "max_drawdown": true,
+        "win_rate": false,
+        "sharpe_ratio": false,
+        "profit_loss_ratio": false,
+        "max_single_loss": true,
+        "max_consecutive_losses": false,
+        "monthly_loss_prob": false
+      },
+      "pass_count": 2
+    },
+    {
+      "rank": 2,
+      "agent_id": "injected-2-020",
+      "worldview": "liquidity_adjusted_strategy",
+      "gt_score": 1.523991667160686,
+      "kpi": {
+        "annualized_return": -0.08541945077789526,
+        "max_drawdown": 0.08542877295125745,
+        "win_rate": 0.0,
+        "sharpe_ratio": -24.9030061643496,
+        "profit_loss_ratio": 0.0,
+        "max_single_loss": 0.0002687175231326994,
+        "max_consecutive_losses": 585,
+        "monthly_loss_prob": 1.0,
+        "total_return": -0.08542877295125745,
+        "total_trades": 585,
+        "win_trades": 0,
+        "loss_trades": 585,
+        "loss_months": 13,
+        "total_months": 13
+      },
+      "kpi_pass": {
+        "annualized_return": false,
+        "max_drawdown": true,
+        "win_rate": false,
+        "sharpe_ratio": false,
+        "profit_loss_ratio": false,
+        "max_single_loss": true,
+        "max_consecutive_losses": false,
+        "monthly_loss_prob": false
+      },
+      "pass_count": 2
+    },
+    {
+      "rank": 3,
+      "agent_id": "intraday-gen0-086",
+      "worldview": "marl_portfolio_management",
+      "gt_score": 1.3895939851282266,
+      "kpi": {
+        "annualized_return": -0.028472463875558462,
+        "max_drawdown": 0.028475667434265235,
+        "win_rate": 0.0,
+        "sharpe_ratio": -13.628821943785631,
+        "profit_loss_ratio": 0.0,
+        "max_single_loss": 0.00029618057715435903,
+        "max_consecutive_losses": 164,
+        "monthly_loss_prob": 1.0,
+        "total_return": -0.028475667434265235,
+        "total_trades": 164,
+        "win_trades": 0,
+        "loss_trades": 164,
+        "loss_months": 12,
+        "total_months": 12
+      },
+      "kpi_pass": {
+        "annualized_return": false,
+        "max_drawdown": true,
+        "win_rate": false,
+        "sharpe_ratio": false,
+        "profit_loss_ratio": false,
+        "max_single_loss": true,
+        "max_consecutive_losses": false,
+        "monthly_loss_prob": false
+      },
+      "pass_count": 2
+    },
+    {
+      "rank": 4,
+      "agent_id": "agent-cdb9042d",
+      "worldview": "liquidation_cascade",
+      "gt_score": 0.557895382397108,
+      "kpi": {
+        "annualized_return": -0.051553719058299086,
+        "max_drawdown": 0.05155944979236883,
+        "win_rate": 0.0,
+        "sharpe_ratio": -21.43201234162758,
+        "profit_loss_ratio": 0.0,
+        "max_single_loss": 0.00023255979579009863,
+        "max_consecutive_losses": 430,
+        "monthly_loss_prob": 1.0,
+        "total_return": -0.05155944979236883,
+        "total_trades": 430,
+        "win_trades": 0,
+        "loss_trades": 430,
+        "loss_months": 12,
+        "total_months": 12
+      },
+      "kpi_pass": {
+        "annualized_return": false,
+        "max_drawdown": true,
+        "win_rate": false,
+        "sharpe_ratio": false,
+        "profit_loss_ratio": false,
+        "max_single_loss": true,
+        "max_consecutive_losses": false,
+        "monthly_loss_prob": false
+      },
+      "pass_count": 2
+    },
+    {
+      "rank": 5,
+      "agent_id": "agent-270cc893",
+      "worldview": "transformer_decision_policy",
+      "gt_score": 0.5377306937137738,
+      "kpi": {
+        "annualized_return": -0.08398259364914151,
+        "max_drawdown": 0.08399176631625233,
+        "win_rate": 0.0,
+        "sharpe_ratio": -25.5636991188222,
+        "profit_loss_ratio": 0.0,
+        "max_single_loss": 0.00027163387617280593,
+        "max_consecutive_losses": 604,
+        "monthly_loss_prob": 1.0,
+        "total_return": -0.08399176631625233,
+        "total_trades": 604,
+        "win_trades": 0,
+        "loss_trades": 604,
+        "loss_months": 13,
+        "total_months": 13
+      },
+      "kpi_pass": {
+        "annualized_return": false,
+        "max_drawdown": true,
+        "win_rate": false,
+        "sharpe_ratio": false,
+        "profit_loss_ratio": false,
+        "max_single_loss": true,
+        "max_consecutive_losses": false,
+        "monthly_loss_prob": false
+      },
+      "pass_count": 2
+    }
+  ],
+  "user_targets": {
+    "annualized_return": {
+      "op": ">=",
+      "value": 0.3,
+      "label": "年化收益≥30%"
+    },
+    "max_drawdown": {
+      "op": "<=",
+      "value": 0.15,
+      "label": "最大回撤≤15%"
+    },
+    "win_rate": {
+      "op": ">=",
+      "value": 0.55,
+      "label": "胜率≥55%"
+    },
+    "sharpe_ratio": {
+      "op": ">=",
+      "value": 1.5,
+      "label": "夏普≥1.5"
+    },
+    "profit_loss_ratio": {
+      "op": ">=",
+      "value": 1.5,
+      "label": "盈亏比≥1.5"
+    },
+    "max_single_loss": {
+      "op": "<=",
+      "value": 0.02,
+      "label": "单次最大亏损≤2%"
+    },
+    "max_consecutive_losses": {
+      "op": "<=",
+      "value": 3,
+      "label": "连续亏损≤3次"
+    },
+    "monthly_loss_prob": {
+      "op": "<=",
+      "value": 0.05,
+      "label": "月度亏损概率≤5%"
+    }
+  }
+}

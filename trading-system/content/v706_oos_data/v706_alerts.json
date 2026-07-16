@@ -1,0 +1,2513 @@
+[
+  {
+    "timestamp": 1783100608.9231644,
+    "timestamp_iso": "2026-07-04 01:43:28",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-03T17:43:28.917984+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783140452.5232155,
+    "timestamp_iso": "2026-07-04 12:47:32",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T04:47:32.519750+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783140700.2950335,
+    "timestamp_iso": "2026-07-04 12:51:40",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T04:51:40.291009+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783140724.5372255,
+    "timestamp_iso": "2026-07-04 12:52:04",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T04:52:04.532470+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783140732.455858,
+    "timestamp_iso": "2026-07-04 12:52:12",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T04:52:12.451182+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783140732.8036883,
+    "timestamp_iso": "2026-07-04 12:52:12",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T04:52:12.799531+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783141654.713347,
+    "timestamp_iso": "2026-07-04 13:07:34",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783141676.0214498,
+    "timestamp_iso": "2026-07-04 13:07:56",
+    "level": "CRITICAL",
+    "category": "consec_loss",
+    "message": "连续亏损 3 次 >= 3 临界值",
+    "metrics": {
+      "current_consec_loss": 3
+    },
+    "action_hint": "检查策略是否退化, 考虑暂停",
+    "action_defined": "记录+通知+减仓50%"
+  },
+  {
+    "timestamp": 1783141676.029007,
+    "timestamp_iso": "2026-07-04 13:07:56",
+    "level": "WARN",
+    "category": "single_loss",
+    "message": "单次最大亏损 1.69%",
+    "metrics": {
+      "max_single_loss_pct": 1.685311987655524
+    },
+    "action_hint": "监控止损距离",
+    "action_defined": "记录+通知"
+  },
+  {
+    "timestamp": 1783141731.3791294,
+    "timestamp_iso": "2026-07-04 13:08:51",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 3,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142002.6766758,
+    "timestamp_iso": "2026-07-04 13:13:22",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:13:22.673207+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142010.2018044,
+    "timestamp_iso": "2026-07-04 13:13:30",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:13:30.197627+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142010.5187109,
+    "timestamp_iso": "2026-07-04 13:13:30",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:13:30.514944+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142011.1439552,
+    "timestamp_iso": "2026-07-04 13:13:31",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142011.4742405,
+    "timestamp_iso": "2026-07-04 13:13:31",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142011.4863997,
+    "timestamp_iso": "2026-07-04 13:13:31",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:13:31.481195+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142011.8130305,
+    "timestamp_iso": "2026-07-04 13:13:31",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142026.2904103,
+    "timestamp_iso": "2026-07-04 13:13:46",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142026.305004,
+    "timestamp_iso": "2026-07-04 13:13:46",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:13:46.299747+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142658.4093926,
+    "timestamp_iso": "2026-07-04 13:24:18",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:24:18.408339+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142776.993979,
+    "timestamp_iso": "2026-07-04 13:26:16",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:26:16.986152+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142789.2906964,
+    "timestamp_iso": "2026-07-04 13:26:29",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:26:29.287092+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142789.6702666,
+    "timestamp_iso": "2026-07-04 13:26:29",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:26:29.669732+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142790.467531,
+    "timestamp_iso": "2026-07-04 13:26:30",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142790.8702233,
+    "timestamp_iso": "2026-07-04 13:26:30",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142790.8845205,
+    "timestamp_iso": "2026-07-04 13:26:30",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:26:30.880073+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142791.35077,
+    "timestamp_iso": "2026-07-04 13:26:31",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142870.270231,
+    "timestamp_iso": "2026-07-04 13:27:50",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:27:50.269518+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142878.950728,
+    "timestamp_iso": "2026-07-04 13:27:58",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:27:58.944230+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142879.3786373,
+    "timestamp_iso": "2026-07-04 13:27:59",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:27:59.378102+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142880.0716412,
+    "timestamp_iso": "2026-07-04 13:28:00",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142880.8561058,
+    "timestamp_iso": "2026-07-04 13:28:00",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142880.8721032,
+    "timestamp_iso": "2026-07-04 13:28:00",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:28:00.867614+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142881.2783444,
+    "timestamp_iso": "2026-07-04 13:28:01",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=0, days=0",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 0,
+      "total_trades": 0,
+      "total_wins": 0,
+      "total_losses": 0,
+      "win_rate": 0.0,
+      "total_sim_pnl_usd": 0.0,
+      "total_live_pnl_usd": 0.0,
+      "total_cost_usd": 0.0,
+      "max_single_loss_pct": 0.0,
+      "max_consec_loss": 0,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783142997.2384157,
+    "timestamp_iso": "2026-07-04 13:29:57",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:29:57.237553+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143011.338967,
+    "timestamp_iso": "2026-07-04 13:30:11",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:30:11.338302+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143011.8590908,
+    "timestamp_iso": "2026-07-04 13:30:11",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:30:11.858308+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143012.919629,
+    "timestamp_iso": "2026-07-04 13:30:12",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143013.409426,
+    "timestamp_iso": "2026-07-04 13:30:13",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143013.431826,
+    "timestamp_iso": "2026-07-04 13:30:13",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:30:13.426949+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 19,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 1,
+        "total_trades": 19,
+        "total_wins": 12,
+        "total_losses": 7,
+        "win_rate": 63.1578947368421,
+        "total_sim_pnl_usd": 4.25,
+        "total_live_pnl_usd": 3.61,
+        "total_cost_usd": 0.65,
+        "max_single_loss_pct": 1.69,
+        "max_consec_loss": 2,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143013.9588623,
+    "timestamp_iso": "2026-07-04 13:30:13",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143121.1040802,
+    "timestamp_iso": "2026-07-04 13:32:01",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:32:01.103490+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143135.3045366,
+    "timestamp_iso": "2026-07-04 13:32:15",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:32:15.303926+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143136.010124,
+    "timestamp_iso": "2026-07-04 13:32:16",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:32:16.009384+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143137.06987,
+    "timestamp_iso": "2026-07-04 13:32:17",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143137.6370182,
+    "timestamp_iso": "2026-07-04 13:32:17",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143137.6710155,
+    "timestamp_iso": "2026-07-04 13:32:17",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:32:17.659238+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 19,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 1,
+        "total_trades": 19,
+        "total_wins": 12,
+        "total_losses": 7,
+        "win_rate": 63.1578947368421,
+        "total_sim_pnl_usd": 4.25,
+        "total_live_pnl_usd": 3.61,
+        "total_cost_usd": 0.65,
+        "max_single_loss_pct": 1.69,
+        "max_consec_loss": 2,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143138.2263675,
+    "timestamp_iso": "2026-07-04 13:32:18",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143461.479194,
+    "timestamp_iso": "2026-07-04 13:37:41",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:37:41.478679+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143473.8459377,
+    "timestamp_iso": "2026-07-04 13:37:53",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:37:53.845338+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143474.3301291,
+    "timestamp_iso": "2026-07-04 13:37:54",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:37:54.329360+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 0,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 0,
+        "total_trades": 0,
+        "total_wins": 0,
+        "total_losses": 0,
+        "win_rate": 0.0,
+        "total_sim_pnl_usd": 0.0,
+        "total_live_pnl_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "max_single_loss_pct": 0.0,
+        "max_consec_loss": 0,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143475.1665626,
+    "timestamp_iso": "2026-07-04 13:37:55",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143475.6066804,
+    "timestamp_iso": "2026-07-04 13:37:55",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143475.6311836,
+    "timestamp_iso": "2026-07-04 13:37:55",
+    "level": "INFO",
+    "category": "sim_to_live_bridge",
+    "message": "v704 SIM→LIVE 桥接评估未通过, 失败项: ['consecutive_sim_go_months', 'min_oos_trades', 'bear_signal_min_count']",
+    "metrics": {
+      "evaluation_date": "2026-07-04T05:37:55.624278+00:00",
+      "can_deploy": false,
+      "checks": {
+        "consecutive_sim_go_months": {
+          "current": 0,
+          "required": 3,
+          "pass": false
+        },
+        "kelly_zero_ratio": {
+          "current": 0.0,
+          "required": 0.1,
+          "pass": true
+        },
+        "min_oos_trades": {
+          "current": 19,
+          "required": 30,
+          "pass": false
+        },
+        "bear_signal_min_count": {
+          "current": 0,
+          "required": 1,
+          "pass": false
+        }
+      },
+      "summary": {
+        "version": "v706_forward_test",
+        "collection_days": 1,
+        "total_trades": 19,
+        "total_wins": 12,
+        "total_losses": 7,
+        "win_rate": 63.1578947368421,
+        "total_sim_pnl_usd": 4.25,
+        "total_live_pnl_usd": 3.61,
+        "total_cost_usd": 0.65,
+        "max_single_loss_pct": 1.69,
+        "max_consec_loss": 2,
+        "consecutive_go_months": 0,
+        "bear_signal_count": 0,
+        "kelly_zero_ratio": 0.0,
+        "tier2_passed": false
+      }
+    },
+    "action_hint": "继续收集 OOS 数据, 等待条件达标",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783143476.122685,
+    "timestamp_iso": "2026-07-04 13:37:56",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783144555.4313476,
+    "timestamp_iso": "2026-07-04 13:55:55",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=1",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 1,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783144573.2358015,
+    "timestamp_iso": "2026-07-04 13:56:13",
+    "level": "WARN",
+    "category": "single_loss",
+    "message": "单次最大亏损 1.69%",
+    "metrics": {
+      "max_single_loss_pct": 1.685311987655524
+    },
+    "action_hint": "监控止损距离",
+    "action_defined": "记录+通知"
+  },
+  {
+    "timestamp": 1783155461.4501,
+    "timestamp_iso": "2026-07-04 16:57:41",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=2",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 2,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783155478.653759,
+    "timestamp_iso": "2026-07-04 16:57:58",
+    "level": "WARN",
+    "category": "single_loss",
+    "message": "单次最大亏损 1.69%",
+    "metrics": {
+      "max_single_loss_pct": 1.685311987655524
+    },
+    "action_hint": "监控止损距离",
+    "action_defined": "记录+通知"
+  },
+  {
+    "timestamp": 1783188301.5865958,
+    "timestamp_iso": "2026-07-05 02:05:01",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=19, days=3",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 3,
+      "total_trades": 19,
+      "total_wins": 12,
+      "total_losses": 7,
+      "win_rate": 63.1578947368421,
+      "total_sim_pnl_usd": 4.25,
+      "total_live_pnl_usd": 3.61,
+      "total_cost_usd": 0.65,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783188318.9170706,
+    "timestamp_iso": "2026-07-05 02:05:18",
+    "level": "WARN",
+    "category": "single_loss",
+    "message": "单次最大亏损 1.69%",
+    "metrics": {
+      "max_single_loss_pct": 1.685311987655524
+    },
+    "action_hint": "监控止损距离",
+    "action_defined": "记录+通知"
+  },
+  {
+    "timestamp": 1783274702.0870051,
+    "timestamp_iso": "2026-07-06 02:05:02",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=21, days=4",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 4,
+      "total_trades": 21,
+      "total_wins": 13,
+      "total_losses": 8,
+      "win_rate": 61.904761904761905,
+      "total_sim_pnl_usd": 4.58,
+      "total_live_pnl_usd": 3.89,
+      "total_cost_usd": 0.69,
+      "max_single_loss_pct": 1.69,
+      "max_consec_loss": 2,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783274718.6634147,
+    "timestamp_iso": "2026-07-06 02:05:18",
+    "level": "CRITICAL",
+    "category": "consec_loss",
+    "message": "连续亏损 3 次 >= 3 临界值",
+    "metrics": {
+      "current_consec_loss": 3
+    },
+    "action_hint": "检查策略是否退化, 考虑暂停",
+    "action_defined": "记录+通知+减仓50%"
+  },
+  {
+    "timestamp": 1783274718.6733248,
+    "timestamp_iso": "2026-07-06 02:05:18",
+    "level": "CRITICAL",
+    "category": "single_loss",
+    "message": "单次最大亏损 2.35% >= 2.0% 临界值",
+    "metrics": {
+      "max_single_loss_pct": 2.3458227698838483
+    },
+    "action_hint": "检查止损是否失效",
+    "action_defined": "记录+通知+减仓50%"
+  },
+  {
+    "timestamp": 1783361101.4409578,
+    "timestamp_iso": "2026-07-07 02:05:01",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=27, days=5",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 5,
+      "total_trades": 27,
+      "total_wins": 15,
+      "total_losses": 12,
+      "win_rate": 55.55555555555556,
+      "total_sim_pnl_usd": 4.55,
+      "total_live_pnl_usd": 3.8,
+      "total_cost_usd": 0.76,
+      "max_single_loss_pct": 2.35,
+      "max_consec_loss": 3,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783361116.5871472,
+    "timestamp_iso": "2026-07-07 02:05:16",
+    "level": "CRITICAL",
+    "category": "consec_loss",
+    "message": "连续亏损 3 次 >= 3 临界值",
+    "metrics": {
+      "current_consec_loss": 3
+    },
+    "action_hint": "检查策略是否退化, 考虑暂停",
+    "action_defined": "记录+通知+减仓50%"
+  },
+  {
+    "timestamp": 1783361116.5978565,
+    "timestamp_iso": "2026-07-07 02:05:16",
+    "level": "CRITICAL",
+    "category": "single_loss",
+    "message": "单次最大亏损 2.35% >= 2.0% 临界值",
+    "metrics": {
+      "max_single_loss_pct": 2.3458227698838483
+    },
+    "action_hint": "检查止损是否失效",
+    "action_defined": "记录+通知+减仓50%"
+  },
+  {
+    "timestamp": 1783447501.9230256,
+    "timestamp_iso": "2026-07-08 02:05:01",
+    "level": "INFO",
+    "category": "v706_init",
+    "message": "V706ForwardTestRunner 初始化完成, trades=27, days=6",
+    "metrics": {
+      "version": "v706_forward_test",
+      "collection_days": 6,
+      "total_trades": 27,
+      "total_wins": 15,
+      "total_losses": 12,
+      "win_rate": 55.55555555555556,
+      "total_sim_pnl_usd": 4.55,
+      "total_live_pnl_usd": 3.8,
+      "total_cost_usd": 0.76,
+      "max_single_loss_pct": 2.35,
+      "max_consec_loss": 3,
+      "consecutive_go_months": 0,
+      "bear_signal_count": 0,
+      "kelly_zero_ratio": 0.0,
+      "tier2_passed": false
+    },
+    "action_hint": "继续每日 collect_daily_data()",
+    "action_defined": "记录"
+  },
+  {
+    "timestamp": 1783447518.3012817,
+    "timestamp_iso": "2026-07-08 02:05:18",
+    "level": "CRITICAL",
+    "category": "consec_loss",
+    "message": "连续亏损 3 次 >= 3 临界值",
+    "metrics": {
+      "current_consec_loss": 3
+    },
+    "action_hint": "检查策略是否退化, 考虑暂停",
+    "action_defined": "记录+通知+减仓50%"
+  },
+  {
+    "timestamp": 1783447518.3108125,
+    "timestamp_iso": "2026-07-08 02:05:18",
+    "level": "CRITICAL",
+    "category": "single_loss",
+    "message": "单次最大亏损 2.35% >= 2.0% 临界值",
+    "metrics": {
+      "max_single_loss_pct": 2.3458227698838483
+    },
+    "action_hint": "检查止损是否失效",
+    "action_defined": "记录+通知+减仓50%"
+  },
+  {
+    "timestamp": 1783447518.318405,
+    "timestamp_iso": "2026-07-08 02:05:18",
+    "level": "WARN",
+    "category": "bear_signal_silent",
+    "message": "OOS 7 天无 bear_signal 触发 (v704 Fix2 可能未生效)",
+    "metrics": {
+      "collection_days": 7,
+      "bear_signal_count": 0
+    },
+    "action_hint": "检查 4h 下降趋势是否出现, BearTrendShortSignal 是否正常",
+    "action_defined": "记录+通知"
+  }
+]

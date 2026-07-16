@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "agent_id": "agent_4_risk_manager",
+  "role": "风控参数硬编码 + 实时监控",
+  "last_heartbeat": "2026-06-28T05:02:58.038000Z",
+  "current_task": {
+    "task_name": "风控参数硬编码",
+    "task_description": "基于v400的渐进式风险缩减参数,准备硬编码",
+    "start_time": "2026-06-28T05:02:58.037993Z",
+    "expected_completion": "",
+    "progress_pct": 30,
+    "current_status": "not_started"
+  },
+  "deliverables": [],
+  "s1_kpi": {
+    "s1_passed": 7,
+    "s1_total": 8,
+    "missing_kpis": [],
+    "achieved_kpis": []
+  },
+  "blockers": [],
+  "cross_agent_dependencies": [
+    {
+      "depends_on_agent": "agent_1_coordinator",
+      "depends_on_task": "v400策略最终确认",
+      "dependency_type": "blocking",
+      "expected_delivery": "v400报告完成"
+    }
+  ],
+  "data_signature": "68d4a1326c13c6bb0c18a3db52bf0249788ece07d55f60f67c6fbd129c60c6e7"
+}

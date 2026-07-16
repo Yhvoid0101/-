@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "updated": "2026-06-28T00:05:02",
+    "description": "Hermes v6 沙盘交易高频监控告警历史",
+    "total_alerts": 0
+  },
+  "alerts": [],
+  "stats": {
+    "by_level": {},
+    "by_category": {},
+    "dedup_window_seconds": 30.0,
+    "monitor_interval_seconds": 0.8
+  }
+}

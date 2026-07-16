@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-07-15T01:29:15.545644",
+  "baseline_version": "unknown",
+  "total_suggestions": 2,
+  "applied": 2,
+  "skipped": 0,
+  "failed": 0,
+  "by_dimension": {
+    "parameter": 1,
+    "logic": 0,
+    "indicator": 0,
+    "knowledge": 1,
+    "strategy": 0
+  },
+  "applied_patches": [
+    {
+      "patch_id": "patch_parameter_1784050155_83856f",
+      "dimension": "parameter",
+      "source_suggestion_name": "reduce_pos_mult_BTC-USDT_ranging",
+      "applied_at": "2026-07-15T01:29:15.546336",
+      "expected_impact": {
+        "ann_delta_pp": 2.0,
+        "max_dd_delta_pp": -1.0,
+        "loss_reduction_pct": 15.0
+      }
+    },
+    {
+      "patch_id": "patch_knowledge_1784050155_33c54d",
+      "dimension": "knowledge",
+      "source_suggestion_name": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_ranging",
+      "applied_at": "2026-07-15T01:29:15.546495",
+      "expected_impact": {
+        "loss_avoidance_pct": 30.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1208 @@
+{
+  "phase": "P12-T3",
+  "scope": "digital_currency_perpetual_contracts_only",
+  "exchange": "Gate.io USDT-Margined Perpetual",
+  "total_symbols": 15,
+  "pass_count": 15,
+  "fail_count": 0,
+  "total_rules_triggered": 20,
+  "avg_spread_pct": 0.0003053934933908698,
+  "results": [
+    {
+      "symbol": "BTC_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 65333.0,
+          "best_ask": 65333.1,
+          "mid_price": 65333.05,
+          "spread": 0.09999999999854481,
+          "spread_pct": 1.5306188827636977e-06
+        },
+        "check4_depth": {
+          "bids_depth_10": 68340.0,
+          "asks_depth_10": 52076.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 65333.05,
+            "spread": 0.09999999999854481,
+            "spread_pct": 1.5306188827636977e-06,
+            "bid_depth": 68340.0,
+            "ask_depth": 52076.0,
+            "imbalance": 0.13506510762689344,
+            "bid_wall": [
+              65326.5,
+              32968.0
+            ],
+            "ask_wall": [
+              65343.9,
+              32968.0
+            ],
+            "bid_wall_ratio": 8.38832975234649,
+            "ask_wall_ratio": 15.528155746284277,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=8.39"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=8.39"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 65333.1,
+          "sell_fill": 65333.0,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 5775.0,
+          "large_qty": 15499.0,
+          "small_avg_price": 65333.1,
+          "large_avg_price": 65334.53644751275,
+          "small_slippage": 0.0,
+          "large_slippage": 2.1986520044989886e-05,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 181323.0,
+          "total_ask_depth": 120882.0,
+          "filled_qty": 120882.0,
+          "unfilled_qty": 60441.0,
+          "avg_price": 65344.979832398545,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "ETH_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 1934.69,
+          "best_ask": 1934.7,
+          "mid_price": 1934.6950000000002,
+          "spread": 0.009999999999990905,
+          "spread_pct": 5.168773372542392e-06
+        },
+        "check4_depth": {
+          "bids_depth_10": 13759.0,
+          "asks_depth_10": 3814.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 1934.6950000000002,
+            "spread": 0.009999999999990905,
+            "spread_pct": 5.168773372542392e-06,
+            "bid_depth": 13759.0,
+            "ask_depth": 3814.0,
+            "imbalance": 0.565924998577363,
+            "bid_wall": [
+              1934.69,
+              11872.0
+            ],
+            "ask_wall": null,
+            "bid_wall_ratio": 56.62321144674086,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=56.62"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=56.62"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 1934.7,
+          "sell_fill": 1934.69,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 316.0,
+          "large_qty": 1354.0,
+          "small_avg_price": 1934.7000000000003,
+          "large_avg_price": 1934.750059084195,
+          "small_slippage": 1.175239961974632e-16,
+          "large_slippage": 2.5874339274836937e-05,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 12414.0,
+          "total_ask_depth": 8276.0,
+          "filled_qty": 8276.0,
+          "unfilled_qty": 4138.0,
+          "avg_price": 1935.0775954567423,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "SOL_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 78.55,
+          "best_ask": 78.56,
+          "mid_price": 78.555,
+          "spread": 0.010000000000005116,
+          "spread_pct": 0.0001272993444084414
+        },
+        "check4_depth": {
+          "bids_depth_10": 9479.0,
+          "asks_depth_10": 9207.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 78.555,
+            "spread": 0.010000000000005116,
+            "spread_pct": 0.0001272993444084414,
+            "bid_depth": 9479.0,
+            "ask_depth": 9207.0,
+            "imbalance": 0.014556352349352457,
+            "bid_wall": null,
+            "ask_wall": null,
+            "bid_wall_ratio": 0.0,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [],
+          "long_adjusted": false,
+          "short_adjusted": false,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 78.56,
+          "sell_fill": 78.55,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 210.5,
+          "large_qty": 3227.0,
+          "small_avg_price": 78.56,
+          "large_avg_price": 78.58198016733809,
+          "small_slippage": 0.0,
+          "large_slippage": 0.00027978828078011357,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 23617.5,
+          "total_ask_depth": 15745.0,
+          "filled_qty": 15745.0,
+          "unfilled_qty": 7872.5,
+          "avg_price": 78.65053477294379,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "DOGE_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 0.0749,
+          "best_ask": 0.07491,
+          "mid_price": 0.074905,
+          "spread": 1.0000000000010001e-05,
+          "spread_pct": 0.00013350243641959818
+        },
+        "check4_depth": {
+          "bids_depth_10": 304951.0,
+          "asks_depth_10": 314395.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 0.074905,
+            "spread": 1.0000000000010001e-05,
+            "spread_pct": 0.00013350243641959818,
+            "bid_depth": 304951.0,
+            "ask_depth": 314395.0,
+            "imbalance": -0.015248342606555948,
+            "bid_wall": null,
+            "ask_wall": null,
+            "bid_wall_ratio": 0.0,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [],
+          "long_adjusted": false,
+          "short_adjusted": false,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 0.07491,
+          "sell_fill": 0.0749,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 3198.0,
+          "large_qty": 114660.0,
+          "small_avg_price": 0.07491,
+          "large_avg_price": 0.07493636141636141,
+          "small_slippage": 0.0,
+          "large_slippage": 0.0003519078408944895,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 913491.0,
+          "total_ask_depth": 608994.0,
+          "filled_qty": 608994.0,
+          "unfilled_qty": 304497.0,
+          "avg_price": 0.07500816738752762,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "ADA_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 0.1674,
+          "best_ask": 0.1675,
+          "mid_price": 0.16745,
+          "spread": 0.00010000000000001674,
+          "spread_pct": 0.0005971931919977112
+        },
+        "check4_depth": {
+          "bids_depth_10": 197609.0,
+          "asks_depth_10": 218288.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 0.16745,
+            "spread": 0.00010000000000001674,
+            "spread_pct": 0.0005971931919977112,
+            "bid_depth": 197609.0,
+            "ask_depth": 218288.0,
+            "imbalance": -0.04972144545404271,
+            "bid_wall": null,
+            "ask_wall": null,
+            "bid_wall_ratio": 0.0,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [],
+          "long_adjusted": false,
+          "short_adjusted": false,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 0.1675,
+          "sell_fill": 0.1674,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 8150.5,
+          "large_qty": 105663.0,
+          "small_avg_price": 0.1675,
+          "large_avg_price": 0.16769141515951655,
+          "small_slippage": 0.0,
+          "large_slippage": 0.0011427770717405326,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 654922.5,
+          "total_ask_depth": 436615.0,
+          "filled_qty": 436615.0,
+          "unfilled_qty": 218307.5,
+          "avg_price": 0.16844455916539744,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "XRP_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 1.1268,
+          "best_ask": 1.1269,
+          "mid_price": 1.1268500000000001,
+          "spread": 9.999999999998899e-05,
+          "spread_pct": 8.87429560278555e-05
+        },
+        "check4_depth": {
+          "bids_depth_10": 12626.0,
+          "asks_depth_10": 16145.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 1.1268500000000001,
+            "spread": 9.999999999998899e-05,
+            "spread_pct": 8.87429560278555e-05,
+            "bid_depth": 12626.0,
+            "ask_depth": 16145.0,
+            "imbalance": -0.12231066003962324,
+            "bid_wall": null,
+            "ask_wall": null,
+            "bid_wall_ratio": 0.0,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [],
+          "long_adjusted": false,
+          "short_adjusted": false,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 1.1269,
+          "sell_fill": 1.1268,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 205.5,
+          "large_qty": 5679.0,
+          "small_avg_price": 1.1269,
+          "large_avg_price": 1.1272055643599226,
+          "small_slippage": 0.0,
+          "large_slippage": 0.00027115481402304744,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 43491.0,
+          "total_ask_depth": 28994.0,
+          "filled_qty": 28994.0,
+          "unfilled_qty": 14497.0,
+          "avg_price": 1.1278560184865831,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "BNB_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 583.8,
+          "best_ask": 583.85,
+          "mid_price": 583.825,
+          "spread": 0.05000000000006821,
+          "spread_pct": 8.56421016572915e-05
+        },
+        "check4_depth": {
+          "bids_depth_10": 433591.0,
+          "asks_depth_10": 229285.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 583.825,
+            "spread": 0.05000000000006821,
+            "spread_pct": 8.56421016572915e-05,
+            "bid_depth": 433591.0,
+            "ask_depth": 229285.0,
+            "imbalance": 0.30821149053518304,
+            "bid_wall": null,
+            "ask_wall": null,
+            "bid_wall_ratio": 0.0,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_imbalance=0.308"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_imbalance_blocks_short=0.308"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 583.85,
+          "sell_fill": 583.8,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 10150.5,
+          "large_qty": 82004.0,
+          "small_avg_price": 583.85,
+          "large_avg_price": 583.9530669235647,
+          "small_slippage": 0.0,
+          "large_slippage": 0.00017652979971689823,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 983433.0,
+          "total_ask_depth": 655622.0,
+          "filled_qty": 655622.0,
+          "unfilled_qty": 327811.0,
+          "avg_price": 584.4167868832955,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "DOT_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 0.863,
+          "best_ask": 0.864,
+          "mid_price": 0.8634999999999999,
+          "spread": 0.0010000000000000009,
+          "spread_pct": 0.0011580775911986115
+        },
+        "check4_depth": {
+          "bids_depth_10": 260740.0,
+          "asks_depth_10": 205593.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 0.8634999999999999,
+            "spread": 0.0010000000000000009,
+            "spread_pct": 0.0011580775911986115,
+            "bid_depth": 260740.0,
+            "ask_depth": 205593.0,
+            "imbalance": 0.11825669639506532,
+            "bid_wall": null,
+            "ask_wall": [
+              0.869,
+              76690.0
+            ],
+            "bid_wall_ratio": 0.0,
+            "ask_wall_ratio": 5.354491361721605,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "ask_wall_blocks_long_ratio=5.35"
+            },
+            {
+              "direction": "short",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "ask_wall_ratio=5.35"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 0.864,
+          "sell_fill": 0.863,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 5368.5,
+          "large_qty": 63698.0,
+          "small_avg_price": 0.864,
+          "large_avg_price": 0.8659928726176647,
+          "small_slippage": 0.0,
+          "large_slippage": 0.002306565529704486,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 635538.0,
+          "total_ask_depth": 423692.0,
+          "filled_qty": 423692.0,
+          "unfilled_qty": 211846.0,
+          "avg_price": 0.8729786802677417,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "LINK_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 8.555,
+          "best_ask": 8.557,
+          "mid_price": 8.556000000000001,
+          "spread": 0.002000000000000668,
+          "spread_pct": 0.00023375409069666524
+        },
+        "check4_depth": {
+          "bids_depth_10": 14208.0,
+          "asks_depth_10": 5403.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 8.556000000000001,
+            "spread": 0.002000000000000668,
+            "spread_pct": 0.00023375409069666524,
+            "bid_depth": 14208.0,
+            "ask_depth": 5403.0,
+            "imbalance": 0.4489827137830809,
+            "bid_wall": [
+              8.546,
+              7080.0
+            ],
+            "ask_wall": [
+              8.566,
+              3357.0
+            ],
+            "bid_wall_ratio": 8.93939393939394,
+            "ask_wall_ratio": 14.766862170087975,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=8.94"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=8.94"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 8.557,
+          "sell_fill": 8.555,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 42.5,
+          "large_qty": 739.0,
+          "small_avg_price": 8.557,
+          "large_avg_price": 8.559120433017592,
+          "small_slippage": 0.0,
+          "large_slippage": 0.00024780098370822003,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 26208.0,
+          "total_ask_depth": 17472.0,
+          "filled_qty": 17472.0,
+          "unfilled_qty": 8736.0,
+          "avg_price": 8.567952323717948,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "LTC_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 45.51,
+          "best_ask": 45.52,
+          "mid_price": 45.515,
+          "spread": 0.010000000000005116,
+          "spread_pct": 0.00021970778864121971
+        },
+        "check4_depth": {
+          "bids_depth_10": 9457.0,
+          "asks_depth_10": 9149.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 45.515,
+            "spread": 0.010000000000005116,
+            "spread_pct": 0.00021970778864121971,
+            "bid_depth": 9457.0,
+            "ask_depth": 9149.0,
+            "imbalance": 0.01655379984951091,
+            "bid_wall": null,
+            "ask_wall": null,
+            "bid_wall_ratio": 0.0,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [],
+          "long_adjusted": false,
+          "short_adjusted": false,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 45.52,
+          "sell_fill": 45.51,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 17.5,
+          "large_qty": 2572.0,
+          "small_avg_price": 45.52,
+          "large_avg_price": 45.546539657853806,
+          "small_slippage": 0.0,
+          "large_slippage": 0.0005830329053998918,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 28758.0,
+          "total_ask_depth": 19172.0,
+          "filled_qty": 19172.0,
+          "unfilled_qty": 9586.0,
+          "avg_price": 45.6140585228458,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "AVAX_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 6.728,
+          "best_ask": 6.73,
+          "mid_price": 6.729,
+          "spread": 0.002000000000000668,
+          "spread_pct": 0.00029722098380155563
+        },
+        "check4_depth": {
+          "bids_depth_10": 6339.0,
+          "asks_depth_10": 5689.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 6.729,
+            "spread": 0.002000000000000668,
+            "spread_pct": 0.00029722098380155563,
+            "bid_depth": 6339.0,
+            "ask_depth": 5689.0,
+            "imbalance": 0.05404057199866977,
+            "bid_wall": [
+              6.719,
+              2086.0
+            ],
+            "ask_wall": [
+              6.739,
+              2795.0
+            ],
+            "bid_wall_ratio": 4.414295791206207,
+            "ask_wall_ratio": 8.692121630960608,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=4.41"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=4.41"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 6.73,
+          "sell_fill": 6.728,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 82.0,
+          "large_qty": 1070.0,
+          "small_avg_price": 6.73,
+          "large_avg_price": 6.732675700934579,
+          "small_slippage": 0.0,
+          "large_slippage": 0.0003975781477828835,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 22203.0,
+          "total_ask_depth": 14802.0,
+          "filled_qty": 14802.0,
+          "unfilled_qty": 7401.0,
+          "avg_price": 6.741620997162545,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "ARB_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 0.09027,
+          "best_ask": 0.09029,
+          "mid_price": 0.09028,
+          "spread": 1.9999999999992246e-05,
+          "spread_pct": 0.00022153300841816845
+        },
+        "check4_depth": {
+          "bids_depth_10": 195821.0,
+          "asks_depth_10": 56609.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 0.09028,
+            "spread": 1.9999999999992246e-05,
+            "spread_pct": 0.00022153300841816845,
+            "bid_depth": 195821.0,
+            "ask_depth": 56609.0,
+            "imbalance": 0.5514875411005031,
+            "bid_wall": [
+              0.09019,
+              110174.0
+            ],
+            "ask_wall": [
+              0.09036,
+              23280.0
+            ],
+            "bid_wall_ratio": 11.577358226207572,
+            "ask_wall_ratio": 6.286417234240451,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=11.58"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=11.58"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 0.09029,
+          "sell_fill": 0.09027,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 1241.5,
+          "large_qty": 13858.0,
+          "small_avg_price": 0.09029,
+          "large_avg_price": 0.09031406191369605,
+          "small_slippage": 0.0,
+          "large_slippage": 0.00026649588765151344,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 401839.5,
+          "total_ask_depth": 267893.0,
+          "filled_qty": 267893.0,
+          "unfilled_qty": 133946.5,
+          "avg_price": 0.09043535101701053,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "OP_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 0.10381,
+          "best_ask": 0.10391,
+          "mid_price": 0.10386000000000001,
+          "spread": 0.00010000000000000286,
+          "spread_pct": 0.0009628345850183214
+        },
+        "check4_depth": {
+          "bids_depth_10": 24902.0,
+          "asks_depth_10": 29720.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 0.10386000000000001,
+            "spread": 0.00010000000000000286,
+            "spread_pct": 0.0009628345850183214,
+            "bid_depth": 24902.0,
+            "ask_depth": 29720.0,
+            "imbalance": -0.08820621727509062,
+            "bid_wall": [
+              0.1037,
+              13448.0
+            ],
+            "ask_wall": [
+              0.104,
+              12975.0
+            ],
+            "bid_wall_ratio": 10.566788894709271,
+            "ask_wall_ratio": 6.973723499552105,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=10.57"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=10.57"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 0.10391,
+          "sell_fill": 0.10381,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 237.0,
+          "large_qty": 9547.0,
+          "small_avg_price": 0.10391,
+          "large_avg_price": 0.10392758981879124,
+          "small_slippage": 0.0,
+          "large_slippage": 0.00016927936475066453,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 103150.5,
+          "total_ask_depth": 68767.0,
+          "filled_qty": 68767.0,
+          "unfilled_qty": 34383.5,
+          "avg_price": 0.10405078816874375,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "APT_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 0.6292,
+          "best_ask": 0.6294,
+          "mid_price": 0.6293,
+          "spread": 0.00019999999999997797,
+          "spread_pct": 0.00031781344350862546
+        },
+        "check4_depth": {
+          "bids_depth_10": 381919.0,
+          "asks_depth_10": 312852.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 0.6293,
+            "spread": 0.00019999999999997797,
+            "spread_pct": 0.00031781344350862546,
+            "bid_depth": 381919.0,
+            "ask_depth": 312852.0,
+            "imbalance": 0.09940973356688751,
+            "bid_wall": [
+              0.6286,
+              191436.0
+            ],
+            "ask_wall": [
+              0.6304,
+              195976.0
+            ],
+            "bid_wall_ratio": 9.04502764026186,
+            "ask_wall_ratio": 15.091070878537938,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=9.05"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=9.05"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 0.6294,
+          "sell_fill": 0.6292,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 302.5,
+          "large_qty": 11333.0,
+          "small_avg_price": 0.6294,
+          "large_avg_price": 0.629726603723639,
+          "small_slippage": 0.0,
+          "large_slippage": 0.0005189128116285644,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 817750.5,
+          "total_ask_depth": 545167.0,
+          "filled_qty": 545167.0,
+          "unfilled_qty": 272583.5,
+          "avg_price": 0.6306072012796079,
+          "partial_correct": true
+        }
+      }
+    },
+    {
+      "symbol": "SUI_USDT",
+      "pass": true,
+      "fail_reasons": [],
+      "checks": {
+        "check1_get": {
+          "bids_count": 20,
+          "asks_count": 20
+        },
+        "check2_sorted": {
+          "bids_desc": true,
+          "asks_asc": true
+        },
+        "check3_spread": {
+          "best_bid": 0.764,
+          "best_ask": 0.7641,
+          "mid_price": 0.76405,
+          "spread": 9.999999999998899e-05,
+          "spread_pct": 0.00013088148681367578
+        },
+        "check4_depth": {
+          "bids_depth_10": 42078.0,
+          "asks_depth_10": 21741.0
+        },
+        "check5_obgate": {
+          "analysis": {
+            "mid_price": 0.76405,
+            "spread": 9.999999999998899e-05,
+            "spread_pct": 0.00013088148681367578,
+            "bid_depth": 42078.0,
+            "ask_depth": 21741.0,
+            "imbalance": 0.318666854698444,
+            "bid_wall": [
+              0.7632,
+              18164.0
+            ],
+            "ask_wall": null,
+            "bid_wall_ratio": 6.835995651083047,
+            "ask_wall_ratio": 0.0,
+            "has_data": true
+          },
+          "rules_triggered": [
+            {
+              "direction": "long",
+              "action": "boost",
+              "multiplier": 1.15,
+              "reason": "bid_wall_ratio=6.84"
+            },
+            {
+              "direction": "short",
+              "action": "reduce",
+              "multiplier": 0.7,
+              "reason": "bid_wall_blocks_short_ratio=6.84"
+            }
+          ],
+          "long_adjusted": true,
+          "short_adjusted": true,
+          "gate_called_ok": true
+        },
+        "check6_fill_price": {
+          "buy_fill": 0.7641,
+          "sell_fill": 0.764,
+          "buy_in_range": true,
+          "sell_in_range": true
+        },
+        "check7_impact": {
+          "small_qty": 131.0,
+          "large_qty": 6102.0,
+          "small_avg_price": 0.7641,
+          "large_avg_price": 0.7643713536545395,
+          "small_slippage": 0.0,
+          "large_slippage": 0.00035512845771424207,
+          "large_worse_than_small": true
+        },
+        "check8_partial_fill": {
+          "huge_qty": 149706.0,
+          "total_ask_depth": 99804.0,
+          "filled_qty": 99804.0,
+          "unfilled_qty": 49902.0,
+          "avg_price": 0.7653127419742694,
+          "partial_correct": true
+        }
+      }
+    }
+  ],
+  "timestamp": 1784123072.2908058
+}

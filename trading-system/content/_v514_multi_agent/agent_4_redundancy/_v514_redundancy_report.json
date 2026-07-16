@@ -1,0 +1,1537 @@
+{
+  "agent_id": "agent_4_redundancy",
+  "timestamp": 1782660769,
+  "total_files_analyzed": 6,
+  "total_functions": 93,
+  "redundant_modules": [
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "load_klines",
+      "qualname": "load_klines",
+      "line_range": [
+        114,
+        144
+      ],
+      "lines": 31,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:load_klines",
+        "_v504_momentum_walkforward.py:load_klines",
+        "_v505_mtf_momentum.py:load_klines",
+        "_v506_mtf_momentum_optimized.py:load_klines"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 9,
+      "nesting_depth": 7,
+      "exec_time_ms": 109.57,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'load_klines' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "calc_indicators",
+      "qualname": "calc_indicators",
+      "line_range": [
+        150,
+        197
+      ],
+      "lines": 48,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:calc_indicators",
+        "_v504_momentum_walkforward.py:calc_indicators",
+        "_v505_mtf_momentum.py:calc_indicators",
+        "_v506_mtf_momentum_optimized.py:calc_indicators"
+      ],
+      "overlap_pct": 97.5,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 9,
+      "nesting_depth": 4,
+      "exec_time_ms": 80.7,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'calc_indicators' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "momentum_signal",
+      "qualname": "momentum_signal",
+      "line_range": [
+        203,
+        235
+      ],
+      "lines": 33,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:momentum_signal",
+        "_v504_momentum_walkforward.py:momentum_signal"
+      ],
+      "overlap_pct": 82.61,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 5,
+      "nesting_depth": 2,
+      "exec_time_ms": 14.1,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'momentum_signal' appears in 2 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "backtest_window",
+      "qualname": "backtest_window",
+      "line_range": [
+        241,
+        387
+      ],
+      "lines": 147,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:backtest_window",
+        "_v504_momentum_walkforward.py:backtest_window",
+        "_v505_mtf_momentum.py:backtest_window",
+        "_v506_mtf_momentum_optimized.py:backtest_window"
+      ],
+      "overlap_pct": 85.33,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 20,
+      "nesting_depth": 5,
+      "exec_time_ms": 133.53,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'backtest_window' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "_calc_metrics",
+      "qualname": "_calc_metrics",
+      "line_range": [
+        390,
+        471
+      ],
+      "lines": 82,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:_calc_metrics",
+        "_v504_momentum_walkforward.py:_calc_metrics",
+        "_v505_mtf_momentum.py:_calc_metrics",
+        "_v506_mtf_momentum_optimized.py:_calc_metrics"
+      ],
+      "overlap_pct": 77.46,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 18,
+      "nesting_depth": 4,
+      "exec_time_ms": 82.8,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: '_calc_metrics' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "walk_forward_evaluate",
+      "qualname": "walk_forward_evaluate",
+      "line_range": [
+        477,
+        629
+      ],
+      "lines": 153,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:walk_forward_evaluate",
+        "_v504_momentum_walkforward.py:walk_forward_evaluate",
+        "_v505_mtf_momentum.py:walk_forward_evaluate",
+        "_v506_mtf_momentum_optimized.py:walk_forward_evaluate"
+      ],
+      "overlap_pct": 81.36,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 30,
+      "nesting_depth": 3,
+      "exec_time_ms": 127.63,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'walk_forward_evaluate' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "random_individual",
+      "qualname": "random_individual",
+      "line_range": [
+        635,
+        636
+      ],
+      "lines": 2,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:random_individual",
+        "_v504_momentum_walkforward.py:random_individual",
+        "_v505_mtf_momentum.py:random_individual",
+        "_v506_mtf_momentum_optimized.py:random_individual"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.8,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'random_individual' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "tournament_select",
+      "qualname": "tournament_select",
+      "line_range": [
+        639,
+        641
+      ],
+      "lines": 3,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:tournament_select",
+        "_v504_momentum_walkforward.py:tournament_select",
+        "_v505_mtf_momentum.py:tournament_select",
+        "_v506_mtf_momentum_optimized.py:tournament_select"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.95,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'tournament_select' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "uniform_crossover",
+      "qualname": "uniform_crossover",
+      "line_range": [
+        644,
+        655
+      ],
+      "lines": 12,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:uniform_crossover",
+        "_v504_momentum_walkforward.py:uniform_crossover",
+        "_v505_mtf_momentum.py:uniform_crossover",
+        "_v506_mtf_momentum_optimized.py:uniform_crossover"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 4,
+      "nesting_depth": 2,
+      "exec_time_ms": 23.0,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'uniform_crossover' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "gaussian_mutation",
+      "qualname": "gaussian_mutation",
+      "line_range": [
+        658,
+        667
+      ],
+      "lines": 10,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:gaussian_mutation",
+        "_v504_momentum_walkforward.py:gaussian_mutation",
+        "_v505_mtf_momentum.py:gaussian_mutation",
+        "_v506_mtf_momentum_optimized.py:gaussian_mutation"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 3,
+      "nesting_depth": 2,
+      "exec_time_ms": 21.6,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'gaussian_mutation' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "function": "main",
+      "qualname": "main",
+      "line_range": [
+        673,
+        880
+      ],
+      "lines": 208,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:main",
+        "_v504_momentum_walkforward.py:main",
+        "_v505_mtf_momentum.py:main",
+        "_v506_mtf_momentum_optimized.py:main"
+      ],
+      "overlap_pct": 70.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 19,
+      "nesting_depth": 3,
+      "exec_time_ms": 217.25,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'main' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "load_klines",
+      "qualname": "load_klines",
+      "line_range": [
+        91,
+        121
+      ],
+      "lines": 31,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:load_klines",
+        "_v503_momentum_walkforward.py:load_klines",
+        "_v505_mtf_momentum.py:load_klines",
+        "_v506_mtf_momentum_optimized.py:load_klines"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 9,
+      "nesting_depth": 7,
+      "exec_time_ms": 109.57,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'load_klines' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "calc_indicators",
+      "qualname": "calc_indicators",
+      "line_range": [
+        127,
+        168
+      ],
+      "lines": 42,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:calc_indicators",
+        "_v503_momentum_walkforward.py:calc_indicators",
+        "_v505_mtf_momentum.py:calc_indicators",
+        "_v506_mtf_momentum_optimized.py:calc_indicators"
+      ],
+      "overlap_pct": 97.5,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 9,
+      "nesting_depth": 4,
+      "exec_time_ms": 78.0,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'calc_indicators' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "momentum_signal",
+      "qualname": "momentum_signal",
+      "line_range": [
+        174,
+        198
+      ],
+      "lines": 25,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:momentum_signal",
+        "_v503_momentum_walkforward.py:momentum_signal"
+      ],
+      "overlap_pct": 82.61,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 5,
+      "nesting_depth": 2,
+      "exec_time_ms": 11.7,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'momentum_signal' appears in 2 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "backtest_window",
+      "qualname": "backtest_window",
+      "line_range": [
+        204,
+        334
+      ],
+      "lines": 131,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:backtest_window",
+        "_v503_momentum_walkforward.py:backtest_window",
+        "_v505_mtf_momentum.py:backtest_window",
+        "_v506_mtf_momentum_optimized.py:backtest_window"
+      ],
+      "overlap_pct": 85.33,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 20,
+      "nesting_depth": 5,
+      "exec_time_ms": 125.12,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'backtest_window' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "_calc_metrics",
+      "qualname": "_calc_metrics",
+      "line_range": [
+        337,
+        413
+      ],
+      "lines": 77,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v505_mtf_momentum.py:_calc_metrics",
+        "_v503_momentum_walkforward.py:_calc_metrics",
+        "_v505_mtf_momentum.py:_calc_metrics",
+        "_v506_mtf_momentum_optimized.py:_calc_metrics"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 19,
+      "nesting_depth": 4,
+      "exec_time_ms": 81.75,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: '_calc_metrics' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "walk_forward_evaluate",
+      "qualname": "walk_forward_evaluate",
+      "line_range": [
+        419,
+        576
+      ],
+      "lines": 158,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:walk_forward_evaluate",
+        "_v503_momentum_walkforward.py:walk_forward_evaluate",
+        "_v505_mtf_momentum.py:walk_forward_evaluate",
+        "_v506_mtf_momentum_optimized.py:walk_forward_evaluate"
+      ],
+      "overlap_pct": 81.36,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 36,
+      "nesting_depth": 3,
+      "exec_time_ms": 135.5,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'walk_forward_evaluate' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "random_individual",
+      "qualname": "random_individual",
+      "line_range": [
+        582,
+        583
+      ],
+      "lines": 2,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:random_individual",
+        "_v503_momentum_walkforward.py:random_individual",
+        "_v505_mtf_momentum.py:random_individual",
+        "_v506_mtf_momentum_optimized.py:random_individual"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.8,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'random_individual' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "tournament_select",
+      "qualname": "tournament_select",
+      "line_range": [
+        586,
+        588
+      ],
+      "lines": 3,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:tournament_select",
+        "_v503_momentum_walkforward.py:tournament_select",
+        "_v505_mtf_momentum.py:tournament_select",
+        "_v506_mtf_momentum_optimized.py:tournament_select"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.95,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'tournament_select' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "uniform_crossover",
+      "qualname": "uniform_crossover",
+      "line_range": [
+        591,
+        602
+      ],
+      "lines": 12,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:uniform_crossover",
+        "_v503_momentum_walkforward.py:uniform_crossover",
+        "_v505_mtf_momentum.py:uniform_crossover",
+        "_v506_mtf_momentum_optimized.py:uniform_crossover"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 4,
+      "nesting_depth": 2,
+      "exec_time_ms": 23.0,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'uniform_crossover' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "gaussian_mutation",
+      "qualname": "gaussian_mutation",
+      "line_range": [
+        605,
+        614
+      ],
+      "lines": 10,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:gaussian_mutation",
+        "_v503_momentum_walkforward.py:gaussian_mutation",
+        "_v505_mtf_momentum.py:gaussian_mutation",
+        "_v506_mtf_momentum_optimized.py:gaussian_mutation"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 3,
+      "nesting_depth": 2,
+      "exec_time_ms": 21.6,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'gaussian_mutation' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "function": "main",
+      "qualname": "main",
+      "line_range": [
+        620,
+        812
+      ],
+      "lines": 193,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:main",
+        "_v503_momentum_walkforward.py:main",
+        "_v505_mtf_momentum.py:main",
+        "_v506_mtf_momentum_optimized.py:main"
+      ],
+      "overlap_pct": 70.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 19,
+      "nesting_depth": 3,
+      "exec_time_ms": 211.62,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'main' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "load_klines",
+      "qualname": "load_klines",
+      "line_range": [
+        89,
+        118
+      ],
+      "lines": 30,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:load_klines",
+        "_v503_momentum_walkforward.py:load_klines",
+        "_v504_momentum_walkforward.py:load_klines",
+        "_v506_mtf_momentum_optimized.py:load_klines"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 9,
+      "nesting_depth": 7,
+      "exec_time_ms": 108.9,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'load_klines' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "calc_indicators",
+      "qualname": "calc_indicators",
+      "line_range": [
+        121,
+        164
+      ],
+      "lines": 44,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:calc_indicators",
+        "_v503_momentum_walkforward.py:calc_indicators",
+        "_v504_momentum_walkforward.py:calc_indicators",
+        "_v506_mtf_momentum_optimized.py:calc_indicators"
+      ],
+      "overlap_pct": 70.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 5,
+      "nesting_depth": 2,
+      "exec_time_ms": 49.4,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'calc_indicators' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "calc_ma",
+      "qualname": "calc_ma",
+      "line_range": [
+        167,
+        174
+      ],
+      "lines": 8,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:calc_ma",
+        "_v506_mtf_momentum_optimized.py:calc_ma"
+      ],
+      "overlap_pct": 87.5,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 2,
+      "nesting_depth": 1,
+      "exec_time_ms": 3.15,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'calc_ma' appears in 2 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "mtf_signal",
+      "qualname": "mtf_signal",
+      "line_range": [
+        177,
+        211
+      ],
+      "lines": 35,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:mtf_signal",
+        "_v506_mtf_momentum_optimized.py:mtf_signal"
+      ],
+      "overlap_pct": 84.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 10,
+      "nesting_depth": 2,
+      "exec_time_ms": 18.7,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'mtf_signal' appears in 2 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "backtest_window",
+      "qualname": "backtest_window",
+      "line_range": [
+        214,
+        358
+      ],
+      "lines": 145,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:backtest_window",
+        "_v503_momentum_walkforward.py:backtest_window",
+        "_v504_momentum_walkforward.py:backtest_window",
+        "_v506_mtf_momentum_optimized.py:backtest_window"
+      ],
+      "overlap_pct": 97.33,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 24,
+      "nesting_depth": 5,
+      "exec_time_ms": 138.08,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'backtest_window' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "_calc_metrics",
+      "qualname": "_calc_metrics",
+      "line_range": [
+        361,
+        434
+      ],
+      "lines": 74,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:_calc_metrics",
+        "_v503_momentum_walkforward.py:_calc_metrics",
+        "_v504_momentum_walkforward.py:_calc_metrics",
+        "_v506_mtf_momentum_optimized.py:_calc_metrics"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 19,
+      "nesting_depth": 4,
+      "exec_time_ms": 80.4,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: '_calc_metrics' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "walk_forward_evaluate",
+      "qualname": "walk_forward_evaluate",
+      "line_range": [
+        437,
+        598
+      ],
+      "lines": 162,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:walk_forward_evaluate",
+        "_v503_momentum_walkforward.py:walk_forward_evaluate",
+        "_v504_momentum_walkforward.py:walk_forward_evaluate",
+        "_v506_mtf_momentum_optimized.py:walk_forward_evaluate"
+      ],
+      "overlap_pct": 89.39,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 39,
+      "nesting_depth": 3,
+      "exec_time_ms": 140.0,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'walk_forward_evaluate' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "random_individual",
+      "qualname": "random_individual",
+      "line_range": [
+        601,
+        602
+      ],
+      "lines": 2,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:random_individual",
+        "_v503_momentum_walkforward.py:random_individual",
+        "_v504_momentum_walkforward.py:random_individual",
+        "_v506_mtf_momentum_optimized.py:random_individual"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.8,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'random_individual' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "tournament_select",
+      "qualname": "tournament_select",
+      "line_range": [
+        605,
+        607
+      ],
+      "lines": 3,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:tournament_select",
+        "_v503_momentum_walkforward.py:tournament_select",
+        "_v504_momentum_walkforward.py:tournament_select",
+        "_v506_mtf_momentum_optimized.py:tournament_select"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.95,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'tournament_select' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "uniform_crossover",
+      "qualname": "uniform_crossover",
+      "line_range": [
+        610,
+        621
+      ],
+      "lines": 12,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:uniform_crossover",
+        "_v503_momentum_walkforward.py:uniform_crossover",
+        "_v504_momentum_walkforward.py:uniform_crossover",
+        "_v506_mtf_momentum_optimized.py:uniform_crossover"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 4,
+      "nesting_depth": 2,
+      "exec_time_ms": 23.0,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'uniform_crossover' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "gaussian_mutation",
+      "qualname": "gaussian_mutation",
+      "line_range": [
+        624,
+        633
+      ],
+      "lines": 10,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:gaussian_mutation",
+        "_v503_momentum_walkforward.py:gaussian_mutation",
+        "_v504_momentum_walkforward.py:gaussian_mutation",
+        "_v506_mtf_momentum_optimized.py:gaussian_mutation"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 3,
+      "nesting_depth": 2,
+      "exec_time_ms": 21.6,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'gaussian_mutation' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "function": "main",
+      "qualname": "main",
+      "line_range": [
+        636,
+        818
+      ],
+      "lines": 183,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:main",
+        "_v503_momentum_walkforward.py:main",
+        "_v504_momentum_walkforward.py:main",
+        "_v506_mtf_momentum_optimized.py:main"
+      ],
+      "overlap_pct": 70.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 22,
+      "nesting_depth": 3,
+      "exec_time_ms": 210.88,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'main' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "load_klines",
+      "qualname": "load_klines",
+      "line_range": [
+        81,
+        110
+      ],
+      "lines": 30,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v505_mtf_momentum.py:load_klines",
+        "_v503_momentum_walkforward.py:load_klines",
+        "_v504_momentum_walkforward.py:load_klines",
+        "_v505_mtf_momentum.py:load_klines"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 9,
+      "nesting_depth": 7,
+      "exec_time_ms": 108.9,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'load_klines' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "calc_indicators",
+      "qualname": "calc_indicators",
+      "line_range": [
+        113,
+        131
+      ],
+      "lines": 19,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v510_paper_trading.py:calc_indicators",
+        "_v503_momentum_walkforward.py:calc_indicators",
+        "_v504_momentum_walkforward.py:calc_indicators",
+        "_v505_mtf_momentum.py:calc_indicators"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 3,
+      "nesting_depth": 2,
+      "exec_time_ms": 24.3,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'calc_indicators' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "calc_ma",
+      "qualname": "calc_ma",
+      "line_range": [
+        134,
+        140
+      ],
+      "lines": 7,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v510_paper_trading.py:calc_ma",
+        "_v505_mtf_momentum.py:calc_ma"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 2,
+      "nesting_depth": 1,
+      "exec_time_ms": 2.93,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'calc_ma' appears in 2 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "mtf_signal",
+      "qualname": "mtf_signal",
+      "line_range": [
+        143,
+        171
+      ],
+      "lines": 29,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v505_mtf_momentum.py:mtf_signal",
+        "_v505_mtf_momentum.py:mtf_signal"
+      ],
+      "overlap_pct": 84.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 10,
+      "nesting_depth": 2,
+      "exec_time_ms": 16.9,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'mtf_signal' appears in 2 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "backtest_window",
+      "qualname": "backtest_window",
+      "line_range": [
+        174,
+        316
+      ],
+      "lines": 143,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v505_mtf_momentum.py:backtest_window",
+        "_v503_momentum_walkforward.py:backtest_window",
+        "_v504_momentum_walkforward.py:backtest_window",
+        "_v505_mtf_momentum.py:backtest_window"
+      ],
+      "overlap_pct": 97.33,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 24,
+      "nesting_depth": 5,
+      "exec_time_ms": 137.03,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'backtest_window' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "_calc_metrics",
+      "qualname": "_calc_metrics",
+      "line_range": [
+        319,
+        392
+      ],
+      "lines": 74,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v504_momentum_walkforward.py:_calc_metrics",
+        "_v503_momentum_walkforward.py:_calc_metrics",
+        "_v504_momentum_walkforward.py:_calc_metrics",
+        "_v505_mtf_momentum.py:_calc_metrics"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 19,
+      "nesting_depth": 4,
+      "exec_time_ms": 80.4,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: '_calc_metrics' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "walk_forward_evaluate",
+      "qualname": "walk_forward_evaluate",
+      "line_range": [
+        395,
+        576
+      ],
+      "lines": 182,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v505_mtf_momentum.py:walk_forward_evaluate",
+        "_v503_momentum_walkforward.py:walk_forward_evaluate",
+        "_v504_momentum_walkforward.py:walk_forward_evaluate",
+        "_v505_mtf_momentum.py:walk_forward_evaluate"
+      ],
+      "overlap_pct": 89.39,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 42,
+      "nesting_depth": 3,
+      "exec_time_ms": 150.5,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'walk_forward_evaluate' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "random_individual",
+      "qualname": "random_individual",
+      "line_range": [
+        579,
+        580
+      ],
+      "lines": 2,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:random_individual",
+        "_v503_momentum_walkforward.py:random_individual",
+        "_v504_momentum_walkforward.py:random_individual",
+        "_v505_mtf_momentum.py:random_individual"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.8,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'random_individual' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "tournament_select",
+      "qualname": "tournament_select",
+      "line_range": [
+        583,
+        585
+      ],
+      "lines": 3,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:tournament_select",
+        "_v503_momentum_walkforward.py:tournament_select",
+        "_v504_momentum_walkforward.py:tournament_select",
+        "_v505_mtf_momentum.py:tournament_select"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 0.95,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'tournament_select' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "uniform_crossover",
+      "qualname": "uniform_crossover",
+      "line_range": [
+        588,
+        599
+      ],
+      "lines": 12,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:uniform_crossover",
+        "_v503_momentum_walkforward.py:uniform_crossover",
+        "_v504_momentum_walkforward.py:uniform_crossover",
+        "_v505_mtf_momentum.py:uniform_crossover"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 4,
+      "nesting_depth": 2,
+      "exec_time_ms": 23.0,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'uniform_crossover' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "gaussian_mutation",
+      "qualname": "gaussian_mutation",
+      "line_range": [
+        602,
+        611
+      ],
+      "lines": 10,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v503_momentum_walkforward.py:gaussian_mutation",
+        "_v503_momentum_walkforward.py:gaussian_mutation",
+        "_v504_momentum_walkforward.py:gaussian_mutation",
+        "_v505_mtf_momentum.py:gaussian_mutation"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": true,
+      "cyclomatic_complexity": 3,
+      "nesting_depth": 2,
+      "exec_time_ms": 21.6,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'gaussian_mutation' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "function": "main",
+      "qualname": "main",
+      "line_range": [
+        614,
+        793
+      ],
+      "lines": 180,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v505_mtf_momentum.py:main",
+        "_v503_momentum_walkforward.py:main",
+        "_v504_momentum_walkforward.py:main",
+        "_v505_mtf_momentum.py:main"
+      ],
+      "overlap_pct": 70.0,
+      "hash_match": false,
+      "iterative": true,
+      "cyclomatic_complexity": 21,
+      "nesting_depth": 3,
+      "exec_time_ms": 208.75,
+      "recommendation": "merge",
+      "reason": "Iterative duplicate: 'main' appears in 4 momentum files (v503-v506); consolidate into one"
+    },
+    {
+      "file": "_v510_paper_trading.py",
+      "function": "calc_indicators",
+      "qualname": "calc_indicators",
+      "line_range": [
+        130,
+        148
+      ],
+      "lines": 19,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:calc_indicators"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": false,
+      "cyclomatic_complexity": 3,
+      "nesting_depth": 2,
+      "exec_time_ms": 24.3,
+      "recommendation": "merge",
+      "reason": "Identical body hash to _v506_mtf_momentum_optimized.py:calc_indicators (exact duplicate)"
+    },
+    {
+      "file": "_v510_paper_trading.py",
+      "function": "calc_ma",
+      "qualname": "calc_ma",
+      "line_range": [
+        151,
+        157
+      ],
+      "lines": 7,
+      "redundancy_type": "duplicate",
+      "overlap_with": [
+        "_v506_mtf_momentum_optimized.py:calc_ma"
+      ],
+      "overlap_pct": 100.0,
+      "hash_match": true,
+      "iterative": false,
+      "cyclomatic_complexity": 2,
+      "nesting_depth": 1,
+      "exec_time_ms": 2.93,
+      "recommendation": "merge",
+      "reason": "Identical body hash to _v506_mtf_momentum_optimized.py:calc_ma (exact duplicate)"
+    },
+    {
+      "file": "_v510_paper_trading.py",
+      "function": "main",
+      "qualname": "main",
+      "line_range": [
+        422,
+        541
+      ],
+      "lines": 120,
+      "redundancy_type": "slow",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 10,
+      "nesting_depth": 6,
+      "exec_time_ms": 184.4,
+      "recommendation": "refactor",
+      "reason": "Estimated > 100ms (loops=3, depth=6, cc=10, lines=120)"
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "get_account",
+      "qualname": "GateIoSpotClient.get_account",
+      "line_range": [
+        204,
+        211
+      ],
+      "lines": 8,
+      "redundancy_type": "dead_code",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 5,
+      "nesting_depth": 3,
+      "exec_time_ms": 28.25,
+      "recommendation": "review",
+      "reason": "Function name never appears as a Call target across all 6 files; however it has a public-API-style name and may be intended as external surface (e.g. REST client). Review before removing."
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "get_order",
+      "qualname": "GateIoSpotClient.get_order",
+      "line_range": [
+        235,
+        239
+      ],
+      "lines": 5,
+      "redundancy_type": "dead_code",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 1.25,
+      "recommendation": "review",
+      "reason": "Function name never appears as a Call target across all 6 files; however it has a public-API-style name and may be intended as external surface (e.g. REST client). Review before removing."
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "list_open_orders",
+      "qualname": "GateIoSpotClient.list_open_orders",
+      "line_range": [
+        241,
+        246
+      ],
+      "lines": 6,
+      "redundancy_type": "dead_code",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 2,
+      "nesting_depth": 1,
+      "exec_time_ms": 2.7,
+      "recommendation": "review",
+      "reason": "Function name never appears as a Call target across all 6 files; however it has a public-API-style name and may be intended as external surface (e.g. REST client). Review before removing."
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "list_tickers",
+      "qualname": "GateIoSpotClient.list_tickers",
+      "line_range": [
+        249,
+        254
+      ],
+      "lines": 6,
+      "redundancy_type": "dead_code",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 2,
+      "nesting_depth": 1,
+      "exec_time_ms": 2.7,
+      "recommendation": "review",
+      "reason": "Function name never appears as a Call target across all 6 files; however it has a public-API-style name and may be intended as external surface (e.g. REST client). Review before removing."
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "list_candlesticks",
+      "qualname": "GateIoSpotClient.list_candlesticks",
+      "line_range": [
+        256,
+        260
+      ],
+      "lines": 5,
+      "redundancy_type": "dead_code",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 1,
+      "nesting_depth": 0,
+      "exec_time_ms": 1.25,
+      "recommendation": "review",
+      "reason": "Function name never appears as a Call target across all 6 files; however it has a public-API-style name and may be intended as external surface (e.g. REST client). Review before removing."
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "_cancel_order",
+      "qualname": "LiveTradingEngine._cancel_order",
+      "line_range": [
+        591,
+        595
+      ],
+      "lines": 5,
+      "redundancy_type": "dead_code",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 4,
+      "nesting_depth": 1,
+      "exec_time_ms": 3.68,
+      "recommendation": "remove",
+      "reason": "Function name never appears as a Call target across all 6 files; not an entry-point. Private helper (leading underscore) — likely safe to remove."
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "monitor_positions",
+      "qualname": "LiveTradingEngine.monitor_positions",
+      "line_range": [
+        655,
+        698
+      ],
+      "lines": 44,
+      "redundancy_type": "slow",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 15,
+      "nesting_depth": 7,
+      "exec_time_ms": 129.15,
+      "recommendation": "refactor",
+      "reason": "Estimated > 100ms (loops=2, depth=7, cc=15, lines=44)"
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "function": "main",
+      "qualname": "main",
+      "line_range": [
+        804,
+        954
+      ],
+      "lines": 151,
+      "redundancy_type": "slow",
+      "overlap_with": [],
+      "overlap_pct": 0.0,
+      "hash_match": false,
+      "cyclomatic_complexity": 18,
+      "nesting_depth": 5,
+      "exec_time_ms": 188.83,
+      "recommendation": "refactor",
+      "reason": "Estimated > 100ms (loops=3, depth=5, cc=18, lines=151)"
+    }
+  ],
+  "optimization_plan": [
+    {
+      "action": "Extract duplicate functions into shared utility module _v520_shared_utils.py",
+      "functions": [
+        "_calc_metrics",
+        "backtest_window",
+        "calc_indicators",
+        "calc_ma",
+        "gaussian_mutation",
+        "load_klines",
+        "main",
+        "momentum_signal",
+        "mtf_signal",
+        "random_individual",
+        "tournament_select",
+        "uniform_crossover",
+        "walk_forward_evaluate"
+      ],
+      "files_affected": [
+        "_v503_momentum_walkforward.py",
+        "_v504_momentum_walkforward.py",
+        "_v505_mtf_momentum.py",
+        "_v506_mtf_momentum_optimized.py",
+        "_v510_paper_trading.py"
+      ],
+      "expected_speedup": "10-20% (eliminates duplicate code paths, simplifies maintenance)",
+      "rollback_plan": "Keep original files intact; new module is additive. If issues arise, revert import statements only."
+    },
+    {
+      "action": "Remove 6 dead-code function(s) from _v511_live_trading_infrastructure.py",
+      "functions": [
+        "get_account",
+        "get_order",
+        "list_open_orders",
+        "list_tickers",
+        "list_candlesticks",
+        "_cancel_order"
+      ],
+      "files_affected": [
+        "_v511_live_trading_infrastructure.py"
+      ],
+      "expected_speedup": "<5% (reduces file size, marginal speedup)",
+      "rollback_plan": "Restore from git history if function is later called by new code"
+    },
+    {
+      "action": "Refactor 19 slow function(s) (est. >100ms) — vectorize loops, cache indicators",
+      "functions": [
+        "_v503_momentum_walkforward.py:load_klines",
+        "_v503_momentum_walkforward.py:backtest_window",
+        "_v503_momentum_walkforward.py:walk_forward_evaluate",
+        "_v503_momentum_walkforward.py:main",
+        "_v504_momentum_walkforward.py:load_klines",
+        "_v504_momentum_walkforward.py:backtest_window",
+        "_v504_momentum_walkforward.py:walk_forward_evaluate",
+        "_v504_momentum_walkforward.py:main",
+        "_v505_mtf_momentum.py:load_klines",
+        "_v505_mtf_momentum.py:backtest_window",
+        "_v505_mtf_momentum.py:walk_forward_evaluate",
+        "_v505_mtf_momentum.py:main",
+        "_v506_mtf_momentum_optimized.py:load_klines",
+        "_v506_mtf_momentum_optimized.py:backtest_window",
+        "_v506_mtf_momentum_optimized.py:walk_forward_evaluate",
+        "_v506_mtf_momentum_optimized.py:main",
+        "_v510_paper_trading.py:main",
+        "_v511_live_trading_infrastructure.py:monitor_positions",
+        "_v511_live_trading_infrastructure.py:main"
+      ],
+      "files_affected": [
+        "_v503_momentum_walkforward.py",
+        "_v504_momentum_walkforward.py",
+        "_v505_mtf_momentum.py",
+        "_v506_mtf_momentum_optimized.py",
+        "_v510_paper_trading.py",
+        "_v511_live_trading_infrastructure.py"
+      ],
+      "expected_speedup": "30-60% on hot paths (backtest loops)",
+      "rollback_plan": "Keep original implementations in _archive/; swap in if refactor regresses"
+    },
+    {
+      "action": "Consolidate v503/v504/v505/v506 momentum variants into a single configurable strategy module (v520_momentum_unified.py)",
+      "rationale": "v503-v506 are iterative versions with ~70-85% code overlap; maintaining 4 copies increases bug surface and divergence risk",
+      "files_affected": [
+        "_v503_momentum_walkforward.py",
+        "_v504_momentum_walkforward.py",
+        "_v505_mtf_momentum.py",
+        "_v506_mtf_momentum_optimized.py"
+      ],
+      "expected_speedup": "60-75% code reduction in momentum strategy surface",
+      "rollback_plan": "Keep v506 as canonical; archive v503/v504/v505 with deprecation header; full rollback via git revert"
+    }
+  ],
+  "metrics": {
+    "total_lines": 4828,
+    "total_functions": 93,
+    "redundant_lines": 833,
+    "redundancy_pct": 17.25,
+    "iterative_duplicate_lines": 2121,
+    "iterative_duplicate_pct": 43.93,
+    "dead_code_functions": 6,
+    "duplicate_functions": 48,
+    "iterative_duplicate_functions": 46,
+    "slow_functions": 19,
+    "files_analyzed": 6,
+    "analysis_time_ms": 1078.87
+  },
+  "file_summary": [
+    {
+      "file": "_v503_momentum_walkforward.py",
+      "lines": 885,
+      "functions": 11,
+      "max_cc": 30,
+      "max_depth": 7,
+      "duplicates_in_file": 11,
+      "iterative_in_file": 11,
+      "dead_in_file": 0,
+      "slow_in_file": 4
+    },
+    {
+      "file": "_v504_momentum_walkforward.py",
+      "lines": 817,
+      "functions": 11,
+      "max_cc": 36,
+      "max_depth": 7,
+      "duplicates_in_file": 11,
+      "iterative_in_file": 11,
+      "dead_in_file": 0,
+      "slow_in_file": 4
+    },
+    {
+      "file": "_v505_mtf_momentum.py",
+      "lines": 823,
+      "functions": 12,
+      "max_cc": 39,
+      "max_depth": 7,
+      "duplicates_in_file": 12,
+      "iterative_in_file": 12,
+      "dead_in_file": 0,
+      "slow_in_file": 4
+    },
+    {
+      "file": "_v506_mtf_momentum_optimized.py",
+      "lines": 798,
+      "functions": 12,
+      "max_cc": 42,
+      "max_depth": 7,
+      "duplicates_in_file": 12,
+      "iterative_in_file": 12,
+      "dead_in_file": 0,
+      "slow_in_file": 4
+    },
+    {
+      "file": "_v510_paper_trading.py",
+      "lines": 546,
+      "functions": 14,
+      "max_cc": 16,
+      "max_depth": 6,
+      "duplicates_in_file": 2,
+      "iterative_in_file": 0,
+      "dead_in_file": 0,
+      "slow_in_file": 1
+    },
+    {
+      "file": "_v511_live_trading_infrastructure.py",
+      "lines": 959,
+      "functions": 33,
+      "max_cc": 18,
+      "max_depth": 7,
+      "duplicates_in_file": 0,
+      "iterative_in_file": 0,
+      "dead_in_file": 6,
+      "slow_in_file": 2
+    }
+  ],
+  "overlap_threshold_pct": 80.0,
+  "exec_time_threshold_ms": 100.0,
+  "methodology": "Python3 ast.parse + McCabe complexity + Jaccard line-set similarity + name-based call-graph"
+}

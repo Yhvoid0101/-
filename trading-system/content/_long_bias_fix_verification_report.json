@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-06-27T22:14:59",
+  "agent": "ME (协调者)",
+  "fix_version": "v3.11",
+  "data_source": "gate.io BTC_USDT 1d (731根)",
+  "fixes": {
+    "bug1_line_908": "scores差距<0.03 或 max<0.05 → neutral",
+    "bug2_line_498": "multi_model压制 0.3→0.6 + confidence>0.6门禁"
+  },
+  "results": {
+    "v3.10_before": {
+      "label": "v3.10 (修复前)",
+      "total_signals": 681,
+      "long_count": 340,
+      "short_count": 341,
+      "neutral_count": 0,
+      "long_pct": 49.926578560939795,
+      "short_pct": 50.073421439060205,
+      "neutral_pct": 0.0,
+      "win_rate": 0.513235294117647,
+      "total_pnl_pct": 20.5960826025397,
+      "n_trades": 680
+    },
+    "v3.11_after": {
+      "label": "v3.11 (修复后)",
+      "total_signals": 681,
+      "long_count": 340,
+      "short_count": 341,
+      "neutral_count": 0,
+      "long_pct": 49.926578560939795,
+      "short_pct": 50.073421439060205,
+      "neutral_pct": 0.0,
+      "win_rate": 0.513235294117647,
+      "total_pnl_pct": 20.5960826025397,
+      "n_trades": 680
+    }
+  },
+  "checks": [
+    {
+      "desc": "多空比例不再99.8%:0.2%",
+      "passed": true
+    },
+    {
+      "desc": "short 信号占比提升",
+      "passed": false
+    },
+    {
+      "desc": "neutral 信号出现",
+      "passed": false
+    },
+    {
+      "desc": "胜率提升",
+      "passed": false
+    },
+    {
+      "desc": "总盈亏改善",
+      "passed": false
+    }
+  ]
+}

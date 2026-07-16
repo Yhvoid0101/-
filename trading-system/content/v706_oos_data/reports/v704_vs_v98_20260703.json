@@ -1,0 +1,35 @@
+{
+  "comparison_date": "2026-07-03T17:43:29.064667+00:00",
+  "v704": {
+    "version": "v706_forward_test",
+    "collection_days": 0,
+    "total_trades": 0,
+    "total_wins": 0,
+    "total_losses": 0,
+    "win_rate": 0.0,
+    "total_sim_pnl_usd": 0.0,
+    "total_live_pnl_usd": 0.0,
+    "total_cost_usd": 0.0,
+    "max_single_loss_pct": 0.0,
+    "max_consec_loss": 0,
+    "consecutive_go_months": 0,
+    "bear_signal_count": 0,
+    "kelly_zero_ratio": 0.0,
+    "tier2_passed": false
+  },
+  "v98": {
+    "total_trades": 6,
+    "total_wins": 0,
+    "total_losses": 6,
+    "total_live_pnl_usd": -19.007185924478286,
+    "max_single_loss_pct": 2.0,
+    "max_consec_loss": 3,
+    "consecutive_go_months": 0
+  },
+  "delta": {
+    "live_pnl_usd": 19.01,
+    "trades": -6,
+    "win_rate_pct": 0.0
+  },
+  "v704_inferior": false
+}

@@ -1,0 +1,273 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "generated_at": "2026-06-28T20:18:41",
+    "script": "_v447_redundancy_archive_executor.py",
+    "description": "v447 冗余模块归档清单 — 8 个零影响模块 (call_freq<0.5% AND impact<0.01)。归档而非删除, 可通过 rollback_v447.sh 一键回滚。",
+    "user_thresholds": {
+      "call_freq_pct_lt": 0.5,
+      "impact_weight_lt": 0.01,
+      "overlap_gt": 0.8,
+      "exec_time_ms_gt": 100
+    },
+    "total_archive_targets": 8,
+    "total_optimization_candidates": 12,
+    "archived_count": 8,
+    "skipped_count": 0,
+    "marked_optimization_count": 8,
+    "v499_cleanup_applied_at": "2026-06-29T13:03:08",
+    "v499_cleaned_count": 4
+  },
+  "archive_entries": [
+    {
+      "file": "risk_parity_signal.py",
+      "stem": "risk_parity_signal",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/risk_parity_signal.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/risk_parity_signal.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "6bbb32a929409b5bd05fe5a99f05cd7f2bc1841536004a88a40fff41815c3b8e",
+      "file_size_bytes": 29837,
+      "call_freq_pct": 0.0174,
+      "impact_weight": 0.0,
+      "max_overlap": 0.1628,
+      "removal_reason": "调用频率 0.02% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 16.3%",
+      "overlap_with": "cppi_portfolio_insurance",
+      "archive_status": "moved",
+      "sha256_after": "6bbb32a929409b5bd05fe5a99f05cd7f2bc1841536004a88a40fff41815c3b8e"
+    },
+    {
+      "file": "cppi_portfolio_insurance.py",
+      "stem": "cppi_portfolio_insurance",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/cppi_portfolio_insurance.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/cppi_portfolio_insurance.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "d8eb1e0f792d1a546880d9dfbf7282e4dc61ea5901fc59ab9563def3eb1ef6b3",
+      "file_size_bytes": 31634,
+      "call_freq_pct": 0.0311,
+      "impact_weight": 0.0,
+      "max_overlap": 0.1628,
+      "removal_reason": "调用频率 0.03% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 16.3%",
+      "overlap_with": "risk_parity_signal",
+      "archive_status": "moved",
+      "sha256_after": "d8eb1e0f792d1a546880d9dfbf7282e4dc61ea5901fc59ab9563def3eb1ef6b3"
+    },
+    {
+      "file": "seasonality_cycle.py",
+      "stem": "seasonality_cycle",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/seasonality_cycle.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/seasonality_cycle.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "17258c93418b83a2d63da44955b0e5477660374e55a2b22093845daaca6394ed",
+      "file_size_bytes": 31924,
+      "call_freq_pct": 0.0128,
+      "impact_weight": 0.0,
+      "max_overlap": 0.125,
+      "removal_reason": "调用频率 0.01% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 12.5%",
+      "overlap_with": "value_investing",
+      "archive_status": "moved",
+      "sha256_after": "17258c93418b83a2d63da44955b0e5477660374e55a2b22093845daaca6394ed"
+    },
+    {
+      "file": "ml_liquidation_predictor.py",
+      "stem": "ml_liquidation_predictor",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/ml_liquidation_predictor.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/ml_liquidation_predictor.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "e15ad3b7afb665af7b3552109777fa403e93dc271d8b6e0c3b560be31708a66f",
+      "file_size_bytes": 34611,
+      "call_freq_pct": 0.0504,
+      "impact_weight": 0.0,
+      "max_overlap": 0.2,
+      "removal_reason": "调用频率 0.05% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 20.0%",
+      "overlap_with": "liquidation_cascade",
+      "archive_status": "moved",
+      "sha256_after": "e15ad3b7afb665af7b3552109777fa403e93dc271d8b6e0c3b560be31708a66f"
+    },
+    {
+      "file": "event_driven_trading.py",
+      "stem": "event_driven_trading",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/event_driven_trading.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/event_driven_trading.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "e9e460c482643967f9b0df4f78127f5a4bee380e5df574631f102b3bb66b0bef",
+      "file_size_bytes": 21458,
+      "call_freq_pct": 0.1561,
+      "impact_weight": 0.0,
+      "max_overlap": 0.1852,
+      "removal_reason": "调用频率 0.16% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 18.5%",
+      "overlap_with": "on_chain_whale_tracker",
+      "archive_status": "moved",
+      "sha256_after": "e9e460c482643967f9b0df4f78127f5a4bee380e5df574631f102b3bb66b0bef"
+    },
+    {
+      "file": "mean_reversion_ml.py",
+      "stem": "mean_reversion_ml",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/mean_reversion_ml.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/mean_reversion_ml.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "8769779a53db2eb0ae72042e1ea8bbe53d11454252579af6c6f02089acb57de1",
+      "file_size_bytes": 21521,
+      "call_freq_pct": 0.0191,
+      "impact_weight": 0.0,
+      "max_overlap": 0.1515,
+      "removal_reason": "调用频率 0.02% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 15.2%",
+      "overlap_with": "stat_arb_pairs",
+      "archive_status": "moved",
+      "sha256_after": "8769779a53db2eb0ae72042e1ea8bbe53d11454252579af6c6f02089acb57de1"
+    },
+    {
+      "file": "macro_liquidity_cycle.py",
+      "stem": "macro_liquidity_cycle",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/macro_liquidity_cycle.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/macro_liquidity_cycle.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "2a47ab97778950d2422ddc04c637046b7ae0e2b9375c13ea0c364865c1a2e68d",
+      "file_size_bytes": 26966,
+      "call_freq_pct": 0.043,
+      "impact_weight": 0.0,
+      "max_overlap": 0.1471,
+      "removal_reason": "调用频率 0.04% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 14.7%",
+      "overlap_with": "term_structure_trading",
+      "archive_status": "moved",
+      "sha256_after": "2a47ab97778950d2422ddc04c637046b7ae0e2b9375c13ea0c364865c1a2e68d"
+    },
+    {
+      "file": "sentiment_driven_trading.py",
+      "stem": "sentiment_driven_trading",
+      "original_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/sentiment_driven_trading.py",
+      "archive_path": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/_archive_v447/sentiment_driven_trading.py",
+      "archive_time": "2026-06-28T20:18:41",
+      "sha256_before": "b062ea3b8155d2c8ab05cb3b7e0c2c937f245622d2a454e009672e720f774f58",
+      "file_size_bytes": 16237,
+      "call_freq_pct": 0.0254,
+      "impact_weight": 0.0,
+      "max_overlap": 0.186,
+      "removal_reason": "调用频率 0.03% < 0.5% 阈值; 影响权重 0.0000 < 0.01 阈值; 重叠度 18.6%",
+      "overlap_with": "transformer_decision_policy",
+      "archive_status": "moved",
+      "sha256_after": "b062ea3b8155d2c8ab05cb3b7e0c2c937f245622d2a454e009672e720f774f58"
+    }
+  ],
+  "optimization_candidates": [
+    {
+      "file": "dispersion_trading.py",
+      "stem": "dispersion_trading",
+      "call_freq_pct": 0.0195,
+      "impact_weight": 0.0,
+      "max_overlap": 0.3462,
+      "exec_time_ms": 0.04,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": true,
+      "optimization_reasons": [
+        "零影响+中等重叠 34.6% > 30% (可合并)"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    },
+    {
+      "file": "term_structure_trading.py",
+      "stem": "term_structure_trading",
+      "call_freq_pct": 0.0386,
+      "impact_weight": 0.0,
+      "max_overlap": 0.3462,
+      "exec_time_ms": 0.04,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": true,
+      "optimization_reasons": [
+        "零影响+中等重叠 34.6% > 30% (可合并)"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    },
+    {
+      "file": "cross_asset_stat_arb.py",
+      "stem": "cross_asset_stat_arb",
+      "call_freq_pct": 0.0334,
+      "impact_weight": 0.0,
+      "max_overlap": 0.3333,
+      "exec_time_ms": 0.04,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": true,
+      "optimization_reasons": [
+        "零影响+中等重叠 33.3% > 30% (可合并)"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    },
+    {
+      "file": "stat_arb_pairs.py",
+      "stem": "stat_arb_pairs",
+      "call_freq_pct": 0.1377,
+      "impact_weight": 0.0,
+      "max_overlap": 0.3333,
+      "exec_time_ms": 0.03,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": true,
+      "optimization_reasons": [
+        "零影响+中等重叠 33.3% > 30% (可合并)"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    },
+    {
+      "file": "vrp_harvesting.py",
+      "stem": "vrp_harvesting",
+      "call_freq_pct": 0.0219,
+      "impact_weight": 0.0,
+      "max_overlap": 0.3103,
+      "exec_time_ms": 0.05,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": true,
+      "optimization_reasons": [
+        "零影响+中等重叠 31.0% > 30% (可合并)"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    },
+    {
+      "file": "volatility_arbitrage.py",
+      "stem": "volatility_arbitrage",
+      "call_freq_pct": 0.0277,
+      "impact_weight": 0.0,
+      "max_overlap": 0.3103,
+      "exec_time_ms": 0.04,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": true,
+      "optimization_reasons": [
+        "零影响+中等重叠 31.0% > 30% (可合并)"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    },
+    {
+      "file": "grid_strike.py",
+      "stem": "grid_strike",
+      "call_freq_pct": 0.0255,
+      "impact_weight": 0.0,
+      "max_overlap": 0.3077,
+      "exec_time_ms": 0.0,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": true,
+      "optimization_reasons": [
+        "零影响+中等重叠 30.8% > 30% (可合并)"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    },
+    {
+      "file": "on_chain_whale_tracker.py",
+      "stem": "on_chain_whale_tracker",
+      "call_freq_pct": 0.1406,
+      "impact_weight": 0.274,
+      "max_overlap": 0.2917,
+      "exec_time_ms": 0.07,
+      "line_count": 0,
+      "max_complexity": 0,
+      "is_zero_impact": false,
+      "optimization_reasons": [
+        "低调用频率 0.14% < 5%"
+      ],
+      "suggested_action": "merge_or_lazy_load"
+    }
+  ]
+}

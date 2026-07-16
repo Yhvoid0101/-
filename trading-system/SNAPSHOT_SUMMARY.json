@@ -1,0 +1,11 @@
+{
+  "source_root": "/home/lmy/hermes_v6/sandbox_trading",
+  "snapshot_utc": "2026-07-16T08:04:52.771468+00:00",
+  "source_file_count": 6475,
+  "included_unique_file_count": 3017,
+  "duplicate_file_count": 1,
+  "excluded_file_count": 3458,
+  "max_upload_bytes": 52428800,
+  "hash_algorithm": "sha256",
+  "note": "Every source file is represented in inventory.json. Excluded runtime data, backups, caches, sensitive candidates, and oversize files remain in the original WSL tree."
+}

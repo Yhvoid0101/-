@@ -1,0 +1,188 @@
+{
+  "BNB_USDT": {
+    "total_gap_bps": -11.916079783099615,
+    "total_gap_pct": -0.11916079783099615,
+    "factors": [
+      {
+        "name": "点差 (Bid-Ask Spread)",
+        "impact_bps": -4.0,
+        "weight_pct": 33.568086760153584
+      },
+      {
+        "name": "滑点 (Market Impact)",
+        "impact_bps": -0.0,
+        "weight_pct": 0.0
+      },
+      {
+        "name": "延迟 (Order Latency)",
+        "impact_bps": -5.916079783099616,
+        "weight_pct": 49.64786985976963
+      },
+      {
+        "name": "费率 (Fees + Funding)",
+        "impact_bps": -2.0,
+        "weight_pct": 16.784043380076792
+      },
+      {
+        "name": "流动性 (Order Book Depth)",
+        "impact_bps": 0,
+        "weight_pct": 0.0
+      }
+    ]
+  },
+  "ADA_USDT": {
+    "total_gap_bps": -11.916079783099615,
+    "total_gap_pct": -0.11916079783099615,
+    "factors": [
+      {
+        "name": "点差 (Bid-Ask Spread)",
+        "impact_bps": -4.0,
+        "weight_pct": 33.568086760153584
+      },
+      {
+        "name": "滑点 (Market Impact)",
+        "impact_bps": -0.0,
+        "weight_pct": 0.0
+      },
+      {
+        "name": "延迟 (Order Latency)",
+        "impact_bps": -5.916079783099616,
+        "weight_pct": 49.64786985976963
+      },
+      {
+        "name": "费率 (Fees + Funding)",
+        "impact_bps": -2.0,
+        "weight_pct": 16.784043380076792
+      },
+      {
+        "name": "流动性 (Order Book Depth)",
+        "impact_bps": 0,
+        "weight_pct": 0.0
+      }
+    ]
+  },
+  "BTC_USDT": {
+    "total_gap_bps": -11.916079783099615,
+    "total_gap_pct": -0.11916079783099615,
+    "factors": [
+      {
+        "name": "点差 (Bid-Ask Spread)",
+        "impact_bps": -4.0,
+        "weight_pct": 33.568086760153584
+      },
+      {
+        "name": "滑点 (Market Impact)",
+        "impact_bps": -0.0,
+        "weight_pct": 0.0
+      },
+      {
+        "name": "延迟 (Order Latency)",
+        "impact_bps": -5.916079783099616,
+        "weight_pct": 49.64786985976963
+      },
+      {
+        "name": "费率 (Fees + Funding)",
+        "impact_bps": -2.0,
+        "weight_pct": 16.784043380076792
+      },
+      {
+        "name": "流动性 (Order Book Depth)",
+        "impact_bps": 0,
+        "weight_pct": 0.0
+      }
+    ]
+  },
+  "XRP_USDT": {
+    "total_gap_bps": -11.916079783099615,
+    "total_gap_pct": -0.11916079783099615,
+    "factors": [
+      {
+        "name": "点差 (Bid-Ask Spread)",
+        "impact_bps": -4.0,
+        "weight_pct": 33.568086760153584
+      },
+      {
+        "name": "滑点 (Market Impact)",
+        "impact_bps": -0.0,
+        "weight_pct": 0.0
+      },
+      {
+        "name": "延迟 (Order Latency)",
+        "impact_bps": -5.916079783099616,
+        "weight_pct": 49.64786985976963
+      },
+      {
+        "name": "费率 (Fees + Funding)",
+        "impact_bps": -2.0,
+        "weight_pct": 16.784043380076792
+      },
+      {
+        "name": "流动性 (Order Book Depth)",
+        "impact_bps": 0,
+        "weight_pct": 0.0
+      }
+    ]
+  },
+  "ETH_USDT": {
+    "total_gap_bps": -11.916079783099615,
+    "total_gap_pct": -0.11916079783099615,
+    "factors": [
+      {
+        "name": "点差 (Bid-Ask Spread)",
+        "impact_bps": -4.0,
+        "weight_pct": 33.568086760153584
+      },
+      {
+        "name": "滑点 (Market Impact)",
+        "impact_bps": -0.0,
+        "weight_pct": 0.0
+      },
+      {
+        "name": "延迟 (Order Latency)",
+        "impact_bps": -5.916079783099616,
+        "weight_pct": 49.64786985976963
+      },
+      {
+        "name": "费率 (Fees + Funding)",
+        "impact_bps": -2.0,
+        "weight_pct": 16.784043380076792
+      },
+      {
+        "name": "流动性 (Order Book Depth)",
+        "impact_bps": 0,
+        "weight_pct": 0.0
+      }
+    ]
+  },
+  "LTC_USDT": {
+    "total_gap_bps": -11.916079783099615,
+    "total_gap_pct": -0.11916079783099615,
+    "factors": [
+      {
+        "name": "点差 (Bid-Ask Spread)",
+        "impact_bps": -4.0,
+        "weight_pct": 33.568086760153584
+      },
+      {
+        "name": "滑点 (Market Impact)",
+        "impact_bps": -0.0,
+        "weight_pct": 0.0
+      },
+      {
+        "name": "延迟 (Order Latency)",
+        "impact_bps": -5.916079783099616,
+        "weight_pct": 49.64786985976963
+      },
+      {
+        "name": "费率 (Fees + Funding)",
+        "impact_bps": -2.0,
+        "weight_pct": 16.784043380076792
+      },
+      {
+        "name": "流动性 (Order Book Depth)",
+        "impact_bps": 0,
+        "weight_pct": 0.0
+      }
+    ]
+  }
+}

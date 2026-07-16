@@ -1,0 +1,92 @@
+{
+  "version": "v700_p4",
+  "_persisted_at": 1783013190.589334,
+  "_round_number": 0,
+  "risk_level": "excellent",
+  "is_overfitted": false,
+  "pbo": 0.019,
+  "oos_is_ratio": 1.8793796196544286,
+  "monte_carlo_pvalue": 0.0,
+  "max_drawdown_ratio": 0.60848324908619,
+  "parameter_stability": 0.7166666666666667,
+  "details": {
+    "walk_forward": {
+      "is_overfitted": false,
+      "oos_is_ratio": 1.8793796196544286,
+      "sharpe_decay": 1.6090996971760985,
+      "dd_ratio": 0.60848324908619,
+      "issues": [],
+      "verdict": "PASS"
+    },
+    "monte_carlo": {
+      "pvalue": 0.0,
+      "actual_metric": 4.685722854028197,
+      "permuted_mean": 4.653608935817388,
+      "permuted_std": 0.7464107266463499,
+      "percentile": 0.524,
+      "is_significant": true,
+      "mc_sharpe_5pct": 3.418694780600169,
+      "ruin_probability": 0.0,
+      "n_iterations": 1000,
+      "method": "bootstrap"
+    },
+    "pbo": {
+      "pbo": 0.019,
+      "pbo_ci_low": 0.0,
+      "pbo_ci_high": 0.2867223518080954,
+      "is_sharpe": 3.5460313796838068,
+      "oos_sharpe": 5.705918019226156,
+      "degradation_factor": 1.6090996971760985,
+      "method": "v596_bootstrap_single_strategy",
+      "n_bootstrap": 1000,
+      "is_overfitted": false,
+      "risk_level": "EXCELLENT"
+    },
+    "slippage_impact": {
+      "erosion_pct": 0.0029720041013114877,
+      "erosion_amount": 50.0616178086621,
+      "n_trades": 252,
+      "slippage_per_trade_bps": 26.11340820917542,
+      "used_real_prices": true,
+      "used_real_volumes": true
+    },
+    "parameter_sensitivity": {
+      "stability_score": 0.7166666666666667,
+      "method": "v700_symbol_consistency_weighted_avg",
+      "n_symbols": 15,
+      "n_positive_symbols": 14,
+      "positive_ratio": 0.9333333333333333,
+      "cv": 1.5070712997280897,
+      "cv_score": 0.5,
+      "fusion": "weighted_avg_0.5_0.5",
+      "symbol_returns": [
+        0.7005799260369282,
+        0.0324060337862447,
+        0.1181584278231634,
+        0.22268974626784502,
+        -0.020296519609408065,
+        0.0604542818146995,
+        0.0011468489796773547,
+        0.09287727305659679,
+        0.0273277196573423,
+        0.08533520882924066,
+        0.027056713332432134,
+        0.07025465040804854,
+        0.16536669795027373,
+        0.09807137182537431,
+        0.0030113481235743045
+      ]
+    }
+  },
+  "recommendations": [],
+  "g11_g15_results": {
+    "G11_pbo_0_5": true,
+    "G12_mc_pvalue_0_05": true,
+    "G13_wf_sharpe_decay_0_5": true,
+    "G14_param_stability_0_5": true,
+    "G15_oos_is_ratio_0_3": true
+  },
+  "g11_g15_pass_count": 5,
+  "total_go_count": 15,
+  "can_deploy_anti_overfitting": true
+}

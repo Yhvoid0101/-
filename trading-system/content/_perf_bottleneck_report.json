@@ -1,0 +1,2960 @@
+{
+  "report_type": "performance_bottleneck_detection",
+  "generated_at": "2026-06-27T23:18:30+0800",
+  "sandbox_dir": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading",
+  "threshold_bottleneck_ms": 100.0,
+  "summary": {
+    "total_modules_scanned": 107,
+    "total_modules_analyzed": 107,
+    "bottleneck_count": 0,
+    "import_bottleneck_count": 4,
+    "error_count": 12,
+    "ok_count": 50,
+    "no_strategy_class_count": 41,
+    "threshold_ms": 100.0,
+    "repeat_measures": 3,
+    "key_methods": [
+      "analyze",
+      "scan_opportunities",
+      "update",
+      "decide",
+      "predict"
+    ]
+  },
+  "bottleneck_modules": [
+    {
+      "module": "advanced_validation",
+      "max_method_ms": null,
+      "import_ms": 1205.6607,
+      "strategy_classes": [],
+      "verdict": "IMPORT_BOTTLENECK",
+      "methods_summary": {}
+    },
+    {
+      "module": "real_market_data_fetcher",
+      "max_method_ms": null,
+      "import_ms": 693.3681,
+      "strategy_classes": [],
+      "verdict": "IMPORT_BOTTLENECK",
+      "methods_summary": {}
+    },
+    {
+      "module": "websocket_stream",
+      "max_method_ms": null,
+      "import_ms": 491.9456,
+      "strategy_classes": [],
+      "verdict": "IMPORT_BOTTLENECK",
+      "methods_summary": {}
+    },
+    {
+      "module": "run_sandbox",
+      "max_method_ms": null,
+      "import_ms": 320.4732,
+      "strategy_classes": [],
+      "verdict": "IMPORT_BOTTLENECK",
+      "methods_summary": {}
+    }
+  ],
+  "error_modules": [
+    {
+      "module": "agent_decision_engine",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "data_pipeline",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "evolution_loop",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "exchange_connector",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "gateio_data_integration",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "gnn_cross_asset_relationship",
+      "verdict": "INSTANTIATION_ERROR",
+      "import_error": null,
+      "instantiation_error": "instantiation_failed: NoneType: None\n"
+    },
+    {
+      "module": "live_matching_engine",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "marl_portfolio_management",
+      "verdict": "INSTANTIATION_ERROR",
+      "import_error": null,
+      "instantiation_error": "instantiation_failed: NoneType: None\n"
+    },
+    {
+      "module": "nsga3_selector",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "population",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "sandbox_engine",
+      "verdict": "IMPORT_ERROR",
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null
+    },
+    {
+      "module": "strategy_registry",
+      "verdict": "INSTANTIATION_ERROR",
+      "import_error": null,
+      "instantiation_error": "instantiation_failed: NoneType: None\n"
+    }
+  ],
+  "all_results": [
+    {
+      "module": "advanced_validation",
+      "file": "advanced_validation.py",
+      "import_ms": 1205.6607,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": true,
+      "verdict": "IMPORT_BOTTLENECK"
+    },
+    {
+      "module": "adversarial_rl_trading",
+      "file": "adversarial_rl_trading.py",
+      "import_ms": 8.7226,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "AdversarialRLTrading",
+        "EnsembleQLearner",
+        "SimplifiedVAE"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0395,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0395,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "agent_decision_engine",
+      "file": "agent_decision_engine.py",
+      "import_ms": 7.8176,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "alpha_mining",
+      "file": "alpha_mining.py",
+      "import_ms": 7.4014,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "AlphaMiningSystem"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": 0.0116,
+          "error": null,
+          "called": true
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0116,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "anti_overfitting",
+      "file": "anti_overfitting.py",
+      "import_ms": 7.8726,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "ParameterSensitivityAnalyzer"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "arena_mode",
+      "file": "arena_mode.py",
+      "import_ms": 11.6662,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "behavior_diversity",
+      "file": "behavior_diversity.py",
+      "import_ms": 5.4294,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "MAPElitesGrid"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "causal_inference_trading",
+      "file": "causal_inference_trading.py",
+      "import_ms": 9.4369,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "CausalInferenceTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.03,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.03,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "cex_dex_flash_arbitrage",
+      "file": "cex_dex_flash_arbitrage.py",
+      "import_ms": 8.5496,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "chanlun_priceaction",
+      "file": "chanlun_priceaction.py",
+      "import_ms": 6.4561,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "ChanLunDivergence",
+        "ChanLunPriceActionSystem",
+        "PriceActionPatterns",
+        "SupportResistance"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": 0.008,
+          "error": null,
+          "called": true
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.008,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "cppi_portfolio_insurance",
+      "file": "cppi_portfolio_insurance.py",
+      "import_ms": 17.4553,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "CPPIPortfolioInsurance"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0943,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0943,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "cross_asset_stat_arb",
+      "file": "cross_asset_stat_arb.py",
+      "import_ms": 10.9202,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "CrossAssetStatArb"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0411,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0411,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "cross_chain_arbitrage",
+      "file": "cross_chain_arbitrage.py",
+      "import_ms": 8.9571,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "crypto_intraday",
+      "file": "crypto_intraday.py",
+      "import_ms": 8.1777,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "CryptoIntradaySystem",
+        "FundingRateSimulator",
+        "OpenInterestTracker",
+        "VWAPCalculator"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "data_pipeline",
+      "file": "data_pipeline.py",
+      "import_ms": 5.7338,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "debate_architecture",
+      "file": "debate_architecture.py",
+      "import_ms": 9.9192,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "debate_gate",
+      "file": "debate_gate.py",
+      "import_ms": 7.6631,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "deep_learning_forecast",
+      "file": "deep_learning_forecast.py",
+      "import_ms": 9.9223,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "DeepLearningForecastSystem",
+        "LinearBaseline",
+        "TorchEnhancer"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": 0.2476,
+          "error": null,
+          "called": true
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.2476,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "deployment_infra",
+      "file": "deployment_infra.py",
+      "import_ms": 7.1853,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "deterministic_rng",
+      "file": "deterministic_rng.py",
+      "import_ms": 8.4264,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "diffusion_forecast_trading",
+      "file": "diffusion_forecast_trading.py",
+      "import_ms": 14.6981,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "DiffusionForecastTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0328,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0328,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "dispersion_trading",
+      "file": "dispersion_trading.py",
+      "import_ms": 7.319,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "DispersionTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0452,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0452,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "event_driven_trading",
+      "file": "event_driven_trading.py",
+      "import_ms": 10.0892,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "EventDrivenTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.045,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.045,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "evolution_enhancements",
+      "file": "evolution_enhancements.py",
+      "import_ms": 4.7545,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "evolution_loop",
+      "file": "evolution_loop.py",
+      "import_ms": 6.9121,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "evolution_monitor",
+      "file": "evolution_monitor.py",
+      "import_ms": 4.8844,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "exchange_connector",
+      "file": "exchange_connector.py",
+      "import_ms": 5.747,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "execution_algorithms",
+      "file": "execution_algorithms.py",
+      "import_ms": 8.0408,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "frontier_enhancement",
+      "file": "frontier_enhancement.py",
+      "import_ms": 5.4857,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "DynamicAdaptiveKelly",
+        "VPINCalculator"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "funding_rate_arb",
+      "file": "funding_rate_arb.py",
+      "import_ms": 10.2962,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "FundingRateArbitrageur"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": 0.0092,
+          "error": null,
+          "called": true
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0092,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "funding_rate_cost",
+      "file": "funding_rate_cost.py",
+      "import_ms": 7.7087,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "funding_rate_predictor",
+      "file": "funding_rate_predictor.py",
+      "import_ms": 6.6569,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "FundingRatePredictor"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": 0.0282,
+          "error": null,
+          "called": true
+        }
+      },
+      "max_method_ms": 0.0282,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "gamma_scalping",
+      "file": "gamma_scalping.py",
+      "import_ms": 9.4317,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "GammaScalping"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0213,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0213,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "gateio_data_integration",
+      "file": "gateio_data_integration.py",
+      "import_ms": 6.1906,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "gateio_real_data_provider",
+      "file": "gateio_real_data_provider.py",
+      "import_ms": 21.8066,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "gene_codec",
+      "file": "gene_codec.py",
+      "import_ms": 12.3718,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "gnn_cross_asset_relationship",
+      "file": "gnn_cross_asset_relationship.py",
+      "import_ms": 9.5862,
+      "import_error": null,
+      "instantiation_error": "instantiation_failed: NoneType: None\n",
+      "strategy_classes": [
+        "BayesianMAGAC",
+        "BiMambaEncoder",
+        "GNNCrossAssetRelationship"
+      ],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "INSTANTIATION_ERROR"
+    },
+    {
+      "module": "grid_strike",
+      "file": "grid_strike.py",
+      "import_ms": 8.8036,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "jit_liquidity_mev",
+      "file": "jit_liquidity_mev.py",
+      "import_ms": 8.8805,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "JITLiquidityMEV"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0487,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0487,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "kpi_monitor",
+      "file": "kpi_monitor.py",
+      "import_ms": 24.5452,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "KPI"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": 0.0095,
+          "error": null,
+          "called": true
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0095,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "liquidation_cascade",
+      "file": "liquidation_cascade.py",
+      "import_ms": 10.6528,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "LiquidationCascade"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0354,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0354,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "liquidation_hunter",
+      "file": "liquidation_hunter.py",
+      "import_ms": 7.657,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "liquidity_adjusted_strategy",
+      "file": "liquidity_adjusted_strategy.py",
+      "import_ms": 8.0932,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "LiquidityAdjustedStrategy"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0362,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0362,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "live_backtest_gap",
+      "file": "live_backtest_gap.py",
+      "import_ms": 10.077,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "LiveSharpePredictor"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "live_matching_engine",
+      "file": "live_matching_engine.py",
+      "import_ms": 21.4398,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "live_paper_comparator",
+      "file": "live_paper_comparator.py",
+      "import_ms": 10.2772,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "DiscrepancyAnalyzer",
+        "RootCauseAnalyzer"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0148,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0148,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "live_reality_check",
+      "file": "live_reality_check.py",
+      "import_ms": 9.9977,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "llm_agent_trading",
+      "file": "llm_agent_trading.py",
+      "import_ms": 8.5274,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "LLMAgentTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0276,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0276,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "macro_liquidity_cycle",
+      "file": "macro_liquidity_cycle.py",
+      "import_ms": 8.7439,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "MacroLiquidityCycle"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0482,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0482,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "market_impact_model",
+      "file": "market_impact_model.py",
+      "import_ms": 12.2552,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "marl_portfolio_management",
+      "file": "marl_portfolio_management.py",
+      "import_ms": 10.5071,
+      "import_error": null,
+      "instantiation_error": "instantiation_failed: NoneType: None\n",
+      "strategy_classes": [
+        "COMACritic",
+        "CentralCritic",
+        "MARLActor",
+        "MARLPortfolioManagement",
+        "QMIXMixingNetwork"
+      ],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "INSTANTIATION_ERROR"
+    },
+    {
+      "module": "matching_engine_interface",
+      "file": "matching_engine_interface.py",
+      "import_ms": 11.6975,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "mcp_evolution_server",
+      "file": "mcp_evolution_server.py",
+      "import_ms": 5.4054,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "mean_reversion_ml",
+      "file": "mean_reversion_ml.py",
+      "import_ms": 8.0099,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "MeanReversionML"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0256,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0256,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "mev_sandwich_arbitrage",
+      "file": "mev_sandwich_arbitrage.py",
+      "import_ms": 8.7624,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "MEVSandwichArbitrage"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0335,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0335,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "microstructure",
+      "file": "microstructure.py",
+      "import_ms": 6.0733,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "HawkesBurstDetector",
+        "MicrostructureEnhancementSystem",
+        "OrderBookImbalance"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "microstructure_alpha_trading",
+      "file": "microstructure_alpha_trading.py",
+      "import_ms": 9.6831,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "MicrostructureAlphaTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0361,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0361,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "ml_liquidation_predictor",
+      "file": "ml_liquidation_predictor.py",
+      "import_ms": 8.5548,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "MLLiquidationPredictor"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0243,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0243,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "multi_agent_collaboration",
+      "file": "multi_agent_collaboration.py",
+      "import_ms": 5.9099,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "multi_model_ensemble",
+      "file": "multi_model_ensemble.py",
+      "import_ms": 10.0951,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "LightGBMPredictor",
+        "ProphetTrendAnalyzer",
+        "QwenSentimentAnalyzer"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "network_resilience",
+      "file": "network_resilience.py",
+      "import_ms": 7.8892,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "network_resilience_pro",
+      "file": "network_resilience_pro.py",
+      "import_ms": 8.5099,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "nsga3_selector",
+      "file": "nsga3_selector.py",
+      "import_ms": 5.7258,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "on_chain_whale_tracker",
+      "file": "on_chain_whale_tracker.py",
+      "import_ms": 7.2802,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "OnChainWhaleTracker"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0689,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0689,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "order_flow_cvd",
+      "file": "order_flow_cvd.py",
+      "import_ms": 7.6784,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "OrderFlowCVDAnalyzer"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0301,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0301,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "paper_trading_framework",
+      "file": "paper_trading_framework.py",
+      "import_ms": 9.6532,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "perp_market_making",
+      "file": "perp_market_making.py",
+      "import_ms": 9.3877,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "perpetual_validator",
+      "file": "perpetual_validator.py",
+      "import_ms": 9.6855,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "population",
+      "file": "population.py",
+      "import_ms": 7.6638,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "portfolio_optimization",
+      "file": "portfolio_optimization.py",
+      "import_ms": 4.8147,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "production_hardening",
+      "file": "production_hardening.py",
+      "import_ms": 8.1951,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "production_oms",
+      "file": "production_oms.py",
+      "import_ms": 9.9327,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "real_data_provider",
+      "file": "real_data_provider.py",
+      "import_ms": 5.9893,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "real_exchange_feed",
+      "file": "real_exchange_feed.py",
+      "import_ms": 9.2127,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "real_market_data_fetcher",
+      "file": "real_market_data_fetcher.py",
+      "import_ms": 693.3681,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": true,
+      "verdict": "IMPORT_BOTTLENECK"
+    },
+    {
+      "module": "real_market_risk_gate",
+      "file": "real_market_risk_gate.py",
+      "import_ms": 18.9868,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "real_market_validator",
+      "file": "real_market_validator.py",
+      "import_ms": 11.6247,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "realistic_data_generator",
+      "file": "realistic_data_generator.py",
+      "import_ms": 13.0037,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "regime_detection",
+      "file": "regime_detection.py",
+      "import_ms": 6.717,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "HMMRegimeDetector",
+        "OnlineChangePointDetector",
+        "RegimeDetectionSystem",
+        "VolatilityRegimeDetector"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": 0.0611,
+          "error": null,
+          "called": true
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0611,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "research_integrity",
+      "file": "research_integrity.py",
+      "import_ms": 9.3198,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "MultiPathVarianceAnalyzer",
+        "TradeAttributionAnalyzer"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0584,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0584,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "risk_control",
+      "file": "risk_control.py",
+      "import_ms": 8.3767,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "risk_parity_signal",
+      "file": "risk_parity_signal.py",
+      "import_ms": 9.5267,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "RiskParitySignalGenerator"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.1015,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.1015,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "rl_market_making",
+      "file": "rl_market_making.py",
+      "import_ms": 8.9616,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "RLMarketMaking"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0324,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0324,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "run_sandbox",
+      "file": "run_sandbox.py",
+      "import_ms": 320.4732,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": true,
+      "verdict": "IMPORT_BOTTLENECK"
+    },
+    {
+      "module": "sandbox_engine",
+      "file": "sandbox_engine.py",
+      "import_ms": 7.2964,
+      "import_error": "ImportError: attempted relative import with no known parent package",
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "IMPORT_ERROR"
+    },
+    {
+      "module": "sandbox_simulators",
+      "file": "sandbox_simulators.py",
+      "import_ms": 6.3013,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "seasonality_cycle",
+      "file": "seasonality_cycle.py",
+      "import_ms": 9.1495,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "SeasonalityCycle"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0813,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0813,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "sentiment_driven_trading",
+      "file": "sentiment_driven_trading.py",
+      "import_ms": 8.3769,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "SentimentDrivenTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0533,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0533,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "smart_money_footprint",
+      "file": "smart_money_footprint.py",
+      "import_ms": 14.2995,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "SmartMoneyFootprint"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0247,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0247,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "standardized_backtest_pipeline",
+      "file": "standardized_backtest_pipeline.py",
+      "import_ms": 11.5034,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "stat_arb_pairs",
+      "file": "stat_arb_pairs.py",
+      "import_ms": 7.7058,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "StatArbPairs"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0307,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0307,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "strategy_benchmarks",
+      "file": "strategy_benchmarks.py",
+      "import_ms": 11.0272,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "BollingerSqueezeStrategy",
+        "DualMAStrategy",
+        "DualThrustStrategy"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": 0.015,
+          "error": null,
+          "called": true
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.015,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "strategy_evaluator",
+      "file": "strategy_evaluator.py",
+      "import_ms": 12.2636,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "strategy_fusion",
+      "file": "strategy_fusion.py",
+      "import_ms": 13.2103,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "CorrelationAnalyzer"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.029,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.029,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "strategy_registry",
+      "file": "strategy_registry.py",
+      "import_ms": 9.5057,
+      "import_error": null,
+      "instantiation_error": "instantiation_failed: NoneType: None\n",
+      "strategy_classes": [
+        "GeneDrivenStrategy",
+        "IStrategy"
+      ],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "INSTANTIATION_ERROR"
+    },
+    {
+      "module": "strict_validation",
+      "file": "strict_validation.py",
+      "import_ms": 9.5867,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "term_structure_trading",
+      "file": "term_structure_trading.py",
+      "import_ms": 10.8691,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "TermStructureTrading"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0268,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0268,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "transformer_decision_policy",
+      "file": "transformer_decision_policy.py",
+      "import_ms": 10.3868,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "TransformerDecisionPolicy"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0356,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0356,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "triangular_arbitrage",
+      "file": "triangular_arbitrage.py",
+      "import_ms": 12.0776,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "turnover_diversity",
+      "file": "turnover_diversity.py",
+      "import_ms": 8.2018,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "turtle_trading",
+      "file": "turtle_trading.py",
+      "import_ms": 7.9972,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "TurtleTradingSystem"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "var_cvar_risk",
+      "file": "var_cvar_risk.py",
+      "import_ms": 10.4618,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK_NO_CLASS"
+    },
+    {
+      "module": "volatility_arbitrage",
+      "file": "volatility_arbitrage.py",
+      "import_ms": 9.557,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "VolatilityArbitrage"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.04,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.04,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "volatility_surface_arb",
+      "file": "volatility_surface_arb.py",
+      "import_ms": 10.597,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "VolatilitySurfaceArbitrage"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0244,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0244,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "vrp_harvesting",
+      "file": "vrp_harvesting.py",
+      "import_ms": 9.9802,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "VRPHarvesting"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": 0.0261,
+          "error": null,
+          "called": true
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": 0.0261,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "websocket_health_monitor",
+      "file": "websocket_health_monitor.py",
+      "import_ms": 22.637,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [
+        "HeartbeatMonitor"
+      ],
+      "methods": {
+        "analyze": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "scan_opportunities": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "update": {
+          "median_ms": null,
+          "error": "RuntimeError: all_empty_call_forms_failed",
+          "called": false
+        },
+        "decide": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        },
+        "predict": {
+          "median_ms": null,
+          "error": "method_not_found",
+          "called": false
+        }
+      },
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": false,
+      "verdict": "OK"
+    },
+    {
+      "module": "websocket_stream",
+      "file": "websocket_stream.py",
+      "import_ms": 491.9456,
+      "import_error": null,
+      "instantiation_error": null,
+      "strategy_classes": [],
+      "methods": {},
+      "max_method_ms": null,
+      "is_bottleneck": false,
+      "is_import_bottleneck": true,
+      "verdict": "IMPORT_BOTTLENECK"
+    }
+  ]
+}

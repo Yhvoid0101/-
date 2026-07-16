@@ -1,0 +1,2206 @@
+{
+  "meta": {
+    "report_name": "GENE-LOSS-ANALYST 亏损基因参数深度分析报告",
+    "generated_at": "2026-06-27T22:23:23.366010",
+    "data_sources": {
+      "evolution_stats_v316": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/data/sandbox_trading_intraday_500_v316/evolution_stats.jsonl",
+      "audit_log_v316": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/data/sandbox_trading_intraday_500_v316/audit.log",
+      "population_dir_v316": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/data/sandbox_trading_intraday_500_v316",
+      "evolution_stats_v500": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/data/sandbox_trading_intraday_500/evolution_stats.jsonl",
+      "audit_log_v500": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/data/sandbox_trading_intraday_500/audit.log",
+      "param_evaluation": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/data/sandbox_trading_intraday_500_v316/_param_evaluation_result.json",
+      "gene_codec": "/mnt/c/Users/Administrator.SK-20260514VARK/Documents/trae_projects/2026/hermes_v6/sandbox_trading/gene_codec.py"
+    },
+    "primary_data_source": "v316 (最新500轮进化)"
+  },
+  "section_1_evolution_trend": {
+    "data_source_v316_records": 39,
+    "data_source_v500_records": 13,
+    "primary_source": "v316",
+    "last_10_generations": [
+      {
+        "generation": 29,
+        "population_size": 100,
+        "mean_gt_score": 2.6825496260294215,
+        "max_gt_score": 23.215886594380926,
+        "mean_sharpe": -4.533913266632699,
+        "diversity": 0.0795216407436331,
+        "elite_count": 20,
+        "pareto_front_size": 27,
+        "feature_map_cells": 34
+      },
+      {
+        "generation": 30,
+        "population_size": 100,
+        "mean_gt_score": 9.856782100735826,
+        "max_gt_score": 78.62431786970481,
+        "mean_sharpe": -4.828164767986177,
+        "diversity": 0.07749135896907833,
+        "elite_count": 20,
+        "pareto_front_size": 33,
+        "feature_map_cells": 32
+      },
+      {
+        "generation": 31,
+        "population_size": 100,
+        "mean_gt_score": 1.8495488227443426,
+        "max_gt_score": 30.328704210882766,
+        "mean_sharpe": -4.506794489486452,
+        "diversity": 0.07829125925731495,
+        "elite_count": 20,
+        "pareto_front_size": 36,
+        "feature_map_cells": 34
+      },
+      {
+        "generation": 32,
+        "population_size": 100,
+        "mean_gt_score": 3.117572164255098,
+        "max_gt_score": 17.319926222977557,
+        "mean_sharpe": -4.9509969084866565,
+        "diversity": 0.08219190180281366,
+        "elite_count": 20,
+        "pareto_front_size": 31,
+        "feature_map_cells": 33
+      },
+      {
+        "generation": 33,
+        "population_size": 100,
+        "mean_gt_score": -1.2740113078688255,
+        "max_gt_score": 20.280591361217812,
+        "mean_sharpe": -4.401767323752276,
+        "diversity": 0.08190995604052187,
+        "elite_count": 20,
+        "pareto_front_size": 33,
+        "feature_map_cells": 30
+      },
+      {
+        "generation": 34,
+        "population_size": 100,
+        "mean_gt_score": 3.048270713389008,
+        "max_gt_score": 13.0,
+        "mean_sharpe": -5.0,
+        "diversity": 0.07444505113866251,
+        "elite_count": 20,
+        "pareto_front_size": 34,
+        "feature_map_cells": 35
+      },
+      {
+        "generation": 35,
+        "population_size": 100,
+        "mean_gt_score": 9.929885249947992,
+        "max_gt_score": 77.92872002208696,
+        "mean_sharpe": -5.0,
+        "diversity": 0.08410045068344962,
+        "elite_count": 20,
+        "pareto_front_size": 36,
+        "feature_map_cells": 28
+      },
+      {
+        "generation": 36,
+        "population_size": 100,
+        "mean_gt_score": 2.723340487963662,
+        "max_gt_score": 12.774005246753545,
+        "mean_sharpe": -4.997461588094524,
+        "diversity": 0.0862101128098185,
+        "elite_count": 20,
+        "pareto_front_size": 32,
+        "feature_map_cells": 32
+      },
+      {
+        "generation": 37,
+        "population_size": 100,
+        "mean_gt_score": 2.388065200803231,
+        "max_gt_score": 12.667854338763753,
+        "mean_sharpe": -5.0,
+        "diversity": 0.08337002222452128,
+        "elite_count": 20,
+        "pareto_front_size": 33,
+        "feature_map_cells": 29
+      },
+      {
+        "generation": 38,
+        "population_size": 100,
+        "mean_gt_score": -10.070746949460514,
+        "max_gt_score": 11.905387026726011,
+        "mean_sharpe": -4.949987854572098,
+        "diversity": 0.08954249083033994,
+        "elite_count": 20,
+        "pareto_front_size": 31,
+        "feature_map_cells": 33
+      }
+    ],
+    "trend_summary": {
+      "mean_gt_score": {
+        "first": 2.6825496260294215,
+        "last": -10.070746949460514,
+        "delta": -12.753296575489935,
+        "trend": "下降",
+        "min": -10.070746949460514,
+        "max": 9.929885249947992
+      },
+      "max_gt_score": {
+        "first": 23.215886594380926,
+        "last": 11.905387026726011,
+        "delta": -11.310499567654915,
+        "trend": "下降"
+      },
+      "mean_sharpe": {
+        "first": -4.533913266632699,
+        "last": -4.949987854572098,
+        "trend": "下降",
+        "note": "Sharpe<0 表示整体亏损或负收益"
+      },
+      "diversity": {
+        "first": 0.0795216407436331,
+        "last": 0.08954249083033994,
+        "trend": "上升",
+        "note": "diversity 上升表示种群基因多样性增加"
+      }
+    }
+  },
+  "section_2_trade_analysis": {
+    "total_close_trades": 44170,
+    "by_symbol": [
+      {
+        "symbol": "BTC-USDT",
+        "trade_count": 15144,
+        "win_count": 352,
+        "loss_count": 7946,
+        "win_rate": 0.02324352879027998,
+        "total_pnl": -4379.6186072632645,
+        "mean_pnl": -0.28919827042150453,
+        "median_pnl": -0.06559511621738297,
+        "min_pnl": -4.468629734853249,
+        "max_pnl": 0.9276617162741376
+      },
+      {
+        "symbol": "ETH-USDT",
+        "trade_count": 15408,
+        "win_count": 392,
+        "loss_count": 15016,
+        "win_rate": 0.02544132917964694,
+        "total_pnl": -2104.4400581547707,
+        "mean_pnl": -0.13658100065905832,
+        "median_pnl": -0.06620089070495272,
+        "min_pnl": -3.564298543379295,
+        "max_pnl": 0.6778175424074823
+      },
+      {
+        "symbol": "SOL-USDT",
+        "trade_count": 13618,
+        "win_count": 279,
+        "loss_count": 5769,
+        "win_rate": 0.020487589954472023,
+        "total_pnl": -2076.887352322915,
+        "mean_pnl": -0.1525104532473869,
+        "median_pnl": -0.0,
+        "min_pnl": -3.8587461431169188,
+        "max_pnl": 1.053997319790902
+      }
+    ],
+    "by_side": [
+      {
+        "side": "long",
+        "trade_count": 25034,
+        "win_count": 639,
+        "loss_count": 19906,
+        "win_rate": 0.025525285611568267,
+        "total_pnl": -4785.923685659591,
+        "mean_pnl": -0.1911769467787645
+      },
+      {
+        "side": "short",
+        "trade_count": 19136,
+        "win_count": 384,
+        "loss_count": 8825,
+        "win_rate": 0.020066889632107024,
+        "total_pnl": -3775.0223320813598,
+        "mean_pnl": -0.1972733242099373
+      }
+    ],
+    "consecutive_loss_sequences": {
+      "total_3plus": 2565,
+      "total_5plus": 1497,
+      "total_10plus": 746,
+      "max_length": 40,
+      "mean_length": 8.265497076023392,
+      "examples": [
+        {
+          "actor": "intraday-gen0-001",
+          "length": 3,
+          "start_ts": 1782568682.8046691,
+          "start_iso": "2026-06-27T21:58:02.804669"
+        },
+        {
+          "actor": "intraday-gen0-005",
+          "length": 4,
+          "start_ts": 1782568682.8088868,
+          "start_iso": "2026-06-27T21:58:02.808887"
+        },
+        {
+          "actor": "intraday-gen0-011",
+          "length": 4,
+          "start_ts": 1782568682.8115711,
+          "start_iso": "2026-06-27T21:58:02.811571"
+        },
+        {
+          "actor": "intraday-gen0-020",
+          "length": 4,
+          "start_ts": 1782568682.8149652,
+          "start_iso": "2026-06-27T21:58:02.814965"
+        },
+        {
+          "actor": "intraday-gen0-036",
+          "length": 4,
+          "start_ts": 1782568682.8208814,
+          "start_iso": "2026-06-27T21:58:02.820881"
+        },
+        {
+          "actor": "intraday-gen0-041",
+          "length": 4,
+          "start_ts": 1782568682.8251896,
+          "start_iso": "2026-06-27T21:58:02.825190"
+        },
+        {
+          "actor": "intraday-gen0-042",
+          "length": 5,
+          "start_ts": 1782568682.8273802,
+          "start_iso": "2026-06-27T21:58:02.827380"
+        },
+        {
+          "actor": "intraday-gen0-048",
+          "length": 4,
+          "start_ts": 1782568682.8306503,
+          "start_iso": "2026-06-27T21:58:02.830650"
+        },
+        {
+          "actor": "intraday-gen0-076",
+          "length": 5,
+          "start_ts": 1782568682.8435514,
+          "start_iso": "2026-06-27T21:58:02.843551"
+        },
+        {
+          "actor": "intraday-gen0-080",
+          "length": 4,
+          "start_ts": 1782568682.846287,
+          "start_iso": "2026-06-27T21:58:02.846287"
+        },
+        {
+          "actor": "intraday-gen0-083",
+          "length": 4,
+          "start_ts": 1782568682.8483412,
+          "start_iso": "2026-06-27T21:58:02.848341"
+        },
+        {
+          "actor": "intraday-gen0-090",
+          "length": 4,
+          "start_ts": 1782568682.8507807,
+          "start_iso": "2026-06-27T21:58:02.850781"
+        },
+        {
+          "actor": "intraday-gen0-094",
+          "length": 4,
+          "start_ts": 1782568682.8539717,
+          "start_iso": "2026-06-27T21:58:02.853972"
+        },
+        {
+          "actor": "intraday-gen0-059",
+          "length": 3,
+          "start_ts": 1782568683.0421596,
+          "start_iso": "2026-06-27T21:58:03.042160"
+        },
+        {
+          "actor": "intraday-gen0-093",
+          "length": 4,
+          "start_ts": 1782568683.1096666,
+          "start_iso": "2026-06-27T21:58:03.109667"
+        },
+        {
+          "actor": "intraday-gen0-006",
+          "length": 3,
+          "start_ts": 1782568683.1568823,
+          "start_iso": "2026-06-27T21:58:03.156882"
+        },
+        {
+          "actor": "intraday-gen0-007",
+          "length": 3,
+          "start_ts": 1782568683.1588929,
+          "start_iso": "2026-06-27T21:58:03.158893"
+        },
+        {
+          "actor": "intraday-gen0-010",
+          "length": 3,
+          "start_ts": 1782568683.1612506,
+          "start_iso": "2026-06-27T21:58:03.161251"
+        },
+        {
+          "actor": "intraday-gen0-039",
+          "length": 3,
+          "start_ts": 1782568683.206734,
+          "start_iso": "2026-06-27T21:58:03.206734"
+        },
+        {
+          "actor": "intraday-gen0-052",
+          "length": 5,
+          "start_ts": 1782568683.2239468,
+          "start_iso": "2026-06-27T21:58:03.223947"
+        }
+      ]
+    },
+    "overall": {
+      "total": 44170,
+      "win_count": 1023,
+      "loss_count": 28731,
+      "win_rate": 0.023160516187457552,
+      "total_pnl": -8560.946017740951,
+      "mean_pnl": -0.1938181122422674,
+      "median_pnl": -0.053823435160500324,
+      "stddev_pnl": 0.39700363932298965,
+      "max_pnl": 1.053997319790902,
+      "min_pnl": -4.468629734853249
+    }
+  },
+  "section_3_gene_correlation": {
+    "total_agents": 4000,
+    "targets": [
+      "fitness_score",
+      "total_pnl",
+      "win_rate",
+      "sharpe_ratio"
+    ],
+    "correlations": [
+      {
+        "field": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "target": "win_rate",
+        "pearson_r": 0.2577996236286129,
+        "abs_r": 0.2577996236286129,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.2284444907855187,
+        "abs_r": 0.2284444907855187,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "target": "total_pnl",
+        "pearson_r": -0.17258848003876492,
+        "abs_r": 0.17258848003876492,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_pyramid_scale",
+        "module": "position_sizing",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.12565216364496093,
+        "abs_r": 0.12565216364496093,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_min_signal_confluence",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.11704540350762377,
+        "abs_r": 0.11704540350762377,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_base_risk_per_trade",
+        "module": "position_sizing",
+        "target": "win_rate",
+        "pearson_r": 0.08820501979730892,
+        "abs_r": 0.08820501979730892,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_base_risk_per_trade",
+        "module": "position_sizing",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.08779079320814613,
+        "abs_r": 0.08779079320814613,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_pyramid_scale",
+        "module": "position_sizing",
+        "target": "win_rate",
+        "pearson_r": -0.08573494802815997,
+        "abs_r": 0.08573494802815997,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_state_confidence",
+        "module": "market_state",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.08324242043185115,
+        "abs_r": 0.08324242043185115,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_adaptability",
+        "module": "worldview",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.08223274338800696,
+        "abs_r": 0.08223274338800696,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_pyramid_scale",
+        "module": "position_sizing",
+        "target": "total_pnl",
+        "pearson_r": 0.07712701643661295,
+        "abs_r": 0.07712701643661295,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_base_risk_per_trade",
+        "module": "position_sizing",
+        "target": "total_pnl",
+        "pearson_r": -0.06895970795920181,
+        "abs_r": 0.06895970795920181,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_position_pct",
+        "module": "position_sizing",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.06401450686069599,
+        "abs_r": 0.06401450686069599,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_confidence_threshold",
+        "module": "worldview",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.062381484299638856,
+        "abs_r": 0.062381484299638856,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_state_confidence",
+        "module": "market_state",
+        "target": "total_pnl",
+        "pearson_r": -0.058340287765737874,
+        "abs_r": 0.058340287765737874,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_circuit_breaker_losses",
+        "module": "exit_risk",
+        "target": "win_rate",
+        "pearson_r": 0.05613726830229237,
+        "abs_r": 0.05613726830229237,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_overbought",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.051831798505740684,
+        "abs_r": 0.051831798505740684,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_adaptability",
+        "module": "worldview",
+        "target": "win_rate",
+        "pearson_r": 0.051220384286528045,
+        "abs_r": 0.051220384286528045,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_macd_sensitivity",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": -0.050897729553695384,
+        "abs_r": 0.050897729553695384,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_macd_sensitivity",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": 0.04932347787135276,
+        "abs_r": 0.04932347787135276,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_patience",
+        "module": "worldview",
+        "target": "fitness_score",
+        "pearson_r": -0.04832398640131373,
+        "abs_r": 0.04832398640131373,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_adaptability",
+        "module": "worldview",
+        "target": "fitness_score",
+        "pearson_r": -0.04541253039098473,
+        "abs_r": 0.04541253039098473,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_patience",
+        "module": "worldview",
+        "target": "win_rate",
+        "pearson_r": 0.0426417159038953,
+        "abs_r": 0.0426417159038953,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_confidence_threshold",
+        "module": "worldview",
+        "target": "win_rate",
+        "pearson_r": -0.041753624673066383,
+        "abs_r": 0.041753624673066383,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_overbought",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": 0.039944669097680054,
+        "abs_r": 0.039944669097680054,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_ema_breakout_pct",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": 0.03971570404213862,
+        "abs_r": 0.03971570404213862,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_min_signal_confluence",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": -0.03694341997308101,
+        "abs_r": 0.03694341997308101,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_regime_memory",
+        "module": "market_state",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.0350080473500578,
+        "abs_r": 0.0350080473500578,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_state_confidence",
+        "module": "market_state",
+        "target": "win_rate",
+        "pearson_r": 0.03472877305789233,
+        "abs_r": 0.03472877305789233,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_adaptability",
+        "module": "worldview",
+        "target": "total_pnl",
+        "pearson_r": -0.034663000784508034,
+        "abs_r": 0.034663000784508034,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_weight_bias",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": 0.0337814277874107,
+        "abs_r": 0.0337814277874107,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_stop_loss_pct",
+        "module": "exit_risk",
+        "target": "win_rate",
+        "pearson_r": 0.033580654142221326,
+        "abs_r": 0.033580654142221326,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_drawdown_pct",
+        "module": "exit_risk",
+        "target": "fitness_score",
+        "pearson_r": 0.03227445638051211,
+        "abs_r": 0.03227445638051211,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_position_pct",
+        "module": "position_sizing",
+        "target": "total_pnl",
+        "pearson_r": 0.03214728179670465,
+        "abs_r": 0.03214728179670465,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_weight_bias",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.03204412650448108,
+        "abs_r": 0.03204412650448108,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_weight_bias",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": -0.031887272598541856,
+        "abs_r": 0.031887272598541856,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_overbought",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": -0.03143519947606523,
+        "abs_r": 0.03143519947606523,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_stop_loss_pct",
+        "module": "exit_risk",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.031294366421760166,
+        "abs_r": 0.031294366421760166,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_correlated_positions",
+        "module": "position_sizing",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.03005679881657892,
+        "abs_r": 0.03005679881657892,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_patience",
+        "module": "worldview",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.029995833737723573,
+        "abs_r": 0.029995833737723573,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_drawdown_pct",
+        "module": "exit_risk",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.029761553256250354,
+        "abs_r": 0.029761553256250354,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_take_profit_pct",
+        "module": "exit_risk",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.028702082601675637,
+        "abs_r": 0.028702082601675637,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_min_signal_confluence",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": 0.027863412338604523,
+        "abs_r": 0.027863412338604523,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_ema_breakout_pct",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.02663894120134395,
+        "abs_r": 0.02663894120134395,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_oversold",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": -0.026329042189117753,
+        "abs_r": 0.026329042189117753,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_circuit_breaker_losses",
+        "module": "exit_risk",
+        "target": "total_pnl",
+        "pearson_r": -0.02561202065590753,
+        "abs_r": 0.02561202065590753,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_take_profit_pct",
+        "module": "exit_risk",
+        "target": "win_rate",
+        "pearson_r": 0.024726641891812434,
+        "abs_r": 0.024726641891812434,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_confidence_threshold",
+        "module": "worldview",
+        "target": "total_pnl",
+        "pearson_r": 0.02457928156713529,
+        "abs_r": 0.02457928156713529,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_patience",
+        "module": "worldview",
+        "target": "total_pnl",
+        "pearson_r": -0.02287091362310517,
+        "abs_r": 0.02287091362310517,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_correlated_positions",
+        "module": "position_sizing",
+        "target": "win_rate",
+        "pearson_r": 0.02279608436396797,
+        "abs_r": 0.02279608436396797,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_drawdown_pct",
+        "module": "exit_risk",
+        "target": "win_rate",
+        "pearson_r": -0.020897187904783354,
+        "abs_r": 0.020897187904783354,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_confidence_threshold",
+        "module": "worldview",
+        "target": "fitness_score",
+        "pearson_r": 0.020636037841722358,
+        "abs_r": 0.020636037841722358,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "target": "fitness_score",
+        "pearson_r": -0.020495630076697125,
+        "abs_r": 0.020495630076697125,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_ema_breakout_pct",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": 0.020010388632742567,
+        "abs_r": 0.020010388632742567,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_macd_sensitivity",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.019162572549351945,
+        "abs_r": 0.019162572549351945,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_oversold",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": 0.017861950626869585,
+        "abs_r": 0.017861950626869585,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_circuit_breaker_losses",
+        "module": "exit_risk",
+        "target": "fitness_score",
+        "pearson_r": 0.017629934107508422,
+        "abs_r": 0.017629934107508422,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_regime_memory",
+        "module": "market_state",
+        "target": "total_pnl",
+        "pearson_r": 0.01738964514622956,
+        "abs_r": 0.01738964514622956,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_contrarian_bias",
+        "module": "worldview",
+        "target": "fitness_score",
+        "pearson_r": -0.016436710447510994,
+        "abs_r": 0.016436710447510994,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_state_confidence",
+        "module": "market_state",
+        "target": "fitness_score",
+        "pearson_r": -0.01593904262224884,
+        "abs_r": 0.01593904262224884,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_regime_memory",
+        "module": "market_state",
+        "target": "fitness_score",
+        "pearson_r": 0.015241169296953678,
+        "abs_r": 0.015241169296953678,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_take_profit_pct",
+        "module": "exit_risk",
+        "target": "total_pnl",
+        "pearson_r": -0.013667685233427818,
+        "abs_r": 0.013667685233427818,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_position_pct",
+        "module": "position_sizing",
+        "target": "win_rate",
+        "pearson_r": -0.012413772757768528,
+        "abs_r": 0.012413772757768528,
+        "n_samples": 4000
+      },
+      {
+        "field": "market_state_regime_memory",
+        "module": "market_state",
+        "target": "win_rate",
+        "pearson_r": -0.011619465649675512,
+        "abs_r": 0.011619465649675512,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_macd_sensitivity",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": 0.01143933932447296,
+        "abs_r": 0.01143933932447296,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_decay",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.0112753497930168,
+        "abs_r": 0.0112753497930168,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_entry_aggressiveness",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": -0.011148352161287681,
+        "abs_r": 0.011148352161287681,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_trailing_distance_pct",
+        "module": "exit_risk",
+        "target": "total_pnl",
+        "pearson_r": 0.01071140409934441,
+        "abs_r": 0.01071140409934441,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_contrarian_bias",
+        "module": "worldview",
+        "target": "total_pnl",
+        "pearson_r": 0.010595142850923299,
+        "abs_r": 0.010595142850923299,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_base_risk_per_trade",
+        "module": "position_sizing",
+        "target": "fitness_score",
+        "pearson_r": 0.010036877574801215,
+        "abs_r": 0.010036877574801215,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_weight_bias",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": -0.009810667842709292,
+        "abs_r": 0.009810667842709292,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_oversold",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": 0.0096783000519173,
+        "abs_r": 0.0096783000519173,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_entry_aggressiveness",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.009116565058456465,
+        "abs_r": 0.009116565058456465,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_decay",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": 0.00873878801793678,
+        "abs_r": 0.00873878801793678,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_pyramid_scale",
+        "module": "position_sizing",
+        "target": "fitness_score",
+        "pearson_r": 0.007849719287301845,
+        "abs_r": 0.007849719287301845,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_contrarian_bias",
+        "module": "worldview",
+        "target": "win_rate",
+        "pearson_r": -0.007730014309521865,
+        "abs_r": 0.007730014309521865,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_ema_breakout_pct",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": -0.007674004027982021,
+        "abs_r": 0.007674004027982021,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_take_profit_pct",
+        "module": "exit_risk",
+        "target": "fitness_score",
+        "pearson_r": 0.0072734539951869875,
+        "abs_r": 0.0072734539951869875,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_entry_aggressiveness",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": 0.00547040124924864,
+        "abs_r": 0.00547040124924864,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_trailing_distance_pct",
+        "module": "exit_risk",
+        "target": "win_rate",
+        "pearson_r": 0.004565727894692321,
+        "abs_r": 0.004565727894692321,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_correlated_positions",
+        "module": "position_sizing",
+        "target": "fitness_score",
+        "pearson_r": -0.0040657373353024506,
+        "abs_r": 0.0040657373353024506,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_stop_loss_pct",
+        "module": "exit_risk",
+        "target": "total_pnl",
+        "pearson_r": -0.0035374461713903937,
+        "abs_r": 0.0035374461713903937,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_trailing_distance_pct",
+        "module": "exit_risk",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.0034700837518383716,
+        "abs_r": 0.0034700837518383716,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_drawdown_pct",
+        "module": "exit_risk",
+        "target": "total_pnl",
+        "pearson_r": -0.003095090049967895,
+        "abs_r": 0.003095090049967895,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_correlated_positions",
+        "module": "position_sizing",
+        "target": "total_pnl",
+        "pearson_r": -0.0030737302013235067,
+        "abs_r": 0.0030737302013235067,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_entry_aggressiveness",
+        "module": "entry_logic",
+        "target": "win_rate",
+        "pearson_r": 0.0025454476838452315,
+        "abs_r": 0.0025454476838452315,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_oversold",
+        "module": "entry_logic",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.0023785382776113392,
+        "abs_r": 0.0023785382776113392,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_trailing_distance_pct",
+        "module": "exit_risk",
+        "target": "fitness_score",
+        "pearson_r": 0.001740387552359629,
+        "abs_r": 0.001740387552359629,
+        "n_samples": 4000
+      },
+      {
+        "field": "worldview_contrarian_bias",
+        "module": "worldview",
+        "target": "sharpe_ratio",
+        "pearson_r": 0.0015158512773541036,
+        "abs_r": 0.0015158512773541036,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_decay",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": -0.0013854830570625173,
+        "abs_r": 0.0013854830570625173,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_min_signal_confluence",
+        "module": "entry_logic",
+        "target": "total_pnl",
+        "pearson_r": -0.001064103528681219,
+        "abs_r": 0.001064103528681219,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_signal_decay",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": 0.001048161422019107,
+        "abs_r": 0.001048161422019107,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_circuit_breaker_losses",
+        "module": "exit_risk",
+        "target": "sharpe_ratio",
+        "pearson_r": -0.000994474873859072,
+        "abs_r": 0.000994474873859072,
+        "n_samples": 4000
+      },
+      {
+        "field": "position_sizing_max_position_pct",
+        "module": "position_sizing",
+        "target": "fitness_score",
+        "pearson_r": 0.0004495294327689487,
+        "abs_r": 0.0004495294327689487,
+        "n_samples": 4000
+      },
+      {
+        "field": "entry_logic_rsi_overbought",
+        "module": "entry_logic",
+        "target": "fitness_score",
+        "pearson_r": 0.0004346046067453606,
+        "abs_r": 0.0004346046067453606,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_stop_loss_pct",
+        "module": "exit_risk",
+        "target": "fitness_score",
+        "pearson_r": 4.744229814726343e-05,
+        "abs_r": 4.744229814726343e-05,
+        "n_samples": 4000
+      }
+    ],
+    "key_params_abs_r_gt_0_3": [],
+    "by_module_summary": {
+      "exit_risk": {
+        "param_count": 24,
+        "mean_abs_r": 0.04287698275477215,
+        "max_abs_r": 0.2577996236286129
+      },
+      "position_sizing": {
+        "param_count": 16,
+        "mean_abs_r": 0.04502335546885029,
+        "max_abs_r": 0.12565216364496093
+      },
+      "entry_logic": {
+        "param_count": 32,
+        "mean_abs_r": 0.023310145079963568,
+        "max_abs_r": 0.11704540350762377
+      },
+      "market_state": {
+        "param_count": 8,
+        "mean_abs_r": 0.03393860641508084,
+        "max_abs_r": 0.08324242043185115
+      },
+      "worldview": {
+        "param_count": 16,
+        "mean_abs_r": 0.033936828486433666,
+        "max_abs_r": 0.08223274338800696
+      }
+    }
+  },
+  "section_4_worldview_pnl": {
+    "by_worldview": [
+      {
+        "worldview": "liquidity_adjusted_strategy",
+        "agent_count": 684,
+        "mean_total_pnl": -2.1153604321804838,
+        "sum_total_pnl": -1446.9065356114509,
+        "mean_win_rate": 0.005880492195823299,
+        "mean_sharpe": -0.47473419076050316,
+        "mean_fitness": 0.12095369262867432,
+        "mean_total_trades": 10.618421052631579,
+        "total_trades_sum": 7263
+      },
+      {
+        "worldview": "ml_liquidation_predictor",
+        "agent_count": 68,
+        "mean_total_pnl": -10.588894539956028,
+        "sum_total_pnl": -720.0448287170099,
+        "mean_win_rate": 0.05231198502070368,
+        "mean_sharpe": -1.2189192325752456,
+        "mean_fitness": 6.661586692564406,
+        "mean_total_trades": 65.94117647058823,
+        "total_trades_sum": 4484
+      },
+      {
+        "worldview": "cross_asset_stat_arb",
+        "agent_count": 35,
+        "mean_total_pnl": -13.239333688026843,
+        "sum_total_pnl": -463.3766790809395,
+        "mean_win_rate": 0.027022860405403363,
+        "mean_sharpe": -1.3146091558777346,
+        "mean_fitness": -0.015530742721032885,
+        "mean_total_trades": 58.457142857142856,
+        "total_trades_sum": 2046
+      },
+      {
+        "worldview": "event_driven_trading",
+        "agent_count": 247,
+        "mean_total_pnl": -1.7919141238915177,
+        "sum_total_pnl": -442.60278860120485,
+        "mean_win_rate": 0.010530191104453423,
+        "mean_sharpe": -0.555266245503011,
+        "mean_fitness": 1.6400537113990155,
+        "mean_total_trades": 13.526315789473685,
+        "total_trades_sum": 3341
+      },
+      {
+        "worldview": "microstructure_alpha_trading",
+        "agent_count": 24,
+        "mean_total_pnl": -16.45336739142851,
+        "sum_total_pnl": -394.88081739428424,
+        "mean_win_rate": 0.036420403587433384,
+        "mean_sharpe": -1.263949686796147,
+        "mean_fitness": 1.3659531705010421,
+        "mean_total_trades": 47.208333333333336,
+        "total_trades_sum": 1133
+      },
+      {
+        "worldview": "llm_agent_trading",
+        "agent_count": 35,
+        "mean_total_pnl": -11.153352317167547,
+        "sum_total_pnl": -390.36733110086413,
+        "mean_win_rate": 0.04121444945352428,
+        "mean_sharpe": -1.2105984555025842,
+        "mean_fitness": -0.884998812309543,
+        "mean_total_trades": 49.57142857142857,
+        "total_trades_sum": 1735
+      },
+      {
+        "worldview": "cex_dex_flash_arbitrage",
+        "agent_count": 39,
+        "mean_total_pnl": -9.888221022799156,
+        "sum_total_pnl": -385.64061988916706,
+        "mean_win_rate": 0.07476948893504455,
+        "mean_sharpe": -1.2778821975976704,
+        "mean_fitness": -35.40707527218529,
+        "mean_total_trades": 73.41025641025641,
+        "total_trades_sum": 2863
+      },
+      {
+        "worldview": "macro_liquidity_cycle",
+        "agent_count": 53,
+        "mean_total_pnl": -7.09128781078096,
+        "sum_total_pnl": -375.8382539713909,
+        "mean_win_rate": 0.015482865201539086,
+        "mean_sharpe": -0.6179741744213358,
+        "mean_fitness": 2.223533176533388,
+        "mean_total_trades": 32.320754716981135,
+        "total_trades_sum": 1713
+      },
+      {
+        "worldview": "cppi_portfolio_insurance",
+        "agent_count": 34,
+        "mean_total_pnl": -10.451805894108459,
+        "sum_total_pnl": -355.36140039968757,
+        "mean_win_rate": 0.028073618699175892,
+        "mean_sharpe": -1.0513692280655142,
+        "mean_fitness": 0.9565887136836975,
+        "mean_total_trades": 47.55882352941177,
+        "total_trades_sum": 1617
+      },
+      {
+        "worldview": "mev_sandwich_arbitrage",
+        "agent_count": 39,
+        "mean_total_pnl": -7.95499625593501,
+        "sum_total_pnl": -310.2448539814654,
+        "mean_win_rate": 0.05300271991130753,
+        "mean_sharpe": -1.7450425672330994,
+        "mean_fitness": 1.0175353250260295,
+        "mean_total_trades": 80.05128205128206,
+        "total_trades_sum": 3122
+      },
+      {
+        "worldview": "on_chain_whale_tracker",
+        "agent_count": 215,
+        "mean_total_pnl": -1.4173524612532917,
+        "sum_total_pnl": -304.7307791694577,
+        "mean_win_rate": 0.002809819727430741,
+        "mean_sharpe": -0.44430358122815156,
+        "mean_fitness": -8.059404048989204,
+        "mean_total_trades": 9.469767441860466,
+        "total_trades_sum": 2036
+      },
+      {
+        "worldview": "marl_portfolio_management",
+        "agent_count": 218,
+        "mean_total_pnl": -1.3787767508202464,
+        "sum_total_pnl": -300.5733316788137,
+        "mean_win_rate": 0.004144912546388413,
+        "mean_sharpe": -0.4529581151871934,
+        "mean_fitness": -3.0948612068343238,
+        "mean_total_trades": 9.477064220183486,
+        "total_trades_sum": 2066
+      },
+      {
+        "worldview": "stat_arb_pairs",
+        "agent_count": 229,
+        "mean_total_pnl": -1.2692172345569899,
+        "sum_total_pnl": -290.6507467135507,
+        "mean_win_rate": 0.01855994705714355,
+        "mean_sharpe": -0.6136092953697,
+        "mean_fitness": 2.1056104645957263,
+        "mean_total_trades": 12.074235807860262,
+        "total_trades_sum": 2765
+      },
+      {
+        "worldview": "vrp_harvesting",
+        "agent_count": 21,
+        "mean_total_pnl": -13.376083205821352,
+        "sum_total_pnl": -280.8977473222484,
+        "mean_win_rate": 0.01888432364096081,
+        "mean_sharpe": -0.47619047619047616,
+        "mean_fitness": -0.3346234185105498,
+        "mean_total_trades": 22.952380952380953,
+        "total_trades_sum": 482
+      },
+      {
+        "worldview": "transformer_decision_v1_1",
+        "agent_count": 38,
+        "mean_total_pnl": -6.76410244846441,
+        "sum_total_pnl": -257.03589304164757,
+        "mean_win_rate": 0.06277193205009506,
+        "mean_sharpe": -0.8807785672853642,
+        "mean_fitness": 4.25390329097084,
+        "mean_total_trades": 39.5,
+        "total_trades_sum": 1501
+      },
+      {
+        "worldview": "funding_rate_predictor",
+        "agent_count": 198,
+        "mean_total_pnl": -1.2870178204561926,
+        "sum_total_pnl": -254.82952845032614,
+        "mean_win_rate": 0.006924643459813822,
+        "mean_sharpe": -0.43584275781216064,
+        "mean_fitness": 1.4239410449821062,
+        "mean_total_trades": 22.439393939393938,
+        "total_trades_sum": 4443
+      },
+      {
+        "worldview": "liquidation_cascade",
+        "agent_count": 43,
+        "mean_total_pnl": -4.642415665941872,
+        "sum_total_pnl": -199.6238736355005,
+        "mean_win_rate": 0.03581470192283801,
+        "mean_sharpe": -0.9413479442273568,
+        "mean_fitness": 1.2989879390911772,
+        "mean_total_trades": 47.116279069767444,
+        "total_trades_sum": 2026
+      },
+      {
+        "worldview": "gamma_scalping",
+        "agent_count": 34,
+        "mean_total_pnl": -5.748244321683458,
+        "sum_total_pnl": -195.44030693723758,
+        "mean_win_rate": 0.019645740240179878,
+        "mean_sharpe": -0.6177837864013747,
+        "mean_fitness": 0.16325252139018442,
+        "mean_total_trades": 25.147058823529413,
+        "total_trades_sum": 855
+      },
+      {
+        "worldview": "grid_strike",
+        "agent_count": 29,
+        "mean_total_pnl": -6.646664532042884,
+        "sum_total_pnl": -192.75327142924363,
+        "mean_win_rate": 0.009891300521600126,
+        "mean_sharpe": -0.6149219127641369,
+        "mean_fitness": 0.4489602747617255,
+        "mean_total_trades": 22.413793103448278,
+        "total_trades_sum": 650
+      },
+      {
+        "worldview": "momentum",
+        "agent_count": 20,
+        "mean_total_pnl": -8.4577477347063,
+        "sum_total_pnl": -169.15495469412602,
+        "mean_win_rate": 0.00608974358974359,
+        "mean_sharpe": -0.25,
+        "mean_fitness": -0.0125,
+        "mean_total_trades": 7.8,
+        "total_trades_sum": 156
+      },
+      {
+        "worldview": "triangular_arbitrage",
+        "agent_count": 38,
+        "mean_total_pnl": -4.083826612037595,
+        "sum_total_pnl": -155.1854112574286,
+        "mean_win_rate": 0.028238113217451594,
+        "mean_sharpe": -0.9984214024379827,
+        "mean_fitness": -0.38643461755476854,
+        "mean_total_trades": 33.973684210526315,
+        "total_trades_sum": 1291
+      },
+      {
+        "worldview": "gnn_cross_asset_v1_1",
+        "agent_count": 25,
+        "mean_total_pnl": -5.973439055408953,
+        "sum_total_pnl": -149.33597638522383,
+        "mean_win_rate": 0.028329246784531338,
+        "mean_sharpe": -0.4758500811115336,
+        "mean_fitness": 2.4604629117512964,
+        "mean_total_trades": 22.4,
+        "total_trades_sum": 560
+      },
+      {
+        "worldview": "transformer_decision_policy",
+        "agent_count": 218,
+        "mean_total_pnl": -0.626181268292618,
+        "sum_total_pnl": -136.50751648779072,
+        "mean_win_rate": 0.004213712561595054,
+        "mean_sharpe": -0.4941302767333988,
+        "mean_fitness": -7.275554450159089,
+        "mean_total_trades": 10.321100917431192,
+        "total_trades_sum": 2250
+      },
+      {
+        "worldview": "safe_margin",
+        "agent_count": 32,
+        "mean_total_pnl": -4.185018731398979,
+        "sum_total_pnl": -133.92059940476733,
+        "mean_win_rate": 0.0115296791024362,
+        "mean_sharpe": -0.8122450640239769,
+        "mean_fitness": 2.854280974088723,
+        "mean_total_trades": 52.3125,
+        "total_trades_sum": 1674
+      },
+      {
+        "worldview": "trend_following",
+        "agent_count": 654,
+        "mean_total_pnl": -0.14718790680333835,
+        "sum_total_pnl": -96.26089104938328,
+        "mean_win_rate": 0.0018175927310566508,
+        "mean_sharpe": -0.0977862941283727,
+        "mean_fitness": 6.058199783415952,
+        "mean_total_trades": 3.143730886850153,
+        "total_trades_sum": 2056
+      },
+      {
+        "worldview": "diffusion_forecast_trading",
+        "agent_count": 14,
+        "mean_total_pnl": -6.137052292569221,
+        "sum_total_pnl": -85.91873209596909,
+        "mean_win_rate": 0.013842746400885937,
+        "mean_sharpe": -0.35714285714285715,
+        "mean_fitness": -0.3738392643126544,
+        "mean_total_trades": 18.428571428571427,
+        "total_trades_sum": 258
+      },
+      {
+        "worldview": "term_structure_trading",
+        "agent_count": 47,
+        "mean_total_pnl": -1.580254487270011,
+        "sum_total_pnl": -74.27196090169052,
+        "mean_win_rate": 0.013540573850218948,
+        "mean_sharpe": -1.1029222714652143,
+        "mean_fitness": 1.627492388891013,
+        "mean_total_trades": 38.851063829787236,
+        "total_trades_sum": 1826
+      },
+      {
+        "worldview": "sentiment_driven_trading",
+        "agent_count": 29,
+        "mean_total_pnl": -2.5435001758838496,
+        "sum_total_pnl": -73.76150510063164,
+        "mean_win_rate": 0.05111425036742751,
+        "mean_sharpe": -0.7987307444956571,
+        "mean_fitness": 1.7126635433417237,
+        "mean_total_trades": 35.241379310344826,
+        "total_trades_sum": 1022
+      },
+      {
+        "worldview": "risk_parity_signal",
+        "agent_count": 17,
+        "mean_total_pnl": -4.113548201099024,
+        "sum_total_pnl": -69.93031941868341,
+        "mean_win_rate": 0.03172070997968129,
+        "mean_sharpe": -0.45616541228848817,
+        "mean_fitness": 2.188449671077809,
+        "mean_total_trades": 27.88235294117647,
+        "total_trades_sum": 474
+      },
+      {
+        "worldview": "risk_parity",
+        "agent_count": 12,
+        "mean_total_pnl": -5.250426150861164,
+        "sum_total_pnl": -63.00511381033396,
+        "mean_win_rate": 0.011061946902654869,
+        "mean_sharpe": -1.0790092437300296,
+        "mean_fitness": 1.227420899814857,
+        "mean_total_trades": 32.833333333333336,
+        "total_trades_sum": 394
+      },
+      {
+        "worldview": "cross_chain_arbitrage",
+        "agent_count": 22,
+        "mean_total_pnl": -2.7992037275012622,
+        "sum_total_pnl": -61.58248200502777,
+        "mean_win_rate": 0.017187767318725934,
+        "mean_sharpe": -0.854584362670539,
+        "mean_fitness": -1.003336956867927,
+        "mean_total_trades": 26.636363636363637,
+        "total_trades_sum": 586
+      },
+      {
+        "worldview": "mean_reversion_ml",
+        "agent_count": 24,
+        "mean_total_pnl": -2.5470039303136436,
+        "sum_total_pnl": -61.12809432752745,
+        "mean_win_rate": 0.003645833333333333,
+        "mean_sharpe": -0.5976919677875775,
+        "mean_fitness": 3.3363706349250695,
+        "mean_total_trades": 32.208333333333336,
+        "total_trades_sum": 773
+      },
+      {
+        "worldview": "adversarial_rl_trading",
+        "agent_count": 14,
+        "mean_total_pnl": -3.2700304367213184,
+        "sum_total_pnl": -45.78042611409846,
+        "mean_win_rate": 0.011294261294261294,
+        "mean_sharpe": -0.35714285714285715,
+        "mean_fitness": -0.017857142857142856,
+        "mean_total_trades": 16.714285714285715,
+        "total_trades_sum": 234
+      },
+      {
+        "worldview": "breakout",
+        "agent_count": 17,
+        "mean_total_pnl": -2.1817638812964613,
+        "sum_total_pnl": -37.08998598203984,
+        "mean_win_rate": 0.007232401157184185,
+        "mean_sharpe": -0.29411764705882354,
+        "mean_fitness": -0.2636198080417818,
+        "mean_total_trades": 14.352941176470589,
+        "total_trades_sum": 244
+      },
+      {
+        "worldview": "liquidation_hunter",
+        "agent_count": 18,
+        "mean_total_pnl": -2.017606521844902,
+        "sum_total_pnl": -36.31691739320824,
+        "mean_win_rate": 0.012336093857832988,
+        "mean_sharpe": -0.8333333333333334,
+        "mean_fitness": -1.0119993187419922,
+        "mean_total_trades": 22.72222222222222,
+        "total_trades_sum": 409
+      },
+      {
+        "worldview": "jit_liquidity_mev",
+        "agent_count": 18,
+        "mean_total_pnl": -1.5673940368981087,
+        "sum_total_pnl": -28.213092664165956,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.2777777777777778,
+        "mean_fitness": 1.5714605245656754,
+        "mean_total_trades": 5.555555555555555,
+        "total_trades_sum": 100
+      },
+      {
+        "worldview": "marl_portfolio_v1_1",
+        "agent_count": 19,
+        "mean_total_pnl": -1.1960043518762362,
+        "sum_total_pnl": -22.72408268564849,
+        "mean_win_rate": 0.01029770177452817,
+        "mean_sharpe": -0.5263157894736842,
+        "mean_fitness": -0.43609389889128386,
+        "mean_total_trades": 16.05263157894737,
+        "total_trades_sum": 305
+      },
+      {
+        "worldview": "volatility_arbitrage",
+        "agent_count": 38,
+        "mean_total_pnl": -0.35016469420686697,
+        "sum_total_pnl": -13.306258379860944,
+        "mean_win_rate": 0.0030599755201958386,
+        "mean_sharpe": -0.6579056946707602,
+        "mean_fitness": 1.2758834645111896,
+        "mean_total_trades": 19.763157894736842,
+        "total_trades_sum": 751
+      },
+      {
+        "worldview": "narrative_driven",
+        "agent_count": 15,
+        "mean_total_pnl": -0.7474378098050514,
+        "sum_total_pnl": -11.21156714707577,
+        "mean_win_rate": 0.02645095017976374,
+        "mean_sharpe": -0.5345815664991579,
+        "mean_fitness": -0.712063326543666,
+        "mean_total_trades": 23.533333333333335,
+        "total_trades_sum": 353
+      },
+      {
+        "worldview": "smart_money_footprint",
+        "agent_count": 24,
+        "mean_total_pnl": -0.2789666450947261,
+        "sum_total_pnl": -6.695199482273426,
+        "mean_win_rate": 0.008680555555555556,
+        "mean_sharpe": -0.7847573474505872,
+        "mean_fitness": -1.0532779288366587,
+        "mean_total_trades": 8.958333333333334,
+        "total_trades_sum": 215
+      },
+      {
+        "worldview": "scalping",
+        "agent_count": 14,
+        "mean_total_pnl": -0.2751911644398663,
+        "sum_total_pnl": -3.852676302158128,
+        "mean_win_rate": 0.013814616755793227,
+        "mean_sharpe": -0.6523758481053121,
+        "mean_fitness": -0.5460597403805375,
+        "mean_total_trades": 15.5,
+        "total_trades_sum": 217
+      },
+      {
+        "worldview": "volatility_surface_arb",
+        "agent_count": 14,
+        "mean_total_pnl": -0.14534438926459375,
+        "sum_total_pnl": -2.0348214497043124,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.35714285714285715,
+        "mean_fitness": -0.7884219838267377,
+        "mean_total_trades": 1.2857142857142858,
+        "total_trades_sum": 18
+      },
+      {
+        "worldview": "seasonality_cycle",
+        "agent_count": 18,
+        "mean_total_pnl": -0.1081339893568779,
+        "sum_total_pnl": -1.9464118084238022,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.4641971913238453,
+        "mean_fitness": -66.82279274444915,
+        "mean_total_trades": 14.055555555555555,
+        "total_trades_sum": 253
+      },
+      {
+        "worldview": "stat_arbitrage",
+        "agent_count": 19,
+        "mean_total_pnl": -0.09664482584584697,
+        "sum_total_pnl": -1.8362516910710924,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.46923497800839015,
+        "mean_fitness": -0.5140223475320094,
+        "mean_total_trades": 6.894736842105263,
+        "total_trades_sum": 131
+      },
+      {
+        "worldview": "value_investing",
+        "agent_count": 17,
+        "mean_total_pnl": -0.08626029122014532,
+        "sum_total_pnl": -1.4664249507424705,
+        "mean_win_rate": 0.018975332068311195,
+        "mean_sharpe": -0.16314211790730554,
+        "mean_fitness": 1.4482651304254237,
+        "mean_total_trades": 1.8235294117647058,
+        "total_trades_sum": 31
+      },
+      {
+        "worldview": "dispersion_trading",
+        "agent_count": 25,
+        "mean_total_pnl": -0.04559791649819246,
+        "sum_total_pnl": -1.1399479124548115,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.31542953091902926,
+        "mean_fitness": 0.6714005290470874,
+        "mean_total_trades": 10.96,
+        "total_trades_sum": 274
+      },
+      {
+        "worldview": "causal_inference_v1_1",
+        "agent_count": 25,
+        "mean_total_pnl": -0.025715437330972143,
+        "sum_total_pnl": -0.6428859332743035,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.1742730823908013,
+        "mean_fitness": -0.18682627102962396,
+        "mean_total_trades": 1.84,
+        "total_trades_sum": 46
+      },
+      {
+        "worldview": "rl_market_making",
+        "agent_count": 17,
+        "mean_total_pnl": -0.028379231467891525,
+        "sum_total_pnl": -0.4824469349541559,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.44711103727601015,
+        "mean_fitness": -0.6526360101533859,
+        "mean_total_trades": 14.117647058823529,
+        "total_trades_sum": 240
+      },
+      {
+        "worldview": "order_flow_cvd",
+        "agent_count": 22,
+        "mean_total_pnl": -0.019563985309657805,
+        "sum_total_pnl": -0.4304076768124717,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.3814296555641353,
+        "mean_fitness": 2.8374279723244986,
+        "mean_total_trades": 13.045454545454545,
+        "total_trades_sum": 287
+      },
+      {
+        "worldview": "funding_rate_arb",
+        "agent_count": 20,
+        "mean_total_pnl": -0.015797209900913992,
+        "sum_total_pnl": -0.31594419801827983,
+        "mean_win_rate": 0.008064516129032258,
+        "mean_sharpe": -0.16902809296165863,
+        "mean_fitness": -0.19470465095767742,
+        "mean_total_trades": 3.1,
+        "total_trades_sum": 62
+      },
+      {
+        "worldview": "perp_market_making",
+        "agent_count": 16,
+        "mean_total_pnl": -0.012445978996417365,
+        "sum_total_pnl": -0.19913566394267784,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.18027756377319948,
+        "mean_fitness": 1.5438998794789363,
+        "mean_total_trades": 11.4375,
+        "total_trades_sum": 183
+      },
+      {
+        "worldview": "grid_trading",
+        "agent_count": 12,
+        "mean_total_pnl": -0.013435099044978277,
+        "sum_total_pnl": -0.16122118853973932,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": -0.2433604706156711,
+        "mean_fitness": 1.6756845526254063,
+        "mean_total_trades": 9.5,
+        "total_trades_sum": 114
+      },
+      {
+        "worldview": "cross_market_arbitrage",
+        "agent_count": 14,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "vanna_volga_arbitrage",
+        "agent_count": 22,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "causal_inference_trading",
+        "agent_count": 11,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "regime_ensemble",
+        "agent_count": 17,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "cross_sectional_momentum",
+        "agent_count": 17,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "mean_reversion",
+        "agent_count": 14,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "multi_strategy",
+        "agent_count": 16,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "basis_arbitrage",
+        "agent_count": 15,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "skew_trading",
+        "agent_count": 16,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "diffusion_forecast_v1_1",
+        "agent_count": 13,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "meta_learning_portfolio",
+        "agent_count": 10,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 0.0,
+        "mean_total_trades": 0.0,
+        "total_trades_sum": 0
+      },
+      {
+        "worldview": "gnn_cross_asset_relationship",
+        "agent_count": 18,
+        "mean_total_pnl": 0.0,
+        "sum_total_pnl": 0.0,
+        "mean_win_rate": 0.0,
+        "mean_sharpe": 0.0,
+        "mean_fitness": 1.902456573805831,
+        "mean_total_trades": 1.7222222222222223,
+        "total_trades_sum": 31
+      }
+    ]
+  },
+  "section_5_feature_importance": {
+    "method": "sklearn.DecisionTreeClassifier",
+    "n_samples": 44170,
+    "n_features": 20,
+    "top_features": [
+      {
+        "feature": "exit_price",
+        "importance": 0.26882900612537824
+      },
+      {
+        "feature": "hold_seconds",
+        "importance": 0.24130595653229353
+      },
+      {
+        "feature": "max_hold_hours",
+        "importance": 0.20933463313463332
+      },
+      {
+        "feature": "log_quantity",
+        "importance": 0.1905863734929191
+      },
+      {
+        "feature": "symbol_encoded",
+        "importance": 0.039403729725018745
+      },
+      {
+        "feature": "confidence_threshold",
+        "importance": 0.01945574699807024
+      },
+      {
+        "feature": "side_encoded",
+        "importance": 0.019068289098575244
+      },
+      {
+        "feature": "rsi_overbought",
+        "importance": 0.005026669291000963
+      },
+      {
+        "feature": "stop_loss_pct",
+        "importance": 0.0038707440542540177
+      },
+      {
+        "feature": "entry_aggressiveness",
+        "importance": 0.002888070439460059
+      }
+    ],
+    "feature_descriptions": {
+      "symbol_encoded": "交易对编码 (BTC=0, ETH=1, SOL=2, ...)",
+      "side_encoded": "方向: long=1, short=0",
+      "exit_price": "平仓价格",
+      "hour_of_day": "平仓小时 (UTC+8)",
+      "leverage": "杠杆倍数",
+      "log_quantity": "log10(仓位数量+1)",
+      "hold_seconds": "持仓时长(秒)",
+      "worldview_encoded": "世界观策略编码",
+      "stop_loss_pct": "止损百分比(来自基因)",
+      "take_profit_pct": "止盈百分比(来自基因)",
+      "max_hold_hours": "最大持仓小时(来自基因)",
+      "entry_aggressiveness": "入激进度(来自基因)",
+      "min_signal_confluence": "最少信号确认数(来自基因)",
+      "rsi_oversold": "RSI超卖阈值(来自基因)",
+      "rsi_overbought": "RSI超买阈值(来自基因)",
+      "macd_sensitivity": "MACD敏感度(来自基因)",
+      "base_risk_per_trade": "单笔基础风险(来自基因)",
+      "max_position_pct": "最大仓位占比(来自基因)",
+      "regime_memory": "状态记忆长度(来自基因)",
+      "confidence_threshold": "信号置信度阈值(来自基因)"
+    },
+    "class_balance": {
+      "profitable": 1023,
+      "losing": 43147,
+      "profitable_ratio": 0.023160516187457552
+    },
+    "test_accuracy": 0.9834729454380802
+  },
+  "section_6_loss_module_location": {
+    "worst_symbol": {
+      "symbol": "BTC-USDT",
+      "trade_count": 15144,
+      "win_count": 352,
+      "loss_count": 7946,
+      "win_rate": 0.02324352879027998,
+      "total_pnl": -4379.6186072632645,
+      "mean_pnl": -0.28919827042150453,
+      "median_pnl": -0.06559511621738297,
+      "min_pnl": -4.468629734853249,
+      "max_pnl": 0.9276617162741376
+    },
+    "worst_side": {
+      "side": "long",
+      "trade_count": 25034,
+      "win_count": 639,
+      "loss_count": 19906,
+      "win_rate": 0.025525285611568267,
+      "total_pnl": -4785.923685659591,
+      "mean_pnl": -0.1911769467787645
+    },
+    "worst_worldview": {
+      "worldview": "liquidity_adjusted_strategy",
+      "agent_count": 684,
+      "mean_total_pnl": -2.1153604321804838,
+      "sum_total_pnl": -1446.9065356114509,
+      "mean_win_rate": 0.005880492195823299,
+      "mean_sharpe": -0.47473419076050316,
+      "mean_fitness": 0.12095369262867432,
+      "mean_total_trades": 10.618421052631579,
+      "total_trades_sum": 7263
+    },
+    "worst_hours": [
+      {
+        "hour": 22,
+        "trade_count": 40848,
+        "win_rate": 0.02389345867606737,
+        "total_pnl": -6656.714310718522,
+        "mean_pnl": -0.16296304129256076
+      },
+      {
+        "hour": 21,
+        "trade_count": 3322,
+        "win_rate": 0.014148103552077062,
+        "total_pnl": -1904.2317070224285,
+        "mean_pnl": -0.5732184548532295
+      }
+    ],
+    "best_hours": [
+      {
+        "hour": 22,
+        "trade_count": 40848,
+        "win_rate": 0.02389345867606737,
+        "total_pnl": -6656.714310718522,
+        "mean_pnl": -0.16296304129256076
+      },
+      {
+        "hour": 21,
+        "trade_count": 3322,
+        "win_rate": 0.014148103552077062,
+        "total_pnl": -1904.2317070224285,
+        "mean_pnl": -0.5732184548532295
+      }
+    ],
+    "by_price_bucket": [
+      {
+        "price_bucket": "50000-100000",
+        "trade_count": 11165,
+        "win_rate": 0.03949843260188088,
+        "total_pnl": -6195.904266501495,
+        "mean_pnl": -0.5549399253472006
+      },
+      {
+        "price_bucket": ">=100000",
+        "trade_count": 19164,
+        "win_rate": 0.011010227509914422,
+        "total_pnl": -1097.4541270771085,
+        "mean_pnl": -0.05726644370053791
+      },
+      {
+        "price_bucket": "10000-50000",
+        "trade_count": 4960,
+        "win_rate": 0.04838709677419355,
+        "total_pnl": -753.1994521391163,
+        "mean_pnl": -0.15185472825385407
+      },
+      {
+        "price_bucket": "1000-10000",
+        "trade_count": 4140,
+        "win_rate": 0.014492753623188406,
+        "total_pnl": -332.4963038378657,
+        "mean_pnl": -0.08031311686904968
+      },
+      {
+        "price_bucket": "100-1000",
+        "trade_count": 2398,
+        "win_rate": 0.0050041701417848205,
+        "total_pnl": -121.05153073164124,
+        "mean_pnl": -0.050480204642052225
+      },
+      {
+        "price_bucket": "<100",
+        "trade_count": 2343,
+        "win_rate": 0.025181391378574478,
+        "total_pnl": -60.84033745372363,
+        "mean_pnl": -0.025966853373334882
+      }
+    ],
+    "by_position_size": [
+      {
+        "size_bucket": "medium (Q33-Q66)",
+        "q33_threshold": 0.0003,
+        "q66_threshold": 0.001,
+        "trade_count": 7798,
+        "win_rate": 0.059630674531931264,
+        "total_pnl": -3639.339316099739,
+        "mean_pnl": -0.46670163068732223
+      },
+      {
+        "size_bucket": "small (≤Q33)",
+        "q33_threshold": 0.0003,
+        "q66_threshold": 0.001,
+        "trade_count": 12729,
+        "win_rate": 0.03063869903370257,
+        "total_pnl": -2554.921145964566,
+        "mean_pnl": -0.20071656422064313
+      },
+      {
+        "size_bucket": "large (>Q66)",
+        "q33_threshold": 0.0003,
+        "q66_threshold": 0.001,
+        "trade_count": 9120,
+        "win_rate": 0.01732456140350877,
+        "total_pnl": -2325.192549481786,
+        "mean_pnl": -0.2549553234080906
+      }
+    ],
+    "top_risk_gene_params": [
+      {
+        "field": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "target": "win_rate",
+        "pearson_r": 0.2577996236286129,
+        "abs_r": 0.2577996236286129,
+        "n_samples": 4000
+      },
+      {
+        "field": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "target": "total_pnl",
+        "pearson_r": -0.17258848003876492,
+        "abs_r": 0.17258848003876492,
+        "n_samples": 4000
+      }
+    ],
+    "common_loss_traits": [
+      "最差交易对: BTC-USDT (总PnL=-4379.62, 胜率=2.3%, 15144笔)",
+      "最差方向: long (总PnL=-4785.92, 胜率=2.6%)",
+      "最差世界观: liquidity_adjusted_strategy (总PnL=-1446.91, 胜率=0.6%, 684个agent)",
+      "最差时段(UTC+8): 22点 (总PnL=-6656.71, 胜率=2.4%)",
+      "最关键风险基因参数: exit_risk_max_hold_hours (与win_rate的Pearson r=0.258)"
+    ]
+  },
+  "section_7_recommendations": {
+    "to_LIVE_DATA_CONNECTOR": [
+      {
+        "gene_param": "entry_logic_macd_sensitivity",
+        "reason": "与 total_pnl/win_rate 相关性显著, 需要实盘数据验证参数的最佳值域",
+        "action": "拉取实盘 K线/funding/orderflow 数据, 反向验证 entry_logic_macd_sensitivity 在真实市场的最优值"
+      },
+      {
+        "gene_param": "exit_risk_circuit_breaker_losses",
+        "reason": "与 total_pnl/win_rate 相关性显著, 需要实盘数据验证参数的最佳值域",
+        "action": "拉取实盘 K线/funding/orderflow 数据, 反向验证 exit_risk_circuit_breaker_losses 在真实市场的最优值"
+      },
+      {
+        "gene_param": "exit_risk_max_hold_hours",
+        "reason": "与 total_pnl/win_rate 相关性显著, 需要实盘数据验证参数的最佳值域",
+        "action": "拉取实盘 K线/funding/orderflow 数据, 反向验证 exit_risk_max_hold_hours 在真实市场的最优值"
+      },
+      {
+        "gene_param": "market_state_state_confidence",
+        "reason": "与 total_pnl/win_rate 相关性显著, 需要实盘数据验证参数的最佳值域",
+        "action": "拉取实盘 K线/funding/orderflow 数据, 反向验证 market_state_state_confidence 在真实市场的最优值"
+      },
+      {
+        "gene_param": "position_sizing_base_risk_per_trade",
+        "reason": "与 total_pnl/win_rate 相关性显著, 需要实盘数据验证参数的最佳值域",
+        "action": "拉取实盘 K线/funding/orderflow 数据, 反向验证 position_sizing_base_risk_per_trade 在真实市场的最优值"
+      },
+      {
+        "gene_param": "position_sizing_pyramid_scale",
+        "reason": "与 total_pnl/win_rate 相关性显著, 需要实盘数据验证参数的最佳值域",
+        "action": "拉取实盘 K线/funding/orderflow 数据, 反向验证 position_sizing_pyramid_scale 在真实市场的最优值"
+      },
+      {
+        "gene_param": "worldview_adaptability",
+        "reason": "与 total_pnl/win_rate 相关性显著, 需要实盘数据验证参数的最佳值域",
+        "action": "拉取实盘 K线/funding/orderflow 数据, 反向验证 worldview_adaptability 在真实市场的最优值"
+      }
+    ],
+    "to_LOSS_HUNTER": [
+      {
+        "module": "出场风控",
+        "issue": "最差交易对 BTC-USDT 胜率仅 2.3%, 总PnL=-4379.62",
+        "action": "针对 BTC-USDT 检查止损/止盈参数是否适配其波动率"
+      },
+      {
+        "module": "入场决策",
+        "issue": "最差方向 long 总PnL=-4785.92, 胜率=2.6%",
+        "action": "检查 long 方向信号是否在当前 mock 数据下失效"
+      },
+      {
+        "module": "市场世界观",
+        "issue": "最差世界观 liquidity_adjusted_strategy 总PnL=-1446.91, 684个agent",
+        "action": "评估 liquidity_adjusted_strategy 在日内场景的适用性, 考虑降低权重或剔除"
+      },
+      {
+        "module": "时段过滤",
+        "issue": "最差时段 22点 总PnL=-6656.71, 胜率=2.4%",
+        "action": "考虑在亏损时段禁用交易或减少仓位"
+      }
+    ],
+    "to_GENE_OPTIMIZER": [
+      {
+        "gene_param": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "current_correlation": 0.2577996236286129,
+        "target_metric": "win_rate",
+        "suggested_direction": "提高",
+        "action": "由于 exit_risk_max_hold_hours 与 win_rate 的 Pearson r=0.258, 建议提高该参数以提升win_rate"
+      },
+      {
+        "gene_param": "exit_risk_max_hold_hours",
+        "module": "exit_risk",
+        "current_correlation": -0.17258848003876492,
+        "target_metric": "total_pnl",
+        "suggested_direction": "降低",
+        "action": "由于 exit_risk_max_hold_hours 与 total_pnl 的 Pearson r=-0.173, 建议降低该参数以提升total_pnl"
+      }
+    ],
+    "to_BACKTEST_VALIDATOR": [
+      {
+        "issue": "检测到 2565 个≥3连亏序列, 最长 40 连亏",
+        "action": "回测熔断机制 (circuit_breaker_losses) 是否有效触发, 考虑收紧连亏熔断阈值"
+      },
+      {
+        "issue": "整体胜率 2.3%, 总PnL=-8560.95, 均值PnL=-0.1938",
+        "action": "检查 mock 数据是否过于随机 (无趋势), 导致信号策略失效"
+      }
+    ]
+  }
+}

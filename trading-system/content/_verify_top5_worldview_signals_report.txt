@@ -1,0 +1,38 @@
+5大活跃世界观策略信号有效性验证报告
+======================================================================
+
+策略: event_driven_trading
+  加载: OK
+  主方法: analyze
+  feeder数: 3
+  空数据信号: dir=0 flat=True
+  富数据信号: dir=0 actionable=False
+
+策略: liquidity_adjusted_strategy
+  加载: OK
+  主方法: analyze
+  feeder数: 1
+  空数据信号: dir=0 flat=True
+  富数据信号: dir=0 actionable=False
+
+策略: funding_rate_predictor
+  加载: OK
+  主方法: predict
+  feeder数: 0
+  空数据信号: dir=0 flat=True
+  富数据信号: dir=0 actionable=False
+
+策略: stat_arb_pairs
+  加载: OK
+  主方法: analyze
+  feeder数: 2
+  空数据信号: dir=0 flat=True
+  富数据信号: dir=0 actionable=False
+
+策略: transformer_decision_policy
+  加载: OK
+  主方法: analyze
+  feeder数: 8
+  空数据信号: dir=0 flat=True
+  富数据信号: dir=0 actionable=False
+

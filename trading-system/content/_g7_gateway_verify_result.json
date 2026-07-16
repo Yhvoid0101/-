@@ -1,0 +1,119 @@
+{
+  "total_ok": 21,
+  "total_fail": 0,
+  "total_warn": 0,
+  "results": {
+    "L1": [
+      [
+        "_real_data_gateway.py",
+        "OK",
+        "24796B"
+      ]
+    ],
+    "L2": [
+      [
+        "py_compile",
+        "OK",
+        "syntax_ok"
+      ]
+    ],
+    "L6": [
+      [
+        "import gateway module",
+        "OK",
+        ""
+      ],
+      [
+        "TARGET_EXCHANGE_COUNT=8",
+        "OK",
+        "8"
+      ],
+      [
+        "TARGET_DATA_LATENCY_MS=100",
+        "OK",
+        "100ms"
+      ],
+      [
+        "TARGET_ORDER_LATENCY_MS=500",
+        "OK",
+        "500ms"
+      ],
+      [
+        "MONITOR_INTERVAL_SEC=1",
+        "OK",
+        "1s"
+      ],
+      [
+        "GATEWAY_EXCHANGES ≥8",
+        "OK",
+        "10 exchanges"
+      ],
+      [
+        "GATEWAY_SYMBOLS ≥10",
+        "OK",
+        "12 symbols"
+      ],
+      [
+        "LatencyMonitor class",
+        "OK",
+        ""
+      ],
+      [
+        "ALERT_LEVELS 三级告警",
+        "OK",
+        "{'warning': 1.0, 'serious': 1.5, 'emergency': 2.0}"
+      ],
+      [
+        "LatencyMonitor 告警触发",
+        "OK",
+        "normal=None, warn=serious, serious=emergency"
+      ],
+      [
+        "LatencyMonitor summary",
+        "OK",
+        "{'status': 'active', 'monitored_operations': 1, 'data_latency_p50_ms': 150.0, 'data_latency_target_ms': 100, 'data_laten"
+      ],
+      [
+        "RealDataGateway class",
+        "OK",
+        ""
+      ],
+      [
+        "initialize configured_exchanges ≥8",
+        "OK",
+        "10 exchanges"
+      ],
+      [
+        "initialize configured_symbols ≥10",
+        "OK",
+        "12 symbols"
+      ],
+      [
+        "G5 ExecutionRunner 导入 (standalone 修复)",
+        "OK",
+        "import succeeded"
+      ],
+      [
+        "G6 batch_order 集成",
+        "OK",
+        ""
+      ],
+      [
+        "WebSocket Feed 导入 (standalone 修复)",
+        "OK",
+        "import succeeded"
+      ],
+      [
+        "health exchange_count_ok",
+        "OK",
+        ""
+      ],
+      [
+        "综合验证 (全部修复)",
+        "OK",
+        "ex=10, sym=12, g5=True, g6=True, feed=True"
+      ]
+    ]
+  },
+  "errors": []
+}

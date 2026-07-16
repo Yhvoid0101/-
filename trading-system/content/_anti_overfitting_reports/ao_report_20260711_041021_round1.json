@@ -1,0 +1,690 @@
+{
+  "is_overfitted": true,
+  "risk_level": "block",
+  "can_deploy": false,
+  "pbo": 1.0,
+  "oos_is_ratio": 0.9985198737489361,
+  "monte_carlo_pvalue": 1.0,
+  "report": "======================================================================\n反过拟合验证报告 (Anti-Overfitting Validation Report)\n======================================================================\n\n风险等级: BLOCK\n是否过拟合: 是 ❌ (禁止部署)\n\n--- 核心指标 ---\n  PBO (过拟合概率):     1.000  (过拟合)\n  OOS/IS 收益比:       1.00  (合理)\n  蒙特卡洛 p值:        1.0000  (不显著)\n  回撤放大倍数:        1.00x  (可接受)\n\n--- 详细结果 ---\n  [walk_forward]\n    is_overfitted: 0.0000\n    oos_is_ratio: 0.9985\n    sharpe_decay: 1.0000\n    dd_ratio: 0.9985\n    issues: []\n    verdict: PASS\n  [monte_carlo]\n    pvalue: 1.0000\n    actual_metric: -142.6405\n    permuted_mean: -152.7878\n    permuted_std: 30.3597\n    percentile: 0.5500\n    is_significant: 0.0000\n    mc_sharpe_5pct: -208.2435\n    ruin_probability: 0.0000\n    n_iterations: 1000.0000\n    method: bootstrap\n  [pbo]\n    pbo: 1.0000\n    pbo_ci_low: 1.0000\n    pbo_ci_high: 1.0000\n    is_sharpe: -5.0000\n    oos_sharpe: -5.0000\n    degradation_factor: 1.0000\n    method: v596_bootstrap_single_strategy\n    n_bootstrap: 1000.0000\n    is_overfitted: 1.0000\n    risk_level: BLOCK\n  [slippage_impact]\n    erosion_pct: 0.0003\n    erosion_amount: 0.0250\n    n_trades: 20.0000\n    slippage_per_trade_bps: 12.5000\n    used_real_prices: 1.0000\n    used_real_volumes: 1.0000\n\n--- 建议 ---\n  1. 蒙特卡洛检验未通过：p=1.000 >= 0.05，策略可能只是随机噪声\n  2. PBO=1.00 (95%CI: 1.00-1.00)，单策略bootstrap估计，DF=1.000，策略可能过拟合\n\n======================================================================",
+  "details": {
+    "walk_forward": {
+      "is_overfitted": false,
+      "oos_is_ratio": 0.9985198737489361,
+      "sharpe_decay": 1.0,
+      "dd_ratio": 0.9985198737489527,
+      "issues": [],
+      "verdict": "PASS"
+    },
+    "monte_carlo": {
+      "pvalue": 1.0,
+      "actual_metric": -142.64047747509687,
+      "permuted_mean": -152.78781565427332,
+      "permuted_std": 30.35972446314012,
+      "percentile": 0.55,
+      "is_significant": false,
+      "mc_sharpe_5pct": -208.2435262267623,
+      "ruin_probability": 0.0,
+      "n_iterations": 1000,
+      "method": "bootstrap"
+    },
+    "pbo": {
+      "pbo": 1.0,
+      "pbo_ci_low": 1.0,
+      "pbo_ci_high": 1.0,
+      "is_sharpe": -5,
+      "oos_sharpe": -5,
+      "degradation_factor": 1.0,
+      "method": "v596_bootstrap_single_strategy",
+      "n_bootstrap": 1000,
+      "is_overfitted": true,
+      "risk_level": "BLOCK"
+    },
+    "slippage_impact": {
+      "erosion_pct": 0.000269243756258935,
+      "erosion_amount": 0.025000000000000005,
+      "n_trades": 20,
+      "slippage_per_trade_bps": 12.5,
+      "used_real_prices": true,
+      "used_real_volumes": true
+    }
+  },
+  "recommendations": [
+    "蒙特卡洛检验未通过：p=1.000 >= 0.05，策略可能只是随机噪声",
+    "PBO=1.00 (95%CI: 1.00-1.00)，单策略bootstrap估计，DF=1.000，策略可能过拟合"
+  ],
+  "advanced_validation": "{'is_overfitted': True, 'verdict': 'BLOCK', 'psr': PSRResult(psr=0.0012740942168072977, observed_sharpe=-719.6381948348153, benchmark_sharpe=0.0, skewness=-1.6336462462817016, kurtosis=3.9626547234727543, n_observations=10, is_significant=False, z_score=-3.0175597001299734), 'dsr': DSRResult(dsr=0.0012740942168072977, psr_at_zero=0.0012740942168072977, expected_max_sharpe=0.0, n_trials=1, n_effective_trials=1.0, observed_sharpe=-719.6381948348153, is_overfitted=True, verdict='BLOCK'), 'min_btl':",
+  "regime_decay_baseline": {
+    "decay_confirmed": false,
+    "signals_fired": 0,
+    "current_win_rate": 0.0,
+    "mahalanobis_distance": 0.0,
+    "recommendation": "OK: 策略健康，继续交易"
+  },
+  "live_reality_check": {
+    "overall_verdict": "BLOCK",
+    "block_reasons": [
+      "成本敏感性失败: break_even=N/A(全成本亏损)bps",
+      "延迟鲁棒性失败: break_even=N/A(全延迟亏损)ms"
+    ],
+    "warn_reasons": [],
+    "cost_sensitivity": {
+      "verdict": "BLOCK",
+      "break_even_bps": NaN,
+      "is_robust": false,
+      "pnl_degradation_pct": 40.062132625609095,
+      "worst_case_pnl": -192.85266387368776
+    },
+    "latency_robustness": {
+      "verdict": "BLOCK",
+      "break_even_latency_ms": NaN,
+      "is_robust": false,
+      "pnl_degradation_pct": 10.176463751322746
+    },
+    "regime_aware": null
+  },
+  "strict_validation": {
+    "gap_severity": "none",
+    "is_overfit": false,
+    "overfit_ratio": 0.0,
+    "is_sharpe": -5.0,
+    "oos_sharpe": -5.0,
+    "bonferroni": null
+  },
+  "research_integrity": {
+    "overall_verdict": "BLOCK",
+    "block_reasons": [
+      "多路径方差: 数据不足: 20 < 60",
+      "交易归因: 总PnL为负(-92.85), 策略亏损"
+    ],
+    "warn_reasons": [],
+    "multi_path": {
+      "verdict": "BLOCK",
+      "n_paths": 0,
+      "sharpe_mean": 0.0,
+      "sharpe_cv": Infinity,
+      "min_sharpe": 0.0,
+      "max_sharpe": 0.0,
+      "negative_path_ratio": 1.0,
+      "detail": "数据不足: 20 < 60"
+    },
+    "trade_attribution": {
+      "verdict": "BLOCK",
+      "n_trades": 20,
+      "win_rate": 0.0,
+      "top_10pct_share": 0.09632712314266889,
+      "top_20pct_share": 0.19322796507647627,
+      "concentration_ratio": -0.9110476934592324,
+      "detail": "总PnL为负(-92.85), 策略亏损"
+    },
+    "hac_sharpe": {
+      "verdict": "PASS",
+      "raw_sharpe": -506.3234670252583,
+      "hac_sharpe": -486.60939415561546,
+      "adjustment_factor": 0.9610642718468757,
+      "autocorrelation": -0.08433213121917746,
+      "detail": "自相关影响小: 调整因子=0.96, AR1=-0.08"
+    }
+  },
+  "live_backtest_gap": {
+    "overall_verdict": "BLOCK",
+    "block_reasons": [
+      "退化因子: 训练集Sharpe=-5.000≤0, 策略本身无效"
+    ],
+    "warn_reasons": [],
+    "degradation_factor": {
+      "is_sharpe": -5.0,
+      "oos_sharpe": -5.0,
+      "df": 0.0,
+      "degradation_pct": 100.0,
+      "verdict": "BLOCK"
+    },
+    "gap_breakdown": {
+      "data_gap_pct": 0.0,
+      "cost_gap_pct": 0.2016,
+      "latency_gap_pct": 0.1661,
+      "liquidity_gap_pct": 0.0158,
+      "regime_gap_pct": 0.0885,
+      "total_gap_pct": 0.472,
+      "gap_factor": 0.528,
+      "per_symbol_costs": {}
+    },
+    "predicted_live": null
+  },
+  "market_impact": {
+    "overall_verdict": "BLOCK",
+    "block_reasons": [
+      "成本调整: 成本吞噬全部收益, 调整后Sharpe=-0.250≤0"
+    ],
+    "warn_reasons": [],
+    "participation_rate": 0.0001,
+    "total_impact_bps": 10.3,
+    "adjusted_sharpe": -0.2500000000000002,
+    "sharpe_degradation_pct": 0.95
+  },
+  "funding_rate": {
+    "overall_verdict": "BLOCK",
+    "block_reasons": [
+      "当前费率: Sharpe拖累 5475bps≥5000bps, 成本过高"
+    ],
+    "warn_reasons": [
+      "极端场景 'extreme': 极端费率 0.5100%/8h, 年化成本558.45%, 付费方灾难"
+    ],
+    "annual_cost_pct": 0.1095,
+    "sharpe_drag_bps": 5475.0,
+    "reversal_risk_score": 0.0
+  },
+  "real_market_validation": {
+    "overall_verdict": "WARN",
+    "real_data_available": false,
+    "synthetic_sharpe": -2985.244034693603,
+    "real_sharpe": 0.0,
+    "sharpe_gap_pct": 100.0,
+    "overestimation_factor": Infinity,
+    "real_data_source": "none",
+    "real_data_bars": 0,
+    "block_reasons": [],
+    "warn_reasons": [
+      "无真实数据验证: 无真实数据,合成Sharpe=-2985.244<1.5,允许但需WARN"
+    ],
+    "extreme_events_count": 0,
+    "liquidity_low_pct": null
+  },
+  "r16_network_resilience": {
+    "total_sources": 5,
+    "disabled_sources": 0,
+    "degraded_sources": 0,
+    "avg_health_score": 95.8,
+    "health_report": {
+      "binance": {
+        "health_score": 93.0,
+        "success_count": 0,
+        "failure_count": 1,
+        "success_rate": 0.0,
+        "consecutive_failures": 1,
+        "avg_latency_ms": 0.0,
+        "p95_latency_ms": 0.0,
+        "p99_latency_ms": 0.0,
+        "is_degraded": false,
+        "is_disabled": false,
+        "last_error": "binance GET https://api.binance.com/api/v3/exchangeInfo",
+        "weight_used": 0,
+        "weight_usage_pct": 0.0
+      },
+      "bybit": {
+        "health_score": 93.0,
+        "success_count": 0,
+        "failure_count": 1,
+        "success_rate": 0.0,
+        "consecutive_failures": 1,
+        "avg_latency_ms": 0.0,
+        "p95_latency_ms": 0.0,
+        "p99_latency_ms": 0.0,
+        "is_degraded": false,
+        "is_disabled": false,
+        "last_error": "bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot",
+        "weight_used": 0,
+        "weight_usage_pct": 0.0
+      },
+      "okx": {
+        "health_score": 93.0,
+        "success_count": 0,
+        "failure_count": 1,
+        "success_rate": 0.0,
+        "consecutive_failures": 1,
+        "avg_latency_ms": 0.0,
+        "p95_latency_ms": 0.0,
+        "p99_latency_ms": 0.0,
+        "is_degraded": false,
+        "is_disabled": false,
+        "last_error": "okx GET https://www.okx.com/api/v5/public/instruments?instType=SPOT",
+        "weight_used": 0,
+        "weight_usage_pct": 0.0
+      },
+      "coingecko": {
+        "health_score": 100.0,
+        "success_count": 0,
+        "failure_count": 0,
+        "success_rate": 0.0,
+        "consecutive_failures": 0,
+        "avg_latency_ms": 0.0,
+        "p95_latency_ms": 0.0,
+        "p99_latency_ms": 0.0,
+        "is_degraded": false,
+        "is_disabled": false,
+        "last_error": "",
+        "weight_used": 0,
+        "weight_usage_pct": 0.0
+      },
+      "cache": {
+        "health_score": 100.0,
+        "success_count": 0,
+        "failure_count": 0,
+        "success_rate": 0.0,
+        "consecutive_failures": 0,
+        "avg_latency_ms": 0.0,
+        "p95_latency_ms": 0.0,
+        "p99_latency_ms": 0.0,
+        "is_degraded": false,
+        "is_disabled": false,
+        "last_error": "",
+        "weight_used": 0,
+        "weight_usage_pct": 0.0
+      }
+    }
+  },
+  "r16_perpetual_validation": {
+    "overall_verdict": "BLOCK",
+    "block_reasons": [
+      "强平检查: 距强平价0.13%<1.0%, 濒临强平, 立即减仓或追加保证金"
+    ],
+    "warn_reasons": [],
+    "liquidation_distance_pct": 0.1333333333333285,
+    "recommended_leverage": 3,
+    "margin_ratio_pct": 0.6,
+    "funding_hedge_feasible": null
+  },
+  "r16_production_oms": {
+    "total_orders": 10,
+    "fill_rate": 100.0,
+    "avg_slippage_bps": 3.0,
+    "max_slippage_bps": 3.0,
+    "rejected_orders": 0,
+    "canceled_orders": 0
+  },
+  "r17_network_resilience_pro": {
+    "total_nodes": 4,
+    "healthy_nodes": 0,
+    "degraded_nodes": 4,
+    "healthy_ratio": 0.0,
+    "is_connected": true,
+    "should_degrade_to_rest": false,
+    "current_source": "binance",
+    "switch_count": 0,
+    "latency_p50_ms": null,
+    "latency_p95_ms": null,
+    "latency_p99_ms": null,
+    "health_issues": []
+  },
+  "r17_strategy_evaluation": null,
+  "r17_strategy_fusion": null,
+  "r17_paper_trading": null,
+  "r17_live_paper_compare": {
+    "framework_ready": true,
+    "sharpe_diff_warn_threshold": 0.3,
+    "sharpe_diff_block_threshold": 0.8,
+    "slippage_diff_block_bps": 10.0,
+    "matched_pairs": 0,
+    "note": "框架就绪,待实盘数据启动对比分析"
+  },
+  "r17_kpi_monitor": {
+    "overall_status": "unknown",
+    "sharpe": -506.323,
+    "max_drawdown": 0.0,
+    "win_rate": 0.0,
+    "profit_factor": 0.0,
+    "kpi_count": 7
+  },
+  "r17_sim_live_gap": {
+    "by_symbol": {},
+    "symbols_analyzed": 0,
+    "avg_gap_bps": 0.0,
+    "avg_gap_pct": 0.0,
+    "framework": "SimLiveGapAnalyzer (5-factor: spread/slippage/latency/fees/liquidity)",
+    "maker_cost_total_usd": 0.0,
+    "maker_cost_avg_bps": 0.0,
+    "regime_stress_test": {
+      "worst_regime": null,
+      "best_regime": null,
+      "regime_spread_bps": 0.0
+    },
+    "n_regimes_tested": 4,
+    "n_symbols_supported": 10
+  },
+  "r2_dual_track": {
+    "sim_annual_return_pct": -1169.94,
+    "estimated_live_annual_pct": -1169.94,
+    "gap_cost_pct": 0.0,
+    "relative_diff_pct": 0.0,
+    "absolute_diff_pct": 0.0,
+    "r2_pass": true,
+    "r2_track_hit": "relative",
+    "rule": "(relative<=15%) OR (absolute<=3%)"
+  },
+  "staged_admission": {
+    "report_version": "v594_staged_admission_rules",
+    "description": "v594: 分阶测试准入规则 — 模拟→迷你实盘→标准实盘三阶递进, 6大短板#4",
+    "generated_at": "2026-07-10T20:10:21.973781",
+    "tier_thresholds": {
+      "tier1_simulation": {
+        "ann_sim_pct": {
+          "min": 30.0,
+          "desc": "年化收益率(模拟)≥30%"
+        },
+        "max_dd_pct": {
+          "max": 15.0,
+          "desc": "最大回撤≤15%"
+        },
+        "win_rate_pct": {
+          "min": 55.0,
+          "desc": "胜率≥55%"
+        },
+        "sharpe": {
+          "min": 1.5,
+          "desc": "夏普比率≥1.5"
+        },
+        "mlp_pct": {
+          "max": 5.0,
+          "desc": "月度亏损概率≤5%"
+        },
+        "gap_pct": {
+          "max": 15.0,
+          "desc": "模拟-实盘差异率≤15%"
+        },
+        "n_symbols": {
+          "min": 10,
+          "desc": "覆盖交易对≥10"
+        },
+        "years_span": {
+          "min": 1.5,
+          "desc": "样本时间跨度≥1.5年"
+        },
+        "stress_test_pass": {
+          "eq": true,
+          "desc": "资金容量压力测试通过(1x/2x/5x/10x)"
+        },
+        "pbo": {
+          "max": 0.5,
+          "desc": "PBO过拟合概率≤0.5 (Bailey CSCV, ≥0.5=过拟合)"
+        },
+        "monte_carlo_pvalue": {
+          "max": 0.05,
+          "desc": "蒙特卡洛置换检验p≤0.05 (95%置信策略有效)"
+        },
+        "wf_sharpe_decay": {
+          "min": 0.5,
+          "desc": "Walk-Forward Sharpe衰减≥0.5 (OOS Sharpe≥IS×0.5)"
+        },
+        "parameter_stability": {
+          "min": 0.5,
+          "desc": "参数稳定性≥0.5 (平台区域, 非尖峰脆弱)"
+        },
+        "oos_is_ratio": {
+          "min": 0.3,
+          "desc": "OOS/IS收益比≥0.3 (OOS收益不低于IS×30%)"
+        }
+      },
+      "tier2_mini_live": {
+        "tier1_pass": {
+          "eq": true,
+          "desc": "Tier 1全部通过"
+        },
+        "consecutive_sim_go_months": {
+          "min": 3,
+          "desc": "连续3月模拟GO"
+        },
+        "live_mlp_pct": {
+          "max": 5.0,
+          "desc": "实盘月度亏损概率≤5%"
+        },
+        "live_gap_pct": {
+          "max": 15.0,
+          "desc": "实盘差异率≤15%"
+        },
+        "live_single_loss_pct": {
+          "max": 2.0,
+          "desc": "实盘单次最大亏损≤2%本金"
+        },
+        "live_consec_loss": {
+          "max": 3,
+          "desc": "实盘连续亏损次数≤3"
+        },
+        "capital_max_usd": {
+          "max": 5000,
+          "desc": "资金上限$5,000"
+        }
+      },
+      "tier3_standard_live": {
+        "tier2_run_months": {
+          "min": 3,
+          "desc": "Tier 2运行≥3月"
+        },
+        "live_ann_pct": {
+          "min": 30.0,
+          "desc": "实盘年化≥30%"
+        },
+        "live_max_dd_pct": {
+          "max": 15.0,
+          "desc": "实盘最大回撤≤15%"
+        },
+        "live_win_rate_pct": {
+          "min": 55.0,
+          "desc": "实盘胜率≥55%"
+        },
+        "live_sharpe": {
+          "min": 1.5,
+          "desc": "实盘夏普≥1.5"
+        },
+        "live_mlp_pct": {
+          "max": 5.0,
+          "desc": "实盘月度亏损≤5%"
+        },
+        "systemic_loss_prob_pct": {
+          "max": 5.0,
+          "desc": "系统性亏损概率≤5%"
+        }
+      }
+    },
+    "tier1_evaluation": {
+      "metrics": {
+        "ann_sim_pct": -1169.94,
+        "max_dd_pct": 0.0,
+        "win_rate_pct": 0.0,
+        "sharpe": -506.323,
+        "mlp_pct": 100.0,
+        "gap_pct": 0.0,
+        "n_symbols": 0,
+        "years_span": 1.72,
+        "stress_test_pass": false,
+        "pbo": 1.0,
+        "monte_carlo_pvalue": 1.0,
+        "wf_sharpe_decay": 0.0,
+        "parameter_stability": 0.0,
+        "oos_is_ratio": 0.0
+      },
+      "result": {
+        "passed": false,
+        "n_pass": 3,
+        "n_total": 14,
+        "details": [
+          "❌ 年化收益率(模拟)≥30%: -1169.9400 < 30.0 (BLOCK)",
+          "✅ 最大回撤≤15%: 0.0000 ≤ 15.0",
+          "❌ 胜率≥55%: 0.0000 < 55.0 (BLOCK)",
+          "❌ 夏普比率≥1.5: -506.3230 < 1.5 (BLOCK)",
+          "❌ 月度亏损概率≤5%: 100.0000 > 5.0 (BLOCK)",
+          "✅ 模拟-实盘差异率≤15%: 0.0000 ≤ 15.0",
+          "❌ 覆盖交易对≥10: 0.0000 < 10 (BLOCK)",
+          "✅ 样本时间跨度≥1.5年: 1.7200 ≥ 1.5",
+          "❌ 资金容量压力测试通过(1x/2x/5x/10x): False != True (BLOCK)",
+          "❌ PBO过拟合概率≤0.5 (Bailey CSCV, ≥0.5=过拟合): 1.0000 > 0.5 (BLOCK)",
+          "❌ 蒙特卡洛置换检验p≤0.05 (95%置信策略有效): 1.0000 > 0.05 (BLOCK)",
+          "❌ Walk-Forward Sharpe衰减≥0.5 (OOS Sharpe≥IS×0.5): 0.0000 < 0.5 (BLOCK)",
+          "❌ 参数稳定性≥0.5 (平台区域, 非尖峰脆弱): 0.0000 < 0.5 (BLOCK)",
+          "❌ OOS/IS收益比≥0.3 (OOS收益不低于IS×30%): 0.0000 < 0.3 (BLOCK)"
+        ]
+      }
+    },
+    "tier2_evaluation": {
+      "metrics": {
+        "tier1_pass": false,
+        "consecutive_sim_go_months": 0,
+        "live_mlp_pct": 59.523809523809526,
+        "live_gap_pct": 17.133497724402257,
+        "live_single_loss_pct": 0.07805883285997797,
+        "live_consec_loss": 12,
+        "capital_max_usd": 5000
+      },
+      "result": {
+        "passed": false,
+        "n_pass": 2,
+        "n_total": 7,
+        "details": [
+          "❌ Tier 1全部通过: False != True (BLOCK)",
+          "❌ 连续3月模拟GO: 0.0000 < 3 (BLOCK)",
+          "❌ 实盘月度亏损概率≤5%: 59.5238 > 5.0 (BLOCK)",
+          "❌ 实盘差异率≤15%: 17.1335 > 15.0 (BLOCK)",
+          "✅ 实盘单次最大亏损≤2%本金: 0.0781 ≤ 2.0",
+          "❌ 实盘连续亏损次数≤3: 12.0000 > 3 (BLOCK)",
+          "✅ 资金上限$5,000: 5000.0000 ≤ 5000"
+        ]
+      }
+    },
+    "tier3_evaluation": {
+      "metrics": {
+        "tier2_run_months": 0,
+        "live_ann_pct": null,
+        "live_max_dd_pct": null,
+        "live_win_rate_pct": null,
+        "live_sharpe": null,
+        "live_mlp_pct": null,
+        "systemic_loss_prob_pct": null
+      },
+      "result": {
+        "passed": false,
+        "n_pass": 0,
+        "n_total": 7,
+        "details": [
+          "❌ Tier 2运行≥3月: 0.0000 < 3 (BLOCK)",
+          "❌ live_ann_pct: 缺失 (BLOCK)",
+          "❌ live_max_dd_pct: 缺失 (BLOCK)",
+          "❌ live_win_rate_pct: 缺失 (BLOCK)",
+          "❌ live_sharpe: 缺失 (BLOCK)",
+          "❌ live_mlp_pct: 缺失 (BLOCK)",
+          "❌ systemic_loss_prob_pct: 缺失 (BLOCK)"
+        ]
+      }
+    },
+    "admission_decision": {
+      "current_tier": "Tier 0 (未准入)",
+      "next_tier": "Tier 1",
+      "decision": "❌ BLOCK — Tier 1未通过, 禁止任何实盘部署",
+      "blockers_for_next_tier": [
+        "Tier 1 KPI未达标"
+      ],
+      "deployment_ban_active": true
+    },
+    "rollback_mechanism": {
+      "tier3_to_tier2": [
+        {
+          "condition": "任一KPI退化>20%",
+          "action": "回滚Tier 2",
+          "severity": "WARN"
+        },
+        {
+          "condition": "连续2月亏损",
+          "action": "回滚Tier 2 + 资金缩减50%",
+          "severity": "BLOCK"
+        },
+        {
+          "condition": "单次亏损>2%本金",
+          "action": "暂停 + 人工审核",
+          "severity": "BLOCK"
+        },
+        {
+          "condition": "系统性亏损信号",
+          "action": "立即停止 + 全量回滚",
+          "severity": "BLOCK"
+        }
+      ],
+      "tier2_to_tier1": [
+        {
+          "condition": "实盘mlp>5%",
+          "action": "回滚Tier 1",
+          "severity": "BLOCK"
+        },
+        {
+          "condition": "实盘gap>15%",
+          "action": "回滚Tier 1 + 重校准成本模型",
+          "severity": "BLOCK"
+        },
+        {
+          "condition": "单次亏损>2%本金",
+          "action": "暂停 + 人工审核",
+          "severity": "BLOCK"
+        }
+      ]
+    },
+    "shortboards_addressed": {
+      "#4_分阶测试准入规则": true
+    },
+    "err_entry": {
+      "err_id": "ERR-20260710-v594",
+      "version": "v594",
+      "timestamp": "2026-07-10T20:10:21.973885",
+      "current_tier": "Tier 0 (未准入)",
+      "tier1_pass": false,
+      "tier2_pass": false,
+      "tier3_pass": false,
+      "deployment_ban": true,
+      "lessons": [
+        "v594: Tier 1未通过 — 失败项: ['❌ 年化收益率(模拟)≥30%: -1169.9400 < 30.0 (BLOCK)', '❌ 胜率≥55%: 0.0000 < 55.0 (BLOCK)', '❌ 夏普比率≥1.5: -506.3230 < 1.5 (BLOCK)', '❌ 月度亏损概率≤5%: 100.0000 > 5.0 (BLOCK)', '❌ 覆盖交易对≥10: 0.0000 < 10 (BLOCK)', '❌ 资金容量压力测试通过(1x/2x/5x/10x): False != True (BLOCK)', '❌ PBO过拟合概率≤0.5 (Bailey CSCV, ≥0.5=过拟合): 1.0000 > 0.5 (BLOCK)', '❌ 蒙特卡洛置换检验p≤0.05 (95%置信策略有效): 1.0000 > 0.05 (BLOCK)', '❌ Walk-Forward Sharpe衰减≥0.5 (OOS Sharpe≥IS×0.5): 0.0000 < 0.5 (BLOCK)', '❌ 参数稳定性≥0.5 (平台区域, 非尖峰脆弱): 0.0000 < 0.5 (BLOCK)', '❌ OOS/IS收益比≥0.3 (OOS收益不低于IS×30%): 0.0000 < 0.3 (BLOCK)']",
+        "v594: 当前所处Tier=Tier 0 (未准入), 下一Tier阻塞项=['Tier 1 KPI未达标']",
+        "v594: 严禁跨tier部署, 必须逐级晋升, 任何KPI退化触发回滚机制",
+        "v594 部署禁令: ❌ 实盘部署禁止 — 未达Tier 2准入门槛, 仅允许模拟回测"
+      ]
+    },
+    "lessons_learned": [
+      "v594: Tier 1未通过 — 失败项: ['❌ 年化收益率(模拟)≥30%: -1169.9400 < 30.0 (BLOCK)', '❌ 胜率≥55%: 0.0000 < 55.0 (BLOCK)', '❌ 夏普比率≥1.5: -506.3230 < 1.5 (BLOCK)', '❌ 月度亏损概率≤5%: 100.0000 > 5.0 (BLOCK)', '❌ 覆盖交易对≥10: 0.0000 < 10 (BLOCK)', '❌ 资金容量压力测试通过(1x/2x/5x/10x): False != True (BLOCK)', '❌ PBO过拟合概率≤0.5 (Bailey CSCV, ≥0.5=过拟合): 1.0000 > 0.5 (BLOCK)', '❌ 蒙特卡洛置换检验p≤0.05 (95%置信策略有效): 1.0000 > 0.05 (BLOCK)', '❌ Walk-Forward Sharpe衰减≥0.5 (OOS Sharpe≥IS×0.5): 0.0000 < 0.5 (BLOCK)', '❌ 参数稳定性≥0.5 (平台区域, 非尖峰脆弱): 0.0000 < 0.5 (BLOCK)', '❌ OOS/IS收益比≥0.3 (OOS收益不低于IS×30%): 0.0000 < 0.3 (BLOCK)']",
+      "v594: 当前所处Tier=Tier 0 (未准入), 下一Tier阻塞项=['Tier 1 KPI未达标']",
+      "v594: 严禁跨tier部署, 必须逐级晋升, 任何KPI退化触发回滚机制",
+      "v594 部署禁令: ❌ 实盘部署禁止 — 未达Tier 2准入门槛, 仅允许模拟回测"
+    ]
+  },
+  "v596_unified_walkforward": null,
+  "r12_anti_overfitting_guard": {
+    "enabled": true,
+    "lookahead_guard": {
+      "enabled": true,
+      "embargo_bars": 5,
+      "current_ts": 0.0,
+      "total_access_checks": 0,
+      "blocked_accesses": 0,
+      "block_violations": 0,
+      "all_violations": 0,
+      "has_lookahead_violation": false,
+      "verdict": "PASS"
+    },
+    "oos_isolation": {
+      "enabled": true,
+      "current_phase": "IS",
+      "wf_rounds_completed": 0,
+      "is_seen_bars": 0,
+      "contamination_violations": 0,
+      "all_violations": 0,
+      "rounds_detail": [],
+      "has_contamination": false,
+      "verdict": "PASS"
+    },
+    "logic_verifier": {
+      "enabled": true,
+      "n_permutations": 200,
+      "alpha": 0.05,
+      "logic_failures": 0,
+      "all_violations": 0,
+      "has_logic_failure": false,
+      "verdict": "PASS"
+    },
+    "overall_verdict": "PASS",
+    "block_reasons": [],
+    "n_block_layers": 0,
+    "has_lookahead_violation": false,
+    "has_oos_contamination": false,
+    "has_logic_failure": false
+  },
+  "r12_capacity_stress_test": {
+    "enabled": true,
+    "reason": "未运行 (trades<5 或 _compute_final_metrics 未调用)"
+  },
+  "_persisted_at": 1783714221.9751248,
+  "_round_number": 1,
+  "_version": "v700_p3"
+}

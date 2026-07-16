@@ -1,0 +1,14 @@
+{
+  "iteration_id": "20260711_132516",
+  "timestamp": "2026-07-11T13:25:16.449908",
+  "source_patches": [],
+  "validations": [],
+  "overlay_generated": false,
+  "overlay_path": "",
+  "backtest_run": false,
+  "backtest_metrics": {},
+  "baseline_metrics": {},
+  "decision": "no_valid_patches",
+  "improvement_score": 0.0,
+  "notes": "无未应用补丁"
+}

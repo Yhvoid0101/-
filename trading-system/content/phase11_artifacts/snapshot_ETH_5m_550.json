@@ -1,0 +1,20 @@
+{
+  "round_num": 550,
+  "timestamp": 1784121542.9298272,
+  "cycle_count": 550,
+  "sample_count": 550,
+  "audit_chain_length": 6010,
+  "state": "idle",
+  "duration_ms": 22.88031578063965,
+  "inner_triggered": true,
+  "middle_triggered": false,
+  "outer_triggered": false,
+  "death_cause_counts": {
+    "DIRECTION_FLIP": 10,
+    "RR_INSUFFICIENT": 5,
+    "SL_HIT": 3,
+    "OOD_REGIME": 2,
+    "EXECUTION_FAILURE": 550
+  },
+  "alerts_count": 471
+}

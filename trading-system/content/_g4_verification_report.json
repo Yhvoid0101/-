@@ -1,0 +1,46 @@
+{
+  "test_started_at": "2026-06-27T23:03:54Z",
+  "health": {
+    "active_layer": "file",
+    "layers": {
+      "redis": {
+        "available": false,
+        "reachable": false
+      },
+      "zmq": {
+        "available": false,
+        "reachable": false
+      },
+      "file": {
+        "available": true,
+        "reachable": true
+      }
+    },
+    "meets_latency_target_le_100ms": false,
+    "target_latency_ms": 100.0,
+    "target_throughput_hz": 1000.0,
+    "channels": [
+      "market_data",
+      "agent_signals",
+      "risk_alerts",
+      "coordination"
+    ],
+    "channel_priority": {
+      "risk_alerts": 0,
+      "agent_signals": 1,
+      "coordination": 2,
+      "market_data": 3
+    }
+  },
+  "results": {
+    "T1_health_check": true,
+    "T2_serialization": true,
+    "T3_pubsub": true,
+    "T4_priority": true,
+    "T5_latency": true
+  },
+  "n_pass": 5,
+  "n_total": 5,
+  "overall_pass": true,
+  "test_finished_at": "2026-06-27T23:03:54Z"
+}

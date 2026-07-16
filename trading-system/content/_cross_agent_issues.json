@@ -1,0 +1,73 @@
+{
+  "last_updated": "2026-06-28T08:30:00.000000Z",
+  "total_open_issues": 0,
+  "total_resolved_issues": 3,
+  "resolved_issues": [
+    {
+      "issue_id": "DEP-agent_4_risk_manager-agent_1_coordinator-1782622978",
+      "type": "dependency_blocked",
+      "severity": "HIGH",
+      "agent_id": "agent_4_risk_manager",
+      "blocked_by": "agent_1_coordinator",
+      "description": "agent_4_risk_manager被阻塞,等待agent_1_coordinator的'v400策略最终确认'(状态:unknown)",
+      "detected_at": "2026-06-28T05:02:58.092637Z",
+      "resolved_at": "2026-06-28T08:30:00.000000Z",
+      "resolved_by": "agent_1_coordinator",
+      "resolution": "v400为历史版本,当前最新v446已S1=8/8全部通过(年化127.93%/回撤12.15%/胜率60%/夏普7.15)。策略最终确认状态: COMPLETED。agent_4可基于v446基线开展v447风控评估。",
+      "authoritative_report": "_v446_atr_dynamic_stoploss.json"
+    },
+    {
+      "issue_id": "DEP-agent_6_deployment_engineer-agent_4_risk_manager-1782622978",
+      "type": "dependency_blocked",
+      "severity": "HIGH",
+      "agent_id": "agent_6_deployment_engineer",
+      "blocked_by": "agent_4_risk_manager",
+      "description": "agent_6_deployment_engineer被阻塞,等待agent_4_risk_manager的'风控参数硬编码'(状态:not_started)",
+      "detected_at": "2026-06-28T05:02:58.092660Z",
+      "resolved_at": "2026-06-28T08:30:00.000000Z",
+      "resolved_by": "agent_1_coordinator",
+      "resolution": "v446已实现ATR动态止损机制[0.005,0.015]+0.3%摩擦预留, max_single_loss=0.01886<0.02阈值。风控参数硬编码状态: COMPLETED。agent_6任务调整为实盘技术预研(不部署实盘,用户明确指示)。",
+      "user_directive": "别总想着直接部署实盘,直接花钱去浪费!收益率,回撤,胜率,都做到极限极致了么!!"
+    },
+    {
+      "issue_id": "KPI-CONFLICT-1782622978",
+      "type": "kpi_conflict",
+      "severity": "MEDIUM",
+      "description": "Agent报告不同的S1值: {7: ['agent_1_coordinator', 'agent_4_risk_manager', 'agent_5_backtest_engineer'], 6: ['agent_2_data_engineer'], 5: ['agent_3_strategy_researcher'], 0: ['agent_6_deployment_engineer']}",
+      "detected_at": "2026-06-28T05:02:58.092718Z",
+      "resolved_at": "2026-06-28T08:30:00.000000Z",
+      "resolved_by": "agent_1_coordinator",
+      "resolution": "统一以v446 _v446_atr_dynamic_stoploss.json报告为权威标准:S1=8/8全部通过。所有Agent必须使用此标准值,禁止引用过时版本(v405/v440/v393)。",
+      "authoritative_kpi": {
+        "version": "v446",
+        "s1_passed": 8,
+        "annualized_return_sim": 1.2793,
+        "annualized_return_live": 1.1576,
+        "max_drawdown": 0.1215,
+        "win_rate": 0.6004,
+        "sharpe_ratio_sim": 7.15,
+        "sharpe_ratio_live": 6.94,
+        "profit_loss_ratio": 1.8179,
+        "max_single_loss": 0.01886,
+        "max_consecutive_losses": 2,
+        "monthly_loss_prob": 0.04
+      },
+      "superseded_reports": [
+        "v405 (S1=6/8, max_consec=7 失败)",
+        "v440 (S1=8/8 中间版本)",
+        "v393 (S1=5/8 原始架构)"
+      ]
+    }
+  ],
+  "issues": [],
+  "v447_coordination_status": {
+    "coordinator": "agent_1_coordinator",
+    "current_phase": "phase_2_liquidity_fixes",
+    "next_milestone": "v447_liquidity_fixes_complete",
+    "authoritative_kpi_source": "_v446_atr_dynamic_stoploss.json",
+    "unified_s1_value": 8,
+    "no_deployment_directive": true,
+    "coordination_report": "_v447_coordination_sync_report.md",
+    "roadmap": "_v447_roadmap.md"
+  }
+}

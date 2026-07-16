@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "agent_id": "agent_5_backtest_engineer",
+  "role": "实盘vs模拟差异监控",
+  "last_heartbeat": "2026-06-28T05:02:58.040059Z",
+  "current_task": {
+    "task_name": "v380差异量化模型持续监控",
+    "task_description": "差异率7.92%<15%达标,建立持续监控机制",
+    "start_time": "2026-06-28T05:02:58.040054Z",
+    "expected_completion": "",
+    "progress_pct": 70,
+    "current_status": "in_progress"
+  },
+  "deliverables": [],
+  "s1_kpi": {
+    "s1_passed": 7,
+    "s1_total": 8,
+    "missing_kpis": [],
+    "achieved_kpis": []
+  },
+  "blockers": [],
+  "cross_agent_dependencies": [],
+  "data_signature": "25628854ac02f45c2f28efde302e6f12d4c8bd1cb072490794dcc63242eaa53b"
+}

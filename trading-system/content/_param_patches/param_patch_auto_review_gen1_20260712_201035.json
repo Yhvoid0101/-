@@ -1,0 +1,60 @@
+{
+  "version": "auto_review_gen1_20260712_201035",
+  "generated_at": "2026-07-12T20:10:37.034776",
+  "adjustments": [
+    {
+      "target_symbol": "GLOBAL",
+      "param_name": "max_pos_multiplier",
+      "current_value": 1.0,
+      "suggested_value": 0.5,
+      "reason": "最大回撤 3688.0% 超标, 缩减仓位至 0.500x",
+      "confidence": 0.7,
+      "evidence": {
+        "max_drawdown": 3688.0,
+        "target": 15.0
+      },
+      "auto_apply": false
+    },
+    {
+      "target_symbol": "BTC-USDT",
+      "param_name": "enabled",
+      "current_value": 1.0,
+      "suggested_value": 0.0,
+      "reason": "BTC-USDT EV=-1.9178% 持续为负, 1890笔交易验证, 建议禁用 (参考 ERR-20260629-049)",
+      "confidence": 0.85,
+      "evidence": {
+        "ev": -1.9178,
+        "trades": 1890,
+        "total_pnl": -3624.71
+      },
+      "auto_apply": false
+    },
+    {
+      "target_symbol": "ETH-USDT",
+      "param_name": "enabled",
+      "current_value": 1.0,
+      "suggested_value": 0.0,
+      "reason": "ETH-USDT EV=-3.7327% 持续为负, 1993笔交易验证, 建议禁用 (参考 ERR-20260629-049)",
+      "confidence": 0.85,
+      "evidence": {
+        "ev": -3.7327,
+        "trades": 1993,
+        "total_pnl": -7439.3
+      },
+      "auto_apply": false
+    },
+    {
+      "target_symbol": "GLOBAL",
+      "param_name": "adx_filter_threshold",
+      "current_value": 0.0,
+      "suggested_value": 20.0,
+      "reason": "胜率 2.2% < 50%, 添加 ADX≥20 过滤器剔除弱趋势信号",
+      "confidence": 0.7,
+      "evidence": {
+        "win_rate": 2.2,
+        "target": 55.0
+      },
+      "auto_apply": false
+    }
+  ]
+}

@@ -1,0 +1,6006 @@
+{
+  "timestamp": "2026-07-11T13:05:32.557619",
+  "trade_count": 78,
+  "attributions": [
+    {
+      "trade_id": "unknown_unknown_6368",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_91584",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_99360",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_77536",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_42912",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_86176",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_83456",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_80544",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_18528",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_70976",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_85600",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_85664",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_92672",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_70880",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_91968",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_83584",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_66368",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_10720",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_82016",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_76224",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_85728",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_85792",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_86240",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_15712",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_89984",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_72640",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_86144",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_90176",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_99296",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_84128",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_22944",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_16608",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_81056",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_83776",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_69504",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_83968",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_88320",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_86048",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_75776",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_83232",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_79904",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_47456",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_84352",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "timesfm_prediction:long",
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "timesfm_prediction:long": {
+            "count": 6,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          },
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "timesfm_prediction:long 信号历史表现弱 (胜率 0%, 6 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_75744",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_87840",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "timesfm_prediction:long",
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "timesfm_prediction:long": {
+            "count": 6,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          },
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "timesfm_prediction:long 信号历史表现弱 (胜率 0%, 6 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_79424",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "timesfm_prediction:long",
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "timesfm_prediction:long": {
+            "count": 6,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          },
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "timesfm_prediction:long 信号历史表现弱 (胜率 0%, 6 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_50912",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_66048",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "timesfm_prediction:long",
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "timesfm_prediction:long": {
+            "count": 6,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          },
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "timesfm_prediction:long 信号历史表现弱 (胜率 0%, 6 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_78752",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "timesfm_prediction:long",
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "timesfm_prediction:long": {
+            "count": 6,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          },
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "timesfm_prediction:long 信号历史表现弱 (胜率 0%, 6 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_80224",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_78880",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "timesfm_prediction:long",
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "timesfm_prediction:long": {
+            "count": 6,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          },
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "timesfm_prediction:long 信号历史表现弱 (胜率 0%, 6 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_84224",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_84288",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_79936",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_60000",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_65792",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_82624",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_88928",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_13984",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_76640",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_80128",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_58272",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_99744",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_80288",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_64960",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_66880",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_75008",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_86752",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_20640",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_88288",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_62688",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_80320",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_70080",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_65984",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_66688",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_39520",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_90976",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "unknown"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "unknown": {
+            "count": 30,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "unknown 信号历史表现弱 (胜率 0%, 30 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    },
+    {
+      "trade_id": "unknown_unknown_15584",
+      "symbol": "unknown",
+      "direction": "unknown",
+      "pnl_pct": 0.0,
+      "pnl_outcome": "breakeven",
+      "signal_attribution": {
+        "signals_detected": [
+          "price_momentum_roc:long"
+        ],
+        "direction": "unknown",
+        "alignments": {},
+        "misaligned_count": 0,
+        "total_alignments": 0,
+        "is_counter_trend": false,
+        "signal_history": {
+          "price_momentum_roc:long": {
+            "count": 48,
+            "win_rate": 0,
+            "avg_pnl": 0.0,
+            "total_pnl": 0.0,
+            "is_profitable": false
+          }
+        },
+        "has_weak_history": true,
+        "conclusion": "顺势入场, 信号历史弱"
+      },
+      "feature_attribution": {
+        "conclusion": "无特征数据, 跳过特征归因",
+        "anomalies": []
+      },
+      "exit_attribution": {
+        "exit_reason": "stop_loss",
+        "bars_held": 0,
+        "mae_pct": -0.0,
+        "mfe_pct": 0.0,
+        "mae_mfe_inferred": true,
+        "actual_pnl_pct": 0.0,
+        "optimal_pnl_pct": 0.0,
+        "exit_efficiency": 1.0,
+        "avoidable": false,
+        "avoid_reason": "",
+        "exit_quality": "acceptable",
+        "conclusion": "stop_loss 出场 (acceptable), MAE=-0.00%, MFE=0.00%, 效率=100%, 不可避免"
+      },
+      "market_attribution": {
+        "regime": "low_vol",
+        "market_state_16": "",
+        "market_state_8": "",
+        "htf_state": "",
+        "atr_state": "",
+        "vol_state": "",
+        "strategy_type": "unknown",
+        "match_score": 1.0,
+        "is_mismatched": false,
+        "mismatches": [],
+        "conclusion": "unknown 策略在 low_vol/ 下运行, 匹配度 100%"
+      },
+      "risk_attribution": {
+        "pos_mult": 1.0,
+        "leverage": 1.0,
+        "atr_pct": 0.0,
+        "sl_dist_pct": 0.0,
+        "tp_dist_pct": 0.0,
+        "sl_tp_inferred": false,
+        "rr_ratio": 0,
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "issues": [],
+        "conclusion": "仓位 1.00x, 风险等级 low, R:R=0.00"
+      },
+      "root_cause": "price_momentum_roc:long 信号历史表现弱 (胜率 0%, 48 笔), 当前笔表现符合历史模式",
+      "root_cause_category": "weak_signal",
+      "confidence": 0.275,
+      "data_quality": "minimal"
+    }
+  ],
+  "patterns": [],
+  "suggestions": [],
+  "summary": {
+    "total_trades": 78,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0.0,
+    "total_pnl_pct": 0.0,
+    "avg_confidence": 0.27499999999999986,
+    "confidence_distribution": {
+      "high": 0,
+      "medium": 0,
+      "low": 78
+    },
+    "top_root_causes": {
+      "weak_signal": 78
+    },
+    "patterns_count": 0,
+    "suggestions_count": 0,
+    "suggestions_by_dimension": {},
+    "data_quality_distribution": {
+      "minimal": 78
+    }
+  }
+}
