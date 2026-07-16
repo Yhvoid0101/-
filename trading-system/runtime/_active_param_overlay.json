@@ -1,0 +1,250 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "source": "evolution_suggestion_applier",
+    "updated_at": "2026-07-15T01:36:04.543305"
+  },
+  "adjustments": [],
+  "patches": [
+    {
+      "patch_id": "patch_parameter_1783035060_bfa6eb",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_UNI_USDT_neutral",
+      "param_name": "pos_mult",
+      "target_symbol": "UNI_USDT@neutral",
+      "adjustment_pct": -15.0,
+      "reason": "UNI_USDT@neutral 亏损率 80%",
+      "applied_at": "2026-07-03T07:31:00.122749",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783035060_b2b233",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_ARB_USDT_trending",
+      "param_name": "pos_mult",
+      "target_symbol": "ARB_USDT@trending",
+      "adjustment_pct": -15.0,
+      "reason": "ARB_USDT@trending 亏损率 62%",
+      "applied_at": "2026-07-03T07:31:00.129929",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783767578_b2ced8",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_ETH-USDT_ranging",
+      "param_name": "pos_mult",
+      "target_symbol": "ETH-USDT@ranging",
+      "adjustment_pct": -15.0,
+      "reason": "ETH-USDT@ranging 亏损率 100%",
+      "applied_at": "2026-07-11T18:59:38.902629",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783767578_ad5735",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_low_vol",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@low_vol",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@low_vol 亏损率 100%",
+      "applied_at": "2026-07-11T18:59:38.904442",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783767578_bf1573",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_ETH-USDT_high_vol",
+      "param_name": "pos_mult",
+      "target_symbol": "ETH-USDT@high_vol",
+      "adjustment_pct": -15.0,
+      "reason": "ETH-USDT@high_vol 亏损率 100%",
+      "applied_at": "2026-07-11T18:59:38.905228",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783767578_0a0b31",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_ranging",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@ranging",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@ranging 亏损率 100%",
+      "applied_at": "2026-07-11T18:59:38.905724",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783858236_9c0343",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_ranging",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@ranging",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@ranging 亏损率 100%",
+      "applied_at": "2026-07-12T20:10:36.969928",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783858236_75ca88",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_ETH-USDT_ranging",
+      "param_name": "pos_mult",
+      "target_symbol": "ETH-USDT@ranging",
+      "adjustment_pct": -15.0,
+      "reason": "ETH-USDT@ranging 亏损率 95%",
+      "applied_at": "2026-07-12T20:10:36.970833",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783858236_19607f",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_ETH-USDT_high_vol",
+      "param_name": "pos_mult",
+      "target_symbol": "ETH-USDT@high_vol",
+      "adjustment_pct": -15.0,
+      "reason": "ETH-USDT@high_vol 亏损率 100%",
+      "applied_at": "2026-07-12T20:10:36.971834",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783858236_830e22",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_low_vol",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@low_vol",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@low_vol 亏损率 98%",
+      "applied_at": "2026-07-12T20:10:36.972784",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783858236_51d992",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_ETH-USDT_low_vol",
+      "param_name": "pos_mult",
+      "target_symbol": "ETH-USDT@low_vol",
+      "adjustment_pct": -15.0,
+      "reason": "ETH-USDT@low_vol 亏损率 77%",
+      "applied_at": "2026-07-12T20:10:36.973965",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1783858236_1a50c7",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_high_vol",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@high_vol",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@high_vol 亏损率 100%",
+      "applied_at": "2026-07-12T20:10:36.975011",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1784049856_6663ef",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_ranging",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@ranging",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@ranging 亏损率 100%",
+      "applied_at": "2026-07-15T01:24:16.360704",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1784050155_83856f",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_ranging",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@ranging",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@ranging 亏损率 100%",
+      "applied_at": "2026-07-15T01:29:15.545688",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    },
+    {
+      "patch_id": "patch_parameter_1784050564_3ecafd",
+      "source": "attribution_engine",
+      "source_suggestion": "reduce_pos_mult_BTC-USDT_ranging",
+      "param_name": "pos_mult",
+      "target_symbol": "BTC-USDT@ranging",
+      "adjustment_pct": -15.0,
+      "reason": "BTC-USDT@ranging 亏损率 100%",
+      "applied_at": "2026-07-15T01:36:04.542544",
+      "risk_level": "low",
+      "rollback_on": [
+        "ann_delta_pp < -3",
+        "max_consec > 3"
+      ],
+      "status": "active"
+    }
+  ]
+}

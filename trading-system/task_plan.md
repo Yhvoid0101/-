@@ -1,7 +1,9 @@
-# Trading System Snapshot Plan
+# Unified Trading System Plan
 
-- [x] Identify and preserve the canonical WSL source.
-- [x] Hash and classify every source file.
-- [x] Copy unique maintainable source/configuration content into `content/`.
-- [x] Record duplicates and exclusions with SHA-256 manifests.
-- [ ] Verify the committed GitHub tree and establish the first runtime baseline before optimization.
+- [x] Audit WSL, C:, D: and TRAE sources with file-level hashes.
+- [x] Establish WSL trading runtime as the sole source authority.
+- [x] Copy the unique maintainable runtime snapshot into `runtime/`.
+- [x] Copy only unique C-drive tool-shaped scripts into `legacy-tools/`.
+- [x] Extract TRAE context into redacted docs; exclude raw sessions and caches.
+- [ ] Run unified repository verification and publish the GitHub mirror.
+- [ ] After an explicit retention decision, archive or remove legacy source roots; until then they remain read-only reference data.

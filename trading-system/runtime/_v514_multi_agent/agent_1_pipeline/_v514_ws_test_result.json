@@ -1,0 +1,39 @@
+{
+  "agent_id": "agent_1_pipeline",
+  "timestamp": 1782661110,
+  "test_duration_sec": 60,
+  "symbols_subscribed": [
+    "BTC_USDT",
+    "ETH_USDT",
+    "SOL_USDT",
+    "BNB_USDT",
+    "XRP_USDT"
+  ],
+  "messages_received": 165,
+  "ticker_updates": 158,
+  "latency_stats": {
+    "min_ms": 188.664,
+    "median_ms": 222.646,
+    "mean_ms": 423.166,
+    "p95_ms": 1134.866,
+    "p99_ms": 1385.108,
+    "max_ms": 1935.167,
+    "n": 158,
+    "available": true,
+    "clock_offset_sec": 0.16,
+    "offset_source": "subscribe_handshake",
+    "negative_latency_count": 0,
+    "rtt_mean_ms": 353.199,
+    "rtt_median_ms": 368.486,
+    "rtt_min_ms": 201.908
+  },
+  "reconnect_count": 0,
+  "errors": [],
+  "prices_at_end": {
+    "SOL_USDT": 71.79,
+    "BTC_USDT": 59933.2,
+    "ETH_USDT": 1580.21,
+    "XRP_USDT": 1.0536,
+    "BNB_USDT": 554.9
+  }
+}

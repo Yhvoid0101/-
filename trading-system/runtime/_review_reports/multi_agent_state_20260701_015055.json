@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-07-01T01:50:55.488022",
+  "summary": {
+    "total_tasks": 15,
+    "completed": 0,
+    "in_progress": 1,
+    "blocked": 0,
+    "pending": 14,
+    "completion_rate": "0.0%"
+  },
+  "agent_load": {
+    "Agent-1": {
+      "total": 1,
+      "completed": 0,
+      "in_progress": 1,
+      "blocked": 0
+    },
+    "Agent-2": {
+      "total": 0,
+      "completed": 0,
+      "in_progress": 0,
+      "blocked": 0
+    },
+    "Agent-3": {
+      "total": 0,
+      "completed": 0,
+      "in_progress": 0,
+      "blocked": 0
+    },
+    "Agent-4": {
+      "total": 0,
+      "completed": 0,
+      "in_progress": 0,
+      "blocked": 0
+    },
+    "Agent-5": {
+      "total": 0,
+      "completed": 0,
+      "in_progress": 0,
+      "blocked": 0
+    },
+    "Agent-6": {
+      "total": 0,
+      "completed": 0,
+      "in_progress": 0,
+      "blocked": 0
+    },
+    "Agent-7": {
+      "total": 0,
+      "completed": 0,
+      "in_progress": 0,
+      "blocked": 0
+    },
+    "Agent-8": {
+      "total": 0,
+      "completed": 0,
+      "in_progress": 0,
+      "blocked": 0
+    }
+  },
+  "overlap_check": {
+    "overlaps": {},
+    "max_overlap_pct": 0,
+    "within_threshold": true
+  },
+  "blocked_tasks": []
+}

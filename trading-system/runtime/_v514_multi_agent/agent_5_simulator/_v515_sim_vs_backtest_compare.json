@@ -1,0 +1,526 @@
+{
+  "version": "v515_sim_vs_backtest_compare",
+  "agent_id": "agent_5_simulator",
+  "timestamp": 1782662290.2164016,
+  "target_diff_rate": 0.15,
+  "latency_source": {
+    "ws_median_ms": 222.646,
+    "ws_p95_ms": 1134.866,
+    "rest_median_ms": 1056.0,
+    "exec_baseline_ms": 818.0
+  },
+  "summary": {
+    "symbols_analyzed": 5,
+    "symbols_ok": 5,
+    "avg_diff_rate": 0.5382141771812332,
+    "max_diff_rate": 1.7720517829162143,
+    "pass_count": 1,
+    "target_met": false
+  },
+  "per_symbol": {
+    "BTCUSDT": {
+      "symbol": "BTCUSDT",
+      "status": "ok",
+      "bars": 1000,
+      "metric_diffs": {
+        "annual_return": {
+          "ideal": -0.4916136371265003,
+          "hifi": -0.5602752065627936,
+          "diff_rate": 0.13966571358276939
+        },
+        "sharpe": {
+          "ideal": -3202.573942517878,
+          "hifi": -2389.3527233295763,
+          "diff_rate": 0.25392738271920856
+        },
+        "max_dd": {
+          "ideal": 0.0171273826878334,
+          "hifi": 0.017604224225221492,
+          "diff_rate": 0.027840887663870554
+        },
+        "win_rate": {
+          "ideal": 0.16666666666666666,
+          "hifi": 0.16666666666666666,
+          "diff_rate": 0.0
+        },
+        "total_return": {
+          "ideal": -0.021415965868401294,
+          "hifi": -0.022616573122053524,
+          "diff_rate": 0.05606131710471651
+        },
+        "n_trades": {
+          "ideal": 2.6666666666666665,
+          "hifi": 2.6666666666666665,
+          "diff_rate": 0.0
+        }
+      },
+      "composite_diff_rate": 0.11655586899787872,
+      "pass": true,
+      "factor_weights": {
+        "spread_only": 0.8961950953784976,
+        "slippage_only": 0.0012427617365923188,
+        "delay_only": 0.02280290353717021,
+        "funding_only": 0.0797592393477399,
+        "partial_fill_only": 0.0
+      },
+      "factor_weights_sharpe": {
+        "spread_only": 0.12420770773676686,
+        "slippage_only": 0.0012233818505508946,
+        "delay_only": 0.0015999945693779668,
+        "funding_only": 0.8729689158433044,
+        "partial_fill_only": 0.0
+      },
+      "microstructure_costs": {
+        "total_spread_bps": 40.82751092288725,
+        "total_slippage_bps": 0.04847153863822679,
+        "total_delay_drift_bps": 3.4623993062932685,
+        "total_funding_bps": 537.75,
+        "avg_delay_ms": 222.64600000000002,
+        "p95_delay_ms": 222.646,
+        "partial_fill_count": 0,
+        "session_distribution": {
+          "asia": 107,
+          "europe": 112,
+          "us": 112
+        }
+      },
+      "cost_breakdown": {
+        "spread_pct": 0.07013971108458299,
+        "slippage_pct": 8.327178510420938e-05,
+        "delay_pct": 0.0059482364100411425,
+        "funding_pct": 0.9238287807202716
+      },
+      "ideal_metrics": {
+        "n_trades": 2.6666666666666665,
+        "sharpe": -3202.573942517878,
+        "win_rate": 0.16666666666666666,
+        "annual_return": -0.4916136371265003,
+        "max_dd": 0.0171273826878334,
+        "total_return": -0.021415965868401294,
+        "monthly_loss_prob": 0.6666666666666666,
+        "max_consecutive_losses": 1.6666666666666667,
+        "profit_loss_ratio": 0.38277260406493835
+      },
+      "hifi_metrics": {
+        "n_trades": 2.6666666666666665,
+        "sharpe": -2389.3527233295763,
+        "win_rate": 0.16666666666666666,
+        "annual_return": -0.5602752065627936,
+        "max_dd": 0.017604224225221492,
+        "total_return": -0.022616573122053524,
+        "monthly_loss_prob": 0.6666666666666666,
+        "max_consecutive_losses": 1.6666666666666667,
+        "profit_loss_ratio": 0.36019354234764966
+      }
+    },
+    "ETHUSDT": {
+      "symbol": "ETHUSDT",
+      "status": "ok",
+      "bars": 1000,
+      "metric_diffs": {
+        "annual_return": {
+          "ideal": -0.37136444173081923,
+          "hifi": -0.5523929269325563,
+          "diff_rate": 0.4874685480333472
+        },
+        "sharpe": {
+          "ideal": -127.45982532781859,
+          "hifi": -136.37655985328416,
+          "diff_rate": 0.06995721595045573
+        },
+        "max_dd": {
+          "ideal": 0.03674387470333299,
+          "hifi": 0.038634569472506916,
+          "diff_rate": 0.05145605313645438
+        },
+        "win_rate": {
+          "ideal": 0.20833333333333331,
+          "hifi": 0.20833333333333331,
+          "diff_rate": 0.0
+        },
+        "total_return": {
+          "ideal": -0.0304266264586259,
+          "hifi": -0.033589135942699966,
+          "diff_rate": 0.10393888025589837
+        },
+        "n_trades": {
+          "ideal": 3.25,
+          "hifi": 3.25,
+          "diff_rate": 0.0
+        }
+      },
+      "composite_diff_rate": 0.1844149670504988,
+      "pass": false,
+      "factor_weights": {
+        "spread_only": 0.8614475998822699,
+        "slippage_only": 0.0013040294738241938,
+        "delay_only": 0.022797038256149368,
+        "funding_only": 0.1144513323877566,
+        "partial_fill_only": 0.0
+      },
+      "factor_weights_sharpe": {
+        "spread_only": 0.8194632105374295,
+        "slippage_only": 2.7393113740372393e-05,
+        "delay_only": 0.005369162693200809,
+        "funding_only": 0.17514023365562928,
+        "partial_fill_only": 0.0
+      },
+      "microstructure_costs": {
+        "total_spread_bps": 121.40683008357652,
+        "total_slippage_bps": 0.11190481296837748,
+        "total_delay_drift_bps": 7.503680112899467,
+        "total_funding_bps": 171.9375,
+        "avg_delay_ms": 222.64599999999996,
+        "p95_delay_ms": 222.646,
+        "partial_fill_count": 0,
+        "session_distribution": {
+          "asia": 107,
+          "europe": 109,
+          "us": 100
+        }
+      },
+      "cost_breakdown": {
+        "spread_pct": 0.40339867214464986,
+        "slippage_pct": 0.00037182630439294825,
+        "delay_pct": 0.024932490137977333,
+        "funding_pct": 0.57129701141298
+      },
+      "ideal_metrics": {
+        "n_trades": 3.25,
+        "sharpe": -127.45982532781859,
+        "win_rate": 0.20833333333333331,
+        "annual_return": -0.37136444173081923,
+        "max_dd": 0.03674387470333299,
+        "total_return": -0.0304266264586259,
+        "monthly_loss_prob": 0.75,
+        "max_consecutive_losses": 2.25,
+        "profit_loss_ratio": 0.7645888552302584
+      },
+      "hifi_metrics": {
+        "n_trades": 3.25,
+        "sharpe": -136.37655985328416,
+        "win_rate": 0.20833333333333331,
+        "annual_return": -0.5523929269325563,
+        "max_dd": 0.038634569472506916,
+        "total_return": -0.033589135942699966,
+        "monthly_loss_prob": 0.75,
+        "max_consecutive_losses": 2.25,
+        "profit_loss_ratio": 0.7012724554865684
+      }
+    },
+    "SOLUSDT": {
+      "symbol": "SOLUSDT",
+      "status": "ok",
+      "bars": 1000,
+      "metric_diffs": {
+        "annual_return": {
+          "ideal": -0.27300417297299084,
+          "hifi": -0.6160740764865094,
+          "diff_rate": 1.2566471046120584
+        },
+        "sharpe": {
+          "ideal": -241.4070196452376,
+          "hifi": -274.9529960632871,
+          "diff_rate": 0.13896023598380605
+        },
+        "max_dd": {
+          "ideal": 0.01966057414274768,
+          "hifi": 0.021342855244409244,
+          "diff_rate": 0.0855662245388759
+        },
+        "win_rate": {
+          "ideal": 0.125,
+          "hifi": 0.125,
+          "diff_rate": 0.0
+        },
+        "total_return": {
+          "ideal": -0.03156371451167886,
+          "hifi": -0.0358551156459779,
+          "diff_rate": 0.1359599527714391
+        },
+        "n_trades": {
+          "ideal": 2.5,
+          "hifi": 2.5,
+          "diff_rate": 0.0
+        }
+      },
+      "composite_diff_rate": 0.4424434305644881,
+      "pass": false,
+      "factor_weights": {
+        "spread_only": 0.9187875679179698,
+        "slippage_only": 0.004231000891302601,
+        "delay_only": 0.009894094299538789,
+        "funding_only": 0.06708733689118879,
+        "partial_fill_only": 0.0
+      },
+      "factor_weights_sharpe": {
+        "spread_only": 0.8770854395013203,
+        "slippage_only": 0.0018757330125521727,
+        "delay_only": 0.005479142854518782,
+        "funding_only": 0.11555968463160876,
+        "partial_fill_only": 0.0
+      },
+      "microstructure_costs": {
+        "total_spread_bps": 192.97882700531378,
+        "total_slippage_bps": 0.6118086889201757,
+        "total_delay_drift_bps": 6.461577840283029,
+        "total_funding_bps": 449.25,
+        "avg_delay_ms": 222.646,
+        "p95_delay_ms": 222.646,
+        "partial_fill_count": 0,
+        "session_distribution": {
+          "asia": 104,
+          "europe": 110,
+          "us": 110
+        }
+      },
+      "cost_breakdown": {
+        "spread_pct": 0.297209562793297,
+        "slippage_pct": 0.0009422556648771564,
+        "delay_pct": 0.009951572173316686,
+        "funding_pct": 0.691896609368509
+      },
+      "ideal_metrics": {
+        "n_trades": 2.5,
+        "sharpe": -241.4070196452376,
+        "win_rate": 0.125,
+        "annual_return": -0.27300417297299084,
+        "max_dd": 0.01966057414274768,
+        "total_return": -0.03156371451167886,
+        "monthly_loss_prob": 0.75,
+        "max_consecutive_losses": 1.75,
+        "profit_loss_ratio": 0.3243662901753728
+      },
+      "hifi_metrics": {
+        "n_trades": 2.5,
+        "sharpe": -274.9529960632871,
+        "win_rate": 0.125,
+        "annual_return": -0.6160740764865094,
+        "max_dd": 0.021342855244409244,
+        "total_return": -0.0358551156459779,
+        "monthly_loss_prob": 0.75,
+        "max_consecutive_losses": 1.75,
+        "profit_loss_ratio": 0.2799944344439806
+      }
+    },
+    "BNBUSDT": {
+      "symbol": "BNBUSDT",
+      "status": "ok",
+      "bars": 1000,
+      "metric_diffs": {
+        "annual_return": {
+          "ideal": 1.8271842766538344,
+          "hifi": 1.0670862945954906,
+          "diff_rate": 0.4159941565665884
+        },
+        "sharpe": {
+          "ideal": -122.88903434720588,
+          "hifi": -127.54550060948827,
+          "diff_rate": 0.03789163359463136
+        },
+        "max_dd": {
+          "ideal": 0.019857635119805653,
+          "hifi": 0.021170545003341264,
+          "diff_rate": 0.06611612488670099
+        },
+        "win_rate": {
+          "ideal": 0.3333333333333333,
+          "hifi": 0.3333333333333333,
+          "diff_rate": 0.0
+        },
+        "total_return": {
+          "ideal": -0.011280734480992705,
+          "hifi": -0.014451800387258601,
+          "diff_rate": 0.2811045603111157
+        },
+        "n_trades": {
+          "ideal": 2.75,
+          "hifi": 2.75,
+          "diff_rate": 0.0
+        }
+      },
+      "composite_diff_rate": 0.1756048363770861,
+      "pass": false,
+      "factor_weights": {
+        "spread_only": 0.8995118412630084,
+        "slippage_only": 0.02260277864125612,
+        "delay_only": 0.01158140346418268,
+        "funding_only": 0.06630397663155285,
+        "partial_fill_only": 0.0
+      },
+      "factor_weights_sharpe": {
+        "spread_only": 0.9049497173984473,
+        "slippage_only": 0.01872205335984649,
+        "delay_only": 0.01049785767252719,
+        "funding_only": 0.06583037156917905,
+        "partial_fill_only": 0.0
+      },
+      "microstructure_costs": {
+        "total_spread_bps": 134.31026662521225,
+        "total_slippage_bps": 2.3394891196583663,
+        "total_delay_drift_bps": 4.920459713620624,
+        "total_funding_bps": 327.82500000000005,
+        "avg_delay_ms": 222.646,
+        "p95_delay_ms": 222.646,
+        "partial_fill_count": 0,
+        "session_distribution": {
+          "asia": 102,
+          "europe": 114,
+          "us": 106
+        }
+      },
+      "cost_breakdown": {
+        "spread_pct": 0.2861347159110303,
+        "slippage_pct": 0.004984049778550092,
+        "delay_pct": 0.010482551912708495,
+        "funding_pct": 0.6983986823977111
+      },
+      "ideal_metrics": {
+        "n_trades": 2.75,
+        "sharpe": -122.88903434720588,
+        "win_rate": 0.3333333333333333,
+        "annual_return": 1.8271842766538344,
+        "max_dd": 0.019857635119805653,
+        "total_return": -0.011280734480992705,
+        "monthly_loss_prob": 0.75,
+        "max_consecutive_losses": 1.5,
+        "profit_loss_ratio": 1.4874495404112835
+      },
+      "hifi_metrics": {
+        "n_trades": 2.75,
+        "sharpe": -127.54550060948827,
+        "win_rate": 0.3333333333333333,
+        "annual_return": 1.0670862945954906,
+        "max_dd": 0.021170545003341264,
+        "total_return": -0.014451800387258601,
+        "monthly_loss_prob": 0.75,
+        "max_consecutive_losses": 1.5,
+        "profit_loss_ratio": 1.2296008310226099
+      }
+    },
+    "XRPUSDT": {
+      "symbol": "XRPUSDT",
+      "status": "ok",
+      "bars": 1000,
+      "metric_diffs": {
+        "annual_return": {
+          "ideal": 0.12881344833873964,
+          "hifi": -0.5124511546065822,
+          "diff_rate": 4.978242654128734
+        },
+        "sharpe": {
+          "ideal": -121.14257021815672,
+          "hifi": -165.62127577020655,
+          "diff_rate": 0.36715999563119234
+        },
+        "max_dd": {
+          "ideal": 0.021367637904672627,
+          "hifi": 0.024191611420072912,
+          "diff_rate": 0.13216123972143617
+        },
+        "win_rate": {
+          "ideal": 0.27777777777777773,
+          "hifi": 0.27777777777777773,
+          "diff_rate": 0.0
+        },
+        "total_return": {
+          "ideal": -0.004768606109159894,
+          "hifi": -0.012415387400928735,
+          "diff_rate": 1.6035673982550864
+        },
+        "n_trades": {
+          "ideal": 3.3333333333333335,
+          "hifi": 3.3333333333333335,
+          "diff_rate": 0.0
+        }
+      },
+      "composite_diff_rate": 1.7720517829162143,
+      "pass": false,
+      "factor_weights": {
+        "spread_only": 0.8917253145283531,
+        "slippage_only": 0.009575830522751379,
+        "delay_only": 0.007513443232796617,
+        "funding_only": 0.09118541171609873,
+        "partial_fill_only": 0.0
+      },
+      "factor_weights_sharpe": {
+        "spread_only": 0.8115088679037882,
+        "slippage_only": 0.00015849831860302168,
+        "delay_only": 0.003461187363663732,
+        "funding_only": 0.184871446413945,
+        "partial_fill_only": 0.0
+      },
+      "microstructure_costs": {
+        "total_spread_bps": 229.05566505781474,
+        "total_slippage_bps": 1.8283081332501832,
+        "total_delay_drift_bps": 5.382504897210827,
+        "total_funding_bps": 1358.75,
+        "avg_delay_ms": 222.646,
+        "p95_delay_ms": 222.646,
+        "partial_fill_count": 0,
+        "session_distribution": {
+          "asia": 103,
+          "europe": 109,
+          "us": 113
+        }
+      },
+      "cost_breakdown": {
+        "spread_pct": 0.14360708381668374,
+        "slippage_pct": 0.0011462628495484395,
+        "delay_pct": 0.0033745763577703513,
+        "funding_pct": 0.8518720769759974
+      },
+      "ideal_metrics": {
+        "n_trades": 3.3333333333333335,
+        "sharpe": -121.14257021815672,
+        "win_rate": 0.27777777777777773,
+        "annual_return": 0.12881344833873964,
+        "max_dd": 0.021367637904672627,
+        "total_return": -0.004768606109159894,
+        "monthly_loss_prob": 0.3333333333333333,
+        "max_consecutive_losses": 2.0,
+        "profit_loss_ratio": 1.117897936681129
+      },
+      "hifi_metrics": {
+        "n_trades": 3.3333333333333335,
+        "sharpe": -165.62127577020655,
+        "win_rate": 0.27777777777777773,
+        "annual_return": -0.5124511546065822,
+        "max_dd": 0.024191611420072912,
+        "total_return": -0.012415387400928735,
+        "monthly_loss_prob": 0.6666666666666666,
+        "max_consecutive_losses": 2.0,
+        "profit_loss_ratio": 0.9414203421633115
+      }
+    }
+  },
+  "suggestions": [
+    "综合差异率 53.8% 超过目标 15.0%, 需进一步校准微观结构参数或优化策略鲁棒性",
+    "最大影响因素: 点差 (平均权重 89.4%), 建议优先优化该因素",
+    "资金费率总成本 2845.5 bps 较高, 建议: (1)缩短持仓时间 (2)避免长时间单边持仓 (3)对冲永续合约头寸",
+    "平均执行延迟 223ms 可接受, 建议保持 WebSocket 连接, 避免高峰时段下单",
+    "滑点成本 (4.94 bps) 远低于点差 (718.6 bps), 当前订单规模对市场冲击小, 可适当增大仓位",
+    "无部分成交发生, 当前订单规模流动性充足",
+    "平均交易数 2.9 低于统计显著性阈值 (30), 建议增加策略频率或使用更多历史数据 (当前仅 1000 bars)",
+    "BTCUSDT 数据量仅 1000 bars, 建议获取更多历史数据 (目标 ≥5000 bars) 以提高统计显著性"
+  ],
+  "methodology": {
+    "diff_rate_formula": "|hifi - ideal| / max(|ideal|, epsilon)",
+    "composite_formula": "weighted_average of metric diff_rates",
+    "metric_weights": {
+      "annual_return": 0.3,
+      "sharpe": 0.25,
+      "max_dd": 0.2,
+      "win_rate": 0.15,
+      "total_return": 0.1
+    },
+    "factor_weight_formula": "|factor_i - all_disabled| / |all_enabled - all_disabled|",
+    "factors_tested": [
+      "spread_only",
+      "slippage_only",
+      "delay_only",
+      "funding_only",
+      "partial_fill_only"
+    ]
+  }
+}

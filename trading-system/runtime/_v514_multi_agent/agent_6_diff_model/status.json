@@ -1,0 +1,47 @@
+{
+  "agent_id": "agent_6_diff_model",
+  "role": "模拟vs实盘差异量化模型",
+  "status": "completed",
+  "progress_pct": 100,
+  "started_at": 1782662400,
+  "updated_at": 1782666000,
+  "completed_at": 1782666000,
+  "deliverables": [
+    "_v515_diff_quantification.py",
+    "_v515_regime_split_analysis.py",
+    "_v515_diff_quantification_result.json",
+    "_v515_diff_quantification_report.md",
+    "_v515_regime_split_result.json",
+    "_v515_regime_split_report.md",
+    "_verify_l1_l6.py"
+  ],
+  "blockers": [],
+  "dependencies": [
+    "agent_1_pipeline (实盘延迟 818ms)",
+    "_v517_fixed_backtest_result.json (模拟基线)"
+  ],
+  "metrics": {
+    "target_diff_rate": 0.15,
+    "n_symbols": 10,
+    "n_regimes": 4,
+    "live_latency_ms": 818,
+    "sim_baseline_file": "_v517_fixed_backtest_result.json",
+    "naive_diff_rate_pct": 260.81,
+    "mitigated_diff_rate_pct": 112.97,
+    "high_edge_diff_rate_pct": 33.65,
+    "improvement_pct_naive_to_high": 87.1,
+    "primary_bottleneck": "spread",
+    "primary_bottleneck_weight_pct": 60.0,
+    "n_samples_per_scenario": 8000,
+    "regression_r_squared": 0.747,
+    "systematic_pct": 74.7,
+    "random_pct": 25.3,
+    "verification_L1_L6": "PASS (GOOD)"
+  },
+  "answers": {
+    "is_15pct_achievable": "有条件可达 — naive 260.8% / mitigated 113.0% / high_edge 33.7%; high_edge 场景 (edge×5) 已接近目标, 需进一步策略进化至 edge×7-8 或拉长持仓周期",
+    "primary_bottleneck": "spread (点差) — 跨场景平均权重 60-74%",
+    "highest_diff_regime": "LOW_VOL (606.6%) — 因 base_edge 最小 (2.5bps), 摩擦占比爆炸",
+    "highest_risk_factor": "spread — 跨 4 状态平均权重 73.9%"
+  }
+}

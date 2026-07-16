@@ -1,0 +1,47 @@
+{
+  "version": "auto_review_gen1_20260711_185938",
+  "generated_at": "2026-07-11T18:59:38.923593",
+  "adjustments": [
+    {
+      "target_symbol": "GLOBAL",
+      "param_name": "max_pos_multiplier",
+      "current_value": 1.0,
+      "suggested_value": 0.5,
+      "reason": "最大回撤 128.3% 超标, 缩减仓位至 0.500x",
+      "confidence": 0.7,
+      "evidence": {
+        "max_drawdown": 128.3,
+        "target": 15.0
+      },
+      "auto_apply": false
+    },
+    {
+      "target_symbol": "BTC-USDT",
+      "param_name": "enabled",
+      "current_value": 1.0,
+      "suggested_value": 0.0,
+      "reason": "BTC-USDT EV=-2.3345% 持续为负, 21笔交易验证, 建议禁用 (参考 ERR-20260629-049)",
+      "confidence": 0.85,
+      "evidence": {
+        "ev": -2.3345,
+        "trades": 21,
+        "total_pnl": -49.02
+      },
+      "auto_apply": false
+    },
+    {
+      "target_symbol": "ETH-USDT",
+      "param_name": "enabled",
+      "current_value": 1.0,
+      "suggested_value": 0.0,
+      "reason": "ETH-USDT EV=-4.6138% 持续为负, 45笔交易验证, 建议禁用 (参考 ERR-20260629-049)",
+      "confidence": 0.85,
+      "evidence": {
+        "ev": -4.6138,
+        "trades": 45,
+        "total_pnl": -207.62
+      },
+      "auto_apply": false
+    }
+  ]
+}

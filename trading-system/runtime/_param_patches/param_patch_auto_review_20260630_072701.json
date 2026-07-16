@@ -1,0 +1,32 @@
+{
+  "version": "auto_review_20260630_072701",
+  "generated_at": "2026-07-11T04:10:21.987260",
+  "adjustments": [
+    {
+      "target_symbol": "GLOBAL",
+      "param_name": "max_pos_multiplier",
+      "current_value": 1.0,
+      "suggested_value": 0.5,
+      "reason": "最大回撤 131.0% 超标, 缩减仓位至 0.500x",
+      "confidence": 0.7,
+      "evidence": {
+        "max_drawdown": 131.0,
+        "target": 15.0
+      },
+      "auto_apply": false
+    },
+    {
+      "target_symbol": "GLOBAL",
+      "param_name": "adx_filter_threshold",
+      "current_value": 0.0,
+      "suggested_value": 20.0,
+      "reason": "胜率 19.4% < 50%, 添加 ADX≥20 过滤器剔除弱趋势信号",
+      "confidence": 0.7,
+      "evidence": {
+        "win_rate": 19.4,
+        "target": 55.0
+      },
+      "auto_apply": false
+    }
+  ]
+}

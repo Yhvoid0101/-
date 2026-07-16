@@ -1,0 +1,382 @@
+{
+  "timestamp": "2026-07-03T10:43:26.874825",
+  "data_source": {
+    "attributions_count": 215,
+    "trades_count": 215,
+    "matched_count": 215
+  },
+  "root_cause_distribution": {
+    "unexplained": {
+      "n": 80,
+      "wins": 70,
+      "losses": 10,
+      "win_rate": 0.875,
+      "total_pnl_pct": 166.35145620998097,
+      "avg_pnl_pct": 2.0793932026247623
+    },
+    "feature_anomaly": {
+      "n": 33,
+      "wins": 0,
+      "losses": 33,
+      "win_rate": 0.0,
+      "total_pnl_pct": -65.47608572718448,
+      "avg_pnl_pct": -1.9841238099146814
+    },
+    "counter_trend": {
+      "n": 38,
+      "wins": 22,
+      "losses": 16,
+      "win_rate": 0.5789473684210527,
+      "total_pnl_pct": 12.48937376703707,
+      "avg_pnl_pct": 0.32866773071150185
+    },
+    "regime_mismatch": {
+      "n": 49,
+      "wins": 30,
+      "losses": 19,
+      "win_rate": 0.6122448979591837,
+      "total_pnl_pct": 50.59580964201579,
+      "avg_pnl_pct": 1.032567543714608
+    },
+    "weak_signal": {
+      "n": 13,
+      "wins": 13,
+      "losses": 0,
+      "win_rate": 1.0,
+      "total_pnl_pct": 25.309812561472,
+      "avg_pnl_pct": 1.9469086585747692
+    },
+    "bad_exit": {
+      "n": 2,
+      "wins": 0,
+      "losses": 2,
+      "win_rate": 0.0,
+      "total_pnl_pct": -4.000000000000005,
+      "avg_pnl_pct": -2.0000000000000027
+    }
+  },
+  "regime_mismatch_analysis": {
+    "total": 49,
+    "by_symbol": {
+      "AVAX_USDT": 2,
+      "BNB_USDT": 3,
+      "OP_USDT": 1,
+      "ETH_USDT": 1,
+      "LTC_USDT": 13,
+      "UNI_USDT": 11,
+      "ARB_USDT": 3,
+      "SOL_USDT": 11,
+      "BTC_USDT": 1,
+      "TRX_USDT": 1,
+      "INJ_USDT": 2
+    },
+    "by_regime": {
+      "trending": 49
+    },
+    "by_direction": {
+      "short": 45,
+      "long": 4
+    },
+    "by_srd": {
+      "UNI_USDT@trending@short": {
+        "n": 11,
+        "wins": 5,
+        "total_pnl_pct": -6.585135119975563
+      },
+      "OP_USDT@trending@long": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -2.0
+      },
+      "LTC_USDT@trending@long": {
+        "n": 2,
+        "wins": 1,
+        "total_pnl_pct": -0.40235056468643504
+      },
+      "AVAX_USDT@trending@short": {
+        "n": 2,
+        "wins": 1,
+        "total_pnl_pct": -0.017200191113236202
+      },
+      "TRX_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 0.8122658439064315
+      },
+      "ETH_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 1.10234953331188
+      },
+      "BTC_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 2.9540587951122665
+      },
+      "SOL_USDT@trending@long": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 4.015544974211715
+      },
+      "ARB_USDT@trending@short": {
+        "n": 3,
+        "wins": 2,
+        "total_pnl_pct": 5.07155296212901
+      },
+      "INJ_USDT@trending@short": {
+        "n": 2,
+        "wins": 1,
+        "total_pnl_pct": 5.156176951548118
+      },
+      "BNB_USDT@trending@short": {
+        "n": 3,
+        "wins": 3,
+        "total_pnl_pct": 9.364482270281144
+      },
+      "SOL_USDT@trending@short": {
+        "n": 10,
+        "wins": 5,
+        "total_pnl_pct": 11.873878784270527
+      },
+      "LTC_USDT@trending@short": {
+        "n": 11,
+        "wins": 8,
+        "total_pnl_pct": 19.25018540301993
+      }
+    },
+    "wilson_ci": {
+      "win_rate": 0.6122448979591837,
+      "ci_lower": 0.4724574648805242,
+      "ci_upper": 0.735711856260395
+    }
+  },
+  "counter_trend_analysis": {
+    "total": 38,
+    "by_symbol": {
+      "AVAX_USDT": 2,
+      "LTC_USDT": 9,
+      "ETH_USDT": 3,
+      "OP_USDT": 1,
+      "ARB_USDT": 2,
+      "BNB_USDT": 3,
+      "UNI_USDT": 8,
+      "INJ_USDT": 2,
+      "BTC_USDT": 1,
+      "SOL_USDT": 6,
+      "ATOM_USDT": 1
+    },
+    "by_regime": {
+      "trending": 12,
+      "low_vol": 10,
+      "high_vol": 4,
+      "ranging": 12
+    },
+    "by_direction": {
+      "short": 31,
+      "long": 7
+    },
+    "by_srd": {
+      "UNI_USDT@ranging@short": {
+        "n": 2,
+        "wins": 0,
+        "total_pnl_pct": -4.0000000000000115
+      },
+      "UNI_USDT@trending@short": {
+        "n": 2,
+        "wins": 0,
+        "total_pnl_pct": -3.9999999999999925
+      },
+      "ARB_USDT@trending@short": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -2.0000000000000067
+      },
+      "LTC_USDT@ranging@long": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -2.000000000000001
+      },
+      "ARB_USDT@ranging@long": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -2.000000000000001
+      },
+      "UNI_USDT@low_vol@long": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -1.9999999999999958
+      },
+      "UNI_USDT@ranging@long": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -1.9999999999999938
+      },
+      "ATOM_USDT@low_vol@short": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -1.9509754877438792
+      },
+      "SOL_USDT@trending@short": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -1.9416622737655906
+      },
+      "ETH_USDT@low_vol@short": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -1.900989351683351
+      },
+      "BNB_USDT@low_vol@short": {
+        "n": 2,
+        "wins": 1,
+        "total_pnl_pct": -1.2996643018967786
+      },
+      "LTC_USDT@trending@short": {
+        "n": 2,
+        "wins": 1,
+        "total_pnl_pct": -1.155740961462059
+      },
+      "SOL_USDT@low_vol@short": {
+        "n": 2,
+        "wins": 1,
+        "total_pnl_pct": -1.0245456777909645
+      },
+      "SOL_USDT@low_vol@long": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 0.6900690069006848
+      },
+      "UNI_USDT@low_vol@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 0.7576470588235275
+      },
+      "BTC_USDT@low_vol@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 1.036966813286178
+      },
+      "LTC_USDT@trending@long": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 1.1462882096069917
+      },
+      "UNI_USDT@high_vol@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 1.3036565977742425
+      },
+      "LTC_USDT@high_vol@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 1.4319999999999993
+      },
+      "AVAX_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 1.778425655976675
+      },
+      "BNB_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 2.3047797948371738
+      },
+      "ETH_USDT@ranging@long": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 2.3657937256941444
+      },
+      "AVAX_USDT@ranging@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 2.5641974605705204
+      },
+      "INJ_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 2.650800479365769
+      },
+      "INJ_USDT@ranging@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 3.498556998557001
+      },
+      "OP_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 4.101186024147877
+      },
+      "ETH_USDT@trending@short": {
+        "n": 1,
+        "wins": 1,
+        "total_pnl_pct": 4.20041841004184
+      },
+      "SOL_USDT@high_vol@short": {
+        "n": 2,
+        "wins": 2,
+        "total_pnl_pct": 4.549004371118573
+      },
+      "LTC_USDT@ranging@short": {
+        "n": 4,
+        "wins": 3,
+        "total_pnl_pct": 5.383161214678502
+      }
+    },
+    "err109_validation": {
+      "total_pnl_pct": 12.489373767037074,
+      "avg_pnl_pct": 0.3286677307115019,
+      "consistent_with_err109": true
+    },
+    "wilson_ci": {
+      "win_rate": 0.5789473684210527,
+      "ci_lower": 0.42192070613127325,
+      "ci_upper": 0.7214772518818047
+    }
+  },
+  "joint_patterns": {
+    "overlap_combinations": [
+      "LTC_USDT@trending@long",
+      "ETH_USDT@trending@short",
+      "UNI_USDT@trending@short",
+      "LTC_USDT@trending@short",
+      "BNB_USDT@trending@short",
+      "AVAX_USDT@trending@short",
+      "INJ_USDT@trending@short",
+      "SOL_USDT@trending@short",
+      "ARB_USDT@trending@short"
+    ],
+    "overlap_count": 9
+  },
+  "optimization_directions": [
+    {
+      "id": 1,
+      "name": "regime分类器边界增强",
+      "type": "mechanism"
+    },
+    {
+      "id": 2,
+      "name": "均值回归策略regime限制",
+      "type": "strategy_essence"
+    },
+    {
+      "id": 3,
+      "name": "MTF同向过滤(区分合理逆势)",
+      "type": "filter_refinement"
+    },
+    {
+      "id": 4,
+      "name": "pattern发现扩展到5维",
+      "type": "engine_enhancement"
+    },
+    {
+      "id": 5,
+      "name": "pos_mult上限硬约束",
+      "type": "risk_control"
+    },
+    {
+      "id": 6,
+      "name": "小样本防御(避免过拟合)",
+      "type": "anti_overfitting"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.0",
+  "agent_id": "agent_7_livedeployer",
+  "role": "分阶测试准入",
+  "priority": "L1",
+  "last_heartbeat": "2026-07-01T11:47:32.152154+00:00",
+  "current_task": {
+    "task_name": "Tier 1已通过, Tier 2准入评估中",
+    "progress_pct": 40,
+    "current_status": "blocked"
+  },
+  "deliverables": [
+    "Tier 1通过 (v88)",
+    "分阶测试准入规则 (v594)"
+  ],
+  "next_task": "Tier 2迷你实盘($1k-$5k)准入评估",
+  "blockers": [
+    "Tier 2需连续3月模拟GO (当前0/3月)",
+    "Tier 2需实盘数据 (当前无)",
+    "实盘部署禁令仍激活"
+  ],
+  "v88_milestone": "进行中"
+}

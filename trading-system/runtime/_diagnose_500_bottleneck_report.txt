@@ -1,0 +1,90 @@
+================================================================================
+500轮进化综合诊断报告 (MCP-AGENT 产出)
+================================================================================
+
+【1. 进化状态】
+  当前代数: gen0 ~ gen11
+  最终 mean_sharpe: -4.3105
+  最终 max_gt_score: 155.16
+  峰值 max_gt_score: 155.16 (gen11)
+  max_gt 轨迹: [51.68245919248928, 47.306861471349485, 48.91526059746955, 47.93791356024414, 92.88805352654687, 145.58173482159322, 50.29107098297194, 51.92617109009649, 49.656707715220335, 52.18034912550644, 55.32429303919785, 155.15618346094493]
+  mean_sharpe 轨迹: [-5.0, -5.0, -4.899, -4.624, -4.363, -4.454, -4.818, -4.712, -4.363, -4.875, -4.664, -4.31]
+  diversity 轨迹: [0.0525, 0.052, 0.0562, 0.0614, 0.0652, 0.0676, 0.0664, 0.0644, 0.0677, 0.066, 0.0692, 0.0715]
+
+【2. 世界观分布演变】
+  首代 Top5: [('event_driven_trading', 38), ('liquidity_adjusted_strategy', 20), ('stat_arb_pairs', 16), ('transformer_decision_policy', 13), ('funding_rate_predictor', 13)]
+  末代 Top5: [('breakout', 12), ('event_driven_trading', 12), ('stat_arb_pairs', 10), ('trend_following', 7), ('funding_rate_predictor', 6)]
+  涌现策略: {'gnn_cross_asset_v1_1', 'diffusion_forecast_trading', 'safe_margin', 'cross_chain_arbitrage', 'stat_arbitrage', 'adversarial_rl_trading', 'cppi_portfolio_insurance', 'breakout', 'dispersion_trading', 'skew_trading', 'funding_rate_arb', 'transformer_decision_v1_1', 'narrative_driven', 'momentum', 'on_chain_whale_tracker', 'macro_liquidity_cycle', 'marl_portfolio_v1_1', 'value_investing', 'cross_market_arbitrage', 'vrp_harvesting', 'liquidation_hunter', 'gamma_scalping', 'multi_strategy', 'trend_following', 'microstructure_alpha_trading', 'volatility_surface_arb', 'cross_sectional_momentum', 'seasonality_cycle', 'perp_market_making', 'rl_market_making'}
+  淘汰策略: set()
+
+【3. 修复效果对比】
+  修复前 max_gt 峰值: 112.98
+  修复后 max_gt 峰值: 155.16
+  修复前 final mean_sharpe: -4.4653
+  修复后 final mean_sharpe: -4.3105
+
+【4. 瓶颈识别 — 32个feeder缺失策略】
+  缺失策略数: 30
+  影响评估: 32个策略feeder缺失, 即使P0-4 fallback让analyze()能被调用, 策略内部数据(self.xxx)仍为空 → 产出错误信号(假信号比无信号更危险). 这是gen4-5 max_gt峰值(92.89/145.58)后gen6-8回落到50左右的原因之一.
+  关键缺失策略:
+    - regime_ensemble.py: ['update_regime_data']
+    - skew_trading.py: ['update_skew_data']
+    - cross_market_arbitrage.py: ['update_snapshot']
+    - meta_learning_portfolio.py: ['add_policy', 'update_policy_performance']
+    - sentiment_driven_trading.py: ['update_sentiment', 'update_sentiment_history']
+    - diffusion_forecast_trading.py: ['update_returns', 'update_ohlcv']
+    - transformer_decision_policy.py: ['update_weights', 'update_other_asset_states', 'update_state', 'update_target_asset']
+    - smart_money_footprint.py: ['add_transactions_batch', 'add_tracked_wallet']
+  ... 共 30 个策略
+
+【5. 64个量化模型真实使用情况】
+  data_packet 数据源 (14 个):
+    - timesfm_prediction
+    - kronos_range
+    - multi_model
+    - gnn_cross_asset
+    - cross_sectional_momentum
+    - dl_forecast
+    - alpha_mining
+    - multi_agent
+    - regime
+    - microstructure
+    - vpin
+    - chanlun_pa
+    - crypto_intraday
+    - turtle
+  multi_model 子模型: ['LightGBM', 'Prophet', 'Qwen']
+  策略类独立模型 (20 个):
+    - HMM (regime_detection.py)
+    - GARCH (regime_detection.py)
+    - Bayesian changepoint (regime_detection.py)
+    - OU process (mean_reversion_ml.py)
+    - LSTM (sentiment_driven_trading.py)
+    - FinBERT (sentiment_driven_trading.py)
+    - LSTM (ml_liquidation_predictor.py)
+    - GAT (gnn_cross_asset_relationship.py)
+    - BiMamba (gnn_cross_asset_v1_1)
+    - Transformer (transformer_decision_policy.py)
+    - DDPM (diffusion_forecast_trading.py)
+    - MAPPO (marl_portfolio_management.py)
+    - PPO/SAC (rl_market_making.py)
+    - ArchetypeTrader VQ (adversarial_rl_trading.py)
+    - Decision Transformer (transformer_decision_policy.py)
+    - Genetic Programming (alpha_mining.py)
+    - Engle-Granger (stat_arb_pairs.py)
+    - Avellaneda-Stoikov (perp_market_making.py)
+    - Kyle lambda (microstructure.py)
+    - Hawkes (microstructure.py)
+
+【6. 给 INTRADAY-GUARD 的协调建议】
+  建议1: 把32个缺失feeder加入 _TWO_PHASE_FEEDERS['analyze'/'scan'] 列表
+         (本智能体不修改该列表, 避免与 INTRADAY-GUARD 冲突)
+  建议2: 在 _invoke_single_feader 中为新feeder添加数据提取逻辑
+         (可参考已有的 update_fear_greed/update_economic_data 模式)
+  建议3: risk_control.py 的 L1 阈值偏宽松, 对日内交易建议收紧:
+         - l1_max_consecutive_losses: 8 → 5
+         - l1_max_drawdown_pct: 0.20 → 0.10
+         - l1_max_daily_loss_pct: 0.20 → 0.10
+  建议4: 等PID 159016完成后, 联合运行对照分析脚本
+
+================================================================================

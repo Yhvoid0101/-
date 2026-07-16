@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "agent": "LIVE-DATA-CONNECTOR",
+  "role": "实盘数据接入专员",
+  "core_task": "终止模拟测试, 启动真实数据接入",
+  "owned_files": [
+    "exchange_connector.py",
+    "real_exchange_feed.py",
+    "websocket_stream.py",
+    "live_matching_engine.py",
+    "_realtime_sync_layer.py (新建)",
+    "_live_data_gap_patch_list.py",
+    "_live_data_connector_coordination_report.py"
+  ],
+  "shared_files": [
+    "real_market_validator.py (G1)",
+    "execution_algorithms.py (G5)",
+    "matching_engine_interface.py",
+    "_info_sync_mechanism.py (G4 升级)"
+  ],
+  "contracts": [
+    {
+      "agent": "INTRADAY-GUARD",
+      "i_provide": "IMatchingEngine+7交易对行情",
+      "they_provide": "沙盘引擎+GT-Score+风控信号",
+      "priority": "P0"
+    },
+    {
+      "agent": "MCP-AGENT",
+      "i_provide": "WebSocket 1000Hz+多源行情",
+      "they_provide": "fallback机制+数据有效性检查",
+      "priority": "P0"
+    },
+    {
+      "agent": "LOSS-HUNTER",
+      "i_provide": "STOP_LOSS执行+成交回报+费率",
+      "they_provide": "资金安全验证+亏损归因",
+      "priority": "P0"
+    },
+    {
+      "agent": "DIRECTION-CHECK",
+      "i_provide": "实盘订单方向+成交方向",
+      "they_provide": "方向反转检测+方向映射验证",
+      "priority": "P1"
+    },
+    {
+      "agent": "ME",
+      "i_provide": "验证报告+Gap清单+同步层架构",
+      "they_provide": "冲突仲裁+会议纪要+模块监控",
+      "priority": "P0"
+    }
+  ],
+  "p0_requests": 4,
+  "p1_requests": 3,
+  "p2_requests": 2,
+  "consensus_required": 5,
+  "consensus_threshold": 0.8,
+  "current_consensus": 0
+}

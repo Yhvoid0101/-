@@ -1,0 +1,41 @@
+{
+  "agent_id": "agent_3_shap",
+  "role": "参数深度SHAP分析",
+  "status": "completed",
+  "progress_pct": 100,
+  "started_at": 1782658000,
+  "updated_at": 1782663600,
+  "completed_at": 1782663600,
+  "deliverables": [
+    "_v514_multi_agent/agent_3_shap/_v514_shap_analysis.json",
+    "_v514_multi_agent/agent_3_shap/_v514_shap_report.md",
+    "_v514_multi_agent/agent_3_shap/_v514_raw_samples.json",
+    "_v514_multi_agent/agent_3_shap/_v514_shap_analysis.py"
+  ],
+  "blockers": [],
+  "dependencies": ["v503-v506回测数据"],
+  "metrics": {
+    "data_samples": 1600,
+    "param_combos": 80,
+    "symbols": 5,
+    "walk_forward_windows": 4,
+    "bootstrap_iterations": 1000,
+    "rf_r2_score": 0.0364,
+    "shap_top1_param": "trend_ma",
+    "shap_top1_share": 0.5254,
+    "shap_top2_param": "breakout_n",
+    "shap_top2_share": 0.2142,
+    "significant_params": ["breakout_n", "trend_ma", "take_profit_r"],
+    "pca_pc1_pc2_cumulative_variance": 0.4774,
+    "max_param_correlation_abs": 0.262
+  },
+  "verification": {
+    "L1_existence": "PASS",
+    "L2_format": "PASS (json.loads validated)",
+    "L3_cross_reference": "PASS (v505/v506 paths verified)",
+    "L4_content": "PASS (no placeholders, all values from real computation)",
+    "L6_functional": "PASS (RF/PCA/SHAP/t-test all executed)",
+    "L7_meta": "PASS (numeric consistency verified: sums=100%, samples=1600)",
+    "L8_self_learning": "PASS (no known errors repeated)"
+  }
+}

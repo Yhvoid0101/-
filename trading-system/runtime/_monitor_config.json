@@ -1,0 +1,155 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "updated": "2026-06-27",
+    "description": "Hermes v6 沙盘交易高频监控告警阈值配置(监控频率≤1秒+4级告警)",
+    "protocol": "realtime_monitor_1s"
+  },
+  "monitor": {
+    "interval_seconds": 0.8,
+    "max_interval_seconds": 1.0,
+    "min_interval_seconds": 0.5,
+    "dedup_window_seconds": 30,
+    "history_file": "_monitor_alerts_history.json",
+    "max_history_records": 10000
+  },
+  "data_sources": {
+    "audit_log": {
+      "description": "进化任务审计日志(JSON Lines)",
+      "default_path": "hermes_v6/data/sandbox_trading_intraday_500_v321/audit.log",
+      "tail_enabled": true,
+      "encoding": "utf-8"
+    },
+    "evolution_stats": {
+      "description": "进化统计日志(JSON Lines)",
+      "default_path": "hermes_v6/data/sandbox_trading_intraday_500_v321/evolution_stats.jsonl",
+      "encoding": "utf-8"
+    },
+    "process_metrics": {
+      "description": "进程CPU/内存采集",
+      "method": "psutil_or_proc",
+      "fallback_proc_pid_stat": "/proc/self/stat",
+      "fallback_proc_pid_status": "/proc/self/status"
+    }
+  },
+  "alert_levels": {
+    "INFO": {
+      "level_value": 1,
+      "label": "ℹ️ INFO",
+      "description": "信息: 仅记录日志",
+      "actions": ["记录日志"]
+    },
+    "WARN": {
+      "level_value": 2,
+      "label": "⚠️ WARN",
+      "description": "警告: 记录+通知",
+      "actions": ["记录日志", "通知"]
+    },
+    "CRITICAL": {
+      "level_value": 3,
+      "label": "🚨 CRITICAL",
+      "description": "严重: 记录+通知+减仓50%",
+      "actions": ["记录日志", "通知", "减仓50%"]
+    },
+    "EMERGENCY": {
+      "level_value": 4,
+      "label": "⛔ EMERGENCY",
+      "description": "紧急: 记录+通知+全平仓+暂停策略",
+      "actions": ["记录日志", "通知", "全平仓", "暂停策略"]
+    }
+  },
+  "thresholds": {
+    "pnl_volatility_pct": {
+      "description": "PnL波动百分比(基于近期交易pnl_pct绝对值)",
+      "unit": "percent",
+      "INFO_max": 1.0,
+      "WARN_max": 3.0,
+      "CRITICAL_max": 5.0,
+      "EMERGENCY_min": 5.0
+    },
+    "order_latency_ms": {
+      "description": "订单执行延迟(从entry_time到exit_time,或日志时间戳差)",
+      "unit": "millisecond",
+      "INFO_max": 100,
+      "WARN_max": 300,
+      "CRITICAL_max": 500,
+      "EMERGENCY_min": 500
+    },
+    "consecutive_losses": {
+      "description": "连续亏损次数",
+      "unit": "count",
+      "INFO_max": 1,
+      "WARN_min": 2,
+      "CRITICAL_min": 3,
+      "EMERGENCY_min": 4
+    },
+    "drawdown_pct": {
+      "description": "最大回撤百分比(基于累计pnl_pct的权益曲线)",
+      "unit": "percent",
+      "INFO_max": 8.0,
+      "WARN_max": 10.0,
+      "CRITICAL_max": 15.0,
+      "EMERGENCY_min": 15.0
+    },
+    "cpu_usage_pct": {
+      "description": "进程CPU使用率",
+      "unit": "percent",
+      "INFO_max": 50.0,
+      "WARN_max": 75.0,
+      "CRITICAL_max": 90.0,
+      "EMERGENCY_min": 95.0
+    },
+    "memory_usage_pct": {
+      "description": "进程内存使用率(占系统总内存)",
+      "unit": "percent",
+      "INFO_max": 50.0,
+      "WARN_max": 75.0,
+      "CRITICAL_max": 85.0,
+      "EMERGENCY_min": 90.0
+    },
+    "signal_frequency_min": {
+      "description": "信号产出频率(每分钟最少信号数,低于阈值告警)",
+      "unit": "signals_per_minute",
+      "WARN_min": 1.0,
+      "CRITICAL_min": 0.5,
+      "EMERGENCY_min": 0.1
+    }
+  },
+  "threshold_matrix": {
+    "INFO": {
+      "pnl_volatility_pct_lt": 1.0,
+      "order_latency_ms_lt": 100,
+      "consecutive_losses_lt": 2,
+      "drawdown_pct_lt": 8.0,
+      "cpu_usage_pct_lt": 50.0,
+      "memory_usage_pct_lt": 50.0
+    },
+    "WARN": {
+      "pnl_volatility_pct_range": [1.0, 3.0],
+      "order_latency_ms_range": [100, 300],
+      "consecutive_losses_min": 2,
+      "drawdown_pct_min": 10.0,
+      "cpu_usage_pct_range": [50.0, 75.0],
+      "memory_usage_pct_range": [50.0, 75.0],
+      "signal_frequency_min_max": 1.0
+    },
+    "CRITICAL": {
+      "pnl_volatility_pct_range": [3.0, 5.0],
+      "order_latency_ms_range": [300, 500],
+      "consecutive_losses_min": 3,
+      "drawdown_pct_min": 10.0,
+      "cpu_usage_pct_range": [75.0, 90.0],
+      "memory_usage_pct_range": [75.0, 85.0],
+      "signal_frequency_min_max": 0.5
+    },
+    "EMERGENCY": {
+      "pnl_volatility_pct_min": 5.0,
+      "order_latency_ms_min": 500,
+      "consecutive_losses_min": 4,
+      "drawdown_pct_min": 15.0,
+      "cpu_usage_pct_min": 95.0,
+      "memory_usage_pct_min": 90.0,
+      "signal_frequency_min_max": 0.1
+    }
+  }
+}

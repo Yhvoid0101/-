@@ -1,8 +1,0 @@
-{
-  "gate1_unit_tests": true,
-  "gate2_stability_100": true,
-  "gate3_stability_1000": true,
-  "gate4_monitor_system": true,
-  "gate5_anomaly_rollback": true,
-  "all_pass": true
-}

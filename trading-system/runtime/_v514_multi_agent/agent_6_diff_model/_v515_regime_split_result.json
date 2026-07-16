@@ -1,0 +1,636 @@
+{
+  "report_type": "v515_regime_split_analysis",
+  "agent_id": "agent_6_diff_model",
+  "version": "5.15",
+  "timestamp": 1782662368.4419012,
+  "timestamp_human": "2026-06-28 23:59:28",
+  "inputs": {
+    "live_latency_ms": 818.0,
+    "n_symbols": 10,
+    "n_regimes": 4,
+    "n_samples_total": 8000,
+    "target_diff_rate": 0.15
+  },
+  "regime_results": {
+    "TRENDING": {
+      "n_samples": 2000,
+      "r_squared": 0.7235228295264988,
+      "weights_pct": {
+        "spread": 69.129378644775,
+        "slippage": 17.91660412258168,
+        "latency": 0.593366730204732,
+        "liquidity": 12.360650502438602
+      },
+      "standardized_beta": {
+        "spread": 6.909052819023461,
+        "slippage": 1.7906535057480442,
+        "latency": 0.05930332603019276,
+        "liquidity": -1.2353703862676335
+      },
+      "diff_rate": 2.106481457752333,
+      "sim_mean_bps": 7.87287034707415,
+      "live_mean_bps": -8.711185060432202,
+      "diff_bps": 16.58405540750635,
+      "avg_costs_bps": {
+        "spread": 14.875681352596438,
+        "slippage": 0.785440270650934,
+        "latency": 0.8219334462544103,
+        "liquidity": 0.1816081759710392
+      },
+      "total_friction_bps": 16.66466324547282,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 69.129378644775,
+      "pass_15pct": false
+    },
+    "RANGING": {
+      "n_samples": 2000,
+      "r_squared": 0.7346722222192424,
+      "weights_pct": {
+        "spread": 78.48290244549518,
+        "slippage": 12.571677103866511,
+        "latency": 2.2104747307984525,
+        "liquidity": 6.734945719839838
+      },
+      "standardized_beta": {
+        "spread": 6.991997933491314,
+        "slippage": 1.1200036898711832,
+        "latency": 0.19692995885965328,
+        "liquidity": -0.6000125516254944
+      },
+      "diff_rate": 3.4966615235705523,
+      "sim_mean_bps": 4.693560397882967,
+      "live_mean_bps": -11.71823165744556,
+      "diff_bps": 16.411792055328526,
+      "avg_costs_bps": {
+        "spread": 14.903937440477062,
+        "slippage": 0.45757741703623994,
+        "latency": 0.8845698572909277,
+        "liquidity": 0.16807814777707467
+      },
+      "total_friction_bps": 16.414162862581303,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 78.48290244549518,
+      "pass_15pct": false
+    },
+    "HIGH_VOL": {
+      "n_samples": 2000,
+      "r_squared": 0.7211347737509964,
+      "weights_pct": {
+        "spread": 75.33911454271757,
+        "slippage": 12.176897563067174,
+        "latency": 11.126409463380964,
+        "liquidity": 1.3575784308342878
+      },
+      "standardized_beta": {
+        "spread": 7.989369529718235,
+        "slippage": 1.2913044564879739,
+        "latency": 1.1799049840372338,
+        "liquidity": 0.14396500165077358
+      },
+      "diff_rate": 1.8757268847875948,
+      "sim_mean_bps": 12.221814583597592,
+      "live_mean_bps": -10.70297161362124,
+      "diff_bps": 22.924786197218832,
+      "avg_costs_bps": {
+        "spread": 14.886347342856403,
+        "slippage": 2.284680659193778,
+        "latency": 5.264562921905859,
+        "liquidity": 0.23260718911069772
+      },
+      "total_friction_bps": 22.668198113066737,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 75.33911454271757,
+      "pass_15pct": false
+    },
+    "LOW_VOL": {
+      "n_samples": 2000,
+      "r_squared": 0.7441859161085531,
+      "weights_pct": {
+        "spread": 72.73234145003407,
+        "slippage": 15.234484622283503,
+        "latency": 1.16127194557544,
+        "liquidity": 10.871901982106966
+      },
+      "standardized_beta": {
+        "spread": 6.852172341024358,
+        "slippage": 1.4352530398087855,
+        "latency": -0.10940436327553216,
+        "liquidity": -1.0242506231880197
+      },
+      "diff_rate": 6.065623175900333,
+      "sim_mean_bps": 2.5251036841844607,
+      "live_mean_bps": -12.791223750221743,
+      "diff_bps": 15.316327434406205,
+      "avg_costs_bps": {
+        "spread": 14.910246564244924,
+        "slippage": 0.26252131781905746,
+        "latency": 0.1253727441317952,
+        "liquidity": 0.16255786206115252
+      },
+      "total_friction_bps": 15.460698488256929,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 72.73234145003407,
+      "pass_15pct": false
+    }
+  },
+  "regime_factor_matrix": {
+    "matrix": {
+      "TRENDING": {
+        "spread": 69.129378644775,
+        "slippage": 17.91660412258168,
+        "latency": 0.593366730204732,
+        "liquidity": 12.360650502438602
+      },
+      "RANGING": {
+        "spread": 78.48290244549518,
+        "slippage": 12.571677103866511,
+        "latency": 2.2104747307984525,
+        "liquidity": 6.734945719839838
+      },
+      "HIGH_VOL": {
+        "spread": 75.33911454271757,
+        "slippage": 12.176897563067174,
+        "latency": 11.126409463380964,
+        "liquidity": 1.3575784308342878
+      },
+      "LOW_VOL": {
+        "spread": 72.73234145003407,
+        "slippage": 15.234484622283503,
+        "latency": 1.16127194557544,
+        "liquidity": 10.871901982106966
+      }
+    },
+    "factor_avg_weight_pct": {
+      "spread": 73.92093427075545,
+      "slippage": 14.474915852949717,
+      "latency": 3.772880717489897,
+      "liquidity": 7.831269158804924
+    },
+    "regime_diff_rate": {
+      "TRENDING": 2.106481457752333,
+      "RANGING": 3.4966615235705523,
+      "HIGH_VOL": 1.8757268847875948,
+      "LOW_VOL": 6.065623175900333
+    },
+    "highest_diff_regime": "LOW_VOL",
+    "highest_diff_rate": 6.065623175900333,
+    "highest_risk_factor": "spread",
+    "highest_risk_factor_weight": 73.92093427075545
+  },
+  "regime_symbol_breakdown": [
+    {
+      "regime": "TRENDING",
+      "symbol": "BTCUSDT",
+      "sim_bps": 7.499552063130577,
+      "live_bps": 1.4618337780939032,
+      "diff_bps": 6.037718285036673,
+      "diff_rate": 0.8050771877315617,
+      "pass_15pct": false,
+      "total_friction_bps": 5.863541933136181
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "ETHUSDT",
+      "sim_bps": 8.134687597230938,
+      "live_bps": 1.137154607439754,
+      "diff_bps": 6.997532989791184,
+      "diff_rate": 0.8602091850844951,
+      "pass_15pct": false,
+      "total_friction_bps": 7.023367024617722
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "SOLUSDT",
+      "sim_bps": 8.299962098604896,
+      "live_bps": -5.0902407650334895,
+      "diff_bps": 13.390202863638386,
+      "diff_rate": 1.6132848202133119,
+      "pass_15pct": false,
+      "total_friction_bps": 13.610494807796266
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "BNBUSDT",
+      "sim_bps": 7.728859215183409,
+      "live_bps": -1.9005065781327948,
+      "diff_bps": 9.629365793316204,
+      "diff_rate": 1.2458974247005736,
+      "pass_15pct": false,
+      "total_friction_bps": 9.347143089041555
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "XRPUSDT",
+      "sim_bps": 8.816642796596541,
+      "live_bps": -8.027315802689008,
+      "diff_bps": 16.84395859928555,
+      "diff_rate": 1.910473066219411,
+      "pass_15pct": false,
+      "total_friction_bps": 16.894104693989377
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "ADAUSDT",
+      "sim_bps": 7.437260961944242,
+      "live_bps": -12.187165935735187,
+      "diff_bps": 19.624426897679427,
+      "diff_rate": 2.638663211558273,
+      "pass_15pct": false,
+      "total_friction_bps": 19.8036347675643
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "AVAXUSDT",
+      "sim_bps": 7.606952722400419,
+      "live_bps": -14.029762302878373,
+      "diff_bps": 21.636715025278793,
+      "diff_rate": 2.844334099608662,
+      "pass_15pct": false,
+      "total_friction_bps": 22.155282340150524
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "DOTUSDT",
+      "sim_bps": 7.359678327570193,
+      "live_bps": -13.031460526645514,
+      "diff_bps": 20.391138854215708,
+      "diff_rate": 2.7706562629316998,
+      "pass_15pct": false,
+      "total_friction_bps": 20.10885007645361
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "MATICUSDT",
+      "sim_bps": 8.30982339514627,
+      "live_bps": -19.227348426924024,
+      "diff_bps": 27.53717182207029,
+      "diff_rate": 3.313809513068692,
+      "pass_15pct": false,
+      "total_friction_bps": 27.77583060948803
+    },
+    {
+      "regime": "TRENDING",
+      "symbol": "LINKUSDT",
+      "sim_bps": 7.535284292934017,
+      "live_bps": -16.217038651817287,
+      "diff_bps": 23.752322944751306,
+      "diff_rate": 3.152146888986282,
+      "pass_15pct": false,
+      "total_friction_bps": 24.064383112490642
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "BTCUSDT",
+      "sim_bps": 4.7974632896212315,
+      "live_bps": -0.6585873528613615,
+      "diff_bps": 5.456050642482593,
+      "diff_rate": 1.1372782472663965,
+      "pass_15pct": false,
+      "total_friction_bps": 5.729003311323933
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "ETHUSDT",
+      "sim_bps": 4.066058086135591,
+      "live_bps": -2.741039499503365,
+      "diff_bps": 6.807097585638957,
+      "diff_rate": 1.674126989768201,
+      "pass_15pct": false,
+      "total_friction_bps": 6.94053459924688
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "SOLUSDT",
+      "sim_bps": 4.844554059231547,
+      "live_bps": -8.61480558167046,
+      "diff_bps": 13.459359640902008,
+      "diff_rate": 2.778245319086957,
+      "pass_15pct": false,
+      "total_friction_bps": 13.565724394664617
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "BNBUSDT",
+      "sim_bps": 5.16415252797598,
+      "live_bps": -4.486838718259711,
+      "diff_bps": 9.65099124623569,
+      "diff_rate": 1.8688431823196794,
+      "pass_15pct": false,
+      "total_friction_bps": 9.029396667617853
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "XRPUSDT",
+      "sim_bps": 4.870314481003529,
+      "live_bps": -11.439104556328129,
+      "diff_bps": 16.309419037331658,
+      "diff_rate": 3.348740435057565,
+      "pass_15pct": false,
+      "total_friction_bps": 16.373465244210667
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "ADAUSDT",
+      "sim_bps": 4.248747038294879,
+      "live_bps": -15.470449136976058,
+      "diff_bps": 19.719196175270937,
+      "diff_rate": 4.641179150675803,
+      "pass_15pct": false,
+      "total_friction_bps": 19.472495141498555
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "AVAXUSDT",
+      "sim_bps": 4.918080045598958,
+      "live_bps": -16.838531515547146,
+      "diff_bps": 21.756611561146105,
+      "diff_rate": 4.423801840352647,
+      "pass_15pct": false,
+      "total_friction_bps": 22.16179609889772
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "DOTUSDT",
+      "sim_bps": 4.329620106571378,
+      "live_bps": -15.359387625388381,
+      "diff_bps": 19.68900773195976,
+      "diff_rate": 4.547513925651078,
+      "pass_15pct": false,
+      "total_friction_bps": 19.6718979935007
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "MATICUSDT",
+      "sim_bps": 4.752015532419802,
+      "live_bps": -22.471675186052806,
+      "diff_bps": 27.223690718472607,
+      "diff_rate": 5.728872417822465,
+      "pass_15pct": false,
+      "total_friction_bps": 27.359032647628066
+    },
+    {
+      "regime": "RANGING",
+      "symbol": "LINKUSDT",
+      "sim_bps": 4.944598811976779,
+      "live_bps": -19.101897401868182,
+      "diff_bps": 24.04649621384496,
+      "diff_rate": 4.863184481365098,
+      "pass_15pct": false,
+      "total_friction_bps": 23.838282527224063
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "BTCUSDT",
+      "sim_bps": 12.893888409995204,
+      "live_bps": 3.8053586273147153,
+      "diff_bps": 9.088529782680489,
+      "diff_rate": 0.7048711368504078,
+      "pass_15pct": false,
+      "total_friction_bps": 8.959192711484672
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "ETHUSDT",
+      "sim_bps": 11.075118556535621,
+      "live_bps": 0.16716168888422583,
+      "diff_bps": 10.907956867651395,
+      "diff_rate": 0.9849065552647752,
+      "pass_15pct": false,
+      "total_friction_bps": 10.88210129788064
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "SOLUSDT",
+      "sim_bps": 11.841620938185995,
+      "live_bps": -7.650200639489253,
+      "diff_bps": 19.49182157767525,
+      "diff_rate": 1.6460433649901258,
+      "pass_15pct": false,
+      "total_friction_bps": 19.358738031446237
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "BNBUSDT",
+      "sim_bps": 11.629452727238732,
+      "live_bps": -2.741312765968343,
+      "diff_bps": 14.370765493207076,
+      "diff_rate": 1.235721562228966,
+      "pass_15pct": false,
+      "total_friction_bps": 14.120947503500938
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "XRPUSDT",
+      "sim_bps": 11.210604206869034,
+      "live_bps": -10.93830640823587,
+      "diff_bps": 22.148910615104903,
+      "diff_rate": 1.9757106935911597,
+      "pass_15pct": false,
+      "total_friction_bps": 22.277458055260787
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "ADAUSDT",
+      "sim_bps": 13.159204477889556,
+      "live_bps": -14.057188568688447,
+      "diff_bps": 27.216393046578006,
+      "diff_rate": 2.0682399981123076,
+      "pass_15pct": false,
+      "total_friction_bps": 26.61667361209663
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "AVAXUSDT",
+      "sim_bps": 12.079085700084656,
+      "live_bps": -18.160185364558625,
+      "diff_bps": 30.239271064643283,
+      "diff_rate": 2.503440393831125,
+      "pass_15pct": false,
+      "total_friction_bps": 29.613212334446736
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "DOTUSDT",
+      "sim_bps": 12.639231067052238,
+      "live_bps": -14.804304015421103,
+      "diff_bps": 27.44353508247334,
+      "diff_rate": 2.1712978372427614,
+      "pass_15pct": false,
+      "total_friction_bps": 26.731345633104716
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "MATICUSDT",
+      "sim_bps": 12.556564797910992,
+      "live_bps": -24.337347850868618,
+      "diff_bps": 36.89391264877961,
+      "diff_rate": 2.938217039423024,
+      "pass_15pct": false,
+      "total_friction_bps": 36.21575797820044
+    },
+    {
+      "regime": "HIGH_VOL",
+      "symbol": "LINKUSDT",
+      "sim_bps": 13.133374954213886,
+      "live_bps": -18.313390839181082,
+      "diff_bps": 31.446765793394967,
+      "diff_rate": 2.3944162030423684,
+      "pass_15pct": false,
+      "total_friction_bps": 31.90655397324558
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "BTCUSDT",
+      "sim_bps": 2.0060192013197167,
+      "live_bps": -3.1176355474346438,
+      "diff_bps": 5.12365474875436,
+      "diff_rate": 2.554140430375481,
+      "pass_15pct": false,
+      "total_friction_bps": 5.146718898664281
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "ETHUSDT",
+      "sim_bps": 2.812085253604886,
+      "live_bps": -3.3221033137035194,
+      "diff_bps": 6.134188567308406,
+      "diff_rate": 2.181366499206758,
+      "pass_15pct": false,
+      "total_friction_bps": 6.206836854466486
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "SOLUSDT",
+      "sim_bps": 2.5106901629680474,
+      "live_bps": -9.758548714727667,
+      "diff_bps": 12.269238877695713,
+      "diff_rate": 4.886799276858863,
+      "pass_15pct": false,
+      "total_friction_bps": 12.469596560690189
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "BNBUSDT",
+      "sim_bps": 2.6315548505174546,
+      "live_bps": -5.695651774992191,
+      "diff_bps": 8.327206625509646,
+      "diff_rate": 3.1643674919821114,
+      "pass_15pct": false,
+      "total_friction_bps": 8.334984108820832
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "XRPUSDT",
+      "sim_bps": 2.2830629452049394,
+      "live_bps": -13.302617969320517,
+      "diff_bps": 15.585680914525456,
+      "diff_rate": 6.826654052807883,
+      "pass_15pct": false,
+      "total_friction_bps": 15.443626693242493
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "ADAUSDT",
+      "sim_bps": 2.4209162723413145,
+      "live_bps": -16.52069343026783,
+      "diff_bps": 18.941609702609146,
+      "diff_rate": 7.82414902621403,
+      "pass_15pct": false,
+      "total_friction_bps": 18.684672682788218
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "AVAXUSDT",
+      "sim_bps": 2.157560647516749,
+      "live_bps": -18.186191002256905,
+      "diff_bps": 20.343751649773655,
+      "diff_rate": 9.429052047162292,
+      "pass_15pct": false,
+      "total_friction_bps": 20.799735242084015
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "DOTUSDT",
+      "sim_bps": 2.6756952091162094,
+      "live_bps": -15.41572397559252,
+      "diff_bps": 18.09141918470873,
+      "diff_rate": 6.7613901300525905,
+      "pass_15pct": false,
+      "total_friction_bps": 18.678583496145823
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "MATICUSDT",
+      "sim_bps": 2.7354233528643976,
+      "live_bps": -22.992413402363425,
+      "diff_bps": 25.727836755227823,
+      "diff_rate": 9.405431418460873,
+      "pass_15pct": false,
+      "total_friction_bps": 25.6938943639467
+    },
+    {
+      "regime": "LOW_VOL",
+      "symbol": "LINKUSDT",
+      "sim_bps": 3.0180289463908934,
+      "live_bps": -19.6006583715582,
+      "diff_bps": 22.618687317949092,
+      "diff_rate": 7.4945229857729165,
+      "pass_15pct": false,
+      "total_friction_bps": 23.148335981720244
+    }
+  ],
+  "priorities": [
+    {
+      "regime": "LOW_VOL",
+      "diff_rate": 6.065623175900333,
+      "r_squared": 0.7441859161085531,
+      "improvement_roi": 4.513951339926661,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 72.73234145003407,
+      "total_friction_bps": 15.460698488256929,
+      "pass_15pct": false,
+      "recommendation": "LOW_VOL 状态: 差异最小, spread 影响有限, 可正常交易"
+    },
+    {
+      "regime": "RANGING",
+      "diff_rate": 3.4966615235705523,
+      "r_squared": 0.7346722222192424,
+      "improvement_roi": 2.5689000918700997,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 78.48290244549518,
+      "total_friction_bps": 16.414162862581303,
+      "pass_15pct": false,
+      "recommendation": "RANGING 状态: 均值回归策略敏感于 spread, 改用限价单减少 spread 损失"
+    },
+    {
+      "regime": "TRENDING",
+      "diff_rate": 2.106481457752333,
+      "r_squared": 0.7235228295264988,
+      "improvement_roi": 1.524087424658072,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 69.129378644775,
+      "total_friction_bps": 16.66466324547282,
+      "pass_15pct": false,
+      "recommendation": "TRENDING 状态: 趋势延续时 spread 影响小, 可保持仓位, 但需注意入场时 spread 损失"
+    },
+    {
+      "regime": "HIGH_VOL",
+      "diff_rate": 1.8757268847875948,
+      "r_squared": 0.7211347737509964,
+      "improvement_roi": 1.3526518826799636,
+      "primary_bottleneck": "spread",
+      "primary_bottleneck_weight": 75.33911454271757,
+      "total_friction_bps": 22.668198113066737,
+      "pass_15pct": false,
+      "recommendation": "HIGH_VOL 状态差异最大 (187.6%): 暂停交易或大幅降仓, 因 spread 在高波动下放大 1.5x"
+    }
+  ],
+  "answers": {
+    "highest_diff_regime": "LOW_VOL",
+    "highest_diff_rate_pct": 606.5623175900333,
+    "highest_risk_factor": "spread",
+    "highest_risk_factor_weight_pct": 73.92093427075545,
+    "is_latency_bottleneck_in_high_vol": false,
+    "does_high_vol_dominate": false
+  }
+}

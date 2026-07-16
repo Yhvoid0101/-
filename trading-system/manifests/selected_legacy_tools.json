@@ -1,0 +1,486 @@
+{
+  "policy": "C-drive source-or-test files under scripts/tools/utils/monitor, excluding exact SHA-256 duplicates of canonical runtime",
+  "count": 60,
+  "files": [
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/auto_fix_agent.py",
+      "size": 997,
+      "sha256": "cc6b23617beeff51291842c3ff11c0eb7b3743dfe917f2b83964b98be4ab0845",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_chaos.py",
+      "size": 2788,
+      "sha256": "811fce3e469943b34444e445611c72e1edd47d9d846b79b0ae99e0de6adfd3e1",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_checkpointer.py",
+      "size": 3900,
+      "sha256": "ba402a604d5da45a31d6f7ad6bb32b2ca310846ed1501bd6f22c666cb496ba8d",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_horizon.py",
+      "size": 3082,
+      "sha256": "53a4b162248ed5b6c6522e44d143a260924d2701c8f6f48fe4b85577fe6e6af5",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_mcp.py",
+      "size": 10034,
+      "sha256": "687f523a204256098cc8d808e4c0f719056a81a8eb153fda29d801a9ff850141",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_memory.py",
+      "size": 3776,
+      "sha256": "d28e2fa9203e67aee02e372b7d9f7582040b3c483e09d063307409aa18fd6ae9",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_multimodal.py",
+      "size": 4217,
+      "sha256": "a93f15744be89e3e12149a69c4dc32669116abf06f24b09d7460e7d5ea1078d8",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_seaeval.py",
+      "size": 2587,
+      "sha256": "ebe2f5e37cec28b3b1daa0524c7c42bfca298fbe9a4722081e2df5687303099a",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_security.py",
+      "size": 6606,
+      "sha256": "eb9b414f85646841fd9478a8dcb0d2f06670b2e3a6f2aa9b999ff0f8382ff244",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/bench_swebench.py",
+      "size": 6550,
+      "sha256": "c41a3c9c2e288253b936fa50e0e195fecf3ba6baa6710163b9b40498b9f86aa8",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/check_broken_imports.py",
+      "size": 3097,
+      "sha256": "8fce9f6bf22663cc2c68ccaf06e75d9c6d2caa74ced01613161cacffccd90548",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/check_production_gates.py",
+      "size": 5291,
+      "sha256": "f112258983bab70f54c271c0c97b1f20d093c4ae0580acf807b820d1fa0b23da",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/collect_metrics.py",
+      "size": 5354,
+      "sha256": "94ca547e3aca18a515a1ba35414080175fc060b67d45306d1ea2a73c72b729a0",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/evaluate_quality_gate.py",
+      "size": 1464,
+      "sha256": "5ac0b9356681650ceb23f041b0fbbac73746ade1a15d8b374e6341763d01d289",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/evolution_daemon.py",
+      "size": 40399,
+      "sha256": "fafaf7f969d16029e513242579c109f4f89746fecb79e75013d62aaccac76757",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/full_delivery.py",
+      "size": 22429,
+      "sha256": "c6095b841572385c5020fdef67b9490d0344a2980b51eddf49dc71c3caca0926",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/health_report.py",
+      "size": 1515,
+      "sha256": "b5a34c037d21b1d7df5d816e86ea337ad8d94d902128b180ef20df7eb5d2f254",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/mock_mcp_server.py",
+      "size": 5953,
+      "sha256": "93784e71969d05ebf2e104ffb62e56d68ec195c092cf76000f27f4d95160276a",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/run_stage2_all.py",
+      "size": 4068,
+      "sha256": "b8b0f3615fad37f1b8a4200643efadf73e4e923b652e86cc82473329b53e24b6",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/run_stage3_all.py",
+      "size": 4466,
+      "sha256": "506c123a866b92e9858d3de7ea49e8d6bae8f776258a751b656afd43cae022bc",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/run_stage4_all.py",
+      "size": 44256,
+      "sha256": "f0ba0ef022d8859cfed71433dd3c08de95d02b3a3eef0becc604c757e908229d",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/soak_monitor.py",
+      "size": 9331,
+      "sha256": "0c3c46ac92fefab5eb477b54d0ae287ea25b1bc6a39211737b8cbb24055d5162",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/soak_test.py",
+      "size": 4244,
+      "sha256": "5ca5e181826931b01e6b634ca844faa8ad1299ab6ea3e7f6e05baca3e3a425f7",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_all_modules.py",
+      "size": 1928,
+      "sha256": "82bff4735528b229809987cadcb3199c9d3482fe2bcc77ccfa0861593b098907",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_am_full.py",
+      "size": 2938,
+      "sha256": "dfbb12374b91687078278e0f29c284fde4a8eefb549a253e0c52cb4eca90e182",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_arbiter.py",
+      "size": 5016,
+      "sha256": "b053b40f85801e420afcd504fbd96902c645e63333155297290df46d61c4bd05",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_arbiter_stress.py",
+      "size": 5537,
+      "sha256": "90944c08fe2a36345ef335ef371271227026ab456209fa3e2eb99fe2d27d6959",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_attention_memory_status.py",
+      "size": 2381,
+      "sha256": "b01d98f7f593d7bdf579b441cbac6cd599575a41e4f9f06065cb7a48bf987e68",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_causal_deep.py",
+      "size": 8115,
+      "sha256": "71bb663c64fd1b3e731d76f21657d0d3936de89f1ce23b7ca1a57836d3171305",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_causal_integration.py",
+      "size": 8002,
+      "sha256": "b21e762296d11fe1e433676bac61db1062221e75be9794cec71c2e004c60e48c",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_causal_reasoner.py",
+      "size": 5906,
+      "sha256": "ddf92fee8ad3a66238d0d5bf63589434f3efde351424ec2790b8c4f24228f680",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_debug_none.py",
+      "size": 447,
+      "sha256": "bf814644bba37e0b5cd6765e6d28ba007a21557edf6fe92cb95b550cb7ae4015",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_degradation.py",
+      "size": 4732,
+      "sha256": "c99d77566b7343aeead1ee63c06606043b3137ee9835062e692ccb2c537d3c48",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_e2e_causal.py",
+      "size": 5459,
+      "sha256": "7d7cc9ea8341db66334be4d395512c8a45a75b56c0e4c06b276eb214c4b21db7",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_edge_cases.py",
+      "size": 6044,
+      "sha256": "233cf06ed718a1c4d9571e0dcefbb1dcdd68d981e8d72c46810fedec178421b7",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_evomaster.py",
+      "size": 11136,
+      "sha256": "485faf53d64edbbb795e26bb78c3a9ac1c7a88af004879f63bf053d1b194a124",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_feedback_loops.py",
+      "size": 6317,
+      "sha256": "6829cf29c00b7153477dede4312b62d8bb6a919639b6f48a20819cabdb99f843",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_final_regression.py",
+      "size": 4240,
+      "sha256": "6867b2ca125e25b119ffabb7abd9e7c0d767d6973bcbde595b0076cefae2bd54",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_final_validation.py",
+      "size": 4571,
+      "sha256": "b74559036f7ea93eb72aa796ce0c79f7a9eedaea09e26338703ab055aa45748a",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_five_modules.py",
+      "size": 1192,
+      "sha256": "0d989d5ef0ae7aea35a3d311351d0ae578b2f9e4d85c764098df76e8c192c77d",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_integration_deep.py",
+      "size": 14856,
+      "sha256": "478bfb4a49209d8fe40776250f1c2040bec0402cfa9aa4482744fc49e1934fd5",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_loop2_debug.py",
+      "size": 1209,
+      "sha256": "62587fc45154d9ecf1332d0628f68eb187ec0c0d74305ea8da1bef51cebe7a6e",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_loop2_debug2.py",
+      "size": 1184,
+      "sha256": "9584fd6edca380b0397a6d2c665638101fb26f5f0b0e6a5ba32ddc37e98e3add",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_magma.py",
+      "size": 18390,
+      "sha256": "ad9aef4c7a939fbd0a4e741b1ecd2445a9ded3b2db6870f5d9af88d7324501f9",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_magma_integration.py",
+      "size": 13957,
+      "sha256": "2b973233507af428db6a443840ecb1f1335a805f85f352563f8177bea524f2ef",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_none_bias.py",
+      "size": 343,
+      "sha256": "ba4cc0451937682cbdf5e6b8a9a827f8c7b3d5c7f7ffb1bb337251975b86ce27",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_original_verify.py",
+      "size": 1331,
+      "sha256": "b997503ad8d4712feaa8cfd3e6369e0f5a4c40c02a6559c110a0d74585687acc",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_oxygent.py",
+      "size": 9802,
+      "sha256": "6ff79da615e8d021dfbe28022e00e19417476cea349d4e972aa0f3d3b0fc5d50",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_parallax_metaclaw.py",
+      "size": 17442,
+      "sha256": "c7b0ab7cd7360061f97c49d4ad51266cc6e154f4bad2fefe36bd803d7822ab87",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_path_fix.py",
+      "size": 1862,
+      "sha256": "f5a4d594f7497069c234f287c4a12e7c5332391816ec28f4cb1d84a85e75e28f",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_qualitative_transforms.py",
+      "size": 16427,
+      "sha256": "002508ca570faa1a8ed969fa4f524c4882be149054ba555de3e36068a918ce9a",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_real_scenario.py",
+      "size": 7798,
+      "sha256": "59ea3d02057172bbc94acd7e15e71bd44836b6c2a9e90df4f166ffc50440bf07",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_regression_final.py",
+      "size": 3014,
+      "sha256": "9cfef44a45d30ca0cfe3018a1cf21bb159aa4bbdf532917f012b6ed908663118",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_spawn_neuron.py",
+      "size": 5007,
+      "sha256": "788cb5cb3d830397e228aa0b7caef6323adbdb5492c2879eb7c5e5e5488b68f6",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_stress_deep.py",
+      "size": 10457,
+      "sha256": "d8235234c451dbe7987ca8274f718dfe046e924f2b2621e33adf42bee611f84f",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_zhibian1.py",
+      "size": 10075,
+      "sha256": "0cf36a2cccb885bab8c324d69cbe7eec7ff983efa4d3b1588a24e9d22ec04847",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_zhibian1_deep.py",
+      "size": 6949,
+      "sha256": "b760b27ec3d09384c9f38c9d83ead73fd147f89b5b5c94c151e4102180d5b974",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/test_zhibian2.py",
+      "size": 11114,
+      "sha256": "d18e19379f438bf84f172d72134e305c5b66cbdc53d963e7e0698e54ddf53ff7",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "scripts/verify_29_items.py",
+      "size": 40019,
+      "sha256": "03be506765bb731a15151f38e1162240b7549616d3d4ee381e0d08d509901daa",
+      "category": "source-or-test"
+    },
+    {
+      "root": "windows_c_hermes_v6",
+      "root_path": "<C_DRIVE>/Users/<user>/hermes_v6",
+      "path": "utils/output_saver.py",
+      "size": 2905,
+      "sha256": "090f801566e73af94f0f74fbf4c60963730e6f8aef1761fe99ab23baca310ca9",
+      "category": "source-or-test"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-# Trading System Agent Rules
+# Unified Trading System Rules
 
-- The canonical runtime source is `/home/lmy/hermes_v6/sandbox_trading` in WSL; `content/` is the versioned GitHub snapshot.
-- Before edits, identify the runtime symptom, reproduction command, acceptance threshold, and relevant existing implementation.
-- Search existing code, reports, and manifests before creating a new component.
-- Make one bounded change at a time and preserve a redacted runtime baseline.
-- Run tests and the production gate before claiming completion. A passing unit test alone is not runtime evidence.
-- Never commit secrets, credentials, private keys, raw tokens, or unreviewed generated runtime data.
-- Record failures with the exact command, error, hypothesis, evidence, and next experiment.
+- This directory is the only active Codex project root for the trading system.
+- `runtime/` is the canonical executable source; `legacy-tools/` is reference tooling and must not silently become runtime dependencies.
+- Before editing, search the unified root and read the relevant provenance record.
+- Preserve real runtime feedback and use one bounded change per experiment.
+- Run tests, static checks, production gates and independent verification before claiming completion.
+- Never copy secrets, raw TRAE sessions, caches, large runtime data or credentials.
+- Keep `manifests/` updated whenever source provenance changes.

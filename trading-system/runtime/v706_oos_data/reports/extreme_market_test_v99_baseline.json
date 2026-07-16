@@ -1,0 +1,210 @@
+{
+  "version": "v96_pure",
+  "test_date": "2026-07-04 10:21:18 UTC",
+  "layer_a_atr_extreme": {
+    "pass": false,
+    "segments": {
+      "top5": {
+        "segment": "Top5% ATR",
+        "n": 40,
+        "win_rate": 42.5,
+        "total_pnl": -1330.3491694592792,
+        "avg_pnl": -33.25872923648198,
+        "max_win": 328.78815867784516,
+        "max_loss": -200.0,
+        "max_single_loss_pct": 2.0,
+        "avg_hold_bars": 12.0,
+        "profit_factor": 0.4663931795600084
+      },
+      "top10": {
+        "segment": "Top10% ATR",
+        "n": 40,
+        "win_rate": 42.5,
+        "total_pnl": -1330.3491694592792,
+        "avg_pnl": -33.25872923648198,
+        "max_win": 328.78815867784516,
+        "max_loss": -200.0,
+        "max_single_loss_pct": 2.0,
+        "avg_hold_bars": 12.0,
+        "profit_factor": 0.4663931795600084
+      },
+      "mid": {
+        "segment": "Mid 80%",
+        "n": 0
+      },
+      "bot10": {
+        "segment": "Bot10% ATR",
+        "n": 24,
+        "win_rate": 50.0,
+        "total_pnl": -321.2547505462686,
+        "avg_pnl": -13.385614606094526,
+        "max_win": 287.3149199061895,
+        "max_loss": -184.95786197844296,
+        "max_single_loss_pct": 1.8495786197844297,
+        "avg_hold_bars": 12.0,
+        "profit_factor": 0.7031269028216661
+      },
+      "bot5": {
+        "segment": "Bot5% ATR",
+        "n": 24,
+        "win_rate": 50.0,
+        "total_pnl": -321.2547505462686,
+        "avg_pnl": -13.385614606094526,
+        "max_win": 287.3149199061895,
+        "max_loss": -184.95786197844296,
+        "max_single_loss_pct": 1.8495786197844297,
+        "avg_hold_bars": 12.0,
+        "profit_factor": 0.7031269028216661
+      }
+    },
+    "atr_thresholds": {
+      "p5": 0.003,
+      "p10": 0.003,
+      "p90": 0.035,
+      "p95": 0.035
+    },
+    "details": "❌ Top5%ATR亏损 $-1330.35; ✅ Top5%单亏≤2.0%: 2.00%; ❌ Top10%ATR亏损 $-1330.35"
+  },
+  "layer_b_single_loss": {
+    "pass": true,
+    "loss_over_2pct": 0,
+    "loss_over_1_5pct": 8,
+    "avg_hold_wins": 12.0,
+    "avg_hold_losses": 12.0,
+    "hold_pass": false,
+    "max_win": 328.78815867784516,
+    "max_loss": -200.0,
+    "details": "单亏>2%=0笔(必须=0); Top10盈持12.0 vs 亏持12.0×1.5=18.0"
+  },
+  "layer_c_consec_loss": {
+    "pass": false,
+    "longest_seq": 8,
+    "threshold": 4,
+    "n_sequences": 14,
+    "seq_distribution": {
+      "total": 14,
+      "max": 8,
+      "avg": 2.5,
+      "len_1": 6,
+      "len_2": 2,
+      "len_3": 4,
+      "len_ge4": 2
+    },
+    "details": "最长连亏=8 (阈值≤4)"
+  },
+  "layer_d_monthly": {
+    "pass": false,
+    "loss_month_rate": 62.5,
+    "cv": -1.616912951980278,
+    "cv_pass": true,
+    "n_months": 8,
+    "n_loss_months": 5,
+    "best_month_pnl": 247.078004200391,
+    "worst_month_pnl": -742.4367310912176,
+    "mean_monthly": -206.45049000069346,
+    "std_monthly": 333.8124712247961,
+    "details": "亏损月率=62.5% (阈值≤0.0%), CV=-1.62"
+  },
+  "layer_e_rolling": {
+    "pass": false,
+    "rate_90": 0.0,
+    "rate_180": 0.0,
+    "pass_90": false,
+    "pass_180": false,
+    "n_windows_90": 4,
+    "n_windows_180": 2,
+    "worst_90_pnl": -875.27348090404,
+    "worst_180_pnl": -1408.980841626563,
+    "details": "90天率=0.0%(阈值≥70.0%), 180天率=0.0%(阈值=100.0%)"
+  },
+  "tier1_validation": {
+    "pass": false,
+    "n_pass": 2,
+    "n_total": 12,
+    "ci_low": -18.65184370519006,
+    "ci_high": -0.007493104615633683,
+    "mean_ann": -9.329668404902847,
+    "p_value": 0.977,
+    "pass_6of8_rate": 0.0,
+    "checks": [
+      {
+        "name": "8/8 KPI",
+        "passed": false,
+        "detail": "n_pass=6/8"
+      },
+      {
+        "name": "MC P<0.05",
+        "passed": false,
+        "detail": "P=0.9770"
+      },
+      {
+        "name": "CI下限>20%",
+        "passed": false,
+        "detail": "CI=-18.65%"
+      },
+      {
+        "name": "6/8率≥80%",
+        "passed": false,
+        "detail": "6/8率=0.0%"
+      },
+      {
+        "name": "ann≥30%",
+        "passed": false,
+        "detail": "ann=-21.55%"
+      },
+      {
+        "name": "dd≤15%",
+        "passed": false,
+        "detail": "dd=17.61%"
+      },
+      {
+        "name": "wr≥55%",
+        "passed": false,
+        "detail": "wr=45.3%"
+      },
+      {
+        "name": "sh≥1.5",
+        "passed": false,
+        "detail": "sh=-1.96"
+      },
+      {
+        "name": "月亏≤5%",
+        "passed": false,
+        "detail": "月亏=62.5%"
+      },
+      {
+        "name": "单亏≤2%",
+        "passed": true,
+        "detail": "单亏=2.00%"
+      },
+      {
+        "name": "连亏≤3",
+        "passed": false,
+        "detail": "连亏=8"
+      },
+      {
+        "name": "gap≤15%",
+        "passed": true,
+        "detail": "gap=0.00%"
+      }
+    ]
+  },
+  "overall_pass": false,
+  "n_pass_layers": 1,
+  "n_total_layers": 5,
+  "error": null,
+  "dataset": "v99_baseline_64trades",
+  "kpi_input": {
+    "n_pass": 6,
+    "ann_live": -21.549077061734582,
+    "max_dd": 17.61408882179886,
+    "win_rate": 45.3125,
+    "sharpe": -1.9588229936603756,
+    "mlp": 62.5,
+    "max_single_loss": 2.0,
+    "max_consec": 8,
+    "gap": 0.0,
+    "n_trades": 64
+  },
+  "n_trades_input": 64
+}

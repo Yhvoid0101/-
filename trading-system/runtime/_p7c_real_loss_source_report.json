@@ -1,0 +1,425 @@
+{
+  "timestamp": "2026-07-03T10:45:55.659394",
+  "data_source": {
+    "attributions_count": 215,
+    "trades_count": 215,
+    "matched_count": 215
+  },
+  "key_finding": {
+    "real_loss_source_1": {
+      "category": "feature_anomaly",
+      "n": 33,
+      "win_rate": 0.0,
+      "total_pnl_pct": -65.47608572718448,
+      "wilson_ci": {
+        "win_rate": 0.0,
+        "ci_lower": 0,
+        "ci_upper": 0.10427343003561192
+      }
+    },
+    "misattributed_categories": {
+      "regime_mismatch": {
+        "n": 49,
+        "total_pnl_pct": 50.6,
+        "actually_profitable": true
+      },
+      "counter_trend": {
+        "n": 38,
+        "total_pnl_pct": 12.49,
+        "actually_profitable": true
+      },
+      "weak_signal": {
+        "n": 13,
+        "total_pnl_pct": 25.31,
+        "actually_profitable": true
+      }
+    }
+  },
+  "attribution_engine_issue": {
+    "issue": "盈亏感知缺失",
+    "description": "root_cause分类逻辑没有pnl_outcome门控, 把盈利笔也归为'问题root_cause'",
+    "misattributed_wins_count": 65,
+    "misattributed_wins_pnl_pct": 158.02890695303296,
+    "fix": "所有root_cause_category分支都应添加pnl_outcome=='loss'条件"
+  },
+  "feature_anomaly_analysis": {
+    "total": 33,
+    "all_losses": true,
+    "total_pnl_pct": -65.47608572718448,
+    "by_srd": {
+      "LTC_USDT@ranging@short": {
+        "n": 3,
+        "total_pnl_pct": -6.000000000000008
+      },
+      "ARB_USDT@trending@short": {
+        "n": 2,
+        "total_pnl_pct": -4.0000000000000115
+      },
+      "LTC_USDT@ranging@long": {
+        "n": 2,
+        "total_pnl_pct": -4.000000000000006
+      },
+      "SOL_USDT@ranging@short": {
+        "n": 2,
+        "total_pnl_pct": -4.000000000000005
+      },
+      "LINK_USDT@high_vol@short": {
+        "n": 2,
+        "total_pnl_pct": -3.9999999999999996
+      },
+      "SOL_USDT@trending@short": {
+        "n": 2,
+        "total_pnl_pct": -3.9999999999999916
+      },
+      "BNB_USDT@trending@short": {
+        "n": 2,
+        "total_pnl_pct": -3.8587722913441036
+      },
+      "ARB_USDT@trending@long": {
+        "n": 2,
+        "total_pnl_pct": -3.826541937529733
+      },
+      "UNI_USDT@trending@short": {
+        "n": 1,
+        "total_pnl_pct": -2.000000000000005
+      },
+      "LTC_USDT@trending@short": {
+        "n": 1,
+        "total_pnl_pct": -2.000000000000004
+      },
+      "LTC_USDT@high_vol@long": {
+        "n": 1,
+        "total_pnl_pct": -2.000000000000004
+      },
+      "BNB_USDT@high_vol@short": {
+        "n": 1,
+        "total_pnl_pct": -2.0000000000000018
+      },
+      "SOL_USDT@ranging@long": {
+        "n": 1,
+        "total_pnl_pct": -1.9999999999999993
+      },
+      "LINK_USDT@trending@short": {
+        "n": 1,
+        "total_pnl_pct": -1.999999999999997
+      },
+      "LTC_USDT@high_vol@short": {
+        "n": 1,
+        "total_pnl_pct": -1.9999999999999958
+      },
+      "AVAX_USDT@high_vol@long": {
+        "n": 1,
+        "total_pnl_pct": -1.9999999999999958
+      },
+      "AVAX_USDT@trending@short": {
+        "n": 1,
+        "total_pnl_pct": -1.999999999999995
+      },
+      "UNI_USDT@trending@long": {
+        "n": 1,
+        "total_pnl_pct": -1.999999999999995
+      },
+      "ETH_USDT@low_vol@short": {
+        "n": 1,
+        "total_pnl_pct": -1.9999999999999938
+      },
+      "ARB_USDT@ranging@short": {
+        "n": 1,
+        "total_pnl_pct": -1.9999999999999938
+      },
+      "UNI_USDT@low_vol@short": {
+        "n": 1,
+        "total_pnl_pct": -1.9874531445231258
+      },
+      "OP_USDT@trending@short": {
+        "n": 1,
+        "total_pnl_pct": -1.9457617071725017
+      },
+      "ATOM_USDT@low_vol@short": {
+        "n": 1,
+        "total_pnl_pct": -1.9300684345594594
+      },
+      "UNI_USDT@low_vol@long": {
+        "n": 1,
+        "total_pnl_pct": -1.9274882120555565
+      }
+    },
+    "anomaly_features_freq": {
+      "pa_body_expansion": 1,
+      "mtf_ema50_200_ratio": 6,
+      "pa_candle_dir": 13,
+      "kelly_fraction_full": 7,
+      "kelly_fraction_half": 7,
+      "kelly_payoff_ratio": 7,
+      "kelly_win_rate": 8,
+      "pos_mult": 4,
+      "mtf_short_ema_alignment": 15,
+      "mtf_hh_hl_pattern": 10,
+      "direction": 9,
+      "mtf_trend_direction": 5,
+      "atr_pct": 1,
+      "hour_of_day": 9,
+      "rsi_14": 7,
+      "pa_outside_bar": 2,
+      "day_of_week": 5,
+      "pa_upper_wick_ratio": 3,
+      "pa_bull_engulf": 9,
+      "adx": 2,
+      "vp_ad_slope": 2,
+      "vp_obv_slope_norm": 5,
+      "pa_lower_wick_ratio": 2,
+      "pa_pin_bar_lower": 1,
+      "vp_vol_ratio_5": 2,
+      "pa_body_pct": 1,
+      "kelly_trades_count": 2
+    },
+    "anomaly_z_score_by_feature": {
+      "pa_body_expansion": {
+        "n": 1,
+        "avg": 2.857520479840723,
+        "min": 2.857520479840723,
+        "max": 2.857520479840723
+      },
+      "mtf_ema50_200_ratio": {
+        "n": 6,
+        "avg": 0.2438137978138715,
+        "min": -1.7954422705347117,
+        "max": 3.1003625102427734
+      },
+      "pa_candle_dir": {
+        "n": 13,
+        "avg": 1.7056057308448833,
+        "min": 1.7056057308448833,
+        "max": 1.7056057308448833
+      },
+      "kelly_fraction_full": {
+        "n": 7,
+        "avg": -1.9503058478852506,
+        "min": -2.1175572369787825,
+        "max": -1.695172366618321
+      },
+      "kelly_fraction_half": {
+        "n": 7,
+        "avg": -1.949852418625044,
+        "min": -2.117611437347637,
+        "max": -1.6934565452340962
+      },
+      "kelly_payoff_ratio": {
+        "n": 7,
+        "avg": -2.4347310749772832,
+        "min": -2.97385900070921,
+        "max": -1.6238001965390934
+      },
+      "kelly_win_rate": {
+        "n": 8,
+        "avg": 1.3130759995927468,
+        "min": -2.534545907355811,
+        "max": 3.2351594963593264
+      },
+      "pos_mult": {
+        "n": 4,
+        "avg": 2.1127875241169334,
+        "min": 1.7441385079790168,
+        "max": 3.2187345725306824
+      },
+      "mtf_short_ema_alignment": {
+        "n": 15,
+        "avg": 1.5191090506254998,
+        "min": 1.5191090506254998,
+        "max": 1.5191090506254998
+      },
+      "mtf_hh_hl_pattern": {
+        "n": 10,
+        "avg": 1.7766949223230974,
+        "min": 1.7766949223230972,
+        "max": 1.7766949223230972
+      },
+      "direction": {
+        "n": 9,
+        "avg": 2.307277489112375,
+        "min": 2.307277489112375,
+        "max": 2.307277489112375
+      },
+      "mtf_trend_direction": {
+        "n": 5,
+        "avg": 1.9623409242099534,
+        "min": 1.9623409242099534,
+        "max": 1.9623409242099534
+      },
+      "atr_pct": {
+        "n": 1,
+        "avg": 1.6700522534338955,
+        "min": 1.6700522534338955,
+        "max": 1.6700522534338955
+      },
+      "hour_of_day": {
+        "n": 9,
+        "avg": -0.5068570496459261,
+        "min": -1.5510355534896674,
+        "max": 1.5814999580415565
+      },
+      "rsi_14": {
+        "n": 7,
+        "avg": 1.3100944304895485,
+        "min": -1.6671818250186305,
+        "max": 2.082421680495194
+      },
+      "pa_outside_bar": {
+        "n": 2,
+        "avg": 2.5325467623418674,
+        "min": 2.5325467623418674,
+        "max": 2.5325467623418674
+      },
+      "day_of_week": {
+        "n": 5,
+        "avg": 1.750664588605431,
+        "min": 1.750664588605431,
+        "max": 1.750664588605431
+      },
+      "pa_upper_wick_ratio": {
+        "n": 3,
+        "avg": 1.8834540739126708,
+        "min": 1.7208000143952464,
+        "max": 2.071426925713468
+      },
+      "pa_bull_engulf": {
+        "n": 9,
+        "avg": 2.3484359721209165,
+        "min": 2.3484359721209165,
+        "max": 2.3484359721209165
+      },
+      "adx": {
+        "n": 2,
+        "avg": 0.23014408585304946,
+        "min": -1.5247079351851802,
+        "max": 1.9849961068912791
+      },
+      "vp_ad_slope": {
+        "n": 2,
+        "avg": -3.7620241570211768,
+        "min": -9.049852837021687,
+        "max": 1.5258045229793333
+      },
+      "vp_obv_slope_norm": {
+        "n": 5,
+        "avg": 1.381623118017305,
+        "min": -1.5240752694478295,
+        "max": 2.2176461857042606
+      },
+      "pa_lower_wick_ratio": {
+        "n": 2,
+        "avg": 2.695383713911314,
+        "min": 1.5041671116893902,
+        "max": 3.886600316133238
+      },
+      "pa_pin_bar_lower": {
+        "n": 1,
+        "avg": 8.406346808612328,
+        "min": 8.406346808612328,
+        "max": 8.406346808612328
+      },
+      "vp_vol_ratio_5": {
+        "n": 2,
+        "avg": 1.8062034257127308,
+        "min": 1.528589302537745,
+        "max": 2.083817548887717
+      },
+      "pa_body_pct": {
+        "n": 1,
+        "avg": 2.464658257384047,
+        "min": 2.464658257384047,
+        "max": 2.464658257384047
+      },
+      "kelly_trades_count": {
+        "n": 2,
+        "avg": 1.8848335058992791,
+        "min": 1.630450755163099,
+        "max": 2.1392162566354593
+      }
+    }
+  },
+  "uni_usdt_analysis": {
+    "total": 42,
+    "total_pnl_pct": 18.519864594725767,
+    "win_rate": 0.5476190476190477,
+    "by_root_cause": {
+      "unexplained": {
+        "n": 16,
+        "wins": 14,
+        "total_pnl_pct": 39.78735248207497
+      },
+      "counter_trend": {
+        "n": 8,
+        "wins": 2,
+        "total_pnl_pct": -9.938696343402224
+      },
+      "regime_mismatch": {
+        "n": 11,
+        "wins": 5,
+        "total_pnl_pct": -6.585135119975563
+      },
+      "feature_anomaly": {
+        "n": 4,
+        "wins": 0,
+        "total_pnl_pct": -7.914941356578682
+      },
+      "weak_signal": {
+        "n": 2,
+        "wins": 2,
+        "total_pnl_pct": 5.1712849326072705
+      },
+      "bad_exit": {
+        "n": 1,
+        "wins": 0,
+        "total_pnl_pct": -2.0000000000000058
+      }
+    }
+  },
+  "v99_optimization_directions": [
+    {
+      "id": 1,
+      "name": "feature_anomaly入场过滤",
+      "type": "mechanism_filter",
+      "priority": "critical",
+      "target": "入场前检测特征异常, z-score>2.5拒绝入场",
+      "expected_impact": "消除33笔全亏=-65.48%的亏损源",
+      "anti_overfitting": "z-score阈值是统计学常识(2.5σ=99.4%置信), 非数据反推"
+    },
+    {
+      "id": 2,
+      "name": "归因引擎盈亏感知修复",
+      "type": "attribution_fix",
+      "priority": "high",
+      "target": "所有root_cause_category分支添加pnl_outcome=='loss'门控",
+      "expected_impact": "消除'盈利笔误归为问题'的归因偏差",
+      "anti_overfitting": "归因逻辑修复, 不涉及策略参数"
+    },
+    {
+      "id": 3,
+      "name": "UNI_USDT币种专项观察",
+      "type": "per_symbol_watch",
+      "priority": "medium",
+      "target": "UNI_USDT在多根因下都亏损, 降仓50%+持续观察",
+      "expected_impact": "限制UNI_USDT亏损扩散",
+      "anti_overfitting": "降仓而非禁用, 避免小样本过拟合; 需Wilson CI确认才禁用"
+    },
+    {
+      "id": 4,
+      "name": "regime分类器边界增强(锦上添花)",
+      "type": "mechanism_enhance",
+      "priority": "low",
+      "target": "ADX阈值严格化+Hurst交叉验证+regime置信度门控",
+      "expected_impact": "提升regime_mismatch子组合表现(整体已盈利)",
+      "anti_overfitting": "机制性改进, 不针对特定symbol"
+    },
+    {
+      "id": 5,
+      "name": "MTF同向过滤精细化(锦上添花)",
+      "type": "filter_refine",
+      "priority": "low",
+      "target": "区分均值回归合理逆势vs趋势跟踪错判",
+      "expected_impact": "提升counter_trend子组合表现(整体已盈利)",
+      "anti_overfitting": "基于策略本质, 非数据反推"
+    }
+  ]
+}

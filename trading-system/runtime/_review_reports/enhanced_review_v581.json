@@ -1,0 +1,247 @@
+{
+  "version": "v581",
+  "timestamp": "2026-06-30T08:46:54.871950",
+  "metrics": {
+    "total_trades": 35,
+    "total_pnl_pct": 33.502199333697085,
+    "annual_return_pct": 16.751099666848543,
+    "win_rate": 37.142857142857146,
+    "avg_win_pct": 4.061294055486136,
+    "avg_loss_pct": 0.8770283358010308,
+    "ev_per_trade_pct": 0.9572056952484884,
+    "profit_factor": 2.736348964198412,
+    "sharpe_ratio": 2.0672531878899734,
+    "max_drawdown_pct": 34.669513319946375,
+    "max_single_loss_pct": 2.0,
+    "max_consecutive_losses": 5,
+    "monthly_loss_prob": 0.0,
+    "monthly_pnl": {
+      "unknown": 3350.219933369708
+    },
+    "monthly_trades": {
+      "unknown": 35
+    },
+    "exit_reasons": {
+      "price_soft_stop": 13,
+      "take_profit": 13,
+      "trend_reversal": 1,
+      "time_price_exit": 4,
+      "single_loss_cap": 2,
+      "stop_loss": 2
+    },
+    "exit_avg_pnl": {
+      "price_soft_stop": -78.02499772639015,
+      "take_profit": 406.1294055486136,
+      "trend_reversal": -16.169601149840112,
+      "time_price_exit": -70.74194179233892,
+      "single_loss_cap": -200.0,
+      "stop_loss": -107.99999999999986
+    },
+    "adx_analysis": {
+      "weak": {
+        "count": 4,
+        "win_rate": 25.0,
+        "total_pnl": -2.8342288852998108,
+        "avg_win": 149.6623479715397,
+        "avg_loss": 50.832192285613175,
+        "ev": -50.3309559349703
+      },
+      "moderate": {
+        "count": 6,
+        "win_rate": 50.0,
+        "total_pnl": 983.1015687614727,
+        "avg_win": 392.6705641944677,
+        "avg_loss": 64.97004127397679,
+        "ev": -62.68183824663456
+      },
+      "good": {
+        "count": 11,
+        "win_rate": 27.27272727272727,
+        "total_pnl": 218.55506009593512,
+        "avg_win": 312.07591775175285,
+        "avg_loss": 89.70908664491543,
+        "ev": -88.61330936019723
+      },
+      "strong": {
+        "count": 14,
+        "win_rate": 42.857142857142854,
+        "total_pnl": 2151.3975333976005,
+        "avg_win": 502.6300797202958,
+        "avg_loss": 108.04786811552178,
+        "ev": -105.43067691051112
+      }
+    },
+    "hurst_analysis": {
+      "high": {
+        "count": 12,
+        "win_rate": 25.0,
+        "total_pnl": 76.29034752338528
+      },
+      "neutral": {
+        "count": 9,
+        "win_rate": 55.55555555555556,
+        "total_pnl": 2452.7121714205764
+      },
+      "low": {
+        "count": 14,
+        "win_rate": 35.714285714285715,
+        "total_pnl": 821.2174144257469
+      }
+    },
+    "symbol_analysis": {
+      "ETH_USDT": {
+        "count": 1,
+        "win_rate": 0.0,
+        "total_pnl": -62.63030933283253,
+        "ev": -62.63030933283253
+      },
+      "ADA_USDT": {
+        "count": 9,
+        "win_rate": 44.44444444444444,
+        "total_pnl": 1485.5741900712105,
+        "ev": -72.08335026592312
+      },
+      "DOGE_USDT": {
+        "count": 5,
+        "win_rate": 40.0,
+        "total_pnl": 187.015245754914,
+        "ev": -101.09144276397662
+      },
+      "BTC_USDT": {
+        "count": 1,
+        "win_rate": 0.0,
+        "total_pnl": -200.0,
+        "ev": -200.0
+      },
+      "BNB_USDT": {
+        "count": 7,
+        "win_rate": 42.857142857142854,
+        "total_pnl": 685.6162006387366,
+        "ev": -78.37893358395709
+      },
+      "XRP_USDT": {
+        "count": 7,
+        "win_rate": 28.57142857142857,
+        "total_pnl": 407.4688757705726,
+        "ev": -96.31258371743314
+      },
+      "LTC_USDT": {
+        "count": 5,
+        "win_rate": 40.0,
+        "total_pnl": 847.1757304671074,
+        "ev": -56.70244731928218
+      }
+    }
+  },
+  "kpi": {
+    "checks": {
+      "annual_return": {
+        "target": "gte 30.0",
+        "actual": 16.75,
+        "passed": false
+      },
+      "max_drawdown": {
+        "target": "lte 15.0",
+        "actual": 34.67,
+        "passed": false
+      },
+      "win_rate": {
+        "target": "gte 55.0",
+        "actual": 37.14,
+        "passed": false
+      },
+      "sharpe_ratio": {
+        "target": "gte 1.5",
+        "actual": 2.07,
+        "passed": true
+      },
+      "ev_per_trade": {
+        "target": "gte 0.5",
+        "actual": 0.96,
+        "passed": true
+      },
+      "profit_factor": {
+        "target": "gte 1.5",
+        "actual": 2.74,
+        "passed": true
+      },
+      "monthly_loss_prob": {
+        "target": "lte 35.0",
+        "actual": 0.0,
+        "passed": true
+      },
+      "max_consec_loss": {
+        "target": "lte 3",
+        "actual": 5,
+        "passed": false
+      },
+      "single_loss_cap": {
+        "target": "lte 2.0",
+        "actual": 2.0,
+        "passed": true
+      }
+    },
+    "passed": 5,
+    "total": 9,
+    "pass_rate": 55.55555555555556
+  },
+  "root_causes": [
+    {
+      "priority": "HIGH",
+      "category": "币种:ADA_USDT",
+      "finding": "ADA_USDT: 9笔, 胜率44.4%, EV=-72.0834% (系统性亏损)",
+      "impact_weight": 4434.258704254663,
+      "counterfactual": "移除ADA_USDT后总PnL≈-1452.07%",
+      "fix_direction": "暂停ADA_USDT交易或为ADA_USDT设计专属入场条件"
+    },
+    {
+      "priority": "HIGH",
+      "category": "币种:LTC_USDT",
+      "finding": "LTC_USDT: 5笔, 胜率40.0%, EV=-56.7024% (系统性亏损)",
+      "impact_weight": 2528.7167628275783,
+      "counterfactual": "移除LTC_USDT后总PnL≈-813.67%",
+      "fix_direction": "暂停LTC_USDT交易或为LTC_USDT设计专属入场条件"
+    },
+    {
+      "priority": "HIGH",
+      "category": "币种:BNB_USDT",
+      "finding": "BNB_USDT: 7笔, 胜率42.9%, EV=-78.3789% (系统性亏损)",
+      "impact_weight": 2046.481169220231,
+      "counterfactual": "移除BNB_USDT后总PnL≈-652.11%",
+      "fix_direction": "暂停BNB_USDT交易或为BNB_USDT设计专属入场条件"
+    },
+    {
+      "priority": "HIGH",
+      "category": "币种:XRP_USDT",
+      "finding": "XRP_USDT: 7笔, 胜率28.6%, EV=-96.3126% (系统性亏损)",
+      "impact_weight": 1216.2451536748317,
+      "counterfactual": "移除XRP_USDT后总PnL≈-373.97%",
+      "fix_direction": "暂停XRP_USDT交易或为XRP_USDT设计专属入场条件"
+    },
+    {
+      "priority": "HIGH",
+      "category": "币种:DOGE_USDT",
+      "finding": "DOGE_USDT: 5笔, 胜率40.0%, EV=-101.0914% (系统性亏损)",
+      "impact_weight": 558.2178169622758,
+      "counterfactual": "移除DOGE_USDT后总PnL≈-153.51%",
+      "fix_direction": "暂停DOGE_USDT交易或为DOGE_USDT设计专属入场条件"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "连续亏损",
+      "finding": "最大连续亏损5次 > 3次目标",
+      "impact_weight": 50.0,
+      "counterfactual": null,
+      "fix_direction": "增加连续亏损后暂停机制或降低仓位"
+    },
+    {
+      "priority": "HIGH",
+      "category": "胜率",
+      "finding": "胜率37.1% < 55%目标, 差距17.9%",
+      "impact_weight": 32.467532467532465,
+      "counterfactual": "如果胜率55%: EV≈1.84%",
+      "fix_direction": "强化入场信号质量, 特别是ADX<20环境下的假突破过滤"
+    }
+  ],
+  "version_comparison": null
+}

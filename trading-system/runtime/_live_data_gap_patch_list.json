@@ -1,0 +1,196 @@
+{
+  "version": "1.0",
+  "agent": "LIVE-DATA-CONNECTOR",
+  "base_report": "_verify_real_data_integration_report.json",
+  "principle": "避免重复造轮子, 仅填补真空白, 复用现有 80+ 模块",
+  "patches": [
+    {
+      "gap_id": "G1",
+      "severity": "BLOCK",
+      "requirement": "R3",
+      "current": "99.67% (299/300)",
+      "target": "≥99.9%",
+      "missing_dimensions": [
+        "gap_detection",
+        "cross_source_verification",
+        "realtime_anomaly_alarm"
+      ],
+      "patch": {
+        "strategy": "扩展现有 real_market_validator.py, 不新建文件",
+        "target_file": "real_market_validator.py",
+        "reuse_base": "现有 SyntheticVsRealSharpeComparator + ExtremeEventStressTester + LiquidityGapDetector 框架",
+        "new_methods": [
+          "DataGapDetector: 检测时间戳间隔异常 (基于 LiquidityGapDetector 的 expanding P80 算法迁移)",
+          "CrossSourceVerifier: 多源价格交叉验证 (binance_vision vs gate_io vs cache, 阈值<0.5%)",
+          "RealtimeAnomalyAlarm: Z-score>3 或价格跳变>5%/min 触发告警 (复用 realistic_data_generator 的 Student-t 模型)"
+        ],
+        "lines_estimate": 150,
+        "expected_effect": "R3 准确率 99.67% → 99.95% (3维度×100样本全通过)"
+      },
+      "owner_agent": "LIVE-DATA-CONNECTOR",
+      "collaborators": [
+        "MCP-AGENT (复用其 fallback 机制做跨源验证)"
+      ],
+      "priority": "P0",
+      "verification": "重跑 _verify_real_data_integration.py, R3 必须 PASS"
+    },
+    {
+      "gap_id": "G2",
+      "severity": "BLOCK",
+      "requirement": "R4",
+      "current": "STOP_LOSS/TAKE_PROFIT 在 LiveMatchingEngine 中静默降级为 market 单",
+      "target": "正确执行条件单 (ccxt 条件订单 / Hyperliquid trigger)",
+      "patch": {
+        "strategy": "修复 live_matching_engine.py 的 submit_order 方法, 不新建文件",
+        "target_file": "live_matching_engine.py",
+        "reuse_base": "现有 UnifiedOrderType.STOP_LOSS/TAKE_PROFIT 枚举 + ccxt.create_order 的 stopPrice/trigger 参数",
+        "fix_points": [
+          "定位: submit_order 中 order_type == UnifiedOrderType.STOP_LOSS 分支",
+          "现状: 警告后降级为 market 单 (致命: 止损变市价, 实盘爆仓风险)",
+          "修复: 调用 ccxt.create_order(symbol, 'STOP_MARKET', side, amount, params={'stopPrice': trigger, 'workingType': 'MARK_PRICE'})",
+          "Hyperliquid: 使用 SDK 的 trigger order 接口",
+          "回退: 若交易所不支持条件单, 抛出 NotImplementedError 而非静默降级"
+        ],
+        "lines_estimate": 60,
+        "expected_effect": "止损单实盘可执行, 杜绝降级变市价的系统性风险"
+      },
+      "owner_agent": "LIVE-DATA-CONNECTOR",
+      "collaborators": [
+        "INTRADAY-GUARD (验证风控熔断仍生效)",
+        "LOSS-HUNTER (验证止损触发后资金安全)"
+      ],
+      "priority": "P0",
+      "verification": "模拟盘下 5 笔 STOP_LOSS 单, 全部以 trigger 价格成交而非市价"
+    },
+    {
+      "gap_id": "G3",
+      "severity": "BLOCK",
+      "requirement": "性能",
+      "current": "p50=1423.8ms, p95=3100.5ms (REST 轮询)",
+      "target": "≤50ms (WebSocket 推送)",
+      "patch": {
+        "strategy": "扩展 websocket_stream.py 支持 Gate.io, 集成到 real_exchange_feed.py",
+        "target_files": [
+          "websocket_stream.py (扩展 Gate.io 频道)",
+          "real_exchange_feed.py (新增 WebSocket 数据源优先级层)"
+        ],
+        "reuse_base": "现有 ccxt.pro based websocket_stream.py (已支持 Binance/OKX/Bybit) + 4-layer fallback",
+        "fix_points": [
+          "websocket_stream.py: 添加 Gate.io 的 watch_ticker/watch_order_book/watch_trades/watch_ohlcv 分支",
+          "real_exchange_feed.py: 顶层增加 WebSocket subscription, REST 作为 fallback",
+          "数据流: WebSocket push → 内存队列 (1000 深度) → 策略消费 → REST 兜底",
+          "背压: 现有 bounded queue (1000) 已实现, 无需新增"
+        ],
+        "lines_estimate": 200,
+        "expected_effect": "p50 延迟 1423ms → 30-50ms (WebSocket 推送), 吞吐 0.7/s → 1000+/s"
+      },
+      "owner_agent": "LIVE-DATA-CONNECTOR",
+      "collaborators": [
+        "MCP-AGENT (验证策略层能消费 WebSocket 数据)"
+      ],
+      "priority": "P0",
+      "verification": "20 笔行情采样 p50≤50ms, 持续 1 分钟无断流"
+    },
+    {
+      "gap_id": "G4",
+      "severity": "BLOCK",
+      "requirement": "协作",
+      "current": "_info_sync_mechanism.py 文件 mtime 轮询 5min",
+      "target": "≤100ms 响应, 1000Hz 更新, 50ms 延迟",
+      "patch": {
+        "strategy": "新增 _realtime_sync_layer.py (Redis/ZMQ), 文件轮询降级为兜底",
+        "target_file": "_realtime_sync_layer.py (新建, 因现有 _info_sync_mechanism.py 架构无法容纳)",
+        "reuse_base": "现有 _info_sync_mechanism.py 的文件兜底 + network_resilience_pro.py 的 SmartRouter",
+        "architecture": [
+          "Layer 1: Redis Pub/Sub (主通道, ≤1ms 延迟, 1000+ Hz)",
+          "Layer 2: ZeroMQ PUSH-PULL (备份通道, ≤5ms 延迟)",
+          "Layer 3: 文件 mtime 轮询 (兜底, 5min, 现有机制保留)"
+        ],
+        "channels": [
+          "market_data: K线/Ticker/订单簿/成交 (1000Hz)",
+          "agent_signals: 策略信号/方向/置信度 (按需)",
+          "risk_alerts: 熔断/止损/异常 (P0 优先)",
+          "coordination: 请求-响应/会议纪要 (按需)"
+        ],
+        "lines_estimate": 300,
+        "expected_effect": "智能体间同步 5min → ≤100ms, 满足用户硬性要求"
+      },
+      "owner_agent": "LIVE-DATA-CONNECTOR",
+      "collaborators": [
+        "ME (协调者, 定义消息格式)",
+        "全部 5 智能体 (消费消息)"
+      ],
+      "priority": "P0",
+      "verification": "5 智能体跨进程通信 p50≤100ms, 持续 1 分钟无丢包"
+    },
+    {
+      "gap_id": "G5",
+      "severity": "WARN",
+      "requirement": "R4",
+      "current": "execution_algorithms.py 仅生成 TWAP/VWAP/POV/IS 计划, 未调用 submit_order",
+      "target": "完整执行: 计划 → 分片下单 → 成交回报 → IS 评估",
+      "patch": {
+        "strategy": "扩展 execution_algorithms.py, 集成 IMatchingEngine 接口",
+        "target_file": "execution_algorithms.py",
+        "reuse_base": "现有 TWAPExecutor/VWAPExecutor/POVExecutor/ISExecutor + IMatchingEngine.submit_order",
+        "fix_points": [
+          "为每个 Executor 添加 execute(engine: IMatchingEngine) 方法",
+          "TWAPExecutor: 按 schedule 调用 engine.submit_order(LIMIT), 等待成交或超时",
+          "VWAPExecutor: 根据历史成交量分布动态调整每片 size",
+          "POVExecutor: 实时监控市场成交量, 维持参与率",
+          "ISExecutor: 记录基准价 vs 实际成交价, 输出 IS bps"
+        ],
+        "lines_estimate": 150,
+        "expected_effect": "大单可拆分执行, 市场冲击降低 30-50%"
+      },
+      "owner_agent": "LIVE-DATA-CONNECTOR",
+      "collaborators": [
+        "INTRADAY-GUARD (验证执行算法在沙盘也可用)"
+      ],
+      "priority": "P1",
+      "verification": "1 BTC 大单 TWAP 拆 10 片, IS bps < 10"
+    },
+    {
+      "gap_id": "G6",
+      "severity": "WARN",
+      "requirement": "R4",
+      "current": "5+ 交易对串行下单, 延迟累计",
+      "target": "批量并发下单, 单次延迟不随交易对数增长",
+      "patch": {
+        "strategy": "扩展 exchange_connector.py, 添加 batch_order 方法",
+        "target_file": "exchange_connector.py",
+        "reuse_base": "现有 create_exchange_connector 工厂 + ccxt.async_support",
+        "fix_points": [
+          "新增 CCXTExchangeConnector.batch_order(orders: List[UnifiedOrder]) -> List[UnifiedOrderResponse]",
+          "使用 asyncio.gather 并发调用 create_order",
+          "Hyperliquid: 使用 SDK 的 batch order 接口 (原生支持)",
+          "失败隔离: 单笔失败不影响其他笔, 返回 per-order 状态"
+        ],
+        "lines_estimate": 80,
+        "expected_effect": "7 交易对并发下单延迟 = 单笔延迟 (而非 7×)"
+      },
+      "owner_agent": "LIVE-DATA-CONNECTOR",
+      "collaborators": [],
+      "priority": "P1",
+      "verification": "7 交易对并发下单, 总延迟 < 单笔延迟 × 1.5"
+    }
+  ],
+  "summary": {
+    "total_gaps": 6,
+    "BLOCK": 4,
+    "WARN": 2,
+    "total_lines_estimate": 940,
+    "new_files": 1,
+    "extended_files": 5,
+    "owner_distribution": {
+      "LIVE-DATA-CONNECTOR": 6
+    },
+    "collaborator_distribution": {
+      "MCP-AGENT": 2,
+      "INTRADAY-GUARD": 2,
+      "LOSS-HUNTER": 1,
+      "ME": 1,
+      "DIRECTION-CHECK": 0
+    }
+  }
+}

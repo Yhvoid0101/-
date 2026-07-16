@@ -1,0 +1,156 @@
+{
+  "timestamp": "2026-07-15T01:36:04.535493",
+  "version": "1.0.0",
+  "symbols_tested": [
+    "BTC-USDT",
+    "unknown"
+  ],
+  "duration_seconds": 0.0,
+  "aggregate": {
+    "symbols_count": 2,
+    "positive_ev_count": 0,
+    "positive_pnl_count": 0,
+    "pnl_mean_pct": -2.84,
+    "pnl_stdev_pct": 4.02,
+    "win_rate_mean": 0.0,
+    "ev_mean_pct": -0.5688,
+    "ev_stdev_pct": 0.8044,
+    "sharpe_mean": -19.862,
+    "total_days": 0.0,
+    "dd_mean_pct": 2.8,
+    "total_trades": 10,
+    "best_symbol": "unknown",
+    "worst_symbol": "BTC-USDT"
+  },
+  "kpi_check": {
+    "annual_return": {
+      "target": "≥ 30.0%",
+      "actual": "0.0%",
+      "passed": false
+    },
+    "max_drawdown": {
+      "target": "≤ 15.0%",
+      "actual": "2.8%",
+      "passed": true
+    },
+    "win_rate": {
+      "target": "≥ 55.0%",
+      "actual": "0.0%",
+      "passed": false
+    },
+    "sharpe_ratio": {
+      "target": "≥ 1.5",
+      "actual": "-19.862",
+      "passed": false
+    },
+    "ev_per_trade": {
+      "target": "≥ 0.5%",
+      "actual": "-0.5688%",
+      "passed": false
+    },
+    "positive_ev_symbols": {
+      "target": "≥ 5/5",
+      "actual": "0/5",
+      "passed": false
+    },
+    "summary": "1/6 KPI 达标"
+  },
+  "symbols": {
+    "BTC-USDT": {
+      "symbol": "BTC-USDT",
+      "total_trades": 5,
+      "long_trades": 0,
+      "short_trades": 5,
+      "total_pnl_pct": -5.69,
+      "win_rate": 0.0,
+      "avg_win_pct": 0,
+      "avg_loss_pct": 1.138,
+      "ev_per_trade_pct": -1.1376,
+      "max_drawdown_pct": 5.7,
+      "profit_factor": 0.0,
+      "sharpe_ratio": -39.724,
+      "exit_reasons": {
+        "unknown": 5
+      },
+      "tp_reachable_rate": 0.0,
+      "sl_avoidable_rate": 100.0,
+      "mfe_avg_pct": 0,
+      "mae_avg_pct": 1.138,
+      "issues": [
+        "胜率 0.0% < 40%: 信号方向可能系统性错误, 需检查入场条件是否在趋势顶部/底部",
+        "EV = -1.1376% < 0: 每笔交易期望为负, 策略在此币种无优势, 需架构性修复",
+        "TP 触发率 0.0% < 10%: TP 距离过远, 在 max_hold 内不可达, 需调整 TP 距离"
+      ],
+      "strengths": []
+    },
+    "unknown": {
+      "symbol": "unknown",
+      "total_trades": 5,
+      "long_trades": 0,
+      "short_trades": 0,
+      "total_pnl_pct": 0,
+      "win_rate": 0.0,
+      "avg_win_pct": 0,
+      "avg_loss_pct": 0,
+      "ev_per_trade_pct": 0.0,
+      "max_drawdown_pct": 0,
+      "profit_factor": 0,
+      "sharpe_ratio": 0.0,
+      "exit_reasons": {
+        "unknown": 5
+      },
+      "tp_reachable_rate": 0.0,
+      "sl_avoidable_rate": 100.0,
+      "mfe_avg_pct": 0,
+      "mae_avg_pct": 0,
+      "issues": [
+        "胜率 0.0% < 40%: 信号方向可能系统性错误, 需检查入场条件是否在趋势顶部/底部",
+        "TP 触发率 0.0% < 10%: TP 距离过远, 在 max_hold 内不可达, 需调整 TP 距离"
+      ],
+      "strengths": []
+    }
+  },
+  "baseline_comparison": {
+    "status": "无基线数据"
+  },
+  "root_cause_hypotheses": [
+    "[BTC-USDT] 胜率 0.0% < 40%: 信号方向可能系统性错误, 需检查入场条件是否在趋势顶部/底部",
+    "[BTC-USDT] EV = -1.1376% < 0: 每笔交易期望为负, 策略在此币种无优势, 需架构性修复",
+    "[BTC-USDT] TP 触发率 0.0% < 10%: TP 距离过远, 在 max_hold 内不可达, 需调整 TP 距离",
+    "[unknown] 胜率 0.0% < 40%: 信号方向可能系统性错误, 需检查入场条件是否在趋势顶部/底部",
+    "[unknown] TP 触发率 0.0% < 10%: TP 距离过远, 在 max_hold 内不可达, 需调整 TP 距离"
+  ],
+  "actionable_recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "Fix EV: 重构 fitness 函数为 EV 导向",
+      "detail": "当前 EV 为负, 策略无正期望。根据 ERR-047 教训: EV = 胜率 × 盈亏比 - (1-胜率) × 1.0, 应在保持胜率 ≥ 55% 前提下提升盈亏比, 而非单纯优化盈亏比。",
+      "fix_id": "Fix 33"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Fix 胜率: 入场信号质量改进",
+      "detail": "当前跨币种胜率 < 50%, 低于随机水平。需检查: 1)入场是否在趋势反转点 2)趋势确认是否充分 3)信号是否被噪声主导。",
+      "fix_id": "Fix 34"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Fix 亏损币种: BTC-USDT",
+      "detail": "以下币种 EV 为负: BTC-USDT。需分析: 1)市场微观结构差异 2)波动率特征差异 3)趋势持续性差异。考虑币种特定的参数调整。",
+      "fix_id": "Fix 34"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "建立模拟-实盘差异量化评估模型",
+      "detail": "分析点差、滑点、流动性、订单执行延迟等因素对策略表现的影响权重。在模拟环境中构建高保真市场仿真系统。",
+      "fix_id": "Fix 35"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "执行 PCA + 随机森林 + SHAP 参数重要性分析",
+      "detail": "对最近6个月历史交易数据进行深度回溯分析, 量化各参数对交易结果的影响权重。",
+      "fix_id": "Fix 36"
+    }
+  ],
+  "next_fix_direction": "Fix 33: Fix EV: 重构 fitness 函数为 EV 导向 (优先级: CRITICAL)"
+}

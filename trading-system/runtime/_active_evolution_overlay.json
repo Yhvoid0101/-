@@ -1,0 +1,478 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "created_at": "2026-07-03T07:31:00.105951",
+    "updated_at": "2026-07-15T01:36:04.543938",
+    "baseline_version": "v97_alpha_gap_optimize"
+  },
+  "logic_patches": [],
+  "indicator_patches": [],
+  "strategy_patches": [],
+  "knowledge_entries": [
+    {
+      "err_id": "EVOK-20260703-46af23",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "UNI_USDT@neutral 亏损率 80%, 5 笔, 总 PnL $-496",
+      "conditions": {
+        "symbol": "UNI_USDT",
+        "regime": "neutral"
+      },
+      "implication": "避免在 {'symbol': 'UNI_USDT', 'regime': 'neutral'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_UNI_USDT_neutral",
+      "patch_id": "patch_knowledge_1783035060_46af23",
+      "timestamp": "2026-07-03T07:31:00.129827",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-b06965",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "ranging+with_trend 下亏损率100%, 36 笔, 总 PnL $-13606",
+      "conditions": {
+        "regime": "ranging",
+        "alignment": "with_trend"
+      },
+      "implication": "避免在 {'regime': 'ranging', 'alignment': 'with_trend'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_align_ranging_with_trend",
+      "patch_id": "patch_knowledge_1783767578_b06965",
+      "timestamp": "2026-07-11T18:59:38.906248",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-86f050",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "mean_reversion 策略在 ranging 下亏损率 100%, 36 笔, 总 PnL $-13606",
+      "conditions": {
+        "regime": "ranging",
+        "strategy_type": "mean_reversion"
+      },
+      "implication": "避免在 {'regime': 'ranging', 'strategy_type': 'mean_reversion'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_ranging_mean_reversion",
+      "patch_id": "patch_knowledge_1783767578_86f050",
+      "timestamp": "2026-07-11T18:59:38.906421",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-734ae1",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "ETH-USDT@ranging 亏损率 100%, 30 笔, 总 PnL $-11521",
+      "conditions": {
+        "symbol": "ETH-USDT",
+        "regime": "ranging"
+      },
+      "implication": "避免在 {'symbol': 'ETH-USDT', 'regime': 'ranging'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_ETH-USDT_ranging",
+      "patch_id": "patch_knowledge_1783767578_734ae1",
+      "timestamp": "2026-07-11T18:59:38.906568",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-dd11d1",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "low_vol+with_trend 下亏损率100%, 15 笔, 总 PnL $-2818",
+      "conditions": {
+        "regime": "low_vol",
+        "alignment": "with_trend"
+      },
+      "implication": "避免在 {'regime': 'low_vol', 'alignment': 'with_trend'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_align_low_vol_with_trend",
+      "patch_id": "patch_knowledge_1783767578_dd11d1",
+      "timestamp": "2026-07-11T18:59:38.906726",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-0ef5c4",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "high_vol+with_trend 下亏损率100%, 15 笔, 总 PnL $-9241",
+      "conditions": {
+        "regime": "high_vol",
+        "alignment": "with_trend"
+      },
+      "implication": "避免在 {'regime': 'high_vol', 'alignment': 'with_trend'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_align_high_vol_with_trend",
+      "patch_id": "patch_knowledge_1783767578_0ef5c4",
+      "timestamp": "2026-07-11T18:59:38.906861",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-b10142",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "unknown 策略在 low_vol 下亏损率 100%, 15 笔, 总 PnL $-2818",
+      "conditions": {
+        "regime": "low_vol",
+        "strategy_type": "unknown"
+      },
+      "implication": "避免在 {'regime': 'low_vol', 'strategy_type': 'unknown'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_low_vol_unknown",
+      "patch_id": "patch_knowledge_1783767578_b10142",
+      "timestamp": "2026-07-11T18:59:38.906994",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-e20686",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "unknown 策略在 high_vol 下亏损率 100%, 15 笔, 总 PnL $-9241",
+      "conditions": {
+        "regime": "high_vol",
+        "strategy_type": "unknown"
+      },
+      "implication": "避免在 {'regime': 'high_vol', 'strategy_type': 'unknown'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_high_vol_unknown",
+      "patch_id": "patch_knowledge_1783767578_e20686",
+      "timestamp": "2026-07-11T18:59:38.907211",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-8a1896",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@low_vol 亏损率 100%, 15 笔, 总 PnL $-2818",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "low_vol"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'low_vol'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_low_vol",
+      "patch_id": "patch_knowledge_1783767578_8a1896",
+      "timestamp": "2026-07-11T18:59:38.907349",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-afee05",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "ETH-USDT@high_vol 亏损率 100%, 15 笔, 总 PnL $-9241",
+      "conditions": {
+        "symbol": "ETH-USDT",
+        "regime": "high_vol"
+      },
+      "implication": "避免在 {'symbol': 'ETH-USDT', 'regime': 'high_vol'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_ETH-USDT_high_vol",
+      "patch_id": "patch_knowledge_1783767578_afee05",
+      "timestamp": "2026-07-11T18:59:38.907484",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260711-fa5c5f",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@ranging 亏损率 100%, 6 笔, 总 PnL $-2085",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "ranging"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'ranging'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_ranging",
+      "patch_id": "patch_knowledge_1783767578_fa5c5f",
+      "timestamp": "2026-07-11T18:59:38.907622",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-c4f533",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "ranging+with_trend 下亏损率98%, 1942 笔, 总 PnL $-442109",
+      "conditions": {
+        "regime": "ranging",
+        "alignment": "with_trend"
+      },
+      "implication": "避免在 {'regime': 'ranging', 'alignment': 'with_trend'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_align_ranging_with_trend",
+      "patch_id": "patch_knowledge_1783858236_c4f533",
+      "timestamp": "2026-07-12T20:10:36.976098",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-28377d",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "mean_reversion 策略在 ranging 下亏损率 98%, 1615 笔, 总 PnL $-367669",
+      "conditions": {
+        "regime": "ranging",
+        "strategy_type": "mean_reversion"
+      },
+      "implication": "避免在 {'regime': 'ranging', 'strategy_type': 'mean_reversion'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_ranging_mean_reversion",
+      "patch_id": "patch_knowledge_1783858236_28377d",
+      "timestamp": "2026-07-12T20:10:36.976289",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-608b8e",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "low_vol+with_trend 下亏损率79%, 1121 笔, 总 PnL $-92835",
+      "conditions": {
+        "regime": "low_vol",
+        "alignment": "with_trend"
+      },
+      "implication": "避免在 {'regime': 'low_vol', 'alignment': 'with_trend'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_align_low_vol_with_trend",
+      "patch_id": "patch_knowledge_1783858236_608b8e",
+      "timestamp": "2026-07-12T20:10:36.976470",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-b95bd1",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@ranging 亏损率 100%, 1076 笔, 总 PnL $-200616",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "ranging"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'ranging'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_ranging",
+      "patch_id": "patch_knowledge_1783858236_b95bd1",
+      "timestamp": "2026-07-12T20:10:36.976601",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-2ee75e",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "high_vol+with_trend 下亏损率100%, 971 笔, 总 PnL $-571457",
+      "conditions": {
+        "regime": "high_vol",
+        "alignment": "with_trend"
+      },
+      "implication": "避免在 {'regime': 'high_vol', 'alignment': 'with_trend'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_align_high_vol_with_trend",
+      "patch_id": "patch_knowledge_1783858236_2ee75e",
+      "timestamp": "2026-07-12T20:10:36.976753",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-70f36f",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "unknown 策略在 low_vol 下亏损率 80%, 944 笔, 总 PnL $-78930",
+      "conditions": {
+        "regime": "low_vol",
+        "strategy_type": "unknown"
+      },
+      "implication": "避免在 {'regime': 'low_vol', 'strategy_type': 'unknown'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_low_vol_unknown",
+      "patch_id": "patch_knowledge_1783858236_70f36f",
+      "timestamp": "2026-07-12T20:10:36.976957",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-fb1cfd",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "ETH-USDT@ranging 亏损率 95%, 866 笔, 总 PnL $-241493",
+      "conditions": {
+        "symbol": "ETH-USDT",
+        "regime": "ranging"
+      },
+      "implication": "避免在 {'symbol': 'ETH-USDT', 'regime': 'ranging'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_ETH-USDT_ranging",
+      "patch_id": "patch_knowledge_1783858236_fb1cfd",
+      "timestamp": "2026-07-12T20:10:36.977048",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-312641",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "ETH-USDT@high_vol 亏损率 100%, 831 笔, 总 PnL $-489740",
+      "conditions": {
+        "symbol": "ETH-USDT",
+        "regime": "high_vol"
+      },
+      "implication": "避免在 {'symbol': 'ETH-USDT', 'regime': 'high_vol'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_ETH-USDT_high_vol",
+      "patch_id": "patch_knowledge_1783858236_312641",
+      "timestamp": "2026-07-12T20:10:36.977126",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-d165a5",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "unknown 策略在 high_vol 下亏损率 100%, 750 笔, 总 PnL $-439925",
+      "conditions": {
+        "regime": "high_vol",
+        "strategy_type": "unknown"
+      },
+      "implication": "避免在 {'regime': 'high_vol', 'strategy_type': 'unknown'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_high_vol_unknown",
+      "patch_id": "patch_knowledge_1783858236_d165a5",
+      "timestamp": "2026-07-12T20:10:36.977189",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-f4ab72",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@low_vol 亏损率 98%, 674 笔, 总 PnL $-80138",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "low_vol"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'low_vol'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_low_vol",
+      "patch_id": "patch_knowledge_1783858236_f4ab72",
+      "timestamp": "2026-07-12T20:10:36.977251",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-ff6652",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "trend_following 策略在 ranging 下亏损率 94%, 327 笔, 总 PnL $-74440",
+      "conditions": {
+        "regime": "ranging",
+        "strategy_type": "trend_following"
+      },
+      "implication": "避免在 {'regime': 'ranging', 'strategy_type': 'trend_following'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_ranging_trend_following",
+      "patch_id": "patch_knowledge_1783858236_ff6652",
+      "timestamp": "2026-07-12T20:10:36.977340",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-1beeb3",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "ETH-USDT@low_vol 亏损率 77%, 296 笔, 总 PnL $-12697",
+      "conditions": {
+        "symbol": "ETH-USDT",
+        "regime": "low_vol"
+      },
+      "implication": "避免在 {'symbol': 'ETH-USDT', 'regime': 'low_vol'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_ETH-USDT_low_vol",
+      "patch_id": "patch_knowledge_1783858236_1beeb3",
+      "timestamp": "2026-07-12T20:10:36.977428",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-d1ac04",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "trend_following 策略在 high_vol 下亏损率 100%, 221 笔, 总 PnL $-131532",
+      "conditions": {
+        "regime": "high_vol",
+        "strategy_type": "trend_following"
+      },
+      "implication": "避免在 {'regime': 'high_vol', 'strategy_type': 'trend_following'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_high_vol_trend_following",
+      "patch_id": "patch_knowledge_1783858236_d1ac04",
+      "timestamp": "2026-07-12T20:10:36.977490",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-50d20c",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "trend_following 策略在 low_vol 下亏损率 76%, 177 笔, 总 PnL $-13905",
+      "conditions": {
+        "regime": "low_vol",
+        "strategy_type": "trend_following"
+      },
+      "implication": "避免在 {'regime': 'low_vol', 'strategy_type': 'trend_following'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_regime_strategy_low_vol_trend_following",
+      "patch_id": "patch_knowledge_1783858236_50d20c",
+      "timestamp": "2026-07-12T20:10:36.977551",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260712-4bd553",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@high_vol 亏损率 100%, 140 笔, 总 PnL $-81717",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "high_vol"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'high_vol'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_high_vol",
+      "patch_id": "patch_knowledge_1783858236_4bd553",
+      "timestamp": "2026-07-12T20:10:36.977621",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260715-698ea1",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@ranging 亏损率 100%, 5 笔, 总 PnL $-569",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "ranging"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'ranging'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_ranging",
+      "patch_id": "patch_knowledge_1784049856_698ea1",
+      "timestamp": "2026-07-15T01:24:16.363321",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260715-33c54d",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@ranging 亏损率 100%, 5 笔, 总 PnL $-569",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "ranging"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'ranging'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_ranging",
+      "patch_id": "patch_knowledge_1784050155_33c54d",
+      "timestamp": "2026-07-15T01:29:15.546388",
+      "severity": "high"
+    },
+    {
+      "err_id": "EVOK-20260715-9f78af",
+      "category": "evolution_knowledge",
+      "subcategory": "loss_pattern",
+      "pattern": "BTC-USDT@ranging 亏损率 100%, 5 笔, 总 PnL $-569",
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "ranging"
+      },
+      "implication": "避免在 {'symbol': 'BTC-USDT', 'regime': 'ranging'} 下入场, 或显著降仓",
+      "source": "attribution_engine",
+      "source_suggestion": "knowledge_loss_pattern_pat_symbol_regime_BTC-USDT_ranging",
+      "patch_id": "patch_knowledge_1784050564_9f78af",
+      "timestamp": "2026-07-15T01:36:04.543867",
+      "severity": "high"
+    }
+  ],
+  "applied_history": []
+}

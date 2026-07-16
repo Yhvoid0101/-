@@ -1,0 +1,52 @@
+[
+  {
+    "scenario": "audit_chain_not_growing",
+    "detected": true,
+    "alert_level": "error",
+    "rollback_triggered": true,
+    "audit_recorded": true,
+    "restored_to_idle": true,
+    "passed": true,
+    "details": "alerts=1, error_alerts=1, rollback_audits=1"
+  },
+  {
+    "scenario": "death_cause_concentrated",
+    "detected": true,
+    "alert_level": "critical",
+    "rollback_triggered": true,
+    "audit_recorded": true,
+    "restored_to_idle": true,
+    "passed": true,
+    "details": "critical_alerts=1, should_rollback=True"
+  },
+  {
+    "scenario": "state_stagnation",
+    "detected": true,
+    "alert_level": "critical",
+    "rollback_triggered": true,
+    "audit_recorded": true,
+    "restored_to_idle": true,
+    "passed": true,
+    "details": "rounds_simulated=55, critical_alerts=5"
+  },
+  {
+    "scenario": "cycle_count_not_increasing",
+    "detected": true,
+    "alert_level": "error",
+    "rollback_triggered": true,
+    "audit_recorded": true,
+    "restored_to_idle": true,
+    "passed": true,
+    "details": "error_alerts=1"
+  },
+  {
+    "scenario": "duration_anomaly",
+    "detected": true,
+    "alert_level": "warn",
+    "rollback_triggered": true,
+    "audit_recorded": true,
+    "restored_to_idle": true,
+    "passed": true,
+    "details": "warn_alerts=1, baseline_avg=30ms, anomaly=200ms"
+  }
+]

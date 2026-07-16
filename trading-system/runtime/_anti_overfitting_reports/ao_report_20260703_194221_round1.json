@@ -1,0 +1,13 @@
+{
+  "is_overfitted": true,
+  "risk_level": "BLOCK",
+  "can_deploy": false,
+  "report": "交易数不足10笔，无法验证，禁止部署",
+  "details": {
+    "error": "insufficient_trades",
+    "n_trades": 0
+  },
+  "_persisted_at": 1783078941.2805412,
+  "_round_number": 1,
+  "_version": "v700_p3"
+}

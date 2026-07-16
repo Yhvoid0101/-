@@ -1,0 +1,19 @@
+{
+  "version": "v579",
+  "generated_at": "2026-07-11T04:10:21.998886",
+  "adjustments": [
+    {
+      "target_symbol": "GLOBAL",
+      "param_name": "max_pos_multiplier",
+      "current_value": 1.0,
+      "suggested_value": 0.949,
+      "reason": "最大回撤 15.8% 超标, 缩减仓位至 0.949x",
+      "confidence": 0.7,
+      "evidence": {
+        "max_drawdown": 15.8,
+        "target": 15.0
+      },
+      "auto_apply": false
+    }
+  ]
+}

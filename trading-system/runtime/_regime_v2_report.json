@@ -1,0 +1,529 @@
+{
+  "version": "v2",
+  "timestamp": "2026-06-28 00:14:43",
+  "random_seed": 42,
+  "config": {
+    "window_size": 60,
+    "update_interval_s": 10,
+    "samples_per_regime": 200,
+    "regimes_count": 5,
+    "regimes": [
+      "TRENDING_UP",
+      "TRENDING_DOWN",
+      "RANGING",
+      "HIGH_VOLATILITY",
+      "LOW_VOLATILITY"
+    ],
+    "thresholds": {
+      "trend_threshold": 0.00025,
+      "high_vol_threshold": 0.008,
+      "low_vol_threshold": 0.002
+    },
+    "targets": {
+      "accuracy": 0.85,
+      "recall": 0.8,
+      "f1": 0.8,
+      "response_time_ms": 300000
+    },
+    "symbols_12month": [
+      "BTC_USDT",
+      "ETH_USDT",
+      "SOL_USDT"
+    ]
+  },
+  "synthetic_data_metrics": {
+    "accuracy": 0.985,
+    "correct": 985,
+    "total": 1000,
+    "macro_f1": 0.9848511491880517,
+    "macro_recall": 0.985,
+    "macro_precision": 0.9855623170901658,
+    "min_recall": 0.925,
+    "per_class": {
+      "TRENDING_UP": {
+        "precision": 0.970873786407767,
+        "recall": 1.0,
+        "f1": 0.9852216748768473,
+        "tp": 200,
+        "fp": 6,
+        "fn": 0,
+        "support": 200
+      },
+      "TRENDING_DOWN": {
+        "precision": 0.9569377990430622,
+        "recall": 1.0,
+        "f1": 0.9779951100244498,
+        "tp": 200,
+        "fp": 9,
+        "fn": 0,
+        "support": 200
+      },
+      "RANGING": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 200,
+        "fp": 0,
+        "fn": 0,
+        "support": 200
+      },
+      "HIGH_VOLATILITY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 200,
+        "fp": 0,
+        "fn": 0,
+        "support": 200
+      },
+      "LOW_VOLATILITY": {
+        "precision": 1.0,
+        "recall": 0.925,
+        "f1": 0.961038961038961,
+        "tp": 185,
+        "fp": 0,
+        "fn": 15,
+        "support": 200
+      }
+    },
+    "confusion_matrix": {
+      "TRENDING_UP": {
+        "TRENDING_UP": 200,
+        "TRENDING_DOWN": 0,
+        "RANGING": 0,
+        "HIGH_VOLATILITY": 0,
+        "LOW_VOLATILITY": 0
+      },
+      "TRENDING_DOWN": {
+        "TRENDING_UP": 0,
+        "TRENDING_DOWN": 200,
+        "RANGING": 0,
+        "HIGH_VOLATILITY": 0,
+        "LOW_VOLATILITY": 0
+      },
+      "RANGING": {
+        "TRENDING_UP": 0,
+        "TRENDING_DOWN": 0,
+        "RANGING": 200,
+        "HIGH_VOLATILITY": 0,
+        "LOW_VOLATILITY": 0
+      },
+      "HIGH_VOLATILITY": {
+        "TRENDING_UP": 0,
+        "TRENDING_DOWN": 0,
+        "RANGING": 0,
+        "HIGH_VOLATILITY": 200,
+        "LOW_VOLATILITY": 0
+      },
+      "LOW_VOLATILITY": {
+        "TRENDING_UP": 6,
+        "TRENDING_DOWN": 9,
+        "RANGING": 0,
+        "HIGH_VOLATILITY": 0,
+        "LOW_VOLATILITY": 185
+      }
+    }
+  },
+  "response_time_ms": 0.026378490047136438,
+  "real_data_12month": {
+    "per_symbol": {
+      "BTC_USDT": {
+        "accuracy": 1.0,
+        "macro_f1": 0.6,
+        "macro_recall": 0.6,
+        "min_recall": 0.0,
+        "total_samples": 69,
+        "per_class": {
+          "TRENDING_UP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 26,
+            "fp": 0,
+            "fn": 0,
+            "support": 26
+          },
+          "TRENDING_DOWN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 37,
+            "fp": 0,
+            "fn": 0,
+            "support": 37
+          },
+          "RANGING": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0
+          },
+          "HIGH_VOLATILITY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 6,
+            "fp": 0,
+            "fn": 0,
+            "support": 6
+          },
+          "LOW_VOLATILITY": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": {
+          "TRENDING_UP": {
+            "TRENDING_UP": 26,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "TRENDING_DOWN": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 37,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "RANGING": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "HIGH_VOLATILITY": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 6,
+            "LOW_VOLATILITY": 0
+          },
+          "LOW_VOLATILITY": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          }
+        }
+      },
+      "ETH_USDT": {
+        "accuracy": 1.0,
+        "macro_f1": 0.6,
+        "macro_recall": 0.6,
+        "min_recall": 0.0,
+        "total_samples": 69,
+        "per_class": {
+          "TRENDING_UP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 30,
+            "fp": 0,
+            "fn": 0,
+            "support": 30
+          },
+          "TRENDING_DOWN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 37,
+            "fp": 0,
+            "fn": 0,
+            "support": 37
+          },
+          "RANGING": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0
+          },
+          "HIGH_VOLATILITY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2
+          },
+          "LOW_VOLATILITY": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": {
+          "TRENDING_UP": {
+            "TRENDING_UP": 30,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "TRENDING_DOWN": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 37,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "RANGING": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "HIGH_VOLATILITY": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 2,
+            "LOW_VOLATILITY": 0
+          },
+          "LOW_VOLATILITY": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          }
+        }
+      },
+      "SOL_USDT": {
+        "accuracy": 1.0,
+        "macro_f1": 0.6,
+        "macro_recall": 0.6,
+        "min_recall": 0.0,
+        "total_samples": 69,
+        "per_class": {
+          "TRENDING_UP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 23,
+            "fp": 0,
+            "fn": 0,
+            "support": 23
+          },
+          "TRENDING_DOWN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 37,
+            "fp": 0,
+            "fn": 0,
+            "support": 37
+          },
+          "RANGING": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0
+          },
+          "HIGH_VOLATILITY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 9,
+            "fp": 0,
+            "fn": 0,
+            "support": 9
+          },
+          "LOW_VOLATILITY": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": {
+          "TRENDING_UP": {
+            "TRENDING_UP": 23,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "TRENDING_DOWN": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 37,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "RANGING": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          },
+          "HIGH_VOLATILITY": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 9,
+            "LOW_VOLATILITY": 0
+          },
+          "LOW_VOLATILITY": {
+            "TRENDING_UP": 0,
+            "TRENDING_DOWN": 0,
+            "RANGING": 0,
+            "HIGH_VOLATILITY": 0,
+            "LOW_VOLATILITY": 0
+          }
+        }
+      }
+    },
+    "aggregated": {
+      "accuracy": 1.0,
+      "macro_f1": 0.6,
+      "macro_recall": 0.6,
+      "macro_precision": 0.6,
+      "min_recall": 0.0,
+      "total_samples": 207,
+      "per_class": {
+        "TRENDING_UP": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 79,
+          "fp": 0,
+          "fn": 0,
+          "support": 79
+        },
+        "TRENDING_DOWN": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 111,
+          "fp": 0,
+          "fn": 0,
+          "support": 111
+        },
+        "RANGING": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0
+        },
+        "HIGH_VOLATILITY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 17,
+          "fp": 0,
+          "fn": 0,
+          "support": 17
+        },
+        "LOW_VOLATILITY": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "support": 0
+        }
+      },
+      "confusion_matrix": {
+        "TRENDING_UP": {
+          "TRENDING_UP": 79,
+          "TRENDING_DOWN": 0,
+          "RANGING": 0,
+          "HIGH_VOLATILITY": 0,
+          "LOW_VOLATILITY": 0
+        },
+        "TRENDING_DOWN": {
+          "TRENDING_UP": 0,
+          "TRENDING_DOWN": 111,
+          "RANGING": 0,
+          "HIGH_VOLATILITY": 0,
+          "LOW_VOLATILITY": 0
+        },
+        "RANGING": {
+          "TRENDING_UP": 0,
+          "TRENDING_DOWN": 0,
+          "RANGING": 0,
+          "HIGH_VOLATILITY": 0,
+          "LOW_VOLATILITY": 0
+        },
+        "HIGH_VOLATILITY": {
+          "TRENDING_UP": 0,
+          "TRENDING_DOWN": 0,
+          "RANGING": 0,
+          "HIGH_VOLATILITY": 17,
+          "LOW_VOLATILITY": 0
+        },
+        "LOW_VOLATILITY": {
+          "TRENDING_UP": 0,
+          "TRENDING_DOWN": 0,
+          "RANGING": 0,
+          "HIGH_VOLATILITY": 0,
+          "LOW_VOLATILITY": 0
+        }
+      }
+    },
+    "data_availability": {
+      "BTC_USDT": {
+        "bars": 401,
+        "months_covered": 13.4,
+        "source": "gateio_api"
+      },
+      "ETH_USDT": {
+        "bars": 401,
+        "months_covered": 13.4,
+        "source": "gateio_api"
+      },
+      "SOL_USDT": {
+        "bars": 401,
+        "months_covered": 13.4,
+        "source": "gateio_api"
+      }
+    },
+    "total_samples": 207,
+    "symbols_requested": [
+      "BTC_USDT",
+      "ETH_USDT",
+      "SOL_USDT"
+    ],
+    "validation_window_days": 365,
+    "window_size": 60,
+    "step": 5
+  },
+  "targets_met": {
+    "accuracy_ge_85pct": true,
+    "recall_ge_80pct": true,
+    "response_time_le_5min": true
+  },
+  "overall_pass": true
+}

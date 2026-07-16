@@ -1,9 +1,0 @@
-{
-  "duplicates": [
-    {
-      "sha256": "d7818d609c333a387c0563fcc95ab5f02ecb622cf7a381d370b3cdbdfc2387ea",
-      "canonical_path": "_review_reports/auto_review_baseline.json",
-      "duplicate_path": "_review_reports/auto_review_20260703_005736.json"
-    }
-  ]
-}

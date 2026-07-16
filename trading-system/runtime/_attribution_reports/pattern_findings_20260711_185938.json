@@ -1,0 +1,178 @@
+{
+  "timestamp": "2026-07-11T18:59:38.874377",
+  "patterns": [
+    {
+      "pattern_id": "pat_regime_align_ranging_with_trend",
+      "description": "ranging+with_trend 下亏损率100%, 36 笔, 总 PnL $-13606",
+      "trade_count": 36,
+      "statistics": {
+        "win_rate": 0.0,
+        "loss_rate": 1.0,
+        "total_pnl_pct": -1.360621574931682,
+        "avg_pnl_pct": -0.037795043748102275
+      },
+      "conditions": {
+        "regime": "ranging",
+        "alignment": "with_trend"
+      },
+      "impact": "high",
+      "evolution_dimension": "strategy",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_regime_strategy_ranging_mean_reversion",
+      "description": "mean_reversion 策略在 ranging 下亏损率 100%, 36 笔, 总 PnL $-13606",
+      "trade_count": 36,
+      "statistics": {
+        "loss_rate": 1.0,
+        "total_pnl_pct": -1.360621574931682,
+        "avg_pnl_pct": -0.037795043748102275
+      },
+      "conditions": {
+        "regime": "ranging",
+        "strategy_type": "mean_reversion"
+      },
+      "impact": "high",
+      "evolution_dimension": "strategy",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_symbol_regime_ETH-USDT_ranging",
+      "description": "ETH-USDT@ranging 亏损率 100%, 30 笔, 总 PnL $-11521",
+      "trade_count": 30,
+      "statistics": {
+        "loss_rate": 1.0,
+        "total_pnl_pct": -1.152132466398231,
+        "avg_pnl_pct": -0.03840441554660771
+      },
+      "conditions": {
+        "symbol": "ETH-USDT",
+        "regime": "ranging"
+      },
+      "impact": "high",
+      "evolution_dimension": "parameter",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_regime_align_low_vol_with_trend",
+      "description": "low_vol+with_trend 下亏损率100%, 15 笔, 总 PnL $-2818",
+      "trade_count": 15,
+      "statistics": {
+        "win_rate": 0.0,
+        "loss_rate": 1.0,
+        "total_pnl_pct": -0.2817550791423528,
+        "avg_pnl_pct": -0.018783671942823522
+      },
+      "conditions": {
+        "regime": "low_vol",
+        "alignment": "with_trend"
+      },
+      "impact": "high",
+      "evolution_dimension": "parameter",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_regime_align_high_vol_with_trend",
+      "description": "high_vol+with_trend 下亏损率100%, 15 笔, 总 PnL $-9241",
+      "trade_count": 15,
+      "statistics": {
+        "win_rate": 0.0,
+        "loss_rate": 1.0,
+        "total_pnl_pct": -0.9240761807133293,
+        "avg_pnl_pct": -0.06160507871422195
+      },
+      "conditions": {
+        "regime": "high_vol",
+        "alignment": "with_trend"
+      },
+      "impact": "high",
+      "evolution_dimension": "parameter",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_regime_strategy_low_vol_unknown",
+      "description": "unknown 策略在 low_vol 下亏损率 100%, 15 笔, 总 PnL $-2818",
+      "trade_count": 15,
+      "statistics": {
+        "loss_rate": 1.0,
+        "total_pnl_pct": -0.2817550791423528,
+        "avg_pnl_pct": -0.018783671942823522
+      },
+      "conditions": {
+        "regime": "low_vol",
+        "strategy_type": "unknown"
+      },
+      "impact": "high",
+      "evolution_dimension": "strategy",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_regime_strategy_high_vol_unknown",
+      "description": "unknown 策略在 high_vol 下亏损率 100%, 15 笔, 总 PnL $-9241",
+      "trade_count": 15,
+      "statistics": {
+        "loss_rate": 1.0,
+        "total_pnl_pct": -0.9240761807133293,
+        "avg_pnl_pct": -0.06160507871422195
+      },
+      "conditions": {
+        "regime": "high_vol",
+        "strategy_type": "unknown"
+      },
+      "impact": "high",
+      "evolution_dimension": "strategy",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_symbol_regime_BTC-USDT_low_vol",
+      "description": "BTC-USDT@low_vol 亏损率 100%, 15 笔, 总 PnL $-2818",
+      "trade_count": 15,
+      "statistics": {
+        "loss_rate": 1.0,
+        "total_pnl_pct": -0.2817550791423528,
+        "avg_pnl_pct": -0.018783671942823522
+      },
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "low_vol"
+      },
+      "impact": "high",
+      "evolution_dimension": "parameter",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_symbol_regime_ETH-USDT_high_vol",
+      "description": "ETH-USDT@high_vol 亏损率 100%, 15 笔, 总 PnL $-9241",
+      "trade_count": 15,
+      "statistics": {
+        "loss_rate": 1.0,
+        "total_pnl_pct": -0.9240761807133293,
+        "avg_pnl_pct": -0.06160507871422195
+      },
+      "conditions": {
+        "symbol": "ETH-USDT",
+        "regime": "high_vol"
+      },
+      "impact": "high",
+      "evolution_dimension": "parameter",
+      "pattern_type": "loss"
+    },
+    {
+      "pattern_id": "pat_symbol_regime_BTC-USDT_ranging",
+      "description": "BTC-USDT@ranging 亏损率 100%, 6 笔, 总 PnL $-2085",
+      "trade_count": 6,
+      "statistics": {
+        "loss_rate": 1.0,
+        "total_pnl_pct": -0.20848910853345073,
+        "avg_pnl_pct": -0.03474818475557512
+      },
+      "conditions": {
+        "symbol": "BTC-USDT",
+        "regime": "ranging"
+      },
+      "impact": "high",
+      "evolution_dimension": "parameter",
+      "pattern_type": "loss"
+    }
+  ]
+}

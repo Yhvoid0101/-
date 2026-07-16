@@ -1,0 +1,292 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "generated_at": "2026-06-27T16:04:50.815333+00:00",
+    "legend": "R=Responsible, A=Accountable, C=Consulted, I=Informed",
+    "agents": {
+      "AGENT_1_STRATEGY_EVOLVER": "STRATEGY-EVOLVER",
+      "AGENT_2_GENE_ANALYZER": "GENE-ANALYZER",
+      "AGENT_3_REDUNDANCY_HUNTER": "REDUNDANCY-HUNTER",
+      "AGENT_4_LIVE_DATA_CONNECTOR": "LIVE-DATA-CONNECTOR",
+      "AGENT_5_SIM_LIVE_GAP_ANALYST": "SIM-LIVE-GAP-ANALYST",
+      "AGENT_6_RISK_GUARDIAN": "RISK-GUARDIAN"
+    }
+  },
+  "agents": {
+    "AGENT_1_STRATEGY_EVOLVER": {
+      "name": "STRATEGY-EVOLVER",
+      "role": "策略进化主驱动",
+      "responsibility": "50-200 子Agent种群进化、达尔文选择、基因突变",
+      "deliverables": "新一代种群快照 population_gen_N.jsonl",
+      "key_metrics": "进化代数、种群多样性、最优fitness"
+    },
+    "AGENT_2_GENE_ANALYZER": {
+      "name": "GENE-ANALYZER",
+      "role": "基因参数分析",
+      "responsibility": "统计学+ML+SHAP分析、亏损基因定位",
+      "deliverables": "_enhanced_gene_analysis_report.json, _shap_gene_analysis_report.json",
+      "key_metrics": "显著基因数(P<0.05)、Top-10重要基因、模块贡献度"
+    },
+    "AGENT_3_REDUNDANCY_HUNTER": {
+      "name": "REDUNDANCY-HUNTER",
+      "role": "冗余模块检测",
+      "responsibility": "4维矩阵(频率/影响/重叠/瓶颈)、重构计划、回滚机制",
+      "deliverables": "_redundancy_report_v2.json",
+      "key_metrics": "REMOVE/OPTIMIZE/OBSERVE 计数、瓶颈模块数(>100ms)"
+    },
+    "AGENT_4_LIVE_DATA_CONNECTOR": {
+      "name": "LIVE-DATA-CONNECTOR",
+      "role": "真实数据接入",
+      "responsibility": "8+主流交易所API、行情延迟≤100ms、订单≤500ms",
+      "deliverables": "_real_data_gateway.py, multi_exchange_provider.py",
+      "key_metrics": "交易所连通率、行情延迟、订单响应时间"
+    },
+    "AGENT_5_SIM_LIVE_GAP_ANALYST": {
+      "name": "SIM-LIVE-GAP-ANALYST",
+      "role": "模拟-实盘差异分析",
+      "responsibility": "5模块成本模型、≥10交易对×4行情、差异≤15%",
+      "deliverables": "_sim_live_gap_multi_pair_report.json",
+      "key_metrics": "整体gap%、pass_rate%、各regime gap分布"
+    },
+    "AGENT_6_RISK_GUARDIAN": {
+      "name": "RISK-GUARDIAN",
+      "role": "风控守门员",
+      "responsibility": "实盘止损、月度亏损≤5%、单笔≤2%、连续亏损≤3",
+      "deliverables": "_risk_guardian.py, _circuit_breaker.py",
+      "key_metrics": "月度亏损率、单笔最大亏损、连续亏损次数"
+    }
+  },
+  "raci_matrix": {
+    "策略进化主循环": {
+      "AGENT_1": "R,A",
+      "AGENT_2": "C",
+      "AGENT_3": "I",
+      "AGENT_4": "I",
+      "AGENT_5": "I",
+      "AGENT_6": "C"
+    },
+    "基因参数分析": {
+      "AGENT_1": "C",
+      "AGENT_2": "R,A",
+      "AGENT_3": "I",
+      "AGENT_4": "I",
+      "AGENT_5": "C",
+      "AGENT_6": "C"
+    },
+    "SHAP值分析": {
+      "AGENT_1": "I",
+      "AGENT_2": "R,A",
+      "AGENT_3": "I",
+      "AGENT_4": "I",
+      "AGENT_5": "C",
+      "AGENT_6": "I"
+    },
+    "冗余模块检测": {
+      "AGENT_1": "C",
+      "AGENT_2": "C",
+      "AGENT_3": "R,A",
+      "AGENT_4": "I",
+      "AGENT_5": "I",
+      "AGENT_6": "I"
+    },
+    "模块重构执行": {
+      "AGENT_1": "C",
+      "AGENT_2": "I",
+      "AGENT_3": "R,A",
+      "AGENT_4": "C",
+      "AGENT_5": "I",
+      "AGENT_6": "C"
+    },
+    "性能瓶颈定位": {
+      "AGENT_1": "C",
+      "AGENT_2": "I",
+      "AGENT_3": "R,A",
+      "AGENT_4": "C",
+      "AGENT_5": "I",
+      "AGENT_6": "I"
+    },
+    "真实数据接入": {
+      "AGENT_1": "I",
+      "AGENT_2": "I",
+      "AGENT_3": "I",
+      "AGENT_4": "R,A",
+      "AGENT_5": "C",
+      "AGENT_6": "I"
+    },
+    "交易所API集成": {
+      "AGENT_1": "I",
+      "AGENT_2": "I",
+      "AGENT_3": "I",
+      "AGENT_4": "R,A",
+      "AGENT_5": "C",
+      "AGENT_6": "I"
+    },
+    "行情延迟监控": {
+      "AGENT_1": "I",
+      "AGENT_2": "I",
+      "AGENT_3": "I",
+      "AGENT_4": "R,A",
+      "AGENT_5": "C",
+      "AGENT_6": "C"
+    },
+    "模拟-实盘差异评估": {
+      "AGENT_1": "C",
+      "AGENT_2": "C",
+      "AGENT_3": "I",
+      "AGENT_4": "C",
+      "AGENT_5": "R,A",
+      "AGENT_6": "C"
+    },
+    "5模块成本模型": {
+      "AGENT_1": "I",
+      "AGENT_2": "I",
+      "AGENT_3": "I",
+      "AGENT_4": "C",
+      "AGENT_5": "R,A",
+      "AGENT_6": "C"
+    },
+    "多交易对多行情测试": {
+      "AGENT_1": "I",
+      "AGENT_2": "I",
+      "AGENT_3": "I",
+      "AGENT_4": "C",
+      "AGENT_5": "R,A",
+      "AGENT_6": "C"
+    },
+    "实盘止损熔断": {
+      "AGENT_1": "I",
+      "AGENT_2": "C",
+      "AGENT_3": "I",
+      "AGENT_4": "C",
+      "AGENT_5": "C",
+      "AGENT_6": "R,A"
+    },
+    "月度亏损监控": {
+      "AGENT_1": "I",
+      "AGENT_2": "I",
+      "AGENT_3": "I",
+      "AGENT_4": "I",
+      "AGENT_5": "C",
+      "AGENT_6": "R,A"
+    },
+    "连续亏损监控": {
+      "AGENT_1": "I",
+      "AGENT_2": "C",
+      "AGENT_3": "I",
+      "AGENT_4": "I",
+      "AGENT_5": "C",
+      "AGENT_6": "R,A"
+    },
+    "进度报告同步": {
+      "AGENT_1": "R",
+      "AGENT_2": "R",
+      "AGENT_3": "R",
+      "AGENT_4": "R,A",
+      "AGENT_5": "R",
+      "AGENT_6": "R"
+    },
+    "跨智能体问题升级": {
+      "AGENT_1": "C",
+      "AGENT_2": "C",
+      "AGENT_3": "C",
+      "AGENT_4": "R,A",
+      "AGENT_5": "C",
+      "AGENT_6": "C"
+    }
+  },
+  "task_boundaries": {
+    "AGENT_1_STRATEGY_EVOLVER": {
+      "owns": [
+        "population_gen_*.jsonl 生成",
+        "audit.log 写入",
+        "feeder 数据注入逻辑",
+        "fitness 函数定义",
+        "基因突变/交叉/选择算子"
+      ],
+      "does_not_touch": [
+        "SHAP/PI 分析脚本",
+        "冗余检测脚本",
+        "真实交易所API调用",
+        "5模块成本模型",
+        "风控熔断逻辑"
+      ]
+    },
+    "AGENT_2_GENE_ANALYZER": {
+      "owns": [
+        "_enhanced_gene_analysis.py",
+        "_shap_gene_analysis.py",
+        "基因参数→fitness 影响分析",
+        "P值/置信区间/SHAP 计算与解释"
+      ],
+      "does_not_touch": [
+        "种群数据生成",
+        "模块性能测量",
+        "交易所API",
+        "差异模型"
+      ]
+    },
+    "AGENT_3_REDUNDANCY_HUNTER": {
+      "owns": [
+        "_redundancy_detector_v2.py",
+        "_perf_bottleneck_detector.py",
+        "4维判定矩阵",
+        "重构计划与回滚机制"
+      ],
+      "does_not_touch": [
+        "基因分析",
+        "交易所",
+        "差异模型",
+        "风控"
+      ]
+    },
+    "AGENT_4_LIVE_DATA_CONNECTOR": {
+      "owns": [
+        "_real_data_gateway.py",
+        "multi_exchange_provider.py",
+        "LatencyMonitor",
+        "8家交易所API集成",
+        "本协调框架 (_multi_agent_coordination_framework.py)",
+        "协调日志 (_coordination_log_agent4_*.py)"
+      ],
+      "does_not_touch": [
+        "策略进化",
+        "基因分析",
+        "冗余检测",
+        "差异模型公式",
+        "风控阈值"
+      ]
+    },
+    "AGENT_5_SIM_LIVE_GAP_ANALYST": {
+      "owns": [
+        "_sim_live_gap_model.py",
+        "_sim_live_gap_multi_pair.py",
+        "5模块成本模型 (spread/slippage/liquidity/latency/fee)",
+        "多交易对多行情差异测试"
+      ],
+      "does_not_touch": [
+        "策略进化",
+        "基因分析",
+        "冗余检测",
+        "交易所API",
+        "风控熔断"
+      ]
+    },
+    "AGENT_6_RISK_GUARDIAN": {
+      "owns": [
+        "_risk_guardian.py",
+        "_circuit_breaker.py",
+        "月度亏损监控",
+        "单笔亏损限制",
+        "连续亏损监控",
+        "4级告警系统"
+      ],
+      "does_not_touch": [
+        "策略进化",
+        "基因分析",
+        "冗余检测",
+        "交易所API",
+        "差异模型"
+      ]
+    }
+  }
+}

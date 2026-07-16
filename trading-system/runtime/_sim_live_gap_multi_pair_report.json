@@ -1,0 +1,2377 @@
+{
+  "_meta": {
+    "tool": "_sim_live_gap_multi_pair.py",
+    "version": "1.0",
+    "symbols_count": 12,
+    "regimes_count": 4,
+    "trades_per_scenario": 250,
+    "total_scenarios": 48,
+    "total_trades": 12000,
+    "target_gap_pct": 15.0,
+    "round2_baseline_gap_pct": 17.11,
+    "round2_baseline_pairs": 3,
+    "round2_baseline_regimes": 1
+  },
+  "per_pair": {
+    "BTC-USDT": {
+      "base_price": 60000.0,
+      "spread_bps": 1.0,
+      "atr_pct": 0.015,
+      "scenarios": {
+        "trend": {
+          "symbol": "BTC-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 16400.0,
+          "live_pnl": 13748.28,
+          "gap_pct": 16.169,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 571.74,
+            "slippage_cost": 121.47,
+            "liquidity_cost": 779.81,
+            "latency_cost": 42.41,
+            "fee_cost": 1114.01,
+            "failure_cost": 22.28,
+            "total_cost": 2651.72
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "BTC-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 6400.0,
+          "live_pnl": -282.76,
+          "gap_pct": 104.4181,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 1376.23,
+            "slippage_cost": 478.2,
+            "liquidity_cost": 1889.02,
+            "latency_cost": 105.76,
+            "fee_cost": 2777.98,
+            "failure_cost": 55.56,
+            "total_cost": 6682.76
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "BTC-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 13500.0,
+          "live_pnl": 4604.15,
+          "gap_pct": 65.8952,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 279.22,
+            "slippage_cost": 42.99,
+            "liquidity_cost": 1726.87,
+            "latency_cost": 36.86,
+            "fee_cost": 557.06,
+            "failure_cost": 6252.85,
+            "total_cost": 8895.85
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "BTC-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 7340.0,
+          "live_pnl": -6320.95,
+          "gap_pct": 186.1165,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 2818.12,
+            "slippage_cost": 1352.61,
+            "liquidity_cost": 3611.47,
+            "latency_cost": 211.53,
+            "fee_cost": 5556.11,
+            "failure_cost": 111.12,
+            "total_cost": 13660.95
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 93.1497,
+      "total_sim_pnl": 43639.99999999999,
+      "total_live_pnl": 11748.717696966149,
+      "total_trades": 1000
+    },
+    "ETH-USDT": {
+      "base_price": 3000.0,
+      "spread_bps": 1.2,
+      "atr_pct": 0.018,
+      "scenarios": {
+        "trend": {
+          "symbol": "ETH-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 13700.0,
+          "live_pnl": 11106.74,
+          "gap_pct": 18.9289,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 763.38,
+            "slippage_cost": 190.19,
+            "liquidity_cost": 650.7,
+            "latency_cost": 40.83,
+            "fee_cost": 929.58,
+            "failure_cost": 18.59,
+            "total_cost": 2593.26
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "ETH-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 4800.0,
+          "live_pnl": -1817.42,
+          "gap_pct": 137.8629,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 1833.45,
+            "slippage_cost": 747.12,
+            "liquidity_cost": 1574.07,
+            "latency_cost": 101.66,
+            "fee_cost": 2314.81,
+            "failure_cost": 46.3,
+            "total_cost": 6617.42
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "ETH-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 10350.0,
+          "live_pnl": 1926.99,
+          "gap_pct": 81.3817,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 372.52,
+            "slippage_cost": 67.18,
+            "liquidity_cost": 1438.67,
+            "latency_cost": 34.84,
+            "fee_cost": 464.09,
+            "failure_cost": 6045.7,
+            "total_cost": 8423.01
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "ETH-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 4700.0,
+          "live_pnl": -9100.42,
+          "gap_pct": 293.6259,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 3753.7,
+            "slippage_cost": 2112.79,
+            "liquidity_cost": 3008.93,
+            "latency_cost": 203.3,
+            "fee_cost": 4629.12,
+            "failure_cost": 92.58,
+            "total_cost": 13800.42
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 132.9498,
+      "total_sim_pnl": 33549.99999999997,
+      "total_live_pnl": 2115.89094576304,
+      "total_trades": 1000
+    },
+    "SOL-USDT": {
+      "base_price": 150.0,
+      "spread_bps": 2.0,
+      "atr_pct": 0.025,
+      "scenarios": {
+        "trend": {
+          "symbol": "SOL-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 8765.74,
+          "live_pnl": 7347.96,
+          "gap_pct": 16.1741,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 581.02,
+            "slippage_cost": 164.23,
+            "liquidity_cost": 264.35,
+            "latency_cost": 22.99,
+            "fee_cost": 377.64,
+            "failure_cost": 7.55,
+            "total_cost": 1417.78
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "SOL-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 1582.19,
+          "live_pnl": 201.53,
+          "gap_pct": 87.2625,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 557.43,
+            "slippage_cost": 162.53,
+            "liquidity_cost": 255.14,
+            "latency_cost": 22.84,
+            "fee_cost": 375.21,
+            "failure_cost": 7.5,
+            "total_cost": 1380.66
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "SOL-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 7552.21,
+          "live_pnl": -351.48,
+          "gap_pct": 104.654,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 503.33,
+            "slippage_cost": 137.17,
+            "liquidity_cost": 1036.73,
+            "latency_cost": 33.15,
+            "fee_cost": 334.43,
+            "failure_cost": 5858.89,
+            "total_cost": 7903.69
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "SOL-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 827.35,
+          "live_pnl": -554.55,
+          "gap_pct": 167.0278,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 570.27,
+            "slippage_cost": 162.43,
+            "liquidity_cost": 243.8,
+            "latency_cost": 22.83,
+            "fee_cost": 375.07,
+            "failure_cost": 7.5,
+            "total_cost": 1381.9
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 93.7796,
+      "total_sim_pnl": 18727.491776862797,
+      "total_live_pnl": 6643.452951571021,
+      "total_trades": 1000
+    },
+    "BNB-USDT": {
+      "base_price": 600.0,
+      "spread_bps": 1.5,
+      "atr_pct": 0.02,
+      "scenarios": {
+        "trend": {
+          "symbol": "BNB-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 16700.0,
+          "live_pnl": 14715.39,
+          "gap_pct": 11.8839,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 428.64,
+            "slippage_cost": 78.98,
+            "liquidity_cost": 585.19,
+            "latency_cost": 39.09,
+            "fee_cost": 835.98,
+            "failure_cost": 16.72,
+            "total_cost": 1984.61
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "BNB-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 4022.66,
+          "live_pnl": 471.31,
+          "gap_pct": 88.2836,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 742.5,
+            "slippage_cost": 189.64,
+            "liquidity_cost": 1019.63,
+            "latency_cost": 70.12,
+            "fee_cost": 1499.46,
+            "failure_cost": 29.99,
+            "total_cost": 3551.35
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "BNB-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 11750.0,
+          "live_pnl": 3644.33,
+          "gap_pct": 68.9844,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 208.22,
+            "slippage_cost": 27.73,
+            "liquidity_cost": 1288.33,
+            "latency_cost": 32.51,
+            "fee_cost": 415.59,
+            "failure_cost": 6133.28,
+            "total_cost": 8105.67
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "BNB-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 2560.57,
+          "live_pnl": -964.44,
+          "gap_pct": 137.665,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 760.89,
+            "slippage_cost": 189.66,
+            "liquidity_cost": 974.74,
+            "latency_cost": 70.12,
+            "fee_cost": 1499.6,
+            "failure_cost": 29.99,
+            "total_cost": 3525.01
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 76.7042,
+      "total_sim_pnl": 35033.22862848527,
+      "total_live_pnl": 17866.59431772388,
+      "total_trades": 1000
+    },
+    "XRP-USDT": {
+      "base_price": 0.55,
+      "spread_bps": 3.0,
+      "atr_pct": 0.022,
+      "scenarios": {
+        "trend": {
+          "symbol": "XRP-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 32.98,
+          "live_pnl": 29.83,
+          "gap_pct": 9.5471,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 0.71,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 0.96,
+            "latency_cost": 0.07,
+            "fee_cost": 1.38,
+            "failure_cost": 0.03,
+            "total_cost": 3.15
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "XRP-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 4.65,
+          "live_pnl": 1.56,
+          "gap_pct": 66.4176,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 0.68,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 0.93,
+            "latency_cost": 0.07,
+            "fee_cost": 1.37,
+            "failure_cost": 0.03,
+            "total_cost": 3.09
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "XRP-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 44.8,
+          "live_pnl": 16.03,
+          "gap_pct": 64.2308,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 0.69,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 4.24,
+            "latency_cost": 0.11,
+            "fee_cost": 1.37,
+            "failure_cost": 22.36,
+            "total_cost": 28.78
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "XRP-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 2.5,
+          "live_pnl": -0.56,
+          "gap_pct": 122.3397,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 0.7,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 0.89,
+            "latency_cost": 0.07,
+            "fee_cost": 1.37,
+            "failure_cost": 0.03,
+            "total_cost": 3.06
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 65.6338,
+      "total_sim_pnl": 84.93315773690723,
+      "total_live_pnl": 46.857365366951754,
+      "total_trades": 1000
+    },
+    "DOGE-USDT": {
+      "base_price": 0.1,
+      "spread_bps": 5.0,
+      "atr_pct": 0.03,
+      "scenarios": {
+        "trend": {
+          "symbol": "DOGE-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 6.94,
+          "live_pnl": 6.34,
+          "gap_pct": 8.6533,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 0.15,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 0.18,
+            "latency_cost": 0.01,
+            "fee_cost": 0.25,
+            "failure_cost": 0.01,
+            "total_cost": 0.6
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "DOGE-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 1.04,
+          "live_pnl": 0.45,
+          "gap_pct": 56.509,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 0.15,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 0.17,
+            "latency_cost": 0.01,
+            "fee_cost": 0.25,
+            "failure_cost": 0.0,
+            "total_cost": 0.59
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "DOGE-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 9.22,
+          "live_pnl": 2.61,
+          "gap_pct": 71.7245,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 0.15,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 0.78,
+            "latency_cost": 0.02,
+            "fee_cost": 0.25,
+            "failure_cost": 5.41,
+            "total_cost": 6.61
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "DOGE-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 0.6,
+          "live_pnl": 0.02,
+          "gap_pct": 97.4318,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 0.15,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 0.16,
+            "latency_cost": 0.01,
+            "fee_cost": 0.25,
+            "failure_cost": 0.0,
+            "total_cost": 0.58
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 58.5797,
+      "total_sim_pnl": 17.794271347937073,
+      "total_live_pnl": 9.410219694962768,
+      "total_trades": 1000
+    },
+    "ADA-USDT": {
+      "base_price": 0.4,
+      "spread_bps": 4.0,
+      "atr_pct": 0.025,
+      "scenarios": {
+        "trend": {
+          "symbol": "ADA-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 23.16,
+          "live_pnl": 20.87,
+          "gap_pct": 9.8885,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 0.51,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 0.7,
+            "latency_cost": 0.05,
+            "fee_cost": 1.0,
+            "failure_cost": 0.02,
+            "total_cost": 2.29
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "ADA-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 3.71,
+          "live_pnl": 1.46,
+          "gap_pct": 60.6307,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 0.49,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 0.68,
+            "latency_cost": 0.05,
+            "fee_cost": 1.0,
+            "failure_cost": 0.02,
+            "total_cost": 2.25
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "ADA-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 26.29,
+          "live_pnl": 3.82,
+          "gap_pct": 85.4588,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 0.5,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 3.09,
+            "latency_cost": 0.09,
+            "fee_cost": 1.0,
+            "failure_cost": 17.79,
+            "total_cost": 22.47
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "ADA-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 1.74,
+          "live_pnl": -0.49,
+          "gap_pct": 128.408,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 0.51,
+            "slippage_cost": 0.0,
+            "liquidity_cost": 0.65,
+            "latency_cost": 0.05,
+            "fee_cost": 1.0,
+            "failure_cost": 0.02,
+            "total_cost": 2.23
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 71.0965,
+      "total_sim_pnl": 54.899078135057714,
+      "total_live_pnl": 25.658671128974333,
+      "total_trades": 1000
+    },
+    "AVAX-USDT": {
+      "base_price": 35.0,
+      "spread_bps": 3.5,
+      "atr_pct": 0.028,
+      "scenarios": {
+        "trend": {
+          "symbol": "AVAX-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 2704.76,
+          "live_pnl": 2494.89,
+          "gap_pct": 7.7593,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 50.55,
+            "slippage_cost": 2.7,
+            "liquidity_cost": 61.57,
+            "latency_cost": 5.34,
+            "fee_cost": 87.96,
+            "failure_cost": 1.76,
+            "total_cost": 209.87
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "AVAX-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 433.43,
+          "live_pnl": 228.18,
+          "gap_pct": 47.3549,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 48.5,
+            "slippage_cost": 2.67,
+            "liquidity_cost": 59.51,
+            "latency_cost": 5.31,
+            "fee_cost": 87.51,
+            "failure_cost": 1.75,
+            "total_cost": 205.25
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "AVAX-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 2614.35,
+          "live_pnl": 444.53,
+          "gap_pct": 82.9966,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 49.26,
+            "slippage_cost": 2.7,
+            "liquidity_cost": 271.95,
+            "latency_cost": 8.55,
+            "fee_cost": 87.73,
+            "failure_cost": 1749.63,
+            "total_cost": 2169.82
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "AVAX-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 279.98,
+          "live_pnl": 76.15,
+          "gap_pct": 72.8001,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 49.72,
+            "slippage_cost": 2.67,
+            "liquidity_cost": 56.87,
+            "latency_cost": 5.31,
+            "fee_cost": 87.5,
+            "failure_cost": 1.75,
+            "total_cost": 203.83
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 52.7277,
+      "total_sim_pnl": 6032.517102426343,
+      "total_live_pnl": 3243.751546587412,
+      "total_trades": 1000
+    },
+    "MATIC-USDT": {
+      "base_price": 0.7,
+      "spread_bps": 4.5,
+      "atr_pct": 0.026,
+      "scenarios": {
+        "trend": {
+          "symbol": "MATIC-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 39.18,
+          "live_pnl": 35.12,
+          "gap_pct": 10.362,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 0.94,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 1.23,
+            "latency_cost": 0.09,
+            "fee_cost": 1.76,
+            "failure_cost": 0.04,
+            "total_cost": 4.06
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "MATIC-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 4.82,
+          "live_pnl": 0.84,
+          "gap_pct": 82.481,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 0.9,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 1.19,
+            "latency_cost": 0.09,
+            "fee_cost": 1.75,
+            "failure_cost": 0.04,
+            "total_cost": 3.98
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "MATIC-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 47.21,
+          "live_pnl": 6.51,
+          "gap_pct": 86.2108,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 0.91,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 5.44,
+            "latency_cost": 0.16,
+            "fee_cost": 1.75,
+            "failure_cost": 32.43,
+            "total_cost": 40.7
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "MATIC-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 2.81,
+          "live_pnl": -1.13,
+          "gap_pct": 140.3585,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 0.92,
+            "slippage_cost": 0.01,
+            "liquidity_cost": 1.14,
+            "latency_cost": 0.09,
+            "fee_cost": 1.75,
+            "failure_cost": 0.03,
+            "total_cost": 3.95
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 79.8531,
+      "total_sim_pnl": 94.02234628621035,
+      "total_live_pnl": 41.3406707528181,
+      "total_trades": 1000
+    },
+    "LINK-USDT": {
+      "base_price": 15.0,
+      "spread_bps": 3.0,
+      "atr_pct": 0.024,
+      "scenarios": {
+        "trend": {
+          "symbol": "LINK-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 693.46,
+          "live_pnl": 606.55,
+          "gap_pct": 12.5322,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 19.34,
+            "slippage_cost": 0.75,
+            "liquidity_cost": 26.35,
+            "latency_cost": 2.07,
+            "fee_cost": 37.64,
+            "failure_cost": 0.75,
+            "total_cost": 86.91
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "LINK-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 104.04,
+          "live_pnl": 18.87,
+          "gap_pct": 81.8677,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 18.57,
+            "slippage_cost": 0.75,
+            "liquidity_cost": 25.52,
+            "latency_cost": 2.06,
+            "fee_cost": 37.53,
+            "failure_cost": 0.75,
+            "total_cost": 85.18
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "LINK-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 1009.35,
+          "live_pnl": 185.58,
+          "gap_pct": 81.6141,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 18.87,
+            "slippage_cost": 0.76,
+            "liquidity_cost": 116.64,
+            "latency_cost": 3.34,
+            "fee_cost": 37.62,
+            "failure_cost": 646.55,
+            "total_cost": 823.77
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "LINK-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 53.22,
+          "live_pnl": -31.25,
+          "gap_pct": 158.7246,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 19.02,
+            "slippage_cost": 0.75,
+            "liquidity_cost": 24.38,
+            "latency_cost": 2.06,
+            "fee_cost": 37.51,
+            "failure_cost": 0.75,
+            "total_cost": 84.47
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 83.6847,
+      "total_sim_pnl": 1860.069709945003,
+      "total_live_pnl": 779.7470113525114,
+      "total_trades": 1000
+    },
+    "LTC-USDT": {
+      "base_price": 80.0,
+      "spread_bps": 2.5,
+      "atr_pct": 0.02,
+      "scenarios": {
+        "trend": {
+          "symbol": "LTC-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 4298.19,
+          "live_pnl": 3830.23,
+          "gap_pct": 10.8873,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 103.33,
+            "slippage_cost": 9.32,
+            "liquidity_cost": 140.83,
+            "latency_cost": 9.26,
+            "fee_cost": 201.19,
+            "failure_cost": 4.02,
+            "total_cost": 467.96
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "LTC-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 883.32,
+          "live_pnl": 425.96,
+          "gap_pct": 51.7772,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 98.98,
+            "slippage_cost": 9.24,
+            "liquidity_cost": 135.97,
+            "latency_cost": 9.21,
+            "fee_cost": 199.96,
+            "failure_cost": 4.0,
+            "total_cost": 457.36
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "LTC-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 5163.59,
+          "live_pnl": 1300.34,
+          "gap_pct": 74.8172,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 100.77,
+            "slippage_cost": 9.32,
+            "liquidity_cost": 622.72,
+            "latency_cost": 15.6,
+            "fee_cost": 200.88,
+            "failure_cost": 2913.96,
+            "total_cost": 3863.26
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "LTC-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 468.51,
+          "live_pnl": 14.68,
+          "gap_pct": 96.8661,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 101.4,
+            "slippage_cost": 9.24,
+            "liquidity_cost": 129.99,
+            "latency_cost": 9.21,
+            "fee_cost": 199.99,
+            "failure_cost": 4.0,
+            "total_cost": 453.82
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 58.587,
+      "total_sim_pnl": 10813.61202005034,
+      "total_live_pnl": 5571.216152159457,
+      "total_trades": 1000
+    },
+    "DOT-USDT": {
+      "base_price": 7.0,
+      "spread_bps": 4.0,
+      "atr_pct": 0.026,
+      "scenarios": {
+        "trend": {
+          "symbol": "DOT-USDT",
+          "regime": "trend",
+          "n_trades": 250,
+          "sim_pnl": 463.07,
+          "live_pnl": 422.05,
+          "gap_pct": 8.8586,
+          "verdict": "PASS",
+          "costs": {
+            "spread_cost": 9.41,
+            "slippage_cost": 0.24,
+            "liquidity_cost": 12.34,
+            "latency_cost": 1.06,
+            "fee_cost": 17.63,
+            "failure_cost": 0.35,
+            "total_cost": 41.02
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "ranging": {
+          "symbol": "DOT-USDT",
+          "regime": "ranging",
+          "n_trades": 250,
+          "sim_pnl": 58.9,
+          "live_pnl": 18.82,
+          "gap_pct": 68.055,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 9.02,
+            "slippage_cost": 0.24,
+            "liquidity_cost": 11.91,
+            "latency_cost": 1.05,
+            "fee_cost": 17.52,
+            "failure_cost": 0.35,
+            "total_cost": 40.09
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        },
+        "high_vol": {
+          "symbol": "DOT-USDT",
+          "regime": "high_vol",
+          "n_trades": 250,
+          "sim_pnl": 719.6,
+          "live_pnl": 296.1,
+          "gap_pct": 58.8514,
+          "verdict": "WARN",
+          "costs": {
+            "spread_cost": 9.15,
+            "slippage_cost": 0.24,
+            "liquidity_cost": 54.45,
+            "latency_cost": 1.66,
+            "fee_cost": 17.56,
+            "failure_cost": 340.42,
+            "total_cost": 423.49
+          },
+          "regime_detected": {
+            "toxic": 250
+          }
+        },
+        "low_vol": {
+          "symbol": "DOT-USDT",
+          "regime": "low_vol",
+          "n_trades": 250,
+          "sim_pnl": 32.83,
+          "live_pnl": -6.92,
+          "gap_pct": 121.0824,
+          "verdict": "BLOCK",
+          "costs": {
+            "spread_cost": 9.23,
+            "slippage_cost": 0.24,
+            "liquidity_cost": 11.38,
+            "latency_cost": 1.05,
+            "fee_cost": 17.51,
+            "failure_cost": 0.35,
+            "total_cost": 39.75
+          },
+          "regime_detected": {
+            "thin": 250
+          }
+        }
+      },
+      "avg_gap_pct": 64.2118,
+      "total_sim_pnl": 1274.4017253097725,
+      "total_live_pnl": 730.0467512634095,
+      "total_trades": 1000
+    }
+  },
+  "per_regime": {
+    "trend": {
+      "total_sim_pnl": 63827.469302470614,
+      "total_live_pnl": 54364.25014701903,
+      "total_trades": 3000,
+      "gaps": [
+        16.169024169044043,
+        18.92892766988792,
+        16.17409869879486,
+        11.883864204776888,
+        9.547115078935239,
+        8.65330551080978,
+        9.888464953246807,
+        7.7592971776677775,
+        10.361996740031143,
+        12.532174236527649,
+        10.887283599541561,
+        8.858554998564703
+      ],
+      "scenarios": [
+        "BTC-USDT|trend",
+        "ETH-USDT|trend",
+        "SOL-USDT|trend",
+        "BNB-USDT|trend",
+        "XRP-USDT|trend",
+        "DOGE-USDT|trend",
+        "ADA-USDT|trend",
+        "AVAX-USDT|trend",
+        "MATIC-USDT|trend",
+        "LINK-USDT|trend",
+        "LTC-USDT|trend",
+        "DOT-USDT|trend"
+      ],
+      "avg_gap_pct": 11.8037
+    },
+    "ranging": {
+      "total_sim_pnl": 18298.766911600098,
+      "total_live_pnl": -731.1928040121152,
+      "total_trades": 3000,
+      "gaps": [
+        104.41805262982116,
+        137.86292080070587,
+        87.26248107298379,
+        88.28363094074273,
+        66.4176351440836,
+        56.509013717383205,
+        60.630712499163344,
+        47.35490980949737,
+        82.48102060693518,
+        81.86769582630326,
+        51.77722051676993,
+        68.05502326450772
+      ],
+      "scenarios": [
+        "BTC-USDT|ranging",
+        "ETH-USDT|ranging",
+        "SOL-USDT|ranging",
+        "BNB-USDT|ranging",
+        "XRP-USDT|ranging",
+        "DOGE-USDT|ranging",
+        "ADA-USDT|ranging",
+        "AVAX-USDT|ranging",
+        "MATIC-USDT|ranging",
+        "LINK-USDT|ranging",
+        "LTC-USDT|ranging",
+        "DOT-USDT|ranging"
+      ],
+      "avg_gap_pct": 77.7434
+    },
+    "high_vol": {
+      "total_sim_pnl": 52786.62571260721,
+      "total_live_pnl": 12079.503060788735,
+      "total_trades": 3000,
+      "gaps": [
+        65.89520704218204,
+        81.3817032577451,
+        104.6540333757899,
+        68.9844267762338,
+        64.23084765291122,
+        71.72445762992035,
+        85.45875470822534,
+        82.99657004906955,
+        86.21083684712998,
+        81.61414135648542,
+        74.8171829854001,
+        58.85137686309665
+      ],
+      "scenarios": [
+        "BTC-USDT|high_vol",
+        "ETH-USDT|high_vol",
+        "SOL-USDT|high_vol",
+        "BNB-USDT|high_vol",
+        "XRP-USDT|high_vol",
+        "DOGE-USDT|high_vol",
+        "ADA-USDT|high_vol",
+        "AVAX-USDT|high_vol",
+        "MATIC-USDT|high_vol",
+        "LINK-USDT|high_vol",
+        "LTC-USDT|high_vol",
+        "DOT-USDT|high_vol"
+      ],
+      "avg_gap_pct": 77.235
+    },
+    "low_vol": {
+      "total_sim_pnl": 16270.107889907671,
+      "total_live_pnl": -16889.876103465063,
+      "total_trades": 3000,
+      "gaps": [
+        186.1165397862058,
+        293.62594633727355,
+        167.0278182577743,
+        137.66503178839844,
+        122.33971871432443,
+        97.43184734321795,
+        128.40795017946945,
+        72.80013655715891,
+        140.3585450734397,
+        158.7245515747558,
+        96.86607232585817,
+        121.08239696446171
+      ],
+      "scenarios": [
+        "BTC-USDT|low_vol",
+        "ETH-USDT|low_vol",
+        "SOL-USDT|low_vol",
+        "BNB-USDT|low_vol",
+        "XRP-USDT|low_vol",
+        "DOGE-USDT|low_vol",
+        "ADA-USDT|low_vol",
+        "AVAX-USDT|low_vol",
+        "MATIC-USDT|low_vol",
+        "LINK-USDT|low_vol",
+        "LTC-USDT|low_vol",
+        "DOT-USDT|low_vol"
+      ],
+      "avg_gap_pct": 143.5372
+    }
+  },
+  "per_scenario": [
+    {
+      "symbol": "BTC-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 16400.0,
+      "live_pnl": 13748.28,
+      "gap_pct": 16.169,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 571.74,
+        "slippage_cost": 121.47,
+        "liquidity_cost": 779.81,
+        "latency_cost": 42.41,
+        "fee_cost": 1114.01,
+        "failure_cost": 22.28,
+        "total_cost": 2651.72
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "BTC-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 6400.0,
+      "live_pnl": -282.76,
+      "gap_pct": 104.4181,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 1376.23,
+        "slippage_cost": 478.2,
+        "liquidity_cost": 1889.02,
+        "latency_cost": 105.76,
+        "fee_cost": 2777.98,
+        "failure_cost": 55.56,
+        "total_cost": 6682.76
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "BTC-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 13500.0,
+      "live_pnl": 4604.15,
+      "gap_pct": 65.8952,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 279.22,
+        "slippage_cost": 42.99,
+        "liquidity_cost": 1726.87,
+        "latency_cost": 36.86,
+        "fee_cost": 557.06,
+        "failure_cost": 6252.85,
+        "total_cost": 8895.85
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "BTC-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 7340.0,
+      "live_pnl": -6320.95,
+      "gap_pct": 186.1165,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 2818.12,
+        "slippage_cost": 1352.61,
+        "liquidity_cost": 3611.47,
+        "latency_cost": 211.53,
+        "fee_cost": 5556.11,
+        "failure_cost": 111.12,
+        "total_cost": 13660.95
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "ETH-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 13700.0,
+      "live_pnl": 11106.74,
+      "gap_pct": 18.9289,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 763.38,
+        "slippage_cost": 190.19,
+        "liquidity_cost": 650.7,
+        "latency_cost": 40.83,
+        "fee_cost": 929.58,
+        "failure_cost": 18.59,
+        "total_cost": 2593.26
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "ETH-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 4800.0,
+      "live_pnl": -1817.42,
+      "gap_pct": 137.8629,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 1833.45,
+        "slippage_cost": 747.12,
+        "liquidity_cost": 1574.07,
+        "latency_cost": 101.66,
+        "fee_cost": 2314.81,
+        "failure_cost": 46.3,
+        "total_cost": 6617.42
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "ETH-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 10350.0,
+      "live_pnl": 1926.99,
+      "gap_pct": 81.3817,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 372.52,
+        "slippage_cost": 67.18,
+        "liquidity_cost": 1438.67,
+        "latency_cost": 34.84,
+        "fee_cost": 464.09,
+        "failure_cost": 6045.7,
+        "total_cost": 8423.01
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "ETH-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 4700.0,
+      "live_pnl": -9100.42,
+      "gap_pct": 293.6259,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 3753.7,
+        "slippage_cost": 2112.79,
+        "liquidity_cost": 3008.93,
+        "latency_cost": 203.3,
+        "fee_cost": 4629.12,
+        "failure_cost": 92.58,
+        "total_cost": 13800.42
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "SOL-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 8765.74,
+      "live_pnl": 7347.96,
+      "gap_pct": 16.1741,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 581.02,
+        "slippage_cost": 164.23,
+        "liquidity_cost": 264.35,
+        "latency_cost": 22.99,
+        "fee_cost": 377.64,
+        "failure_cost": 7.55,
+        "total_cost": 1417.78
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "SOL-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 1582.19,
+      "live_pnl": 201.53,
+      "gap_pct": 87.2625,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 557.43,
+        "slippage_cost": 162.53,
+        "liquidity_cost": 255.14,
+        "latency_cost": 22.84,
+        "fee_cost": 375.21,
+        "failure_cost": 7.5,
+        "total_cost": 1380.66
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "SOL-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 7552.21,
+      "live_pnl": -351.48,
+      "gap_pct": 104.654,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 503.33,
+        "slippage_cost": 137.17,
+        "liquidity_cost": 1036.73,
+        "latency_cost": 33.15,
+        "fee_cost": 334.43,
+        "failure_cost": 5858.89,
+        "total_cost": 7903.69
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "SOL-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 827.35,
+      "live_pnl": -554.55,
+      "gap_pct": 167.0278,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 570.27,
+        "slippage_cost": 162.43,
+        "liquidity_cost": 243.8,
+        "latency_cost": 22.83,
+        "fee_cost": 375.07,
+        "failure_cost": 7.5,
+        "total_cost": 1381.9
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "BNB-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 16700.0,
+      "live_pnl": 14715.39,
+      "gap_pct": 11.8839,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 428.64,
+        "slippage_cost": 78.98,
+        "liquidity_cost": 585.19,
+        "latency_cost": 39.09,
+        "fee_cost": 835.98,
+        "failure_cost": 16.72,
+        "total_cost": 1984.61
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "BNB-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 4022.66,
+      "live_pnl": 471.31,
+      "gap_pct": 88.2836,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 742.5,
+        "slippage_cost": 189.64,
+        "liquidity_cost": 1019.63,
+        "latency_cost": 70.12,
+        "fee_cost": 1499.46,
+        "failure_cost": 29.99,
+        "total_cost": 3551.35
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "BNB-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 11750.0,
+      "live_pnl": 3644.33,
+      "gap_pct": 68.9844,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 208.22,
+        "slippage_cost": 27.73,
+        "liquidity_cost": 1288.33,
+        "latency_cost": 32.51,
+        "fee_cost": 415.59,
+        "failure_cost": 6133.28,
+        "total_cost": 8105.67
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "BNB-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 2560.57,
+      "live_pnl": -964.44,
+      "gap_pct": 137.665,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 760.89,
+        "slippage_cost": 189.66,
+        "liquidity_cost": 974.74,
+        "latency_cost": 70.12,
+        "fee_cost": 1499.6,
+        "failure_cost": 29.99,
+        "total_cost": 3525.01
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "XRP-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 32.98,
+      "live_pnl": 29.83,
+      "gap_pct": 9.5471,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 0.71,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 0.96,
+        "latency_cost": 0.07,
+        "fee_cost": 1.38,
+        "failure_cost": 0.03,
+        "total_cost": 3.15
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "XRP-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 4.65,
+      "live_pnl": 1.56,
+      "gap_pct": 66.4176,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 0.68,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 0.93,
+        "latency_cost": 0.07,
+        "fee_cost": 1.37,
+        "failure_cost": 0.03,
+        "total_cost": 3.09
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "XRP-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 44.8,
+      "live_pnl": 16.03,
+      "gap_pct": 64.2308,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 0.69,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 4.24,
+        "latency_cost": 0.11,
+        "fee_cost": 1.37,
+        "failure_cost": 22.36,
+        "total_cost": 28.78
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "XRP-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 2.5,
+      "live_pnl": -0.56,
+      "gap_pct": 122.3397,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 0.7,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 0.89,
+        "latency_cost": 0.07,
+        "fee_cost": 1.37,
+        "failure_cost": 0.03,
+        "total_cost": 3.06
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "DOGE-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 6.94,
+      "live_pnl": 6.34,
+      "gap_pct": 8.6533,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 0.15,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 0.18,
+        "latency_cost": 0.01,
+        "fee_cost": 0.25,
+        "failure_cost": 0.01,
+        "total_cost": 0.6
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "DOGE-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 1.04,
+      "live_pnl": 0.45,
+      "gap_pct": 56.509,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 0.15,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 0.17,
+        "latency_cost": 0.01,
+        "fee_cost": 0.25,
+        "failure_cost": 0.0,
+        "total_cost": 0.59
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "DOGE-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 9.22,
+      "live_pnl": 2.61,
+      "gap_pct": 71.7245,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 0.15,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 0.78,
+        "latency_cost": 0.02,
+        "fee_cost": 0.25,
+        "failure_cost": 5.41,
+        "total_cost": 6.61
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "DOGE-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 0.6,
+      "live_pnl": 0.02,
+      "gap_pct": 97.4318,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 0.15,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 0.16,
+        "latency_cost": 0.01,
+        "fee_cost": 0.25,
+        "failure_cost": 0.0,
+        "total_cost": 0.58
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "ADA-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 23.16,
+      "live_pnl": 20.87,
+      "gap_pct": 9.8885,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 0.51,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 0.7,
+        "latency_cost": 0.05,
+        "fee_cost": 1.0,
+        "failure_cost": 0.02,
+        "total_cost": 2.29
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "ADA-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 3.71,
+      "live_pnl": 1.46,
+      "gap_pct": 60.6307,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 0.49,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 0.68,
+        "latency_cost": 0.05,
+        "fee_cost": 1.0,
+        "failure_cost": 0.02,
+        "total_cost": 2.25
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "ADA-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 26.29,
+      "live_pnl": 3.82,
+      "gap_pct": 85.4588,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 0.5,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 3.09,
+        "latency_cost": 0.09,
+        "fee_cost": 1.0,
+        "failure_cost": 17.79,
+        "total_cost": 22.47
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "ADA-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 1.74,
+      "live_pnl": -0.49,
+      "gap_pct": 128.408,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 0.51,
+        "slippage_cost": 0.0,
+        "liquidity_cost": 0.65,
+        "latency_cost": 0.05,
+        "fee_cost": 1.0,
+        "failure_cost": 0.02,
+        "total_cost": 2.23
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "AVAX-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 2704.76,
+      "live_pnl": 2494.89,
+      "gap_pct": 7.7593,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 50.55,
+        "slippage_cost": 2.7,
+        "liquidity_cost": 61.57,
+        "latency_cost": 5.34,
+        "fee_cost": 87.96,
+        "failure_cost": 1.76,
+        "total_cost": 209.87
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "AVAX-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 433.43,
+      "live_pnl": 228.18,
+      "gap_pct": 47.3549,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 48.5,
+        "slippage_cost": 2.67,
+        "liquidity_cost": 59.51,
+        "latency_cost": 5.31,
+        "fee_cost": 87.51,
+        "failure_cost": 1.75,
+        "total_cost": 205.25
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "AVAX-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 2614.35,
+      "live_pnl": 444.53,
+      "gap_pct": 82.9966,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 49.26,
+        "slippage_cost": 2.7,
+        "liquidity_cost": 271.95,
+        "latency_cost": 8.55,
+        "fee_cost": 87.73,
+        "failure_cost": 1749.63,
+        "total_cost": 2169.82
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "AVAX-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 279.98,
+      "live_pnl": 76.15,
+      "gap_pct": 72.8001,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 49.72,
+        "slippage_cost": 2.67,
+        "liquidity_cost": 56.87,
+        "latency_cost": 5.31,
+        "fee_cost": 87.5,
+        "failure_cost": 1.75,
+        "total_cost": 203.83
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "MATIC-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 39.18,
+      "live_pnl": 35.12,
+      "gap_pct": 10.362,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 0.94,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 1.23,
+        "latency_cost": 0.09,
+        "fee_cost": 1.76,
+        "failure_cost": 0.04,
+        "total_cost": 4.06
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "MATIC-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 4.82,
+      "live_pnl": 0.84,
+      "gap_pct": 82.481,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 0.9,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 1.19,
+        "latency_cost": 0.09,
+        "fee_cost": 1.75,
+        "failure_cost": 0.04,
+        "total_cost": 3.98
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "MATIC-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 47.21,
+      "live_pnl": 6.51,
+      "gap_pct": 86.2108,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 0.91,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 5.44,
+        "latency_cost": 0.16,
+        "fee_cost": 1.75,
+        "failure_cost": 32.43,
+        "total_cost": 40.7
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "MATIC-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 2.81,
+      "live_pnl": -1.13,
+      "gap_pct": 140.3585,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 0.92,
+        "slippage_cost": 0.01,
+        "liquidity_cost": 1.14,
+        "latency_cost": 0.09,
+        "fee_cost": 1.75,
+        "failure_cost": 0.03,
+        "total_cost": 3.95
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "LINK-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 693.46,
+      "live_pnl": 606.55,
+      "gap_pct": 12.5322,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 19.34,
+        "slippage_cost": 0.75,
+        "liquidity_cost": 26.35,
+        "latency_cost": 2.07,
+        "fee_cost": 37.64,
+        "failure_cost": 0.75,
+        "total_cost": 86.91
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "LINK-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 104.04,
+      "live_pnl": 18.87,
+      "gap_pct": 81.8677,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 18.57,
+        "slippage_cost": 0.75,
+        "liquidity_cost": 25.52,
+        "latency_cost": 2.06,
+        "fee_cost": 37.53,
+        "failure_cost": 0.75,
+        "total_cost": 85.18
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "LINK-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 1009.35,
+      "live_pnl": 185.58,
+      "gap_pct": 81.6141,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 18.87,
+        "slippage_cost": 0.76,
+        "liquidity_cost": 116.64,
+        "latency_cost": 3.34,
+        "fee_cost": 37.62,
+        "failure_cost": 646.55,
+        "total_cost": 823.77
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "LINK-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 53.22,
+      "live_pnl": -31.25,
+      "gap_pct": 158.7246,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 19.02,
+        "slippage_cost": 0.75,
+        "liquidity_cost": 24.38,
+        "latency_cost": 2.06,
+        "fee_cost": 37.51,
+        "failure_cost": 0.75,
+        "total_cost": 84.47
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "LTC-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 4298.19,
+      "live_pnl": 3830.23,
+      "gap_pct": 10.8873,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 103.33,
+        "slippage_cost": 9.32,
+        "liquidity_cost": 140.83,
+        "latency_cost": 9.26,
+        "fee_cost": 201.19,
+        "failure_cost": 4.02,
+        "total_cost": 467.96
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "LTC-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 883.32,
+      "live_pnl": 425.96,
+      "gap_pct": 51.7772,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 98.98,
+        "slippage_cost": 9.24,
+        "liquidity_cost": 135.97,
+        "latency_cost": 9.21,
+        "fee_cost": 199.96,
+        "failure_cost": 4.0,
+        "total_cost": 457.36
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "LTC-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 5163.59,
+      "live_pnl": 1300.34,
+      "gap_pct": 74.8172,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 100.77,
+        "slippage_cost": 9.32,
+        "liquidity_cost": 622.72,
+        "latency_cost": 15.6,
+        "fee_cost": 200.88,
+        "failure_cost": 2913.96,
+        "total_cost": 3863.26
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "LTC-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 468.51,
+      "live_pnl": 14.68,
+      "gap_pct": 96.8661,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 101.4,
+        "slippage_cost": 9.24,
+        "liquidity_cost": 129.99,
+        "latency_cost": 9.21,
+        "fee_cost": 199.99,
+        "failure_cost": 4.0,
+        "total_cost": 453.82
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "DOT-USDT",
+      "regime": "trend",
+      "n_trades": 250,
+      "sim_pnl": 463.07,
+      "live_pnl": 422.05,
+      "gap_pct": 8.8586,
+      "verdict": "PASS",
+      "costs": {
+        "spread_cost": 9.41,
+        "slippage_cost": 0.24,
+        "liquidity_cost": 12.34,
+        "latency_cost": 1.06,
+        "fee_cost": 17.63,
+        "failure_cost": 0.35,
+        "total_cost": 41.02
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "DOT-USDT",
+      "regime": "ranging",
+      "n_trades": 250,
+      "sim_pnl": 58.9,
+      "live_pnl": 18.82,
+      "gap_pct": 68.055,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 9.02,
+        "slippage_cost": 0.24,
+        "liquidity_cost": 11.91,
+        "latency_cost": 1.05,
+        "fee_cost": 17.52,
+        "failure_cost": 0.35,
+        "total_cost": 40.09
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    },
+    {
+      "symbol": "DOT-USDT",
+      "regime": "high_vol",
+      "n_trades": 250,
+      "sim_pnl": 719.6,
+      "live_pnl": 296.1,
+      "gap_pct": 58.8514,
+      "verdict": "WARN",
+      "costs": {
+        "spread_cost": 9.15,
+        "slippage_cost": 0.24,
+        "liquidity_cost": 54.45,
+        "latency_cost": 1.66,
+        "fee_cost": 17.56,
+        "failure_cost": 340.42,
+        "total_cost": 423.49
+      },
+      "regime_detected": {
+        "toxic": 250
+      }
+    },
+    {
+      "symbol": "DOT-USDT",
+      "regime": "low_vol",
+      "n_trades": 250,
+      "sim_pnl": 32.83,
+      "live_pnl": -6.92,
+      "gap_pct": 121.0824,
+      "verdict": "BLOCK",
+      "costs": {
+        "spread_cost": 9.23,
+        "slippage_cost": 0.24,
+        "liquidity_cost": 11.38,
+        "latency_cost": 1.05,
+        "fee_cost": 17.51,
+        "failure_cost": 0.35,
+        "total_cost": 39.75
+      },
+      "regime_detected": {
+        "thin": 250
+      }
+    }
+  ],
+  "worst_pairs": [
+    {
+      "symbol": "ETH-USDT",
+      "avg_gap_pct": 132.9498
+    },
+    {
+      "symbol": "SOL-USDT",
+      "avg_gap_pct": 93.7796
+    },
+    {
+      "symbol": "BTC-USDT",
+      "avg_gap_pct": 93.1497
+    },
+    {
+      "symbol": "LINK-USDT",
+      "avg_gap_pct": 83.6847
+    },
+    {
+      "symbol": "MATIC-USDT",
+      "avg_gap_pct": 79.8531
+    }
+  ],
+  "worst_regimes": [
+    {
+      "regime": "low_vol",
+      "avg_gap_pct": 143.5372
+    },
+    {
+      "regime": "ranging",
+      "avg_gap_pct": 77.7434
+    },
+    {
+      "regime": "high_vol",
+      "avg_gap_pct": 77.235
+    },
+    {
+      "regime": "trend",
+      "avg_gap_pct": 11.8037
+    }
+  ],
+  "summary": {
+    "total_trades": 12000,
+    "total_sim_pnl": 151182.97,
+    "total_live_pnl": 48822.68,
+    "overall_gap_pct": 67.7062,
+    "target_gap_pct": 15.0,
+    "scenarios_pass_15pct": 9,
+    "scenarios_total": 48,
+    "pass_rate_pct": 18.75,
+    "avg_gap_pct": 77.5798,
+    "max_gap_pct": 293.6259,
+    "min_gap_pct": 7.7593,
+    "total_costs": {
+      "spread": 16844.84,
+      "slippage": 6276.82,
+      "liquidity": 22132.28,
+      "latency": 1174.06,
+      "fee": 25446.46,
+      "failure": 30485.82,
+      "total": 102360.29
+    },
+    "round2_comparison": {
+      "round2_gap_pct": 17.11,
+      "round2_pairs": 3,
+      "round2_regimes": 1,
+      "round2_trades": 3000,
+      "this_round_pairs": 12,
+      "this_round_regimes": 4,
+      "this_round_trades": 12000,
+      "improvement_pct": 0
+    }
+  }
+}

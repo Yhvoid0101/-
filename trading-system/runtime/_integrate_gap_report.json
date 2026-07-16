@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-06-27",
+  "original_model": {
+    "params": {
+      "maker_fee": 0.001,
+      "taker_fee": 0.001,
+      "min_slippage": 0.0001,
+      "max_slippage": 0.05,
+      "mev_probability": 0.05,
+      "mev_max_impact": 0.003,
+      "funding_interval_hours": 8,
+      "max_leverage": 10,
+      "latency_ms": 100.0
+    },
+    "slippage_model": {
+      "type": "平方根法则 (Almgren-Chriss)",
+      "k": 0.1,
+      "size_ratio_threshold": 0.5,
+      "large_order_log_compress": 0.02,
+      "vol_boost_factor": "1 + spread × 10",
+      "noise_std_ratio": 0.2
+    },
+    "latency_model": {
+      "type": "基础延迟 + 波动率加成 + 随机漂移",
+      "base_bps_per_sec": 5.0,
+      "vol_factor": "1 + spread × 5",
+      "drift_noise_ratio": 0.5,
+      "cap": "max_slippage × 0.5"
+    },
+    "missing_models": [
+      "点差模型 (无显式点差, 依赖 market.bid/ask 但沙盘常缺失)",
+      "流动性毒性模型 (无 VPIN, 无 Regime 检测)",
+      "订单失败率模型 (无失败拒绝)",
+      "时段点差调整 (无亚洲/欧洲/美洲时段差异)",
+      "订单簿分层成交 (仅 2 层, 真实应 5 档+)"
+    ]
+  },
+  "enhanced_model": {
+    "spread_bps": {
+      "BTC": 5.0,
+      "ETH": 8.0,
+      "SOL": 15.0
+    },
+    "slippage_k": {
+      "BTC": 0.1,
+      "ETH": 0.15,
+      "SOL": 0.25
+    },
+    "taker_fee_bps": 5.0,
+    "adv_usd": {
+      "BTC": 15000000000.0,
+      "ETH": 8000000000.0,
+      "SOL": 2000000000.0
+    },
+    "default_volatility": {
+      "BTC": 0.025,
+      "ETH": 0.035,
+      "SOL": 0.05
+    },
+    "modules": [
+      "SpreadModel",
+      "SlippageModel",
+      "LiquidityModel",
+      "LatencyModel",
+      "SimLiveGapEvaluator"
+    ]
+  },
+  "modules_check": {
+    "SpreadModel": true,
+    "SlippageModel": true,
+    "LiquidityModel": true,
+    "LatencyModel": true,
+    "SimLiveGapEvaluator": true
+  },
+  "integration_check": {
+    "filled_price": 81653.74561122646,
+    "total_cost": 1.0874561122646016,
+    "cost_breakdown": {
+      "spread_cost": 0.183476,
+      "slippage_cost": 0.019013,
+      "liquidity_cost": 0.07339,
+      "latency_cost": 0.003419,
+      "fee_cost": 0.407725,
+      "failure_cost": 0.000408,
+      "bar_gap_cost": 0.400025,
+      "total_cost": 1.087456
+    },
+    "cost_pct": 0.1333565653644738,
+    "is_rejected": false
+  },
+  "engine_check": {
+    "orig_filled": 81800.789831639,
+    "enh_filled": 81656.09574579947,
+    "orig_cost_pct": 0.003136793569673438,
+    "enh_cost_pct": 0.0013605321780912956,
+    "enh_gap_cost": 5.554787289973197,
+    "cost_diff_pct": -0.0017762613915821423
+  },
+  "validation": {
+    "orig_pnl": -1737.0991768496588,
+    "enhanced_pnl": -5393.614791141211,
+    "real_pnl_normalized": -6582.2710162100475,
+    "gap_orig_real": 4845.171839360389,
+    "gap_enh_real": 1188.6562250688366,
+    "elimination_rate": 0.7546720189751307,
+    "target": 0.5,
+    "passed": true,
+    "breakdown": {
+      "sim_pnl_total": -1737.0991768496606,
+      "enhanced_pnl_before_cost": -5096.325504102257,
+      "execution_cost": 297.28928703895457,
+      "spread_cost": 87.35338929422177,
+      "slippage_cost": 3.712474922833618,
+      "liquidity_cost": 85.60447909869758,
+      "latency_cost": 8.674624901828047,
+      "fee_cost": 109.74933217781732,
+      "failure_cost": 2.194986643556349,
+      "enhanced_pnl_final": -5393.614791141211,
+      "n_trades": 3000,
+      "n_wins": 43,
+      "n_losses": 2957,
+      "win_pnl_total": 5.055613368231452,
+      "loss_pnl_total": -1742.1547902178913,
+      "loss_amplified_total": -5100.8249999999825,
+      "regime": "thin",
+      "vpin": 0.18,
+      "signal_decay": 0.06,
+      "latency_stopout": 0.05,
+      "vol_amplification": 2.545985020909224,
+      "stop_hunt_amplification": 1.15,
+      "position_reduction": 0.0,
+      "opportunity_cost": 0.0,
+      "real_max_single_loss_pct": 0.0005
+    },
+    "n_trades": 3000,
+    "real_baseline": {
+      "n_strategies": 5,
+      "avg_total_return": -0.06244381104044598,
+      "avg_total_trades": 284.6,
+      "all_win_rate_zero": true
+    }
+  }
+}

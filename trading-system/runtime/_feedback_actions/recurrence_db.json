@@ -1,0 +1,74 @@
+{
+  "patterns": {
+    "e8b17c7d1d06363d": {
+      "pattern": "high_max_drawdown",
+      "occurrences": [
+        {
+          "version": "v582",
+          "err_id": "ERR-20260701-001",
+          "timestamp": "2026-07-01T14:49:22.642766"
+        },
+        {
+          "version": "v579",
+          "err_id": "ERR-20260701-001",
+          "timestamp": "2026-07-01T14:49:47.032789"
+        },
+        {
+          "version": "auto_review_20260630_072701",
+          "err_id": "ERR-20260701-001",
+          "timestamp": "2026-07-01T20:33:57.028299"
+        },
+        {
+          "version": "v580",
+          "err_id": "ERR-20260701-001",
+          "timestamp": "2026-07-01T20:33:57.123254"
+        },
+        {
+          "version": "auto_review_20260702_083729",
+          "err_id": "ERR-20260701-001",
+          "timestamp": "2026-07-02T08:37:29.227554"
+        },
+        {
+          "version": "auto_review_gen1_20260711_185938",
+          "err_id": "ERR-20260711-001",
+          "timestamp": "2026-07-11T18:59:38.924272"
+        },
+        {
+          "version": "auto_review_gen1_20260712_201035",
+          "err_id": "ERR-20260711-001",
+          "timestamp": "2026-07-12T20:10:37.035210"
+        }
+      ]
+    },
+    "6f9026c9d6047376": {
+      "pattern": "single_symbol_negative_ev",
+      "occurrences": [
+        {
+          "version": "auto_review_gen1_20260711_185938",
+          "err_id": "ERR-20260711-003",
+          "timestamp": "2026-07-11T18:59:38.925111"
+        },
+        {
+          "version": "auto_review_gen1_20260712_201035",
+          "err_id": "ERR-20260711-003",
+          "timestamp": "2026-07-12T20:10:37.035554"
+        }
+      ]
+    },
+    "007d455d651aea81": {
+      "pattern": "single_symbol_negative_ev",
+      "occurrences": [
+        {
+          "version": "auto_review_gen1_20260711_185938",
+          "err_id": "ERR-20260711-004",
+          "timestamp": "2026-07-11T18:59:38.925809"
+        },
+        {
+          "version": "auto_review_gen1_20260712_201035",
+          "err_id": "ERR-20260711-004",
+          "timestamp": "2026-07-12T20:10:37.036321"
+        }
+      ]
+    }
+  }
+}

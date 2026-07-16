@@ -1,0 +1,34 @@
+{
+  "n_trades": 3000,
+  "n_failed": 0,
+  "sim_total_pnl": -1737.099177,
+  "live_adjusted_pnl": -2034.392748,
+  "pnl_gap_pct": 17.1144,
+  "cost_breakdown_usd": {
+    "spread_cost": 87.353389,
+    "slippage_cost": 3.712475,
+    "liquidity_cost": 85.604479,
+    "latency_cost": 8.678909,
+    "fee_cost": 109.749332,
+    "failure_cost": 2.194987,
+    "total_cost": 297.293571
+  },
+  "cost_pct_of_sim_pnl": {
+    "spread_cost_pct": 5.0287,
+    "slippage_cost_pct": 0.2137,
+    "liquidity_cost_pct": 4.928,
+    "latency_cost_pct": 0.4996,
+    "fee_cost_pct": 6.318
+  },
+  "regime_distribution": {
+    "thin": 3000
+  },
+  "gt_score_comparison": {
+    "sim_gt_score": -0.6978,
+    "live_gt_score": -0.699,
+    "gt_score_gap_pct": 0.1648
+  },
+  "verdict": "PASS",
+  "block_reasons": [],
+  "warn_reasons": []
+}
