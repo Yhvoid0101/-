@@ -2,7 +2,8 @@
   "name": "trae-work-cn-trading-system",
   "status": "active-single-source",
   "canonical_runtime": "runtime",
-  "source_authority": "WSL /home/lmy/hermes_v6/sandbox_trading",
+  "source_authority": "D:/hermes/codex_projects/trae-work-cn-trading-system",
+  "import_baseline": "WSL /home/lmy/hermes_v6/sandbox_trading",
   "github_path": "trading-system",
   "four_source_audit": "manifests/four_sources_audit.json"
 }
