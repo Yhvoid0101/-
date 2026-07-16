@@ -1,0 +1,7 @@
+{
+  "path": "runtime/_v97_adaptive_hold.py",
+  "source": "/home/lmy/hermes_v6/sandbox_trading/archive/temp_scripts_20260716/_v97_adaptive_hold.py",
+  "reason": "The runtime import path references sandbox_trading._v97_adaptive_hold; the source was classified as archive but is required to remove the observed Phase L degradation warning.",
+  "promotion": "archive-to-runtime after import evidence",
+  "raw_source_preserved": true
+}
